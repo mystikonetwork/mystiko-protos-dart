@@ -1,0 +1,15 @@
+name: mystiko_protos_dart
+description: A sample command-line application.
+version: 1.0.0
+# repository: https://github.com/my_org/my_repo
+
+environment:
+  sdk: ^3.1.0
+
+# Add regular dependencies here.
+dependencies:
+  protobuf: ^3.1.0
+  fixnum: ^1.1.0
+
+dev_dependencies:
+  lints: ^2.0.0
