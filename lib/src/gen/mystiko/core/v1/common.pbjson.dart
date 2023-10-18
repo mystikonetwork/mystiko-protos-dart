@@ -1,0 +1,130 @@
+//
+//  Generated code. Do not modify.
+//  source: mystiko/core/v1/common.proto
+//
+// @dart = 2.12
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+
+import 'dart:convert' as $convert;
+import 'dart:core' as $core;
+import 'dart:typed_data' as $typed_data;
+
+@$core.Deprecated('Use accountStatusDescriptor instead')
+const AccountStatus$json = {
+  '1': 'AccountStatus',
+  '2': [
+    {'1': 'ACCOUNT_STATUS_UNSPECIFIED', '2': 0},
+    {'1': 'ACCOUNT_STATUS_CREATED', '2': 1},
+    {'1': 'ACCOUNT_STATUS_SCANNING', '2': 2},
+    {'1': 'ACCOUNT_STATUS_SCANNED', '2': 3},
+  ],
+};
+
+/// Descriptor for `AccountStatus`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List accountStatusDescriptor = $convert.base64Decode(
+    'Cg1BY2NvdW50U3RhdHVzEh4KGkFDQ09VTlRfU1RBVFVTX1VOU1BFQ0lGSUVEEAASGgoWQUNDT1'
+    'VOVF9TVEFUVVNfQ1JFQVRFRBABEhsKF0FDQ09VTlRfU1RBVFVTX1NDQU5OSU5HEAISGgoWQUND'
+    'T1VOVF9TVEFUVVNfU0NBTk5FRBAD');
+
+@$core.Deprecated('Use depositStatusDescriptor instead')
+const DepositStatus$json = {
+  '1': 'DepositStatus',
+  '2': [
+    {'1': 'DEPOSIT_STATUS_UNSPECIFIED', '2': 0},
+    {'1': 'DEPOSIT_STATUS_ASSET_APPROVING', '2': 1},
+    {'1': 'DEPOSIT_STATUS_ASSET_APPROVED', '2': 2},
+    {'1': 'DEPOSIT_STATUS_SRC_PENDING', '2': 3},
+    {'1': 'DEPOSIT_STATUS_SRC_SUCCEEDED', '2': 4},
+    {'1': 'DEPOSIT_STATUS_QUEUED', '2': 5},
+    {'1': 'DEPOSIT_STATUS_INCLUDED', '2': 6},
+    {'1': 'DEPOSIT_STATUS_FAILED', '2': 7},
+  ],
+};
+
+/// Descriptor for `DepositStatus`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List depositStatusDescriptor = $convert.base64Decode(
+    'Cg1EZXBvc2l0U3RhdHVzEh4KGkRFUE9TSVRfU1RBVFVTX1VOU1BFQ0lGSUVEEAASIgoeREVQT1'
+    'NJVF9TVEFUVVNfQVNTRVRfQVBQUk9WSU5HEAESIQodREVQT1NJVF9TVEFUVVNfQVNTRVRfQVBQ'
+    'Uk9WRUQQAhIeChpERVBPU0lUX1NUQVRVU19TUkNfUEVORElORxADEiAKHERFUE9TSVRfU1RBVF'
+    'VTX1NSQ19TVUNDRUVERUQQBBIZChVERVBPU0lUX1NUQVRVU19RVUVVRUQQBRIbChdERVBPU0lU'
+    'X1NUQVRVU19JTkNMVURFRBAGEhkKFURFUE9TSVRfU1RBVFVTX0ZBSUxFRBAH');
+
+@$core.Deprecated('Use transactionStatusDescriptor instead')
+const TransactionStatus$json = {
+  '1': 'TransactionStatus',
+  '2': [
+    {'1': 'TRANSACTION_STATUS_UNSPECIFIED', '2': 0},
+    {'1': 'TRANSACTION_STATUS_PENDING', '2': 1},
+    {'1': 'TRANSACTION_STATUS_SUCCEEDED', '2': 2},
+    {'1': 'TRANSACTION_STATUS_FAILED', '2': 3},
+  ],
+};
+
+/// Descriptor for `TransactionStatus`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List transactionStatusDescriptor = $convert.base64Decode(
+    'ChFUcmFuc2FjdGlvblN0YXR1cxIiCh5UUkFOU0FDVElPTl9TVEFUVVNfVU5TUEVDSUZJRUQQAB'
+    'IeChpUUkFOU0FDVElPTl9TVEFUVVNfUEVORElORxABEiAKHFRSQU5TQUNUSU9OX1NUQVRVU19T'
+    'VUNDRUVERUQQAhIdChlUUkFOU0FDVElPTl9TVEFUVVNfRkFJTEVEEAM=');
+
+@$core.Deprecated('Use transactionTypeDescriptor instead')
+const TransactionType$json = {
+  '1': 'TransactionType',
+  '2': [
+    {'1': 'TRANSACTION_TYPE_UNSPECIFIED', '2': 0},
+    {'1': 'TRANSACTION_TYPE_TRANSFER', '2': 1},
+    {'1': 'TRANSACTION_TYPE_WITHDRAW', '2': 2},
+  ],
+};
+
+/// Descriptor for `TransactionType`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List transactionTypeDescriptor = $convert.base64Decode(
+    'Cg9UcmFuc2FjdGlvblR5cGUSIAocVFJBTlNBQ1RJT05fVFlQRV9VTlNQRUNJRklFRBAAEh0KGV'
+    'RSQU5TQUNUSU9OX1RZUEVfVFJBTlNGRVIQARIdChlUUkFOU0FDVElPTl9UWVBFX1dJVEhEUkFX'
+    'EAI=');
+
+@$core.Deprecated('Use networkTypeDescriptor instead')
+const NetworkType$json = {
+  '1': 'NetworkType',
+  '2': [
+    {'1': 'NETWORK_TYPE_UNSPECIFIED', '2': 0},
+    {'1': 'NETWORK_TYPE_TESTNET', '2': 1},
+    {'1': 'NETWORK_TYPE_MAINNET', '2': 2},
+  ],
+};
+
+/// Descriptor for `NetworkType`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List networkTypeDescriptor = $convert.base64Decode(
+    'CgtOZXR3b3JrVHlwZRIcChhORVRXT1JLX1RZUEVfVU5TUEVDSUZJRUQQABIYChRORVRXT1JLX1'
+    'RZUEVfVEVTVE5FVBABEhgKFE5FVFdPUktfVFlQRV9NQUlOTkVUEAI=');
+
+@$core.Deprecated('Use packerChecksumDescriptor instead')
+const PackerChecksum$json = {
+  '1': 'PackerChecksum',
+  '2': [
+    {'1': 'PACKER_CHECKSUM_UNSPECIFIED', '2': 0},
+    {'1': 'PACKER_CHECKSUM_SHA512', '2': 1},
+  ],
+};
+
+/// Descriptor for `PackerChecksum`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List packerChecksumDescriptor = $convert.base64Decode(
+    'Cg5QYWNrZXJDaGVja3N1bRIfChtQQUNLRVJfQ0hFQ0tTVU1fVU5TUEVDSUZJRUQQABIaChZQQU'
+    'NLRVJfQ0hFQ0tTVU1fU0hBNTEyEAE=');
+
+@$core.Deprecated('Use packerCompressionDescriptor instead')
+const PackerCompression$json = {
+  '1': 'PackerCompression',
+  '2': [
+    {'1': 'PACKER_COMPRESSION_UNSPECIFIED', '2': 0},
+    {'1': 'PACKER_COMPRESSION_ZSTD', '2': 1},
+  ],
+};
+
+/// Descriptor for `PackerCompression`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List packerCompressionDescriptor = $convert.base64Decode(
+    'ChFQYWNrZXJDb21wcmVzc2lvbhIiCh5QQUNLRVJfQ09NUFJFU1NJT05fVU5TUEVDSUZJRUQQAB'
+    'IbChdQQUNLRVJfQ09NUFJFU1NJT05fWlNURBAB');
