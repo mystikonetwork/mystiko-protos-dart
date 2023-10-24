@@ -73,52 +73,49 @@ class DepositStatus extends $pb.ProtobufEnum {
   const DepositStatus._($core.int v, $core.String n) : super(v, n);
 }
 
-class TransactionStatus extends $pb.ProtobufEnum {
-  static const TransactionStatus TRANSACTION_STATUS_UNSPECIFIED =
-      TransactionStatus._(
-          0, _omitEnumNames ? '' : 'TRANSACTION_STATUS_UNSPECIFIED');
-  static const TransactionStatus TRANSACTION_STATUS_PENDING =
-      TransactionStatus._(
-          1, _omitEnumNames ? '' : 'TRANSACTION_STATUS_PENDING');
-  static const TransactionStatus TRANSACTION_STATUS_SUCCEEDED =
-      TransactionStatus._(
-          2, _omitEnumNames ? '' : 'TRANSACTION_STATUS_SUCCEEDED');
-  static const TransactionStatus TRANSACTION_STATUS_FAILED =
-      TransactionStatus._(3, _omitEnumNames ? '' : 'TRANSACTION_STATUS_FAILED');
+class SpendStatus extends $pb.ProtobufEnum {
+  static const SpendStatus SPEND_STATUS_UNSPECIFIED =
+      SpendStatus._(0, _omitEnumNames ? '' : 'SPEND_STATUS_UNSPECIFIED');
+  static const SpendStatus SPEND_STATUS_PENDING =
+      SpendStatus._(1, _omitEnumNames ? '' : 'SPEND_STATUS_PENDING');
+  static const SpendStatus SPEND_STATUS_SUCCEEDED =
+      SpendStatus._(2, _omitEnumNames ? '' : 'SPEND_STATUS_SUCCEEDED');
+  static const SpendStatus SPEND_STATUS_FAILED =
+      SpendStatus._(3, _omitEnumNames ? '' : 'SPEND_STATUS_FAILED');
 
-  static const $core.List<TransactionStatus> values = <TransactionStatus>[
-    TRANSACTION_STATUS_UNSPECIFIED,
-    TRANSACTION_STATUS_PENDING,
-    TRANSACTION_STATUS_SUCCEEDED,
-    TRANSACTION_STATUS_FAILED,
+  static const $core.List<SpendStatus> values = <SpendStatus>[
+    SPEND_STATUS_UNSPECIFIED,
+    SPEND_STATUS_PENDING,
+    SPEND_STATUS_SUCCEEDED,
+    SPEND_STATUS_FAILED,
   ];
 
-  static final $core.Map<$core.int, TransactionStatus> _byValue =
+  static final $core.Map<$core.int, SpendStatus> _byValue =
       $pb.ProtobufEnum.initByValue(values);
-  static TransactionStatus? valueOf($core.int value) => _byValue[value];
+  static SpendStatus? valueOf($core.int value) => _byValue[value];
 
-  const TransactionStatus._($core.int v, $core.String n) : super(v, n);
+  const SpendStatus._($core.int v, $core.String n) : super(v, n);
 }
 
-class TransactionType extends $pb.ProtobufEnum {
-  static const TransactionType TRANSACTION_TYPE_UNSPECIFIED = TransactionType._(
-      0, _omitEnumNames ? '' : 'TRANSACTION_TYPE_UNSPECIFIED');
-  static const TransactionType TRANSACTION_TYPE_TRANSFER =
-      TransactionType._(1, _omitEnumNames ? '' : 'TRANSACTION_TYPE_TRANSFER');
-  static const TransactionType TRANSACTION_TYPE_WITHDRAW =
-      TransactionType._(2, _omitEnumNames ? '' : 'TRANSACTION_TYPE_WITHDRAW');
+class SpendType extends $pb.ProtobufEnum {
+  static const SpendType SPEND_TYPE_UNSPECIFIED =
+      SpendType._(0, _omitEnumNames ? '' : 'SPEND_TYPE_UNSPECIFIED');
+  static const SpendType SPEND_TYPE_TRANSFER =
+      SpendType._(1, _omitEnumNames ? '' : 'SPEND_TYPE_TRANSFER');
+  static const SpendType SPEND_TYPE_WITHDRAW =
+      SpendType._(2, _omitEnumNames ? '' : 'SPEND_TYPE_WITHDRAW');
 
-  static const $core.List<TransactionType> values = <TransactionType>[
-    TRANSACTION_TYPE_UNSPECIFIED,
-    TRANSACTION_TYPE_TRANSFER,
-    TRANSACTION_TYPE_WITHDRAW,
+  static const $core.List<SpendType> values = <SpendType>[
+    SPEND_TYPE_UNSPECIFIED,
+    SPEND_TYPE_TRANSFER,
+    SPEND_TYPE_WITHDRAW,
   ];
 
-  static final $core.Map<$core.int, TransactionType> _byValue =
+  static final $core.Map<$core.int, SpendType> _byValue =
       $pb.ProtobufEnum.initByValue(values);
-  static TransactionType? valueOf($core.int value) => _byValue[value];
+  static SpendType? valueOf($core.int value) => _byValue[value];
 
-  const TransactionType._($core.int v, $core.String n) : super(v, n);
+  const SpendType._($core.int v, $core.String n) : super(v, n);
 }
 
 class NetworkType extends $pb.ProtobufEnum {

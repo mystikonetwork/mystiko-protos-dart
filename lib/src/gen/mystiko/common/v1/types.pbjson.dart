@@ -107,3 +107,20 @@ const ProviderType$json = {
 final $typed_data.Uint8List providerTypeDescriptor = $convert.base64Decode(
     'CgxQcm92aWRlclR5cGUSHQoZUFJPVklERVJfVFlQRV9VTlNQRUNJRklFRBAAEhoKFlBST1ZJRE'
     'VSX1RZUEVfRkFJTE9WRVIQARIYChRQUk9WSURFUl9UWVBFX1FVT1JVTRAC');
+
+@$core.Deprecated('Use transactionTypeDescriptor instead')
+const TransactionType$json = {
+  '1': 'TransactionType',
+  '2': [
+    {'1': 'TRANSACTION_TYPE_UNSPECIFIED', '2': 0},
+    {'1': 'TRANSACTION_TYPE_LEGACY', '2': 1},
+    {'1': 'TRANSACTION_TYPE_EIP1559', '2': 2},
+    {'1': 'TRANSACTION_TYPE_EIP2930', '2': 3},
+  ],
+};
+
+/// Descriptor for `TransactionType`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List transactionTypeDescriptor = $convert.base64Decode(
+    'Cg9UcmFuc2FjdGlvblR5cGUSIAocVFJBTlNBQ1RJT05fVFlQRV9VTlNQRUNJRklFRBAAEhsKF1'
+    'RSQU5TQUNUSU9OX1RZUEVfTEVHQUNZEAESHAoYVFJBTlNBQ1RJT05fVFlQRV9FSVAxNTU5EAIS'
+    'HAoYVFJBTlNBQ1RJT05fVFlQRV9FSVAyOTMwEAM=');

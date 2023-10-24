@@ -70,8 +70,16 @@ const ChainConfig$json = {
       '10': 'providerType'
     },
     {
-      '1': 'asset_configs',
+      '1': 'transaction_type',
       '3': 15,
+      '4': 1,
+      '5': 14,
+      '6': '.mystiko.common.v1.TransactionType',
+      '10': 'transactionType'
+    },
+    {
+      '1': 'asset_configs',
+      '3': 16,
       '4': 3,
       '5': 11,
       '6': '.mystiko.config.v1.ChainConfig.AssetConfigsEntry',
@@ -79,7 +87,7 @@ const ChainConfig$json = {
     },
     {
       '1': 'deposit_contract_configs',
-      '3': 16,
+      '3': 17,
       '4': 3,
       '5': 11,
       '6': '.mystiko.config.v1.ChainConfig.DepositContractConfigsEntry',
@@ -87,7 +95,7 @@ const ChainConfig$json = {
     },
     {
       '1': 'pool_contract_configs',
-      '3': 17,
+      '3': 18,
       '4': 3,
       '5': 11,
       '6': '.mystiko.config.v1.ChainConfig.PoolContractConfigsEntry',
@@ -95,20 +103,20 @@ const ChainConfig$json = {
     },
     {
       '1': 'recommended_amounts',
-      '3': 18,
+      '3': 19,
       '4': 3,
       '5': 9,
       '10': 'recommendedAmounts'
     },
     {
       '1': 'provider_configs',
-      '3': 19,
+      '3': 20,
       '4': 3,
       '5': 11,
       '6': '.mystiko.config.v1.ProviderConfig',
       '10': 'providerConfigs'
     },
-    {'1': 'granularities', '3': 20, '4': 3, '5': 4, '10': 'granularities'},
+    {'1': 'granularities', '3': 21, '4': 3, '5': 4, '10': 'granularities'},
   ],
   '3': [
     ChainConfig_AssetConfigsEntry$json,
@@ -181,19 +189,20 @@ final $typed_data.Uint8List chainConfigDescriptor = $convert.base64Decode(
     'ZRIwChRzZXF1ZW5jZXJfZmV0Y2hfc2l6ZRgMIAEoBFISc2VxdWVuY2VyRmV0Y2hTaXplEkoKEW'
     '1haW5fYXNzZXRfY29uZmlnGA0gASgLMh4ubXlzdGlrby5jb25maWcudjEuQXNzZXRDb25maWdS'
     'D21haW5Bc3NldENvbmZpZxJECg1wcm92aWRlcl90eXBlGA4gASgOMh8ubXlzdGlrby5jb21tb2'
-    '4udjEuUHJvdmlkZXJUeXBlUgxwcm92aWRlclR5cGUSVQoNYXNzZXRfY29uZmlncxgPIAMoCzIw'
-    'Lm15c3Rpa28uY29uZmlnLnYxLkNoYWluQ29uZmlnLkFzc2V0Q29uZmlnc0VudHJ5Ugxhc3NldE'
-    'NvbmZpZ3MSdAoYZGVwb3NpdF9jb250cmFjdF9jb25maWdzGBAgAygLMjoubXlzdGlrby5jb25m'
-    'aWcudjEuQ2hhaW5Db25maWcuRGVwb3NpdENvbnRyYWN0Q29uZmlnc0VudHJ5UhZkZXBvc2l0Q2'
-    '9udHJhY3RDb25maWdzEmsKFXBvb2xfY29udHJhY3RfY29uZmlncxgRIAMoCzI3Lm15c3Rpa28u'
-    'Y29uZmlnLnYxLkNoYWluQ29uZmlnLlBvb2xDb250cmFjdENvbmZpZ3NFbnRyeVITcG9vbENvbn'
-    'RyYWN0Q29uZmlncxIvChNyZWNvbW1lbmRlZF9hbW91bnRzGBIgAygJUhJyZWNvbW1lbmRlZEFt'
-    'b3VudHMSTAoQcHJvdmlkZXJfY29uZmlncxgTIAMoCzIhLm15c3Rpa28uY29uZmlnLnYxLlByb3'
-    'ZpZGVyQ29uZmlnUg9wcm92aWRlckNvbmZpZ3MSJAoNZ3JhbnVsYXJpdGllcxgUIAMoBFINZ3Jh'
-    'bnVsYXJpdGllcxpfChFBc3NldENvbmZpZ3NFbnRyeRIQCgNrZXkYASABKAlSA2tleRI0CgV2YW'
-    'x1ZRgCIAEoCzIeLm15c3Rpa28uY29uZmlnLnYxLkFzc2V0Q29uZmlnUgV2YWx1ZToCOAEafAob'
-    'RGVwb3NpdENvbnRyYWN0Q29uZmlnc0VudHJ5EhAKA2tleRgBIAEoCVIDa2V5EkcKBXZhbHVlGA'
-    'IgASgLMjEubXlzdGlrby5jb25maWcuY29udHJhY3QudjEuRGVwb3NpdENvbnRyYWN0Q29uZmln'
-    'UgV2YWx1ZToCOAEadgoYUG9vbENvbnRyYWN0Q29uZmlnc0VudHJ5EhAKA2tleRgBIAEoCVIDa2'
-    'V5EkQKBXZhbHVlGAIgASgLMi4ubXlzdGlrby5jb25maWcuY29udHJhY3QudjEuUG9vbENvbnRy'
-    'YWN0Q29uZmlnUgV2YWx1ZToCOAE=');
+    '4udjEuUHJvdmlkZXJUeXBlUgxwcm92aWRlclR5cGUSTQoQdHJhbnNhY3Rpb25fdHlwZRgPIAEo'
+    'DjIiLm15c3Rpa28uY29tbW9uLnYxLlRyYW5zYWN0aW9uVHlwZVIPdHJhbnNhY3Rpb25UeXBlEl'
+    'UKDWFzc2V0X2NvbmZpZ3MYECADKAsyMC5teXN0aWtvLmNvbmZpZy52MS5DaGFpbkNvbmZpZy5B'
+    'c3NldENvbmZpZ3NFbnRyeVIMYXNzZXRDb25maWdzEnQKGGRlcG9zaXRfY29udHJhY3RfY29uZm'
+    'lncxgRIAMoCzI6Lm15c3Rpa28uY29uZmlnLnYxLkNoYWluQ29uZmlnLkRlcG9zaXRDb250cmFj'
+    'dENvbmZpZ3NFbnRyeVIWZGVwb3NpdENvbnRyYWN0Q29uZmlncxJrChVwb29sX2NvbnRyYWN0X2'
+    'NvbmZpZ3MYEiADKAsyNy5teXN0aWtvLmNvbmZpZy52MS5DaGFpbkNvbmZpZy5Qb29sQ29udHJh'
+    'Y3RDb25maWdzRW50cnlSE3Bvb2xDb250cmFjdENvbmZpZ3MSLwoTcmVjb21tZW5kZWRfYW1vdW'
+    '50cxgTIAMoCVIScmVjb21tZW5kZWRBbW91bnRzEkwKEHByb3ZpZGVyX2NvbmZpZ3MYFCADKAsy'
+    'IS5teXN0aWtvLmNvbmZpZy52MS5Qcm92aWRlckNvbmZpZ1IPcHJvdmlkZXJDb25maWdzEiQKDW'
+    'dyYW51bGFyaXRpZXMYFSADKARSDWdyYW51bGFyaXRpZXMaXwoRQXNzZXRDb25maWdzRW50cnkS'
+    'EAoDa2V5GAEgASgJUgNrZXkSNAoFdmFsdWUYAiABKAsyHi5teXN0aWtvLmNvbmZpZy52MS5Bc3'
+    'NldENvbmZpZ1IFdmFsdWU6AjgBGnwKG0RlcG9zaXRDb250cmFjdENvbmZpZ3NFbnRyeRIQCgNr'
+    'ZXkYASABKAlSA2tleRJHCgV2YWx1ZRgCIAEoCzIxLm15c3Rpa28uY29uZmlnLmNvbnRyYWN0Ln'
+    'YxLkRlcG9zaXRDb250cmFjdENvbmZpZ1IFdmFsdWU6AjgBGnYKGFBvb2xDb250cmFjdENvbmZp'
+    'Z3NFbnRyeRIQCgNrZXkYASABKAlSA2tleRJECgV2YWx1ZRgCIAEoCzIuLm15c3Rpa28uY29uZm'
+    'lnLmNvbnRyYWN0LnYxLlBvb2xDb250cmFjdENvbmZpZ1IFdmFsdWU6AjgB');
