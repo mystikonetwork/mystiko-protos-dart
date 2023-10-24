@@ -36,6 +36,7 @@ class ChainConfig extends $pb.GeneratedMessage {
     $fixnum.Int64? sequencerFetchSize,
     $1.AssetConfig? mainAssetConfig,
     $0.ProviderType? providerType,
+    $0.TransactionType? transactionType,
     $core.Map<$core.String, $1.AssetConfig>? assetConfigs,
     $core.Map<$core.String, $5.DepositContractConfig>? depositContractConfigs,
     $core.Map<$core.String, $3.PoolContractConfig>? poolContractConfigs,
@@ -85,6 +86,9 @@ class ChainConfig extends $pb.GeneratedMessage {
     }
     if (providerType != null) {
       $result.providerType = providerType;
+    }
+    if (transactionType != null) {
+      $result.transactionType = transactionType;
     }
     if (assetConfigs != null) {
       $result.assetConfigs.addAll(assetConfigs);
@@ -147,7 +151,12 @@ class ChainConfig extends $pb.GeneratedMessage {
         defaultOrMaker: $0.ProviderType.PROVIDER_TYPE_UNSPECIFIED,
         valueOf: $0.ProviderType.valueOf,
         enumValues: $0.ProviderType.values)
-    ..m<$core.String, $1.AssetConfig>(15, _omitFieldNames ? '' : 'assetConfigs',
+    ..e<$0.TransactionType>(
+        15, _omitFieldNames ? '' : 'transactionType', $pb.PbFieldType.OE,
+        defaultOrMaker: $0.TransactionType.TRANSACTION_TYPE_UNSPECIFIED,
+        valueOf: $0.TransactionType.valueOf,
+        enumValues: $0.TransactionType.values)
+    ..m<$core.String, $1.AssetConfig>(16, _omitFieldNames ? '' : 'assetConfigs',
         entryClassName: 'ChainConfig.AssetConfigsEntry',
         keyFieldType: $pb.PbFieldType.OS,
         valueFieldType: $pb.PbFieldType.OM,
@@ -155,7 +164,7 @@ class ChainConfig extends $pb.GeneratedMessage {
         valueDefaultOrMaker: $1.AssetConfig.getDefault,
         packageName: const $pb.PackageName('mystiko.config.v1'))
     ..m<$core.String, $5.DepositContractConfig>(
-        16, _omitFieldNames ? '' : 'depositContractConfigs',
+        17, _omitFieldNames ? '' : 'depositContractConfigs',
         entryClassName: 'ChainConfig.DepositContractConfigsEntry',
         keyFieldType: $pb.PbFieldType.OS,
         valueFieldType: $pb.PbFieldType.OM,
@@ -163,19 +172,19 @@ class ChainConfig extends $pb.GeneratedMessage {
         valueDefaultOrMaker: $5.DepositContractConfig.getDefault,
         packageName: const $pb.PackageName('mystiko.config.v1'))
     ..m<$core.String, $3.PoolContractConfig>(
-        17, _omitFieldNames ? '' : 'poolContractConfigs',
+        18, _omitFieldNames ? '' : 'poolContractConfigs',
         entryClassName: 'ChainConfig.PoolContractConfigsEntry',
         keyFieldType: $pb.PbFieldType.OS,
         valueFieldType: $pb.PbFieldType.OM,
         valueCreator: $3.PoolContractConfig.create,
         valueDefaultOrMaker: $3.PoolContractConfig.getDefault,
         packageName: const $pb.PackageName('mystiko.config.v1'))
-    ..pPS(18, _omitFieldNames ? '' : 'recommendedAmounts')
+    ..pPS(19, _omitFieldNames ? '' : 'recommendedAmounts')
     ..pc<$4.ProviderConfig>(
-        19, _omitFieldNames ? '' : 'providerConfigs', $pb.PbFieldType.PM,
+        20, _omitFieldNames ? '' : 'providerConfigs', $pb.PbFieldType.PM,
         subBuilder: $4.ProviderConfig.create)
     ..p<$fixnum.Int64>(
-        20, _omitFieldNames ? '' : 'granularities', $pb.PbFieldType.KU6)
+        21, _omitFieldNames ? '' : 'granularities', $pb.PbFieldType.KU6)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
@@ -371,24 +380,36 @@ class ChainConfig extends $pb.GeneratedMessage {
   void clearProviderType() => clearField(14);
 
   @$pb.TagNumber(15)
-  $core.Map<$core.String, $1.AssetConfig> get assetConfigs => $_getMap(14);
+  $0.TransactionType get transactionType => $_getN(14);
+  @$pb.TagNumber(15)
+  set transactionType($0.TransactionType v) {
+    setField(15, v);
+  }
+
+  @$pb.TagNumber(15)
+  $core.bool hasTransactionType() => $_has(14);
+  @$pb.TagNumber(15)
+  void clearTransactionType() => clearField(15);
 
   @$pb.TagNumber(16)
-  $core.Map<$core.String, $5.DepositContractConfig>
-      get depositContractConfigs => $_getMap(15);
+  $core.Map<$core.String, $1.AssetConfig> get assetConfigs => $_getMap(15);
 
   @$pb.TagNumber(17)
-  $core.Map<$core.String, $3.PoolContractConfig> get poolContractConfigs =>
-      $_getMap(16);
+  $core.Map<$core.String, $5.DepositContractConfig>
+      get depositContractConfigs => $_getMap(16);
 
   @$pb.TagNumber(18)
-  $core.List<$core.String> get recommendedAmounts => $_getList(17);
+  $core.Map<$core.String, $3.PoolContractConfig> get poolContractConfigs =>
+      $_getMap(17);
 
   @$pb.TagNumber(19)
-  $core.List<$4.ProviderConfig> get providerConfigs => $_getList(18);
+  $core.List<$core.String> get recommendedAmounts => $_getList(18);
 
   @$pb.TagNumber(20)
-  $core.List<$fixnum.Int64> get granularities => $_getList(19);
+  $core.List<$4.ProviderConfig> get providerConfigs => $_getList(19);
+
+  @$pb.TagNumber(21)
+  $core.List<$fixnum.Int64> get granularities => $_getList(20);
 }
 
 const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');

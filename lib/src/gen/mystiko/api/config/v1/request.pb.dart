@@ -1,6 +1,6 @@
 //
 //  Generated code. Do not modify.
-//  source: mystiko/config/api/v1/request.proto
+//  source: mystiko/api/config/v1/request.proto
 //
 // @dart = 2.12
 
@@ -29,7 +29,7 @@ class GetConfigRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'GetConfigRequest',
       package: const $pb.PackageName(
-          _omitMessageNames ? '' : 'mystiko.config.api.v1'),
+          _omitMessageNames ? '' : 'mystiko.api.config.v1'),
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
@@ -78,7 +78,7 @@ class FindDefaultCircuitRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'FindDefaultCircuitRequest',
       package: const $pb.PackageName(
-          _omitMessageNames ? '' : 'mystiko.config.api.v1'),
+          _omitMessageNames ? '' : 'mystiko.api.config.v1'),
       createEmptyInstance: create)
     ..e<$0.CircuitType>(
         1, _omitFieldNames ? '' : 'circuitType', $pb.PbFieldType.OE,
@@ -146,7 +146,7 @@ class FindCircuitRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'FindCircuitRequest',
       package: const $pb.PackageName(
-          _omitMessageNames ? '' : 'mystiko.config.api.v1'),
+          _omitMessageNames ? '' : 'mystiko.api.config.v1'),
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'circuitName')
     ..hasRequiredFields = false;
@@ -208,7 +208,7 @@ class FindChainRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'FindChainRequest',
       package: const $pb.PackageName(
-          _omitMessageNames ? '' : 'mystiko.config.api.v1'),
+          _omitMessageNames ? '' : 'mystiko.api.config.v1'),
       createEmptyInstance: create)
     ..a<$fixnum.Int64>(1, _omitFieldNames ? '' : 'chainId', $pb.PbFieldType.OU6,
         defaultOrMaker: $fixnum.Int64.ZERO)
@@ -271,7 +271,7 @@ class FindPeerChainsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'FindPeerChainsRequest',
       package: const $pb.PackageName(
-          _omitMessageNames ? '' : 'mystiko.config.api.v1'),
+          _omitMessageNames ? '' : 'mystiko.api.config.v1'),
       createEmptyInstance: create)
     ..a<$fixnum.Int64>(1, _omitFieldNames ? '' : 'chainId', $pb.PbFieldType.OU6,
         defaultOrMaker: $fixnum.Int64.ZERO)
@@ -340,7 +340,7 @@ class FindAssetSymbolsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'FindAssetSymbolsRequest',
       package: const $pb.PackageName(
-          _omitMessageNames ? '' : 'mystiko.config.api.v1'),
+          _omitMessageNames ? '' : 'mystiko.api.config.v1'),
       createEmptyInstance: create)
     ..a<$fixnum.Int64>(1, _omitFieldNames ? '' : 'chainId', $pb.PbFieldType.OU6,
         defaultOrMaker: $fixnum.Int64.ZERO)
@@ -428,7 +428,7 @@ class FindBridgesRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'FindBridgesRequest',
       package: const $pb.PackageName(
-          _omitMessageNames ? '' : 'mystiko.config.api.v1'),
+          _omitMessageNames ? '' : 'mystiko.api.config.v1'),
       createEmptyInstance: create)
     ..a<$fixnum.Int64>(1, _omitFieldNames ? '' : 'chainId', $pb.PbFieldType.OU6,
         defaultOrMaker: $fixnum.Int64.ZERO)
@@ -519,7 +519,7 @@ class FindBridgeRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'FindBridgeRequest',
       package: const $pb.PackageName(
-          _omitMessageNames ? '' : 'mystiko.config.api.v1'),
+          _omitMessageNames ? '' : 'mystiko.api.config.v1'),
       createEmptyInstance: create)
     ..e<$0.BridgeType>(
         1, _omitFieldNames ? '' : 'bridgeType', $pb.PbFieldType.OE,
@@ -597,7 +597,7 @@ class FindDepositContractRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'FindDepositContractRequest',
       package: const $pb.PackageName(
-          _omitMessageNames ? '' : 'mystiko.config.api.v1'),
+          _omitMessageNames ? '' : 'mystiko.api.config.v1'),
       createEmptyInstance: create)
     ..a<$fixnum.Int64>(1, _omitFieldNames ? '' : 'chainId', $pb.PbFieldType.OU6,
         defaultOrMaker: $fixnum.Int64.ZERO)
@@ -713,7 +713,7 @@ class FindDepositContractByAddressRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'FindDepositContractByAddressRequest',
       package: const $pb.PackageName(
-          _omitMessageNames ? '' : 'mystiko.config.api.v1'),
+          _omitMessageNames ? '' : 'mystiko.api.config.v1'),
       createEmptyInstance: create)
     ..a<$fixnum.Int64>(1, _omitFieldNames ? '' : 'chainId', $pb.PbFieldType.OU6,
         defaultOrMaker: $fixnum.Int64.ZERO)
@@ -806,7 +806,7 @@ class FindPoolContractRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'FindPoolContractRequest',
       package: const $pb.PackageName(
-          _omitMessageNames ? '' : 'mystiko.config.api.v1'),
+          _omitMessageNames ? '' : 'mystiko.api.config.v1'),
       createEmptyInstance: create)
     ..a<$fixnum.Int64>(1, _omitFieldNames ? '' : 'chainId', $pb.PbFieldType.OU6,
         defaultOrMaker: $fixnum.Int64.ZERO)
@@ -922,7 +922,7 @@ class FindPoolContractsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'FindPoolContractsRequest',
       package: const $pb.PackageName(
-          _omitMessageNames ? '' : 'mystiko.config.api.v1'),
+          _omitMessageNames ? '' : 'mystiko.api.config.v1'),
       createEmptyInstance: create)
     ..a<$fixnum.Int64>(1, _omitFieldNames ? '' : 'chainId', $pb.PbFieldType.OU6,
         defaultOrMaker: $fixnum.Int64.ZERO)
@@ -1021,7 +1021,7 @@ class FindPoolContractByAddressRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'FindPoolContractByAddressRequest',
       package: const $pb.PackageName(
-          _omitMessageNames ? '' : 'mystiko.config.api.v1'),
+          _omitMessageNames ? '' : 'mystiko.api.config.v1'),
       createEmptyInstance: create)
     ..a<$fixnum.Int64>(1, _omitFieldNames ? '' : 'chainId', $pb.PbFieldType.OU6,
         defaultOrMaker: $fixnum.Int64.ZERO)
@@ -1106,7 +1106,7 @@ class FindContractByAddressRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'FindContractByAddressRequest',
       package: const $pb.PackageName(
-          _omitMessageNames ? '' : 'mystiko.config.api.v1'),
+          _omitMessageNames ? '' : 'mystiko.api.config.v1'),
       createEmptyInstance: create)
     ..a<$fixnum.Int64>(1, _omitFieldNames ? '' : 'chainId', $pb.PbFieldType.OU6,
         defaultOrMaker: $fixnum.Int64.ZERO)
@@ -1190,7 +1190,7 @@ class GetTransactionUrlRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'GetTransactionUrlRequest',
       package: const $pb.PackageName(
-          _omitMessageNames ? '' : 'mystiko.config.api.v1'),
+          _omitMessageNames ? '' : 'mystiko.api.config.v1'),
       createEmptyInstance: create)
     ..a<$fixnum.Int64>(1, _omitFieldNames ? '' : 'chainId', $pb.PbFieldType.OU6,
         defaultOrMaker: $fixnum.Int64.ZERO)

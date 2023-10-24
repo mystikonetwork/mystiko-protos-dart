@@ -53,38 +53,37 @@ final $typed_data.Uint8List depositStatusDescriptor = $convert.base64Decode(
     'VTX1NSQ19TVUNDRUVERUQQBBIZChVERVBPU0lUX1NUQVRVU19RVUVVRUQQBRIbChdERVBPU0lU'
     'X1NUQVRVU19JTkNMVURFRBAGEhkKFURFUE9TSVRfU1RBVFVTX0ZBSUxFRBAH');
 
-@$core.Deprecated('Use transactionStatusDescriptor instead')
-const TransactionStatus$json = {
-  '1': 'TransactionStatus',
+@$core.Deprecated('Use spendStatusDescriptor instead')
+const SpendStatus$json = {
+  '1': 'SpendStatus',
   '2': [
-    {'1': 'TRANSACTION_STATUS_UNSPECIFIED', '2': 0},
-    {'1': 'TRANSACTION_STATUS_PENDING', '2': 1},
-    {'1': 'TRANSACTION_STATUS_SUCCEEDED', '2': 2},
-    {'1': 'TRANSACTION_STATUS_FAILED', '2': 3},
+    {'1': 'SPEND_STATUS_UNSPECIFIED', '2': 0},
+    {'1': 'SPEND_STATUS_PENDING', '2': 1},
+    {'1': 'SPEND_STATUS_SUCCEEDED', '2': 2},
+    {'1': 'SPEND_STATUS_FAILED', '2': 3},
   ],
 };
 
-/// Descriptor for `TransactionStatus`. Decode as a `google.protobuf.EnumDescriptorProto`.
-final $typed_data.Uint8List transactionStatusDescriptor = $convert.base64Decode(
-    'ChFUcmFuc2FjdGlvblN0YXR1cxIiCh5UUkFOU0FDVElPTl9TVEFUVVNfVU5TUEVDSUZJRUQQAB'
-    'IeChpUUkFOU0FDVElPTl9TVEFUVVNfUEVORElORxABEiAKHFRSQU5TQUNUSU9OX1NUQVRVU19T'
-    'VUNDRUVERUQQAhIdChlUUkFOU0FDVElPTl9TVEFUVVNfRkFJTEVEEAM=');
+/// Descriptor for `SpendStatus`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List spendStatusDescriptor = $convert.base64Decode(
+    'CgtTcGVuZFN0YXR1cxIcChhTUEVORF9TVEFUVVNfVU5TUEVDSUZJRUQQABIYChRTUEVORF9TVE'
+    'FUVVNfUEVORElORxABEhoKFlNQRU5EX1NUQVRVU19TVUNDRUVERUQQAhIXChNTUEVORF9TVEFU'
+    'VVNfRkFJTEVEEAM=');
 
-@$core.Deprecated('Use transactionTypeDescriptor instead')
-const TransactionType$json = {
-  '1': 'TransactionType',
+@$core.Deprecated('Use spendTypeDescriptor instead')
+const SpendType$json = {
+  '1': 'SpendType',
   '2': [
-    {'1': 'TRANSACTION_TYPE_UNSPECIFIED', '2': 0},
-    {'1': 'TRANSACTION_TYPE_TRANSFER', '2': 1},
-    {'1': 'TRANSACTION_TYPE_WITHDRAW', '2': 2},
+    {'1': 'SPEND_TYPE_UNSPECIFIED', '2': 0},
+    {'1': 'SPEND_TYPE_TRANSFER', '2': 1},
+    {'1': 'SPEND_TYPE_WITHDRAW', '2': 2},
   ],
 };
 
-/// Descriptor for `TransactionType`. Decode as a `google.protobuf.EnumDescriptorProto`.
-final $typed_data.Uint8List transactionTypeDescriptor = $convert.base64Decode(
-    'Cg9UcmFuc2FjdGlvblR5cGUSIAocVFJBTlNBQ1RJT05fVFlQRV9VTlNQRUNJRklFRBAAEh0KGV'
-    'RSQU5TQUNUSU9OX1RZUEVfVFJBTlNGRVIQARIdChlUUkFOU0FDVElPTl9UWVBFX1dJVEhEUkFX'
-    'EAI=');
+/// Descriptor for `SpendType`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List spendTypeDescriptor = $convert.base64Decode(
+    'CglTcGVuZFR5cGUSGgoWU1BFTkRfVFlQRV9VTlNQRUNJRklFRBAAEhcKE1NQRU5EX1RZUEVfVF'
+    'JBTlNGRVIQARIXChNTUEVORF9UWVBFX1dJVEhEUkFXEAI=');
 
 @$core.Deprecated('Use networkTypeDescriptor instead')
 const NetworkType$json = {

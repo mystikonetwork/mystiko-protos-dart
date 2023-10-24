@@ -1,6 +1,6 @@
 //
 //  Generated code. Do not modify.
-//  source: mystiko/config/api/v1/response.proto
+//  source: mystiko/api/config/v1/response.proto
 //
 // @dart = 2.12
 
