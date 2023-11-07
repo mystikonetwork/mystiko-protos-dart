@@ -13,16 +13,21 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../common/v1/config.pb.dart' as $13;
+import '../../common/v1/config.pb.dart' as $18;
+import '../../loader/v1/loader.pb.dart' as $21;
 
 class MystikoOptions extends $pb.GeneratedMessage {
   factory MystikoOptions({
-    $13.ConfigOptions? configOptions,
+    $18.ConfigOptions? configOptions,
+    $21.LoaderConfig? loaderConfig,
     $core.String? dbPath,
   }) {
     final $result = create();
     if (configOptions != null) {
       $result.configOptions = configOptions;
+    }
+    if (loaderConfig != null) {
+      $result.loaderConfig = loaderConfig;
     }
     if (dbPath != null) {
       $result.dbPath = dbPath;
@@ -42,9 +47,11 @@ class MystikoOptions extends $pb.GeneratedMessage {
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'mystiko.core.v1'),
       createEmptyInstance: create)
-    ..aOM<$13.ConfigOptions>(1, _omitFieldNames ? '' : 'configOptions',
-        subBuilder: $13.ConfigOptions.create)
-    ..aOS(2, _omitFieldNames ? '' : 'dbPath')
+    ..aOM<$18.ConfigOptions>(1, _omitFieldNames ? '' : 'configOptions',
+        subBuilder: $18.ConfigOptions.create)
+    ..aOM<$21.LoaderConfig>(2, _omitFieldNames ? '' : 'loaderConfig',
+        subBuilder: $21.LoaderConfig.create)
+    ..aOS(3, _omitFieldNames ? '' : 'dbPath')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
@@ -71,9 +78,9 @@ class MystikoOptions extends $pb.GeneratedMessage {
   static MystikoOptions? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $13.ConfigOptions get configOptions => $_getN(0);
+  $18.ConfigOptions get configOptions => $_getN(0);
   @$pb.TagNumber(1)
-  set configOptions($13.ConfigOptions v) {
+  set configOptions($18.ConfigOptions v) {
     setField(1, v);
   }
 
@@ -82,19 +89,33 @@ class MystikoOptions extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearConfigOptions() => clearField(1);
   @$pb.TagNumber(1)
-  $13.ConfigOptions ensureConfigOptions() => $_ensure(0);
+  $18.ConfigOptions ensureConfigOptions() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $core.String get dbPath => $_getSZ(1);
+  $21.LoaderConfig get loaderConfig => $_getN(1);
   @$pb.TagNumber(2)
-  set dbPath($core.String v) {
-    $_setString(1, v);
+  set loaderConfig($21.LoaderConfig v) {
+    setField(2, v);
   }
 
   @$pb.TagNumber(2)
-  $core.bool hasDbPath() => $_has(1);
+  $core.bool hasLoaderConfig() => $_has(1);
   @$pb.TagNumber(2)
-  void clearDbPath() => clearField(2);
+  void clearLoaderConfig() => clearField(2);
+  @$pb.TagNumber(2)
+  $21.LoaderConfig ensureLoaderConfig() => $_ensure(1);
+
+  @$pb.TagNumber(3)
+  $core.String get dbPath => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set dbPath($core.String v) {
+    $_setString(2, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasDbPath() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearDbPath() => clearField(3);
 }
 
 const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');

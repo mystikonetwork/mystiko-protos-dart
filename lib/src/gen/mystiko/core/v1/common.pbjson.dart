@@ -13,23 +13,6 @@ import 'dart:convert' as $convert;
 import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
 
-@$core.Deprecated('Use accountStatusDescriptor instead')
-const AccountStatus$json = {
-  '1': 'AccountStatus',
-  '2': [
-    {'1': 'ACCOUNT_STATUS_UNSPECIFIED', '2': 0},
-    {'1': 'ACCOUNT_STATUS_CREATED', '2': 1},
-    {'1': 'ACCOUNT_STATUS_SCANNING', '2': 2},
-    {'1': 'ACCOUNT_STATUS_SCANNED', '2': 3},
-  ],
-};
-
-/// Descriptor for `AccountStatus`. Decode as a `google.protobuf.EnumDescriptorProto`.
-final $typed_data.Uint8List accountStatusDescriptor = $convert.base64Decode(
-    'Cg1BY2NvdW50U3RhdHVzEh4KGkFDQ09VTlRfU1RBVFVTX1VOU1BFQ0lGSUVEEAASGgoWQUNDT1'
-    'VOVF9TVEFUVVNfQ1JFQVRFRBABEhsKF0FDQ09VTlRfU1RBVFVTX1NDQU5OSU5HEAISGgoWQUND'
-    'T1VOVF9TVEFUVVNfU0NBTk5FRBAD');
-
 @$core.Deprecated('Use depositStatusDescriptor instead')
 const DepositStatus$json = {
   '1': 'DepositStatus',
