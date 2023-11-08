@@ -13,14 +13,22 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
+import 'response.pbenum.dart';
+
+export 'response.pbenum.dart';
+
 enum ApiResponse_Result { data, errorMessage, notSet }
 
 class ApiResponse extends $pb.GeneratedMessage {
   factory ApiResponse({
+    StatusCode? code,
     $core.List<$core.int>? data,
     $core.String? errorMessage,
   }) {
     final $result = create();
+    if (code != null) {
+      $result.code = code;
+    }
     if (data != null) {
       $result.data = data;
     }
@@ -39,18 +47,22 @@ class ApiResponse extends $pb.GeneratedMessage {
 
   static const $core.Map<$core.int, ApiResponse_Result>
       _ApiResponse_ResultByTag = {
-    1: ApiResponse_Result.data,
-    2: ApiResponse_Result.errorMessage,
+    2: ApiResponse_Result.data,
+    3: ApiResponse_Result.errorMessage,
     0: ApiResponse_Result.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ApiResponse',
       package: const $pb.PackageName(_omitMessageNames ? '' : 'mystiko.api.v1'),
       createEmptyInstance: create)
-    ..oo(0, [1, 2])
+    ..oo(0, [2, 3])
+    ..e<StatusCode>(1, _omitFieldNames ? '' : 'code', $pb.PbFieldType.OE,
+        defaultOrMaker: StatusCode.STATUS_CODE_UNSPECIFIED,
+        valueOf: StatusCode.valueOf,
+        enumValues: StatusCode.values)
     ..a<$core.List<$core.int>>(
-        1, _omitFieldNames ? '' : 'data', $pb.PbFieldType.OY)
-    ..aOS(2, _omitFieldNames ? '' : 'errorMessage')
+        2, _omitFieldNames ? '' : 'data', $pb.PbFieldType.OY)
+    ..aOS(3, _omitFieldNames ? '' : 'errorMessage')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
@@ -80,28 +92,40 @@ class ApiResponse extends $pb.GeneratedMessage {
   void clearResult() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
-  $core.List<$core.int> get data => $_getN(0);
+  StatusCode get code => $_getN(0);
   @$pb.TagNumber(1)
+  set code(StatusCode v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasCode() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearCode() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.List<$core.int> get data => $_getN(1);
+  @$pb.TagNumber(2)
   set data($core.List<$core.int> v) {
-    $_setBytes(0, v);
+    $_setBytes(1, v);
   }
 
-  @$pb.TagNumber(1)
-  $core.bool hasData() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearData() => clearField(1);
+  @$pb.TagNumber(2)
+  $core.bool hasData() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearData() => clearField(2);
 
-  @$pb.TagNumber(2)
-  $core.String get errorMessage => $_getSZ(1);
-  @$pb.TagNumber(2)
+  @$pb.TagNumber(3)
+  $core.String get errorMessage => $_getSZ(2);
+  @$pb.TagNumber(3)
   set errorMessage($core.String v) {
-    $_setString(1, v);
+    $_setString(2, v);
   }
 
-  @$pb.TagNumber(2)
-  $core.bool hasErrorMessage() => $_has(1);
-  @$pb.TagNumber(2)
-  void clearErrorMessage() => clearField(2);
+  @$pb.TagNumber(3)
+  $core.bool hasErrorMessage() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearErrorMessage() => clearField(3);
 }
 
 const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');

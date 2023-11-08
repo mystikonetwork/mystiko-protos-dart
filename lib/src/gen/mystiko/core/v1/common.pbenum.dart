@@ -13,30 +13,6 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-class AccountStatus extends $pb.ProtobufEnum {
-  static const AccountStatus ACCOUNT_STATUS_UNSPECIFIED =
-      AccountStatus._(0, _omitEnumNames ? '' : 'ACCOUNT_STATUS_UNSPECIFIED');
-  static const AccountStatus ACCOUNT_STATUS_CREATED =
-      AccountStatus._(1, _omitEnumNames ? '' : 'ACCOUNT_STATUS_CREATED');
-  static const AccountStatus ACCOUNT_STATUS_SCANNING =
-      AccountStatus._(2, _omitEnumNames ? '' : 'ACCOUNT_STATUS_SCANNING');
-  static const AccountStatus ACCOUNT_STATUS_SCANNED =
-      AccountStatus._(3, _omitEnumNames ? '' : 'ACCOUNT_STATUS_SCANNED');
-
-  static const $core.List<AccountStatus> values = <AccountStatus>[
-    ACCOUNT_STATUS_UNSPECIFIED,
-    ACCOUNT_STATUS_CREATED,
-    ACCOUNT_STATUS_SCANNING,
-    ACCOUNT_STATUS_SCANNED,
-  ];
-
-  static final $core.Map<$core.int, AccountStatus> _byValue =
-      $pb.ProtobufEnum.initByValue(values);
-  static AccountStatus? valueOf($core.int value) => _byValue[value];
-
-  const AccountStatus._($core.int v, $core.String n) : super(v, n);
-}
-
 class DepositStatus extends $pb.ProtobufEnum {
   static const DepositStatus DEPOSIT_STATUS_UNSPECIFIED =
       DepositStatus._(0, _omitEnumNames ? '' : 'DEPOSIT_STATUS_UNSPECIFIED');

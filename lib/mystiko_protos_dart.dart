@@ -2,9 +2,11 @@ library mystiko_protos_dart;
 
 export 'package:mystiko_protos_dart/src/gen/mystiko/common/v1/config.pb.dart';
 export 'package:mystiko_protos_dart/src/gen/mystiko/common/v1/types.pb.dart';
+export 'package:mystiko_protos_dart/src/gen/mystiko/api/v1/response.pb.dart';
 export 'package:mystiko_protos_dart/src/gen/mystiko/api/config/v1/request.pb.dart';
 export 'package:mystiko_protos_dart/src/gen/mystiko/api/config/v1/response.pb.dart';
-export 'package:mystiko_protos_dart/src/gen/mystiko/api/v1/response.pb.dart';
+export 'package:mystiko_protos_dart/src/gen/mystiko/api/handler/v1/request.pb.dart';
+export 'package:mystiko_protos_dart/src/gen/mystiko/api/handler/v1/response.pb.dart';
 export 'package:mystiko_protos_dart/src/gen/mystiko/config/bridge/v1/bridge.pb.dart';
 export 'package:mystiko_protos_dart/src/gen/mystiko/config/contract/v1/contract.pb.dart';
 export 'package:mystiko_protos_dart/src/gen/mystiko/config/contract/v1/deposit.pb.dart';
