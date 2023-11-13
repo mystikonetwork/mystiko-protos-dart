@@ -21,5 +21,6 @@ export 'package:mystiko_protos_dart/src/gen/mystiko/core/v1/common.pb.dart';
 export 'package:mystiko_protos_dart/src/gen/mystiko/core/v1/mystiko.pb.dart';
 export 'package:mystiko_protos_dart/src/gen/mystiko/core/handler/v1/account.pb.dart';
 export 'package:mystiko_protos_dart/src/gen/mystiko/core/handler/v1/wallet.pb.dart';
+export 'package:mystiko_protos_dart/src/gen/mystiko/core/document/v1/wallet.pb.dart';
 export 'package:mystiko_protos_dart/src/gen/mystiko/service/v1/client.pb.dart';
 export 'package:mystiko_protos_dart/src/gen/mystiko/storage/v1/filter.pb.dart';
