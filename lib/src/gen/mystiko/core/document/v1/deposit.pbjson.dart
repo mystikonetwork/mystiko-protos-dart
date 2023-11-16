@@ -117,47 +117,45 @@ const Deposit$json = {
       '17': true
     },
     {
-      '1': 'asset_approve_transaction_hash',
+      '1': 'queued_transaction_hash',
       '3': 26,
       '4': 1,
       '5': 9,
       '9': 7,
-      '10': 'assetApproveTransactionHash',
-      '17': true
-    },
-    {
-      '1': 'queued_transaction_hash',
-      '3': 27,
-      '4': 1,
-      '5': 9,
-      '9': 8,
       '10': 'queuedTransactionHash',
       '17': true
     },
     {
       '1': 'included_transaction_hash',
-      '3': 28,
+      '3': 27,
       '4': 1,
       '5': 9,
-      '9': 9,
+      '9': 8,
       '10': 'includedTransactionHash',
       '17': true
     },
     {
       '1': 'src_chain_transaction_hash',
-      '3': 29,
+      '3': 28,
       '4': 1,
       '5': 9,
-      '9': 10,
+      '9': 9,
       '10': 'srcChainTransactionHash',
       '17': true
+    },
+    {
+      '1': 'asset_approve_transaction_hash',
+      '3': 29,
+      '4': 3,
+      '5': 9,
+      '10': 'assetApproveTransactionHash'
     },
     {
       '1': 'error_message',
       '3': 30,
       '4': 1,
       '5': 9,
-      '9': 11,
+      '9': 10,
       '10': 'errorMessage',
       '17': true
     },
@@ -186,7 +184,6 @@ const Deposit$json = {
     {'1': '_bridge_fee_asset_symbol'},
     {'1': '_executor_fee_asset_address'},
     {'1': '_executor_fee_asset_symbol'},
-    {'1': '_asset_approve_transaction_hash'},
     {'1': '_queued_transaction_hash'},
     {'1': '_included_transaction_hash'},
     {'1': '_src_chain_transaction_hash'},
@@ -214,18 +211,17 @@ final $typed_data.Uint8List depositDescriptor = $convert.base64Decode(
     'NSFWJyaWRnZUZlZUFzc2V0QWRkcmVzc4gBARI6ChdicmlkZ2VfZmVlX2Fzc2V0X3N5bWJvbBgX'
     'IAEoCUgEUhRicmlkZ2VGZWVBc3NldFN5bWJvbIgBARJAChpleGVjdXRvcl9mZWVfYXNzZXRfYW'
     'RkcmVzcxgYIAEoCUgFUhdleGVjdXRvckZlZUFzc2V0QWRkcmVzc4gBARI+ChlleGVjdXRvcl9m'
-    'ZWVfYXNzZXRfc3ltYm9sGBkgASgJSAZSFmV4ZWN1dG9yRmVlQXNzZXRTeW1ib2yIAQESSAoeYX'
-    'NzZXRfYXBwcm92ZV90cmFuc2FjdGlvbl9oYXNoGBogASgJSAdSG2Fzc2V0QXBwcm92ZVRyYW5z'
-    'YWN0aW9uSGFzaIgBARI7ChdxdWV1ZWRfdHJhbnNhY3Rpb25faGFzaBgbIAEoCUgIUhVxdWV1ZW'
-    'RUcmFuc2FjdGlvbkhhc2iIAQESPwoZaW5jbHVkZWRfdHJhbnNhY3Rpb25faGFzaBgcIAEoCUgJ'
-    'UhdpbmNsdWRlZFRyYW5zYWN0aW9uSGFzaIgBARJAChpzcmNfY2hhaW5fdHJhbnNhY3Rpb25faG'
-    'FzaBgdIAEoCUgKUhdzcmNDaGFpblRyYW5zYWN0aW9uSGFzaIgBARIoCg1lcnJvcl9tZXNzYWdl'
-    'GB4gASgJSAtSDGVycm9yTWVzc2FnZYgBARI+CgticmlkZ2VfdHlwZRgfIAEoDjIdLm15c3Rpa2'
-    '8uY29tbW9uLnYxLkJyaWRnZVR5cGVSCmJyaWRnZVR5cGUSNgoGc3RhdHVzGCAgASgOMh4ubXlz'
-    'dGlrby5jb3JlLnYxLkRlcG9zaXRTdGF0dXNSBnN0YXR1c0IUChJfYnJpZGdlX2ZlZV9hbW91bn'
-    'RCFgoUX2V4ZWN1dG9yX2ZlZV9hbW91bnRCEAoOX2Fzc2V0X2FkZHJlc3NCGwoZX2JyaWRnZV9m'
-    'ZWVfYXNzZXRfYWRkcmVzc0IaChhfYnJpZGdlX2ZlZV9hc3NldF9zeW1ib2xCHQobX2V4ZWN1dG'
-    '9yX2ZlZV9hc3NldF9hZGRyZXNzQhwKGl9leGVjdXRvcl9mZWVfYXNzZXRfc3ltYm9sQiEKH19h'
-    'c3NldF9hcHByb3ZlX3RyYW5zYWN0aW9uX2hhc2hCGgoYX3F1ZXVlZF90cmFuc2FjdGlvbl9oYX'
-    'NoQhwKGl9pbmNsdWRlZF90cmFuc2FjdGlvbl9oYXNoQh0KG19zcmNfY2hhaW5fdHJhbnNhY3Rp'
-    'b25faGFzaEIQCg5fZXJyb3JfbWVzc2FnZQ==');
+    'ZWVfYXNzZXRfc3ltYm9sGBkgASgJSAZSFmV4ZWN1dG9yRmVlQXNzZXRTeW1ib2yIAQESOwoXcX'
+    'VldWVkX3RyYW5zYWN0aW9uX2hhc2gYGiABKAlIB1IVcXVldWVkVHJhbnNhY3Rpb25IYXNoiAEB'
+    'Ej8KGWluY2x1ZGVkX3RyYW5zYWN0aW9uX2hhc2gYGyABKAlICFIXaW5jbHVkZWRUcmFuc2FjdG'
+    'lvbkhhc2iIAQESQAoac3JjX2NoYWluX3RyYW5zYWN0aW9uX2hhc2gYHCABKAlICVIXc3JjQ2hh'
+    'aW5UcmFuc2FjdGlvbkhhc2iIAQESQwoeYXNzZXRfYXBwcm92ZV90cmFuc2FjdGlvbl9oYXNoGB'
+    '0gAygJUhthc3NldEFwcHJvdmVUcmFuc2FjdGlvbkhhc2gSKAoNZXJyb3JfbWVzc2FnZRgeIAEo'
+    'CUgKUgxlcnJvck1lc3NhZ2WIAQESPgoLYnJpZGdlX3R5cGUYHyABKA4yHS5teXN0aWtvLmNvbW'
+    '1vbi52MS5CcmlkZ2VUeXBlUgpicmlkZ2VUeXBlEjYKBnN0YXR1cxggIAEoDjIeLm15c3Rpa28u'
+    'Y29yZS52MS5EZXBvc2l0U3RhdHVzUgZzdGF0dXNCFAoSX2JyaWRnZV9mZWVfYW1vdW50QhYKFF'
+    '9leGVjdXRvcl9mZWVfYW1vdW50QhAKDl9hc3NldF9hZGRyZXNzQhsKGV9icmlkZ2VfZmVlX2Fz'
+    'c2V0X2FkZHJlc3NCGgoYX2JyaWRnZV9mZWVfYXNzZXRfc3ltYm9sQh0KG19leGVjdXRvcl9mZW'
+    'VfYXNzZXRfYWRkcmVzc0IcChpfZXhlY3V0b3JfZmVlX2Fzc2V0X3N5bWJvbEIaChhfcXVldWVk'
+    'X3RyYW5zYWN0aW9uX2hhc2hCHAoaX2luY2x1ZGVkX3RyYW5zYWN0aW9uX2hhc2hCHQobX3NyY1'
+    '9jaGFpbl90cmFuc2FjdGlvbl9oYXNoQhAKDl9lcnJvcl9tZXNzYWdl');

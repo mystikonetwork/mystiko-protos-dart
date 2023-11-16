@@ -15,23 +15,23 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'transaction.pb.dart' as $22;
+import 'transaction.pb.dart' as $18;
 import 'transaction.pbjson.dart';
 
 export 'transaction.pb.dart';
 
 abstract class TransactionServiceBase extends $pb.GeneratedService {
-  $async.Future<$22.GetAddressResponse> getAddress(
-      $pb.ServerContext ctx, $22.GetAddressRequest request);
-  $async.Future<$22.SendTransactionResponse> sendTransaction(
-      $pb.ServerContext ctx, $22.SendTransactionRequest request);
+  $async.Future<$18.GetAddressResponse> getAddress(
+      $pb.ServerContext ctx, $18.GetAddressRequest request);
+  $async.Future<$18.SendTransactionResponse> sendTransaction(
+      $pb.ServerContext ctx, $18.SendTransactionRequest request);
 
   $pb.GeneratedMessage createRequest($core.String methodName) {
     switch (methodName) {
       case 'GetAddress':
-        return $22.GetAddressRequest();
+        return $18.GetAddressRequest();
       case 'SendTransaction':
-        return $22.SendTransactionRequest();
+        return $18.SendTransactionRequest();
       default:
         throw $core.ArgumentError('Unknown method: $methodName');
     }
@@ -41,9 +41,9 @@ abstract class TransactionServiceBase extends $pb.GeneratedService {
       $core.String methodName, $pb.GeneratedMessage request) {
     switch (methodName) {
       case 'GetAddress':
-        return this.getAddress(ctx, request as $22.GetAddressRequest);
+        return this.getAddress(ctx, request as $18.GetAddressRequest);
       case 'SendTransaction':
-        return this.sendTransaction(ctx, request as $22.SendTransactionRequest);
+        return this.sendTransaction(ctx, request as $18.SendTransactionRequest);
       default:
         throw $core.ArgumentError('Unknown method: $methodName');
     }

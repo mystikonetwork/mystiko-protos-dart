@@ -788,6 +788,7 @@ class QueryFilter extends $pb.GeneratedMessage {
     $fixnum.Int64? limit,
     $fixnum.Int64? offset,
     OrderBy? orderBy,
+    Condition? additionalCondition,
   }) {
     final $result = create();
     if (conditions != null) {
@@ -804,6 +805,9 @@ class QueryFilter extends $pb.GeneratedMessage {
     }
     if (orderBy != null) {
       $result.orderBy = orderBy;
+    }
+    if (additionalCondition != null) {
+      $result.additionalCondition = additionalCondition;
     }
     return $result;
   }
@@ -833,6 +837,8 @@ class QueryFilter extends $pb.GeneratedMessage {
         defaultOrMaker: $fixnum.Int64.ZERO)
     ..aOM<OrderBy>(5, _omitFieldNames ? '' : 'orderBy',
         subBuilder: OrderBy.create)
+    ..aOM<Condition>(6, _omitFieldNames ? '' : 'additionalCondition',
+        subBuilder: Condition.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
@@ -909,6 +915,20 @@ class QueryFilter extends $pb.GeneratedMessage {
   void clearOrderBy() => clearField(5);
   @$pb.TagNumber(5)
   OrderBy ensureOrderBy() => $_ensure(4);
+
+  @$pb.TagNumber(6)
+  Condition get additionalCondition => $_getN(5);
+  @$pb.TagNumber(6)
+  set additionalCondition(Condition v) {
+    setField(6, v);
+  }
+
+  @$pb.TagNumber(6)
+  $core.bool hasAdditionalCondition() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearAdditionalCondition() => clearField(6);
+  @$pb.TagNumber(6)
+  Condition ensureAdditionalCondition() => $_ensure(5);
 }
 
 const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');

@@ -44,10 +44,10 @@ class Deposit extends $pb.GeneratedMessage {
     $core.String? bridgeFeeAssetSymbol,
     $core.String? executorFeeAssetAddress,
     $core.String? executorFeeAssetSymbol,
-    $core.String? assetApproveTransactionHash,
     $core.String? queuedTransactionHash,
     $core.String? includedTransactionHash,
     $core.String? srcChainTransactionHash,
+    $core.Iterable<$core.String>? assetApproveTransactionHash,
     $core.String? errorMessage,
     $0.BridgeType? bridgeType,
     $6.DepositStatus? status,
@@ -128,9 +128,6 @@ class Deposit extends $pb.GeneratedMessage {
     if (executorFeeAssetSymbol != null) {
       $result.executorFeeAssetSymbol = executorFeeAssetSymbol;
     }
-    if (assetApproveTransactionHash != null) {
-      $result.assetApproveTransactionHash = assetApproveTransactionHash;
-    }
     if (queuedTransactionHash != null) {
       $result.queuedTransactionHash = queuedTransactionHash;
     }
@@ -139,6 +136,9 @@ class Deposit extends $pb.GeneratedMessage {
     }
     if (srcChainTransactionHash != null) {
       $result.srcChainTransactionHash = srcChainTransactionHash;
+    }
+    if (assetApproveTransactionHash != null) {
+      $result.assetApproveTransactionHash.addAll(assetApproveTransactionHash);
     }
     if (errorMessage != null) {
       $result.errorMessage = errorMessage;
@@ -199,10 +199,10 @@ class Deposit extends $pb.GeneratedMessage {
     ..aOS(23, _omitFieldNames ? '' : 'bridgeFeeAssetSymbol')
     ..aOS(24, _omitFieldNames ? '' : 'executorFeeAssetAddress')
     ..aOS(25, _omitFieldNames ? '' : 'executorFeeAssetSymbol')
-    ..aOS(26, _omitFieldNames ? '' : 'assetApproveTransactionHash')
-    ..aOS(27, _omitFieldNames ? '' : 'queuedTransactionHash')
-    ..aOS(28, _omitFieldNames ? '' : 'includedTransactionHash')
-    ..aOS(29, _omitFieldNames ? '' : 'srcChainTransactionHash')
+    ..aOS(26, _omitFieldNames ? '' : 'queuedTransactionHash')
+    ..aOS(27, _omitFieldNames ? '' : 'includedTransactionHash')
+    ..aOS(28, _omitFieldNames ? '' : 'srcChainTransactionHash')
+    ..pPS(29, _omitFieldNames ? '' : 'assetApproveTransactionHash')
     ..aOS(30, _omitFieldNames ? '' : 'errorMessage')
     ..e<$0.BridgeType>(
         31, _omitFieldNames ? '' : 'bridgeType', $pb.PbFieldType.OE,
@@ -538,52 +538,43 @@ class Deposit extends $pb.GeneratedMessage {
   void clearExecutorFeeAssetSymbol() => clearField(25);
 
   @$pb.TagNumber(26)
-  $core.String get assetApproveTransactionHash => $_getSZ(25);
+  $core.String get queuedTransactionHash => $_getSZ(25);
   @$pb.TagNumber(26)
-  set assetApproveTransactionHash($core.String v) {
+  set queuedTransactionHash($core.String v) {
     $_setString(25, v);
   }
 
   @$pb.TagNumber(26)
-  $core.bool hasAssetApproveTransactionHash() => $_has(25);
+  $core.bool hasQueuedTransactionHash() => $_has(25);
   @$pb.TagNumber(26)
-  void clearAssetApproveTransactionHash() => clearField(26);
+  void clearQueuedTransactionHash() => clearField(26);
 
   @$pb.TagNumber(27)
-  $core.String get queuedTransactionHash => $_getSZ(26);
+  $core.String get includedTransactionHash => $_getSZ(26);
   @$pb.TagNumber(27)
-  set queuedTransactionHash($core.String v) {
+  set includedTransactionHash($core.String v) {
     $_setString(26, v);
   }
 
   @$pb.TagNumber(27)
-  $core.bool hasQueuedTransactionHash() => $_has(26);
+  $core.bool hasIncludedTransactionHash() => $_has(26);
   @$pb.TagNumber(27)
-  void clearQueuedTransactionHash() => clearField(27);
+  void clearIncludedTransactionHash() => clearField(27);
 
   @$pb.TagNumber(28)
-  $core.String get includedTransactionHash => $_getSZ(27);
+  $core.String get srcChainTransactionHash => $_getSZ(27);
   @$pb.TagNumber(28)
-  set includedTransactionHash($core.String v) {
+  set srcChainTransactionHash($core.String v) {
     $_setString(27, v);
   }
 
   @$pb.TagNumber(28)
-  $core.bool hasIncludedTransactionHash() => $_has(27);
+  $core.bool hasSrcChainTransactionHash() => $_has(27);
   @$pb.TagNumber(28)
-  void clearIncludedTransactionHash() => clearField(28);
+  void clearSrcChainTransactionHash() => clearField(28);
 
   @$pb.TagNumber(29)
-  $core.String get srcChainTransactionHash => $_getSZ(28);
-  @$pb.TagNumber(29)
-  set srcChainTransactionHash($core.String v) {
-    $_setString(28, v);
-  }
-
-  @$pb.TagNumber(29)
-  $core.bool hasSrcChainTransactionHash() => $_has(28);
-  @$pb.TagNumber(29)
-  void clearSrcChainTransactionHash() => clearField(29);
+  $core.List<$core.String> get assetApproveTransactionHash => $_getList(28);
 
   @$pb.TagNumber(30)
   $core.String get errorMessage => $_getSZ(29);

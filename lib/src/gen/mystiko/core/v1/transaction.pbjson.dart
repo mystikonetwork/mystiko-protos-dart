@@ -17,26 +17,15 @@ import 'dart:typed_data' as $typed_data;
 const AccessListItem$json = {
   '1': 'AccessListItem',
   '2': [
-    {
-      '1': 'address',
-      '3': 1,
-      '4': 1,
-      '5': 9,
-      '9': 0,
-      '10': 'address',
-      '17': true
-    },
+    {'1': 'address', '3': 1, '4': 1, '5': 9, '10': 'address'},
     {'1': 'storage_keys', '3': 2, '4': 3, '5': 9, '10': 'storageKeys'},
-  ],
-  '8': [
-    {'1': '_address'},
   ],
 };
 
 /// Descriptor for `AccessListItem`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List accessListItemDescriptor = $convert.base64Decode(
-    'Cg5BY2Nlc3NMaXN0SXRlbRIdCgdhZGRyZXNzGAEgASgJSABSB2FkZHJlc3OIAQESIQoMc3Rvcm'
-    'FnZV9rZXlzGAIgAygJUgtzdG9yYWdlS2V5c0IKCghfYWRkcmVzcw==');
+    'Cg5BY2Nlc3NMaXN0SXRlbRIYCgdhZGRyZXNzGAEgASgJUgdhZGRyZXNzEiEKDHN0b3JhZ2Vfa2'
+    'V5cxgCIAMoCVILc3RvcmFnZUtleXM=');
 
 @$core.Deprecated('Use legacyTransactionDescriptor instead')
 const LegacyTransaction$json = {

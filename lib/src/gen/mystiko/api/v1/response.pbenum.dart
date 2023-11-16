@@ -46,10 +46,12 @@ class StatusCode extends $pb.ProtobufEnum {
       StatusCode._(14, _omitEnumNames ? '' : 'STATUS_CODE_DATA_LOADER_ERROR');
   static const StatusCode STATUS_CODE_SYNCHRONIZER_ERROR =
       StatusCode._(15, _omitEnumNames ? '' : 'STATUS_CODE_SYNCHRONIZER_ERROR');
+  static const StatusCode STATUS_CODE_SCANNER_ERROR =
+      StatusCode._(16, _omitEnumNames ? '' : 'STATUS_CODE_SCANNER_ERROR');
   static const StatusCode STATUS_CODE_GET_MYSTIKO_GUARD_ERROR = StatusCode._(
-      16, _omitEnumNames ? '' : 'STATUS_CODE_GET_MYSTIKO_GUARD_ERROR');
+      17, _omitEnumNames ? '' : 'STATUS_CODE_GET_MYSTIKO_GUARD_ERROR');
   static const StatusCode STATUS_CODE_DESERIALIZE_MESSAGE_ERROR = StatusCode._(
-      17, _omitEnumNames ? '' : 'STATUS_CODE_DESERIALIZE_MESSAGE_ERROR');
+      18, _omitEnumNames ? '' : 'STATUS_CODE_DESERIALIZE_MESSAGE_ERROR');
 
   static const $core.List<StatusCode> values = <StatusCode>[
     STATUS_CODE_UNSPECIFIED,
@@ -68,6 +70,7 @@ class StatusCode extends $pb.ProtobufEnum {
     STATUS_CODE_INVALID_PROVIDER_URL_ERROR,
     STATUS_CODE_DATA_LOADER_ERROR,
     STATUS_CODE_SYNCHRONIZER_ERROR,
+    STATUS_CODE_SCANNER_ERROR,
     STATUS_CODE_GET_MYSTIKO_GUARD_ERROR,
     STATUS_CODE_DESERIALIZE_MESSAGE_ERROR,
   ];
