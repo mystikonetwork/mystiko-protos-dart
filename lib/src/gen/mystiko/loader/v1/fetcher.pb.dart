@@ -14,8 +14,8 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../common/v1/types.pbenum.dart' as $0;
-import '../../service/v1/client.pb.dart' as $7;
+import '../../common/v1/types.pbenum.dart' as $1;
+import '../../service/v1/client.pb.dart' as $8;
 
 export 'fetcher.pbenum.dart';
 
@@ -518,7 +518,7 @@ class ProviderFetcherChainConfig extends $pb.GeneratedMessage {
   factory ProviderFetcherChainConfig({
     $core.Map<$core.int, $core.String>? urls,
     $fixnum.Int64? delayNumBlocks,
-    $0.ProviderType? providerType,
+    $1.ProviderType? providerType,
   }) {
     final $result = create();
     if (urls != null) {
@@ -553,11 +553,11 @@ class ProviderFetcherChainConfig extends $pb.GeneratedMessage {
     ..a<$fixnum.Int64>(
         2, _omitFieldNames ? '' : 'delayNumBlocks', $pb.PbFieldType.OU6,
         defaultOrMaker: $fixnum.Int64.ZERO)
-    ..e<$0.ProviderType>(
+    ..e<$1.ProviderType>(
         3, _omitFieldNames ? '' : 'providerType', $pb.PbFieldType.OE,
-        defaultOrMaker: $0.ProviderType.PROVIDER_TYPE_UNSPECIFIED,
-        valueOf: $0.ProviderType.valueOf,
-        enumValues: $0.ProviderType.values)
+        defaultOrMaker: $1.ProviderType.PROVIDER_TYPE_UNSPECIFIED,
+        valueOf: $1.ProviderType.valueOf,
+        enumValues: $1.ProviderType.values)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
@@ -602,9 +602,9 @@ class ProviderFetcherChainConfig extends $pb.GeneratedMessage {
   void clearDelayNumBlocks() => clearField(2);
 
   @$pb.TagNumber(3)
-  $0.ProviderType get providerType => $_getN(2);
+  $1.ProviderType get providerType => $_getN(2);
   @$pb.TagNumber(3)
-  set providerType($0.ProviderType v) {
+  set providerType($1.ProviderType v) {
     setField(3, v);
   }
 
@@ -679,7 +679,7 @@ class PackerFetcherConfig extends $pb.GeneratedMessage {
 class SequencerFetcherConfig extends $pb.GeneratedMessage {
   factory SequencerFetcherConfig({
     $core.bool? skipValidation,
-    $7.ClientOptions? options,
+    $8.ClientOptions? options,
   }) {
     final $result = create();
     if (skipValidation != null) {
@@ -704,8 +704,8 @@ class SequencerFetcherConfig extends $pb.GeneratedMessage {
           const $pb.PackageName(_omitMessageNames ? '' : 'mystiko.loader.v1'),
       createEmptyInstance: create)
     ..aOB(1, _omitFieldNames ? '' : 'skipValidation')
-    ..aOM<$7.ClientOptions>(2, _omitFieldNames ? '' : 'options',
-        subBuilder: $7.ClientOptions.create)
+    ..aOM<$8.ClientOptions>(2, _omitFieldNames ? '' : 'options',
+        subBuilder: $8.ClientOptions.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
@@ -746,9 +746,9 @@ class SequencerFetcherConfig extends $pb.GeneratedMessage {
   void clearSkipValidation() => clearField(1);
 
   @$pb.TagNumber(2)
-  $7.ClientOptions get options => $_getN(1);
+  $8.ClientOptions get options => $_getN(1);
   @$pb.TagNumber(2)
-  set options($7.ClientOptions v) {
+  set options($8.ClientOptions v) {
     setField(2, v);
   }
 
@@ -757,7 +757,7 @@ class SequencerFetcherConfig extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearOptions() => clearField(2);
   @$pb.TagNumber(2)
-  $7.ClientOptions ensureOptions() => $_ensure(1);
+  $8.ClientOptions ensureOptions() => $_ensure(1);
 }
 
 const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');

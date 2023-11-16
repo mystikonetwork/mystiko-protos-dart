@@ -14,8 +14,8 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../common/v1/types.pbenum.dart' as $0;
-import '../../v1/transaction.pb.dart' as $18;
+import '../../../common/v1/types.pbenum.dart' as $1;
+import '../../v1/transaction.pb.dart' as $0;
 
 class QuoteDepositOptions extends $pb.GeneratedMessage {
   factory QuoteDepositOptions({
@@ -23,7 +23,7 @@ class QuoteDepositOptions extends $pb.GeneratedMessage {
     $core.String? assetSymbol,
     $fixnum.Int64? queryTimeoutMs,
     $fixnum.Int64? dstChainId,
-    $0.BridgeType? bridgeType,
+    $1.BridgeType? bridgeType,
   }) {
     final $result = create();
     if (chainId != null) {
@@ -65,11 +65,11 @@ class QuoteDepositOptions extends $pb.GeneratedMessage {
     ..a<$fixnum.Int64>(
         4, _omitFieldNames ? '' : 'dstChainId', $pb.PbFieldType.OU6,
         defaultOrMaker: $fixnum.Int64.ZERO)
-    ..e<$0.BridgeType>(
+    ..e<$1.BridgeType>(
         5, _omitFieldNames ? '' : 'bridgeType', $pb.PbFieldType.OE,
-        defaultOrMaker: $0.BridgeType.BRIDGE_TYPE_UNSPECIFIED,
-        valueOf: $0.BridgeType.valueOf,
-        enumValues: $0.BridgeType.values)
+        defaultOrMaker: $1.BridgeType.BRIDGE_TYPE_UNSPECIFIED,
+        valueOf: $1.BridgeType.valueOf,
+        enumValues: $1.BridgeType.values)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
@@ -144,9 +144,9 @@ class QuoteDepositOptions extends $pb.GeneratedMessage {
   void clearDstChainId() => clearField(4);
 
   @$pb.TagNumber(5)
-  $0.BridgeType get bridgeType => $_getN(4);
+  $1.BridgeType get bridgeType => $_getN(4);
   @$pb.TagNumber(5)
-  set bridgeType($0.BridgeType v) {
+  set bridgeType($1.BridgeType v) {
     setField(5, v);
   }
 
@@ -168,7 +168,7 @@ class CreateDepositOptions extends $pb.GeneratedMessage {
     $core.double? executorFeeAmount,
     $fixnum.Int64? queryTimeoutMs,
     DepositQuote? depositQuote,
-    $0.BridgeType? bridgeType,
+    $1.BridgeType? bridgeType,
   }) {
     final $result = create();
     if (chainId != null) {
@@ -238,11 +238,11 @@ class CreateDepositOptions extends $pb.GeneratedMessage {
         defaultOrMaker: $fixnum.Int64.ZERO)
     ..aOM<DepositQuote>(10, _omitFieldNames ? '' : 'depositQuote',
         subBuilder: DepositQuote.create)
-    ..e<$0.BridgeType>(
+    ..e<$1.BridgeType>(
         11, _omitFieldNames ? '' : 'bridgeType', $pb.PbFieldType.OE,
-        defaultOrMaker: $0.BridgeType.BRIDGE_TYPE_UNSPECIFIED,
-        valueOf: $0.BridgeType.valueOf,
-        enumValues: $0.BridgeType.values)
+        defaultOrMaker: $1.BridgeType.BRIDGE_TYPE_UNSPECIFIED,
+        valueOf: $1.BridgeType.valueOf,
+        enumValues: $1.BridgeType.values)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
@@ -392,9 +392,9 @@ class CreateDepositOptions extends $pb.GeneratedMessage {
   DepositQuote ensureDepositQuote() => $_ensure(9);
 
   @$pb.TagNumber(11)
-  $0.BridgeType get bridgeType => $_getN(10);
+  $1.BridgeType get bridgeType => $_getN(10);
   @$pb.TagNumber(11)
-  set bridgeType($0.BridgeType v) {
+  set bridgeType($1.BridgeType v) {
     setField(11, v);
   }
 
@@ -414,8 +414,8 @@ class SendDepositOptions extends $pb.GeneratedMessage {
     $fixnum.Int64? txSendTimeoutMs,
     $fixnum.Int64? txWaitTimeoutMs,
     $fixnum.Int64? txWaitIntervalMs,
-    $18.Transaction? assetApproveTx,
-    $18.Transaction? depositTx,
+    $0.Transaction? assetApproveTx,
+    $0.Transaction? depositTx,
   }) {
     final $result = create();
     if (depositId != null) {
@@ -483,10 +483,10 @@ class SendDepositOptions extends $pb.GeneratedMessage {
     ..a<$fixnum.Int64>(
         8, _omitFieldNames ? '' : 'txWaitIntervalMs', $pb.PbFieldType.OU6,
         defaultOrMaker: $fixnum.Int64.ZERO)
-    ..aOM<$18.Transaction>(9, _omitFieldNames ? '' : 'assetApproveTx',
-        subBuilder: $18.Transaction.create)
-    ..aOM<$18.Transaction>(10, _omitFieldNames ? '' : 'depositTx',
-        subBuilder: $18.Transaction.create)
+    ..aOM<$0.Transaction>(9, _omitFieldNames ? '' : 'assetApproveTx',
+        subBuilder: $0.Transaction.create)
+    ..aOM<$0.Transaction>(10, _omitFieldNames ? '' : 'depositTx',
+        subBuilder: $0.Transaction.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
@@ -609,9 +609,9 @@ class SendDepositOptions extends $pb.GeneratedMessage {
   void clearTxWaitIntervalMs() => clearField(8);
 
   @$pb.TagNumber(9)
-  $18.Transaction get assetApproveTx => $_getN(8);
+  $0.Transaction get assetApproveTx => $_getN(8);
   @$pb.TagNumber(9)
-  set assetApproveTx($18.Transaction v) {
+  set assetApproveTx($0.Transaction v) {
     setField(9, v);
   }
 
@@ -620,12 +620,12 @@ class SendDepositOptions extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   void clearAssetApproveTx() => clearField(9);
   @$pb.TagNumber(9)
-  $18.Transaction ensureAssetApproveTx() => $_ensure(8);
+  $0.Transaction ensureAssetApproveTx() => $_ensure(8);
 
   @$pb.TagNumber(10)
-  $18.Transaction get depositTx => $_getN(9);
+  $0.Transaction get depositTx => $_getN(9);
   @$pb.TagNumber(10)
-  set depositTx($18.Transaction v) {
+  set depositTx($0.Transaction v) {
     setField(10, v);
   }
 
@@ -634,7 +634,7 @@ class SendDepositOptions extends $pb.GeneratedMessage {
   @$pb.TagNumber(10)
   void clearDepositTx() => clearField(10);
   @$pb.TagNumber(10)
-  $18.Transaction ensureDepositTx() => $_ensure(9);
+  $0.Transaction ensureDepositTx() => $_ensure(9);
 }
 
 class DepositQuote extends $pb.GeneratedMessage {
@@ -843,7 +843,7 @@ class DepositSummary extends $pb.GeneratedMessage {
     $core.String? bridgeFeeAssetSymbol,
     $core.double? executorFeeAmount,
     $core.String? executorFeeAssetSymbol,
-    $0.BridgeType? bridgeType,
+    $1.BridgeType? bridgeType,
     $core.Map<$core.String, $core.double>? totalAmounts,
   }) {
     final $result = create();
@@ -918,11 +918,11 @@ class DepositSummary extends $pb.GeneratedMessage {
     ..a<$core.double>(
         10, _omitFieldNames ? '' : 'executorFeeAmount', $pb.PbFieldType.OD)
     ..aOS(11, _omitFieldNames ? '' : 'executorFeeAssetSymbol')
-    ..e<$0.BridgeType>(
+    ..e<$1.BridgeType>(
         12, _omitFieldNames ? '' : 'bridgeType', $pb.PbFieldType.OE,
-        defaultOrMaker: $0.BridgeType.BRIDGE_TYPE_UNSPECIFIED,
-        valueOf: $0.BridgeType.valueOf,
-        enumValues: $0.BridgeType.values)
+        defaultOrMaker: $1.BridgeType.BRIDGE_TYPE_UNSPECIFIED,
+        valueOf: $1.BridgeType.valueOf,
+        enumValues: $1.BridgeType.values)
     ..m<$core.String, $core.double>(13, _omitFieldNames ? '' : 'totalAmounts',
         entryClassName: 'DepositSummary.TotalAmountsEntry',
         keyFieldType: $pb.PbFieldType.OS,
@@ -1086,9 +1086,9 @@ class DepositSummary extends $pb.GeneratedMessage {
   void clearExecutorFeeAssetSymbol() => clearField(11);
 
   @$pb.TagNumber(12)
-  $0.BridgeType get bridgeType => $_getN(11);
+  $1.BridgeType get bridgeType => $_getN(11);
   @$pb.TagNumber(12)
-  set bridgeType($0.BridgeType v) {
+  set bridgeType($1.BridgeType v) {
     setField(12, v);
   }
 

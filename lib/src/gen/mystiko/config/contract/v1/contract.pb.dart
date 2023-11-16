@@ -14,8 +14,8 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../common/v1/types.pbenum.dart' as $0;
-import '../../v1/asset.pb.dart' as $1;
+import '../../../common/v1/types.pbenum.dart' as $1;
+import '../../v1/asset.pb.dart' as $2;
 
 class ContractConfig extends $pb.GeneratedMessage {
   factory ContractConfig({
@@ -25,9 +25,9 @@ class ContractConfig extends $pb.GeneratedMessage {
     $fixnum.Int64? startBlock,
     $core.bool? disabled,
     $core.String? minRollupFee,
-    $1.AssetConfig? assetConfig,
-    $0.BridgeType? bridgeType,
-    $0.ContractType? contractType,
+    $2.AssetConfig? assetConfig,
+    $1.BridgeType? bridgeType,
+    $1.ContractType? contractType,
   }) {
     final $result = create();
     if (version != null) {
@@ -80,18 +80,18 @@ class ContractConfig extends $pb.GeneratedMessage {
         defaultOrMaker: $fixnum.Int64.ZERO)
     ..aOB(5, _omitFieldNames ? '' : 'disabled')
     ..aOS(6, _omitFieldNames ? '' : 'minRollupFee')
-    ..aOM<$1.AssetConfig>(7, _omitFieldNames ? '' : 'assetConfig',
-        subBuilder: $1.AssetConfig.create)
-    ..e<$0.BridgeType>(
+    ..aOM<$2.AssetConfig>(7, _omitFieldNames ? '' : 'assetConfig',
+        subBuilder: $2.AssetConfig.create)
+    ..e<$1.BridgeType>(
         8, _omitFieldNames ? '' : 'bridgeType', $pb.PbFieldType.OE,
-        defaultOrMaker: $0.BridgeType.BRIDGE_TYPE_UNSPECIFIED,
-        valueOf: $0.BridgeType.valueOf,
-        enumValues: $0.BridgeType.values)
-    ..e<$0.ContractType>(
+        defaultOrMaker: $1.BridgeType.BRIDGE_TYPE_UNSPECIFIED,
+        valueOf: $1.BridgeType.valueOf,
+        enumValues: $1.BridgeType.values)
+    ..e<$1.ContractType>(
         9, _omitFieldNames ? '' : 'contractType', $pb.PbFieldType.OE,
-        defaultOrMaker: $0.ContractType.CONTRACT_TYPE_UNSPECIFIED,
-        valueOf: $0.ContractType.valueOf,
-        enumValues: $0.ContractType.values)
+        defaultOrMaker: $1.ContractType.CONTRACT_TYPE_UNSPECIFIED,
+        valueOf: $1.ContractType.valueOf,
+        enumValues: $1.ContractType.values)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
@@ -190,9 +190,9 @@ class ContractConfig extends $pb.GeneratedMessage {
   void clearMinRollupFee() => clearField(6);
 
   @$pb.TagNumber(7)
-  $1.AssetConfig get assetConfig => $_getN(6);
+  $2.AssetConfig get assetConfig => $_getN(6);
   @$pb.TagNumber(7)
-  set assetConfig($1.AssetConfig v) {
+  set assetConfig($2.AssetConfig v) {
     setField(7, v);
   }
 
@@ -201,12 +201,12 @@ class ContractConfig extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   void clearAssetConfig() => clearField(7);
   @$pb.TagNumber(7)
-  $1.AssetConfig ensureAssetConfig() => $_ensure(6);
+  $2.AssetConfig ensureAssetConfig() => $_ensure(6);
 
   @$pb.TagNumber(8)
-  $0.BridgeType get bridgeType => $_getN(7);
+  $1.BridgeType get bridgeType => $_getN(7);
   @$pb.TagNumber(8)
-  set bridgeType($0.BridgeType v) {
+  set bridgeType($1.BridgeType v) {
     setField(8, v);
   }
 
@@ -216,9 +216,9 @@ class ContractConfig extends $pb.GeneratedMessage {
   void clearBridgeType() => clearField(8);
 
   @$pb.TagNumber(9)
-  $0.ContractType get contractType => $_getN(8);
+  $1.ContractType get contractType => $_getN(8);
   @$pb.TagNumber(9)
-  set contractType($0.ContractType v) {
+  set contractType($1.ContractType v) {
     setField(9, v);
   }
 

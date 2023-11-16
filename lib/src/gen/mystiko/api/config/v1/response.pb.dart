@@ -13,18 +13,18 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../common/v1/types.pbenum.dart' as $0;
-import '../../../config/bridge/v1/bridge.pb.dart' as $10;
-import '../../../config/contract/v1/contract.pb.dart' as $12;
-import '../../../config/contract/v1/deposit.pb.dart' as $5;
-import '../../../config/contract/v1/pool.pb.dart' as $3;
-import '../../../config/v1/chain.pb.dart' as $9;
-import '../../../config/v1/circuit.pb.dart' as $2;
-import '../../../config/v1/mystiko.pb.dart' as $11;
+import '../../../common/v1/types.pbenum.dart' as $1;
+import '../../../config/bridge/v1/bridge.pb.dart' as $11;
+import '../../../config/contract/v1/contract.pb.dart' as $13;
+import '../../../config/contract/v1/deposit.pb.dart' as $6;
+import '../../../config/contract/v1/pool.pb.dart' as $4;
+import '../../../config/v1/chain.pb.dart' as $10;
+import '../../../config/v1/circuit.pb.dart' as $3;
+import '../../../config/v1/mystiko.pb.dart' as $12;
 
 class GetConfigResponse extends $pb.GeneratedMessage {
   factory GetConfigResponse({
-    $11.MystikoConfig? config,
+    $12.MystikoConfig? config,
   }) {
     final $result = create();
     if (config != null) {
@@ -45,8 +45,8 @@ class GetConfigResponse extends $pb.GeneratedMessage {
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.config.v1'),
       createEmptyInstance: create)
-    ..aOM<$11.MystikoConfig>(1, _omitFieldNames ? '' : 'config',
-        subBuilder: $11.MystikoConfig.create)
+    ..aOM<$12.MystikoConfig>(1, _omitFieldNames ? '' : 'config',
+        subBuilder: $12.MystikoConfig.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
@@ -73,9 +73,9 @@ class GetConfigResponse extends $pb.GeneratedMessage {
   static GetConfigResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $11.MystikoConfig get config => $_getN(0);
+  $12.MystikoConfig get config => $_getN(0);
   @$pb.TagNumber(1)
-  set config($11.MystikoConfig v) {
+  set config($12.MystikoConfig v) {
     setField(1, v);
   }
 
@@ -84,12 +84,12 @@ class GetConfigResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearConfig() => clearField(1);
   @$pb.TagNumber(1)
-  $11.MystikoConfig ensureConfig() => $_ensure(0);
+  $12.MystikoConfig ensureConfig() => $_ensure(0);
 }
 
 class FindDefaultCircuitResponse extends $pb.GeneratedMessage {
   factory FindDefaultCircuitResponse({
-    $2.CircuitConfig? config,
+    $3.CircuitConfig? config,
   }) {
     final $result = create();
     if (config != null) {
@@ -110,8 +110,8 @@ class FindDefaultCircuitResponse extends $pb.GeneratedMessage {
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.config.v1'),
       createEmptyInstance: create)
-    ..aOM<$2.CircuitConfig>(1, _omitFieldNames ? '' : 'config',
-        subBuilder: $2.CircuitConfig.create)
+    ..aOM<$3.CircuitConfig>(1, _omitFieldNames ? '' : 'config',
+        subBuilder: $3.CircuitConfig.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
@@ -141,9 +141,9 @@ class FindDefaultCircuitResponse extends $pb.GeneratedMessage {
   static FindDefaultCircuitResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $2.CircuitConfig get config => $_getN(0);
+  $3.CircuitConfig get config => $_getN(0);
   @$pb.TagNumber(1)
-  set config($2.CircuitConfig v) {
+  set config($3.CircuitConfig v) {
     setField(1, v);
   }
 
@@ -152,12 +152,12 @@ class FindDefaultCircuitResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearConfig() => clearField(1);
   @$pb.TagNumber(1)
-  $2.CircuitConfig ensureConfig() => $_ensure(0);
+  $3.CircuitConfig ensureConfig() => $_ensure(0);
 }
 
 class FindCircuitResponse extends $pb.GeneratedMessage {
   factory FindCircuitResponse({
-    $2.CircuitConfig? config,
+    $3.CircuitConfig? config,
   }) {
     final $result = create();
     if (config != null) {
@@ -178,8 +178,8 @@ class FindCircuitResponse extends $pb.GeneratedMessage {
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.config.v1'),
       createEmptyInstance: create)
-    ..aOM<$2.CircuitConfig>(1, _omitFieldNames ? '' : 'config',
-        subBuilder: $2.CircuitConfig.create)
+    ..aOM<$3.CircuitConfig>(1, _omitFieldNames ? '' : 'config',
+        subBuilder: $3.CircuitConfig.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
@@ -206,9 +206,9 @@ class FindCircuitResponse extends $pb.GeneratedMessage {
   static FindCircuitResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $2.CircuitConfig get config => $_getN(0);
+  $3.CircuitConfig get config => $_getN(0);
   @$pb.TagNumber(1)
-  set config($2.CircuitConfig v) {
+  set config($3.CircuitConfig v) {
     setField(1, v);
   }
 
@@ -217,12 +217,12 @@ class FindCircuitResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearConfig() => clearField(1);
   @$pb.TagNumber(1)
-  $2.CircuitConfig ensureConfig() => $_ensure(0);
+  $3.CircuitConfig ensureConfig() => $_ensure(0);
 }
 
 class FindChainResponse extends $pb.GeneratedMessage {
   factory FindChainResponse({
-    $9.ChainConfig? config,
+    $10.ChainConfig? config,
   }) {
     final $result = create();
     if (config != null) {
@@ -243,8 +243,8 @@ class FindChainResponse extends $pb.GeneratedMessage {
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.config.v1'),
       createEmptyInstance: create)
-    ..aOM<$9.ChainConfig>(1, _omitFieldNames ? '' : 'config',
-        subBuilder: $9.ChainConfig.create)
+    ..aOM<$10.ChainConfig>(1, _omitFieldNames ? '' : 'config',
+        subBuilder: $10.ChainConfig.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
@@ -271,9 +271,9 @@ class FindChainResponse extends $pb.GeneratedMessage {
   static FindChainResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $9.ChainConfig get config => $_getN(0);
+  $10.ChainConfig get config => $_getN(0);
   @$pb.TagNumber(1)
-  set config($9.ChainConfig v) {
+  set config($10.ChainConfig v) {
     setField(1, v);
   }
 
@@ -282,12 +282,12 @@ class FindChainResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearConfig() => clearField(1);
   @$pb.TagNumber(1)
-  $9.ChainConfig ensureConfig() => $_ensure(0);
+  $10.ChainConfig ensureConfig() => $_ensure(0);
 }
 
 class FindPeerChainsResponse extends $pb.GeneratedMessage {
   factory FindPeerChainsResponse({
-    $core.Iterable<$9.ChainConfig>? configs,
+    $core.Iterable<$10.ChainConfig>? configs,
   }) {
     final $result = create();
     if (configs != null) {
@@ -308,9 +308,9 @@ class FindPeerChainsResponse extends $pb.GeneratedMessage {
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.config.v1'),
       createEmptyInstance: create)
-    ..pc<$9.ChainConfig>(
+    ..pc<$10.ChainConfig>(
         1, _omitFieldNames ? '' : 'configs', $pb.PbFieldType.PM,
-        subBuilder: $9.ChainConfig.create)
+        subBuilder: $10.ChainConfig.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
@@ -339,7 +339,7 @@ class FindPeerChainsResponse extends $pb.GeneratedMessage {
   static FindPeerChainsResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.List<$9.ChainConfig> get configs => $_getList(0);
+  $core.List<$10.ChainConfig> get configs => $_getList(0);
 }
 
 class FindAssetSymbolsResponse extends $pb.GeneratedMessage {
@@ -399,7 +399,7 @@ class FindAssetSymbolsResponse extends $pb.GeneratedMessage {
 
 class FindBridgesResponse extends $pb.GeneratedMessage {
   factory FindBridgesResponse({
-    $core.Iterable<$0.BridgeType>? bridgeType,
+    $core.Iterable<$1.BridgeType>? bridgeType,
   }) {
     final $result = create();
     if (bridgeType != null) {
@@ -420,11 +420,11 @@ class FindBridgesResponse extends $pb.GeneratedMessage {
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.config.v1'),
       createEmptyInstance: create)
-    ..pc<$0.BridgeType>(
+    ..pc<$1.BridgeType>(
         1, _omitFieldNames ? '' : 'bridgeType', $pb.PbFieldType.KE,
-        valueOf: $0.BridgeType.valueOf,
-        enumValues: $0.BridgeType.values,
-        defaultEnumValue: $0.BridgeType.BRIDGE_TYPE_UNSPECIFIED)
+        valueOf: $1.BridgeType.valueOf,
+        enumValues: $1.BridgeType.values,
+        defaultEnumValue: $1.BridgeType.BRIDGE_TYPE_UNSPECIFIED)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
@@ -451,12 +451,12 @@ class FindBridgesResponse extends $pb.GeneratedMessage {
   static FindBridgesResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.List<$0.BridgeType> get bridgeType => $_getList(0);
+  $core.List<$1.BridgeType> get bridgeType => $_getList(0);
 }
 
 class FindBridgeResponse extends $pb.GeneratedMessage {
   factory FindBridgeResponse({
-    $10.BridgeConfig? config,
+    $11.BridgeConfig? config,
   }) {
     final $result = create();
     if (config != null) {
@@ -477,8 +477,8 @@ class FindBridgeResponse extends $pb.GeneratedMessage {
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.config.v1'),
       createEmptyInstance: create)
-    ..aOM<$10.BridgeConfig>(1, _omitFieldNames ? '' : 'config',
-        subBuilder: $10.BridgeConfig.create)
+    ..aOM<$11.BridgeConfig>(1, _omitFieldNames ? '' : 'config',
+        subBuilder: $11.BridgeConfig.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
@@ -505,9 +505,9 @@ class FindBridgeResponse extends $pb.GeneratedMessage {
   static FindBridgeResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $10.BridgeConfig get config => $_getN(0);
+  $11.BridgeConfig get config => $_getN(0);
   @$pb.TagNumber(1)
-  set config($10.BridgeConfig v) {
+  set config($11.BridgeConfig v) {
     setField(1, v);
   }
 
@@ -516,12 +516,12 @@ class FindBridgeResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearConfig() => clearField(1);
   @$pb.TagNumber(1)
-  $10.BridgeConfig ensureConfig() => $_ensure(0);
+  $11.BridgeConfig ensureConfig() => $_ensure(0);
 }
 
 class FindDepositContractResponse extends $pb.GeneratedMessage {
   factory FindDepositContractResponse({
-    $5.DepositContractConfig? config,
+    $6.DepositContractConfig? config,
   }) {
     final $result = create();
     if (config != null) {
@@ -542,8 +542,8 @@ class FindDepositContractResponse extends $pb.GeneratedMessage {
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.config.v1'),
       createEmptyInstance: create)
-    ..aOM<$5.DepositContractConfig>(1, _omitFieldNames ? '' : 'config',
-        subBuilder: $5.DepositContractConfig.create)
+    ..aOM<$6.DepositContractConfig>(1, _omitFieldNames ? '' : 'config',
+        subBuilder: $6.DepositContractConfig.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
@@ -574,9 +574,9 @@ class FindDepositContractResponse extends $pb.GeneratedMessage {
   static FindDepositContractResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $5.DepositContractConfig get config => $_getN(0);
+  $6.DepositContractConfig get config => $_getN(0);
   @$pb.TagNumber(1)
-  set config($5.DepositContractConfig v) {
+  set config($6.DepositContractConfig v) {
     setField(1, v);
   }
 
@@ -585,12 +585,12 @@ class FindDepositContractResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearConfig() => clearField(1);
   @$pb.TagNumber(1)
-  $5.DepositContractConfig ensureConfig() => $_ensure(0);
+  $6.DepositContractConfig ensureConfig() => $_ensure(0);
 }
 
 class FindDepositContractByAddressResponse extends $pb.GeneratedMessage {
   factory FindDepositContractByAddressResponse({
-    $5.DepositContractConfig? config,
+    $6.DepositContractConfig? config,
   }) {
     final $result = create();
     if (config != null) {
@@ -612,8 +612,8 @@ class FindDepositContractByAddressResponse extends $pb.GeneratedMessage {
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.config.v1'),
       createEmptyInstance: create)
-    ..aOM<$5.DepositContractConfig>(1, _omitFieldNames ? '' : 'config',
-        subBuilder: $5.DepositContractConfig.create)
+    ..aOM<$6.DepositContractConfig>(1, _omitFieldNames ? '' : 'config',
+        subBuilder: $6.DepositContractConfig.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
@@ -645,9 +645,9 @@ class FindDepositContractByAddressResponse extends $pb.GeneratedMessage {
   static FindDepositContractByAddressResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $5.DepositContractConfig get config => $_getN(0);
+  $6.DepositContractConfig get config => $_getN(0);
   @$pb.TagNumber(1)
-  set config($5.DepositContractConfig v) {
+  set config($6.DepositContractConfig v) {
     setField(1, v);
   }
 
@@ -656,12 +656,12 @@ class FindDepositContractByAddressResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearConfig() => clearField(1);
   @$pb.TagNumber(1)
-  $5.DepositContractConfig ensureConfig() => $_ensure(0);
+  $6.DepositContractConfig ensureConfig() => $_ensure(0);
 }
 
 class FindPoolContractResponse extends $pb.GeneratedMessage {
   factory FindPoolContractResponse({
-    $3.PoolContractConfig? config,
+    $4.PoolContractConfig? config,
   }) {
     final $result = create();
     if (config != null) {
@@ -682,8 +682,8 @@ class FindPoolContractResponse extends $pb.GeneratedMessage {
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.config.v1'),
       createEmptyInstance: create)
-    ..aOM<$3.PoolContractConfig>(1, _omitFieldNames ? '' : 'config',
-        subBuilder: $3.PoolContractConfig.create)
+    ..aOM<$4.PoolContractConfig>(1, _omitFieldNames ? '' : 'config',
+        subBuilder: $4.PoolContractConfig.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
@@ -712,9 +712,9 @@ class FindPoolContractResponse extends $pb.GeneratedMessage {
   static FindPoolContractResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $3.PoolContractConfig get config => $_getN(0);
+  $4.PoolContractConfig get config => $_getN(0);
   @$pb.TagNumber(1)
-  set config($3.PoolContractConfig v) {
+  set config($4.PoolContractConfig v) {
     setField(1, v);
   }
 
@@ -723,12 +723,12 @@ class FindPoolContractResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearConfig() => clearField(1);
   @$pb.TagNumber(1)
-  $3.PoolContractConfig ensureConfig() => $_ensure(0);
+  $4.PoolContractConfig ensureConfig() => $_ensure(0);
 }
 
 class FindPoolContractsResponse extends $pb.GeneratedMessage {
   factory FindPoolContractsResponse({
-    $core.Iterable<$3.PoolContractConfig>? config,
+    $core.Iterable<$4.PoolContractConfig>? config,
   }) {
     final $result = create();
     if (config != null) {
@@ -749,9 +749,9 @@ class FindPoolContractsResponse extends $pb.GeneratedMessage {
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.config.v1'),
       createEmptyInstance: create)
-    ..pc<$3.PoolContractConfig>(
+    ..pc<$4.PoolContractConfig>(
         1, _omitFieldNames ? '' : 'config', $pb.PbFieldType.PM,
-        subBuilder: $3.PoolContractConfig.create)
+        subBuilder: $4.PoolContractConfig.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
@@ -780,12 +780,12 @@ class FindPoolContractsResponse extends $pb.GeneratedMessage {
   static FindPoolContractsResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.List<$3.PoolContractConfig> get config => $_getList(0);
+  $core.List<$4.PoolContractConfig> get config => $_getList(0);
 }
 
 class FindPoolContractByAddressResponse extends $pb.GeneratedMessage {
   factory FindPoolContractByAddressResponse({
-    $3.PoolContractConfig? config,
+    $4.PoolContractConfig? config,
   }) {
     final $result = create();
     if (config != null) {
@@ -806,8 +806,8 @@ class FindPoolContractByAddressResponse extends $pb.GeneratedMessage {
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.config.v1'),
       createEmptyInstance: create)
-    ..aOM<$3.PoolContractConfig>(1, _omitFieldNames ? '' : 'config',
-        subBuilder: $3.PoolContractConfig.create)
+    ..aOM<$4.PoolContractConfig>(1, _omitFieldNames ? '' : 'config',
+        subBuilder: $4.PoolContractConfig.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
@@ -839,9 +839,9 @@ class FindPoolContractByAddressResponse extends $pb.GeneratedMessage {
   static FindPoolContractByAddressResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $3.PoolContractConfig get config => $_getN(0);
+  $4.PoolContractConfig get config => $_getN(0);
   @$pb.TagNumber(1)
-  set config($3.PoolContractConfig v) {
+  set config($4.PoolContractConfig v) {
     setField(1, v);
   }
 
@@ -850,12 +850,12 @@ class FindPoolContractByAddressResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearConfig() => clearField(1);
   @$pb.TagNumber(1)
-  $3.PoolContractConfig ensureConfig() => $_ensure(0);
+  $4.PoolContractConfig ensureConfig() => $_ensure(0);
 }
 
 class FindContractByAddressResponse extends $pb.GeneratedMessage {
   factory FindContractByAddressResponse({
-    $12.ContractConfig? config,
+    $13.ContractConfig? config,
   }) {
     final $result = create();
     if (config != null) {
@@ -876,8 +876,8 @@ class FindContractByAddressResponse extends $pb.GeneratedMessage {
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.config.v1'),
       createEmptyInstance: create)
-    ..aOM<$12.ContractConfig>(1, _omitFieldNames ? '' : 'config',
-        subBuilder: $12.ContractConfig.create)
+    ..aOM<$13.ContractConfig>(1, _omitFieldNames ? '' : 'config',
+        subBuilder: $13.ContractConfig.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
@@ -908,9 +908,9 @@ class FindContractByAddressResponse extends $pb.GeneratedMessage {
   static FindContractByAddressResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $12.ContractConfig get config => $_getN(0);
+  $13.ContractConfig get config => $_getN(0);
   @$pb.TagNumber(1)
-  set config($12.ContractConfig v) {
+  set config($13.ContractConfig v) {
     setField(1, v);
   }
 
@@ -919,7 +919,7 @@ class FindContractByAddressResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearConfig() => clearField(1);
   @$pb.TagNumber(1)
-  $12.ContractConfig ensureConfig() => $_ensure(0);
+  $13.ContractConfig ensureConfig() => $_ensure(0);
 }
 
 class GetTransactionUrlResponse extends $pb.GeneratedMessage {

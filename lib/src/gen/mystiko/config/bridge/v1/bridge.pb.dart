@@ -13,12 +13,12 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../common/v1/types.pbenum.dart' as $0;
+import '../../../common/v1/types.pbenum.dart' as $1;
 
 class BridgeConfig extends $pb.GeneratedMessage {
   factory BridgeConfig({
     $core.String? name,
-    $0.BridgeType? bridgeType,
+    $1.BridgeType? bridgeType,
     $core.String? explorerUrl,
     $core.String? explorerPrefix,
     $core.String? apiUrl,
@@ -59,11 +59,11 @@ class BridgeConfig extends $pb.GeneratedMessage {
           _omitMessageNames ? '' : 'mystiko.config.bridge.v1'),
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'name')
-    ..e<$0.BridgeType>(
+    ..e<$1.BridgeType>(
         2, _omitFieldNames ? '' : 'bridgeType', $pb.PbFieldType.OE,
-        defaultOrMaker: $0.BridgeType.BRIDGE_TYPE_UNSPECIFIED,
-        valueOf: $0.BridgeType.valueOf,
-        enumValues: $0.BridgeType.values)
+        defaultOrMaker: $1.BridgeType.BRIDGE_TYPE_UNSPECIFIED,
+        valueOf: $1.BridgeType.valueOf,
+        enumValues: $1.BridgeType.values)
     ..aOS(3, _omitFieldNames ? '' : 'explorerUrl')
     ..aOS(4, _omitFieldNames ? '' : 'explorerPrefix')
     ..aOS(5, _omitFieldNames ? '' : 'apiUrl')
@@ -106,9 +106,9 @@ class BridgeConfig extends $pb.GeneratedMessage {
   void clearName() => clearField(1);
 
   @$pb.TagNumber(2)
-  $0.BridgeType get bridgeType => $_getN(1);
+  $1.BridgeType get bridgeType => $_getN(1);
   @$pb.TagNumber(2)
-  set bridgeType($0.BridgeType v) {
+  set bridgeType($1.BridgeType v) {
     setField(2, v);
   }
 

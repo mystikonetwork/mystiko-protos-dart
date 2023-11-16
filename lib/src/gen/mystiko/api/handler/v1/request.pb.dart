@@ -13,13 +13,13 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../core/handler/v1/account.pb.dart' as $14;
-import '../../../core/handler/v1/wallet.pb.dart' as $13;
-import '../../../storage/v1/filter.pb.dart' as $15;
+import '../../../core/handler/v1/account.pb.dart' as $15;
+import '../../../core/handler/v1/wallet.pb.dart' as $14;
+import '../../../storage/v1/filter.pb.dart' as $16;
 
 class CreateWalletRequest extends $pb.GeneratedMessage {
   factory CreateWalletRequest({
-    $13.CreateWalletOptions? options,
+    $14.CreateWalletOptions? options,
   }) {
     final $result = create();
     if (options != null) {
@@ -40,8 +40,8 @@ class CreateWalletRequest extends $pb.GeneratedMessage {
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.handler.v1'),
       createEmptyInstance: create)
-    ..aOM<$13.CreateWalletOptions>(1, _omitFieldNames ? '' : 'options',
-        subBuilder: $13.CreateWalletOptions.create)
+    ..aOM<$14.CreateWalletOptions>(1, _omitFieldNames ? '' : 'options',
+        subBuilder: $14.CreateWalletOptions.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
@@ -68,9 +68,9 @@ class CreateWalletRequest extends $pb.GeneratedMessage {
   static CreateWalletRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $13.CreateWalletOptions get options => $_getN(0);
+  $14.CreateWalletOptions get options => $_getN(0);
   @$pb.TagNumber(1)
-  set options($13.CreateWalletOptions v) {
+  set options($14.CreateWalletOptions v) {
     setField(1, v);
   }
 
@@ -79,7 +79,7 @@ class CreateWalletRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearOptions() => clearField(1);
   @$pb.TagNumber(1)
-  $13.CreateWalletOptions ensureOptions() => $_ensure(0);
+  $14.CreateWalletOptions ensureOptions() => $_ensure(0);
 }
 
 class CheckCurrentRequest extends $pb.GeneratedMessage {
@@ -335,7 +335,7 @@ class ExportMnemonicPhraseRequest extends $pb.GeneratedMessage {
 
 class CreateAccountRequest extends $pb.GeneratedMessage {
   factory CreateAccountRequest({
-    $14.CreateAccountOptions? options,
+    $15.CreateAccountOptions? options,
   }) {
     final $result = create();
     if (options != null) {
@@ -356,8 +356,8 @@ class CreateAccountRequest extends $pb.GeneratedMessage {
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.handler.v1'),
       createEmptyInstance: create)
-    ..aOM<$14.CreateAccountOptions>(1, _omitFieldNames ? '' : 'options',
-        subBuilder: $14.CreateAccountOptions.create)
+    ..aOM<$15.CreateAccountOptions>(1, _omitFieldNames ? '' : 'options',
+        subBuilder: $15.CreateAccountOptions.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
@@ -385,9 +385,9 @@ class CreateAccountRequest extends $pb.GeneratedMessage {
   static CreateAccountRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $14.CreateAccountOptions get options => $_getN(0);
+  $15.CreateAccountOptions get options => $_getN(0);
   @$pb.TagNumber(1)
-  set options($14.CreateAccountOptions v) {
+  set options($15.CreateAccountOptions v) {
     setField(1, v);
   }
 
@@ -396,12 +396,12 @@ class CreateAccountRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearOptions() => clearField(1);
   @$pb.TagNumber(1)
-  $14.CreateAccountOptions ensureOptions() => $_ensure(0);
+  $15.CreateAccountOptions ensureOptions() => $_ensure(0);
 }
 
 class CountAccountRequest extends $pb.GeneratedMessage {
   factory CountAccountRequest({
-    $15.QueryFilter? filter,
+    $16.QueryFilter? filter,
   }) {
     final $result = create();
     if (filter != null) {
@@ -422,8 +422,8 @@ class CountAccountRequest extends $pb.GeneratedMessage {
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.handler.v1'),
       createEmptyInstance: create)
-    ..aOM<$15.QueryFilter>(1, _omitFieldNames ? '' : 'filter',
-        subBuilder: $15.QueryFilter.create)
+    ..aOM<$16.QueryFilter>(1, _omitFieldNames ? '' : 'filter',
+        subBuilder: $16.QueryFilter.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
@@ -450,9 +450,9 @@ class CountAccountRequest extends $pb.GeneratedMessage {
   static CountAccountRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $15.QueryFilter get filter => $_getN(0);
+  $16.QueryFilter get filter => $_getN(0);
   @$pb.TagNumber(1)
-  set filter($15.QueryFilter v) {
+  set filter($16.QueryFilter v) {
     setField(1, v);
   }
 
@@ -461,14 +461,14 @@ class CountAccountRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearFilter() => clearField(1);
   @$pb.TagNumber(1)
-  $15.QueryFilter ensureFilter() => $_ensure(0);
+  $16.QueryFilter ensureFilter() => $_ensure(0);
 }
 
 enum FindAccountRequest_Condition { filter, findAll, notSet }
 
 class FindAccountRequest extends $pb.GeneratedMessage {
   factory FindAccountRequest({
-    $15.QueryFilter? filter,
+    $16.QueryFilter? filter,
     $core.bool? findAll,
   }) {
     final $result = create();
@@ -500,8 +500,8 @@ class FindAccountRequest extends $pb.GeneratedMessage {
           _omitMessageNames ? '' : 'mystiko.api.handler.v1'),
       createEmptyInstance: create)
     ..oo(0, [1, 2])
-    ..aOM<$15.QueryFilter>(1, _omitFieldNames ? '' : 'filter',
-        subBuilder: $15.QueryFilter.create)
+    ..aOM<$16.QueryFilter>(1, _omitFieldNames ? '' : 'filter',
+        subBuilder: $16.QueryFilter.create)
     ..aOB(2, _omitFieldNames ? '' : 'findAll')
     ..hasRequiredFields = false;
 
@@ -533,9 +533,9 @@ class FindAccountRequest extends $pb.GeneratedMessage {
   void clearCondition() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
-  $15.QueryFilter get filter => $_getN(0);
+  $16.QueryFilter get filter => $_getN(0);
   @$pb.TagNumber(1)
-  set filter($15.QueryFilter v) {
+  set filter($16.QueryFilter v) {
     setField(1, v);
   }
 
@@ -544,7 +544,7 @@ class FindAccountRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearFilter() => clearField(1);
   @$pb.TagNumber(1)
-  $15.QueryFilter ensureFilter() => $_ensure(0);
+  $16.QueryFilter ensureFilter() => $_ensure(0);
 
   @$pb.TagNumber(2)
   $core.bool get findAll => $_getBF(1);
@@ -682,7 +682,7 @@ enum UpdateAccountRequest_Identifier { id, shieldedAddress, publicKey, notSet }
 
 class UpdateAccountRequest extends $pb.GeneratedMessage {
   factory UpdateAccountRequest({
-    $14.UpdateAccountOptions? options,
+    $15.UpdateAccountOptions? options,
     $core.String? id,
     $core.String? shieldedAddress,
     $core.String? publicKey,
@@ -723,8 +723,8 @@ class UpdateAccountRequest extends $pb.GeneratedMessage {
           _omitMessageNames ? '' : 'mystiko.api.handler.v1'),
       createEmptyInstance: create)
     ..oo(0, [2, 3, 4])
-    ..aOM<$14.UpdateAccountOptions>(1, _omitFieldNames ? '' : 'options',
-        subBuilder: $14.UpdateAccountOptions.create)
+    ..aOM<$15.UpdateAccountOptions>(1, _omitFieldNames ? '' : 'options',
+        subBuilder: $15.UpdateAccountOptions.create)
     ..aOS(2, _omitFieldNames ? '' : 'id')
     ..aOS(3, _omitFieldNames ? '' : 'shieldedAddress')
     ..aOS(4, _omitFieldNames ? '' : 'publicKey')
@@ -759,9 +759,9 @@ class UpdateAccountRequest extends $pb.GeneratedMessage {
   void clearIdentifier() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
-  $14.UpdateAccountOptions get options => $_getN(0);
+  $15.UpdateAccountOptions get options => $_getN(0);
   @$pb.TagNumber(1)
-  set options($14.UpdateAccountOptions v) {
+  set options($15.UpdateAccountOptions v) {
     setField(1, v);
   }
 
@@ -770,7 +770,7 @@ class UpdateAccountRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearOptions() => clearField(1);
   @$pb.TagNumber(1)
-  $14.UpdateAccountOptions ensureOptions() => $_ensure(0);
+  $15.UpdateAccountOptions ensureOptions() => $_ensure(0);
 
   @$pb.TagNumber(2)
   $core.String get id => $_getSZ(1);
