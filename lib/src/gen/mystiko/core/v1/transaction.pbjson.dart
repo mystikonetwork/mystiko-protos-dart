@@ -17,26 +17,15 @@ import 'dart:typed_data' as $typed_data;
 const AccessListItem$json = {
   '1': 'AccessListItem',
   '2': [
-    {
-      '1': 'address',
-      '3': 1,
-      '4': 1,
-      '5': 9,
-      '9': 0,
-      '10': 'address',
-      '17': true
-    },
+    {'1': 'address', '3': 1, '4': 1, '5': 9, '10': 'address'},
     {'1': 'storage_keys', '3': 2, '4': 3, '5': 9, '10': 'storageKeys'},
-  ],
-  '8': [
-    {'1': '_address'},
   ],
 };
 
 /// Descriptor for `AccessListItem`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List accessListItemDescriptor = $convert.base64Decode(
-    'Cg5BY2Nlc3NMaXN0SXRlbRIdCgdhZGRyZXNzGAEgASgJSABSB2FkZHJlc3OIAQESIQoMc3Rvcm'
-    'FnZV9rZXlzGAIgAygJUgtzdG9yYWdlS2V5c0IKCghfYWRkcmVzcw==');
+    'Cg5BY2Nlc3NMaXN0SXRlbRIYCgdhZGRyZXNzGAEgASgJUgdhZGRyZXNzEiEKDHN0b3JhZ2Vfa2'
+    'V5cxgCIAMoCVILc3RvcmFnZUtleXM=');
 
 @$core.Deprecated('Use legacyTransactionDescriptor instead')
 const LegacyTransaction$json = {
@@ -292,40 +281,3 @@ final $typed_data.Uint8List sendTransactionResponseDescriptor =
     $convert.base64Decode(
         'ChdTZW5kVHJhbnNhY3Rpb25SZXNwb25zZRIZCghjaGFpbl9pZBgBIAEoBFIHY2hhaW5JZBIXCg'
         'd0eF9oYXNoGAIgASgJUgZ0eEhhc2g=');
-
-const $core.Map<$core.String, $core.dynamic> TransactionServiceBase$json = {
-  '1': 'TransactionService',
-  '2': [
-    {
-      '1': 'GetAddress',
-      '2': '.mystiko.core.v1.GetAddressRequest',
-      '3': '.mystiko.core.v1.GetAddressResponse'
-    },
-    {
-      '1': 'SendTransaction',
-      '2': '.mystiko.core.v1.SendTransactionRequest',
-      '3': '.mystiko.core.v1.SendTransactionResponse'
-    },
-  ],
-};
-
-@$core.Deprecated('Use transactionServiceDescriptor instead')
-const $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
-    TransactionServiceBase$messageJson = {
-  '.mystiko.core.v1.GetAddressRequest': GetAddressRequest$json,
-  '.mystiko.core.v1.GetAddressResponse': GetAddressResponse$json,
-  '.mystiko.core.v1.SendTransactionRequest': SendTransactionRequest$json,
-  '.mystiko.core.v1.Transaction': Transaction$json,
-  '.mystiko.core.v1.LegacyTransaction': LegacyTransaction$json,
-  '.mystiko.core.v1.Eip1559Transaction': Eip1559Transaction$json,
-  '.mystiko.core.v1.AccessListItem': AccessListItem$json,
-  '.mystiko.core.v1.Eip2930Transaction': Eip2930Transaction$json,
-  '.mystiko.core.v1.SendTransactionResponse': SendTransactionResponse$json,
-};
-
-/// Descriptor for `TransactionService`. Decode as a `google.protobuf.ServiceDescriptorProto`.
-final $typed_data.Uint8List transactionServiceDescriptor = $convert.base64Decode(
-    'ChJUcmFuc2FjdGlvblNlcnZpY2USVQoKR2V0QWRkcmVzcxIiLm15c3Rpa28uY29yZS52MS5HZX'
-    'RBZGRyZXNzUmVxdWVzdBojLm15c3Rpa28uY29yZS52MS5HZXRBZGRyZXNzUmVzcG9uc2USZAoP'
-    'U2VuZFRyYW5zYWN0aW9uEicubXlzdGlrby5jb3JlLnYxLlNlbmRUcmFuc2FjdGlvblJlcXVlc3'
-    'QaKC5teXN0aWtvLmNvcmUudjEuU2VuZFRyYW5zYWN0aW9uUmVzcG9uc2U=');

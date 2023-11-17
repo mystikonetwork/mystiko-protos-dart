@@ -13,13 +13,13 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../common/v1/config.pb.dart' as $18;
-import '../../loader/v1/loader.pb.dart' as $21;
+import '../../common/v1/config.pb.dart' as $19;
+import '../../loader/v1/loader.pb.dart' as $22;
 
 class MystikoOptions extends $pb.GeneratedMessage {
   factory MystikoOptions({
-    $18.ConfigOptions? configOptions,
-    $21.LoaderConfig? loaderConfig,
+    $19.ConfigOptions? configOptions,
+    $22.LoaderConfig? loaderConfig,
     $core.String? dbPath,
   }) {
     final $result = create();
@@ -47,10 +47,10 @@ class MystikoOptions extends $pb.GeneratedMessage {
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'mystiko.core.v1'),
       createEmptyInstance: create)
-    ..aOM<$18.ConfigOptions>(1, _omitFieldNames ? '' : 'configOptions',
-        subBuilder: $18.ConfigOptions.create)
-    ..aOM<$21.LoaderConfig>(2, _omitFieldNames ? '' : 'loaderConfig',
-        subBuilder: $21.LoaderConfig.create)
+    ..aOM<$19.ConfigOptions>(1, _omitFieldNames ? '' : 'configOptions',
+        subBuilder: $19.ConfigOptions.create)
+    ..aOM<$22.LoaderConfig>(2, _omitFieldNames ? '' : 'loaderConfig',
+        subBuilder: $22.LoaderConfig.create)
     ..aOS(3, _omitFieldNames ? '' : 'dbPath')
     ..hasRequiredFields = false;
 
@@ -78,9 +78,9 @@ class MystikoOptions extends $pb.GeneratedMessage {
   static MystikoOptions? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $18.ConfigOptions get configOptions => $_getN(0);
+  $19.ConfigOptions get configOptions => $_getN(0);
   @$pb.TagNumber(1)
-  set configOptions($18.ConfigOptions v) {
+  set configOptions($19.ConfigOptions v) {
     setField(1, v);
   }
 
@@ -89,12 +89,12 @@ class MystikoOptions extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearConfigOptions() => clearField(1);
   @$pb.TagNumber(1)
-  $18.ConfigOptions ensureConfigOptions() => $_ensure(0);
+  $19.ConfigOptions ensureConfigOptions() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $21.LoaderConfig get loaderConfig => $_getN(1);
+  $22.LoaderConfig get loaderConfig => $_getN(1);
   @$pb.TagNumber(2)
-  set loaderConfig($21.LoaderConfig v) {
+  set loaderConfig($22.LoaderConfig v) {
     setField(2, v);
   }
 
@@ -103,7 +103,7 @@ class MystikoOptions extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearLoaderConfig() => clearField(2);
   @$pb.TagNumber(2)
-  $21.LoaderConfig ensureLoaderConfig() => $_ensure(1);
+  $22.LoaderConfig ensureLoaderConfig() => $_ensure(1);
 
   @$pb.TagNumber(3)
   $core.String get dbPath => $_getSZ(2);

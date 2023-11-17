@@ -14,11 +14,11 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../common/v1/types.pbenum.dart' as $0;
-import '../contract/v1/deposit.pb.dart' as $5;
-import '../contract/v1/pool.pb.dart' as $3;
-import 'asset.pb.dart' as $1;
-import 'provider.pb.dart' as $4;
+import '../../common/v1/types.pbenum.dart' as $1;
+import '../contract/v1/deposit.pb.dart' as $6;
+import '../contract/v1/pool.pb.dart' as $4;
+import 'asset.pb.dart' as $2;
+import 'provider.pb.dart' as $5;
 
 class ChainConfig extends $pb.GeneratedMessage {
   factory ChainConfig({
@@ -34,14 +34,14 @@ class ChainConfig extends $pb.GeneratedMessage {
     $fixnum.Int64? eventDelayBlocks,
     $fixnum.Int64? eventFilterSize,
     $fixnum.Int64? sequencerFetchSize,
-    $1.AssetConfig? mainAssetConfig,
-    $0.ProviderType? providerType,
-    $0.TransactionType? transactionType,
-    $core.Map<$core.String, $1.AssetConfig>? assetConfigs,
-    $core.Map<$core.String, $5.DepositContractConfig>? depositContractConfigs,
-    $core.Map<$core.String, $3.PoolContractConfig>? poolContractConfigs,
+    $2.AssetConfig? mainAssetConfig,
+    $1.ProviderType? providerType,
+    $1.TransactionType? transactionType,
+    $core.Map<$core.String, $2.AssetConfig>? assetConfigs,
+    $core.Map<$core.String, $6.DepositContractConfig>? depositContractConfigs,
+    $core.Map<$core.String, $4.PoolContractConfig>? poolContractConfigs,
     $core.Iterable<$core.String>? recommendedAmounts,
-    $core.Iterable<$4.ProviderConfig>? providerConfigs,
+    $core.Iterable<$5.ProviderConfig>? providerConfigs,
     $core.Iterable<$fixnum.Int64>? granularities,
   }) {
     final $result = create();
@@ -144,45 +144,45 @@ class ChainConfig extends $pb.GeneratedMessage {
     ..a<$fixnum.Int64>(
         12, _omitFieldNames ? '' : 'sequencerFetchSize', $pb.PbFieldType.OU6,
         defaultOrMaker: $fixnum.Int64.ZERO)
-    ..aOM<$1.AssetConfig>(13, _omitFieldNames ? '' : 'mainAssetConfig',
-        subBuilder: $1.AssetConfig.create)
-    ..e<$0.ProviderType>(
+    ..aOM<$2.AssetConfig>(13, _omitFieldNames ? '' : 'mainAssetConfig',
+        subBuilder: $2.AssetConfig.create)
+    ..e<$1.ProviderType>(
         14, _omitFieldNames ? '' : 'providerType', $pb.PbFieldType.OE,
-        defaultOrMaker: $0.ProviderType.PROVIDER_TYPE_UNSPECIFIED,
-        valueOf: $0.ProviderType.valueOf,
-        enumValues: $0.ProviderType.values)
-    ..e<$0.TransactionType>(
+        defaultOrMaker: $1.ProviderType.PROVIDER_TYPE_UNSPECIFIED,
+        valueOf: $1.ProviderType.valueOf,
+        enumValues: $1.ProviderType.values)
+    ..e<$1.TransactionType>(
         15, _omitFieldNames ? '' : 'transactionType', $pb.PbFieldType.OE,
-        defaultOrMaker: $0.TransactionType.TRANSACTION_TYPE_UNSPECIFIED,
-        valueOf: $0.TransactionType.valueOf,
-        enumValues: $0.TransactionType.values)
-    ..m<$core.String, $1.AssetConfig>(16, _omitFieldNames ? '' : 'assetConfigs',
+        defaultOrMaker: $1.TransactionType.TRANSACTION_TYPE_UNSPECIFIED,
+        valueOf: $1.TransactionType.valueOf,
+        enumValues: $1.TransactionType.values)
+    ..m<$core.String, $2.AssetConfig>(16, _omitFieldNames ? '' : 'assetConfigs',
         entryClassName: 'ChainConfig.AssetConfigsEntry',
         keyFieldType: $pb.PbFieldType.OS,
         valueFieldType: $pb.PbFieldType.OM,
-        valueCreator: $1.AssetConfig.create,
-        valueDefaultOrMaker: $1.AssetConfig.getDefault,
+        valueCreator: $2.AssetConfig.create,
+        valueDefaultOrMaker: $2.AssetConfig.getDefault,
         packageName: const $pb.PackageName('mystiko.config.v1'))
-    ..m<$core.String, $5.DepositContractConfig>(
+    ..m<$core.String, $6.DepositContractConfig>(
         17, _omitFieldNames ? '' : 'depositContractConfigs',
         entryClassName: 'ChainConfig.DepositContractConfigsEntry',
         keyFieldType: $pb.PbFieldType.OS,
         valueFieldType: $pb.PbFieldType.OM,
-        valueCreator: $5.DepositContractConfig.create,
-        valueDefaultOrMaker: $5.DepositContractConfig.getDefault,
+        valueCreator: $6.DepositContractConfig.create,
+        valueDefaultOrMaker: $6.DepositContractConfig.getDefault,
         packageName: const $pb.PackageName('mystiko.config.v1'))
-    ..m<$core.String, $3.PoolContractConfig>(
+    ..m<$core.String, $4.PoolContractConfig>(
         18, _omitFieldNames ? '' : 'poolContractConfigs',
         entryClassName: 'ChainConfig.PoolContractConfigsEntry',
         keyFieldType: $pb.PbFieldType.OS,
         valueFieldType: $pb.PbFieldType.OM,
-        valueCreator: $3.PoolContractConfig.create,
-        valueDefaultOrMaker: $3.PoolContractConfig.getDefault,
+        valueCreator: $4.PoolContractConfig.create,
+        valueDefaultOrMaker: $4.PoolContractConfig.getDefault,
         packageName: const $pb.PackageName('mystiko.config.v1'))
     ..pPS(19, _omitFieldNames ? '' : 'recommendedAmounts')
-    ..pc<$4.ProviderConfig>(
+    ..pc<$5.ProviderConfig>(
         20, _omitFieldNames ? '' : 'providerConfigs', $pb.PbFieldType.PM,
-        subBuilder: $4.ProviderConfig.create)
+        subBuilder: $5.ProviderConfig.create)
     ..p<$fixnum.Int64>(
         21, _omitFieldNames ? '' : 'granularities', $pb.PbFieldType.KU6)
     ..hasRequiredFields = false;
@@ -354,9 +354,9 @@ class ChainConfig extends $pb.GeneratedMessage {
   void clearSequencerFetchSize() => clearField(12);
 
   @$pb.TagNumber(13)
-  $1.AssetConfig get mainAssetConfig => $_getN(12);
+  $2.AssetConfig get mainAssetConfig => $_getN(12);
   @$pb.TagNumber(13)
-  set mainAssetConfig($1.AssetConfig v) {
+  set mainAssetConfig($2.AssetConfig v) {
     setField(13, v);
   }
 
@@ -365,12 +365,12 @@ class ChainConfig extends $pb.GeneratedMessage {
   @$pb.TagNumber(13)
   void clearMainAssetConfig() => clearField(13);
   @$pb.TagNumber(13)
-  $1.AssetConfig ensureMainAssetConfig() => $_ensure(12);
+  $2.AssetConfig ensureMainAssetConfig() => $_ensure(12);
 
   @$pb.TagNumber(14)
-  $0.ProviderType get providerType => $_getN(13);
+  $1.ProviderType get providerType => $_getN(13);
   @$pb.TagNumber(14)
-  set providerType($0.ProviderType v) {
+  set providerType($1.ProviderType v) {
     setField(14, v);
   }
 
@@ -380,9 +380,9 @@ class ChainConfig extends $pb.GeneratedMessage {
   void clearProviderType() => clearField(14);
 
   @$pb.TagNumber(15)
-  $0.TransactionType get transactionType => $_getN(14);
+  $1.TransactionType get transactionType => $_getN(14);
   @$pb.TagNumber(15)
-  set transactionType($0.TransactionType v) {
+  set transactionType($1.TransactionType v) {
     setField(15, v);
   }
 
@@ -392,21 +392,21 @@ class ChainConfig extends $pb.GeneratedMessage {
   void clearTransactionType() => clearField(15);
 
   @$pb.TagNumber(16)
-  $core.Map<$core.String, $1.AssetConfig> get assetConfigs => $_getMap(15);
+  $core.Map<$core.String, $2.AssetConfig> get assetConfigs => $_getMap(15);
 
   @$pb.TagNumber(17)
-  $core.Map<$core.String, $5.DepositContractConfig>
+  $core.Map<$core.String, $6.DepositContractConfig>
       get depositContractConfigs => $_getMap(16);
 
   @$pb.TagNumber(18)
-  $core.Map<$core.String, $3.PoolContractConfig> get poolContractConfigs =>
+  $core.Map<$core.String, $4.PoolContractConfig> get poolContractConfigs =>
       $_getMap(17);
 
   @$pb.TagNumber(19)
   $core.List<$core.String> get recommendedAmounts => $_getList(18);
 
   @$pb.TagNumber(20)
-  $core.List<$4.ProviderConfig> get providerConfigs => $_getList(19);
+  $core.List<$5.ProviderConfig> get providerConfigs => $_getList(19);
 
   @$pb.TagNumber(21)
   $core.List<$fixnum.Int64> get granularities => $_getList(20);

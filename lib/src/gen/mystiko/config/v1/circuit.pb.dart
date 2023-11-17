@@ -13,12 +13,12 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../common/v1/types.pbenum.dart' as $0;
+import '../../common/v1/types.pbenum.dart' as $1;
 
 class CircuitConfig extends $pb.GeneratedMessage {
   factory CircuitConfig({
     $core.String? name,
-    $0.CircuitType? circuitType,
+    $1.CircuitType? circuitType,
     $core.bool? isDefault,
     $core.Iterable<$core.String>? programFile,
     $core.Iterable<$core.String>? abiFile,
@@ -63,11 +63,11 @@ class CircuitConfig extends $pb.GeneratedMessage {
           const $pb.PackageName(_omitMessageNames ? '' : 'mystiko.config.v1'),
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'name')
-    ..e<$0.CircuitType>(
+    ..e<$1.CircuitType>(
         2, _omitFieldNames ? '' : 'circuitType', $pb.PbFieldType.OE,
-        defaultOrMaker: $0.CircuitType.CIRCUIT_TYPE_UNSPECIFIED,
-        valueOf: $0.CircuitType.valueOf,
-        enumValues: $0.CircuitType.values)
+        defaultOrMaker: $1.CircuitType.CIRCUIT_TYPE_UNSPECIFIED,
+        valueOf: $1.CircuitType.valueOf,
+        enumValues: $1.CircuitType.values)
     ..aOB(3, _omitFieldNames ? '' : 'isDefault')
     ..pPS(4, _omitFieldNames ? '' : 'programFile')
     ..pPS(5, _omitFieldNames ? '' : 'abiFile')
@@ -111,9 +111,9 @@ class CircuitConfig extends $pb.GeneratedMessage {
   void clearName() => clearField(1);
 
   @$pb.TagNumber(2)
-  $0.CircuitType get circuitType => $_getN(1);
+  $1.CircuitType get circuitType => $_getN(1);
   @$pb.TagNumber(2)
-  set circuitType($0.CircuitType v) {
+  set circuitType($1.CircuitType v) {
     setField(2, v);
   }
 

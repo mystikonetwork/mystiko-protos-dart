@@ -14,8 +14,8 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../common/v1/types.pbenum.dart' as $0;
-import '../../v1/common.pbenum.dart' as $6;
+import '../../../common/v1/types.pbenum.dart' as $1;
+import '../../v1/common.pbenum.dart' as $7;
 
 class Deposit extends $pb.GeneratedMessage {
   factory Deposit({
@@ -44,13 +44,13 @@ class Deposit extends $pb.GeneratedMessage {
     $core.String? bridgeFeeAssetSymbol,
     $core.String? executorFeeAssetAddress,
     $core.String? executorFeeAssetSymbol,
-    $core.String? assetApproveTransactionHash,
     $core.String? queuedTransactionHash,
     $core.String? includedTransactionHash,
     $core.String? srcChainTransactionHash,
+    $core.Iterable<$core.String>? assetApproveTransactionHash,
     $core.String? errorMessage,
-    $0.BridgeType? bridgeType,
-    $6.DepositStatus? status,
+    $1.BridgeType? bridgeType,
+    $7.DepositStatus? status,
   }) {
     final $result = create();
     if (id != null) {
@@ -128,9 +128,6 @@ class Deposit extends $pb.GeneratedMessage {
     if (executorFeeAssetSymbol != null) {
       $result.executorFeeAssetSymbol = executorFeeAssetSymbol;
     }
-    if (assetApproveTransactionHash != null) {
-      $result.assetApproveTransactionHash = assetApproveTransactionHash;
-    }
     if (queuedTransactionHash != null) {
       $result.queuedTransactionHash = queuedTransactionHash;
     }
@@ -139,6 +136,9 @@ class Deposit extends $pb.GeneratedMessage {
     }
     if (srcChainTransactionHash != null) {
       $result.srcChainTransactionHash = srcChainTransactionHash;
+    }
+    if (assetApproveTransactionHash != null) {
+      $result.assetApproveTransactionHash.addAll(assetApproveTransactionHash);
     }
     if (errorMessage != null) {
       $result.errorMessage = errorMessage;
@@ -199,21 +199,21 @@ class Deposit extends $pb.GeneratedMessage {
     ..aOS(23, _omitFieldNames ? '' : 'bridgeFeeAssetSymbol')
     ..aOS(24, _omitFieldNames ? '' : 'executorFeeAssetAddress')
     ..aOS(25, _omitFieldNames ? '' : 'executorFeeAssetSymbol')
-    ..aOS(26, _omitFieldNames ? '' : 'assetApproveTransactionHash')
-    ..aOS(27, _omitFieldNames ? '' : 'queuedTransactionHash')
-    ..aOS(28, _omitFieldNames ? '' : 'includedTransactionHash')
-    ..aOS(29, _omitFieldNames ? '' : 'srcChainTransactionHash')
+    ..aOS(26, _omitFieldNames ? '' : 'queuedTransactionHash')
+    ..aOS(27, _omitFieldNames ? '' : 'includedTransactionHash')
+    ..aOS(28, _omitFieldNames ? '' : 'srcChainTransactionHash')
+    ..pPS(29, _omitFieldNames ? '' : 'assetApproveTransactionHash')
     ..aOS(30, _omitFieldNames ? '' : 'errorMessage')
-    ..e<$0.BridgeType>(
+    ..e<$1.BridgeType>(
         31, _omitFieldNames ? '' : 'bridgeType', $pb.PbFieldType.OE,
-        defaultOrMaker: $0.BridgeType.BRIDGE_TYPE_UNSPECIFIED,
-        valueOf: $0.BridgeType.valueOf,
-        enumValues: $0.BridgeType.values)
-    ..e<$6.DepositStatus>(
+        defaultOrMaker: $1.BridgeType.BRIDGE_TYPE_UNSPECIFIED,
+        valueOf: $1.BridgeType.valueOf,
+        enumValues: $1.BridgeType.values)
+    ..e<$7.DepositStatus>(
         32, _omitFieldNames ? '' : 'status', $pb.PbFieldType.OE,
-        defaultOrMaker: $6.DepositStatus.DEPOSIT_STATUS_UNSPECIFIED,
-        valueOf: $6.DepositStatus.valueOf,
-        enumValues: $6.DepositStatus.values)
+        defaultOrMaker: $7.DepositStatus.DEPOSIT_STATUS_UNSPECIFIED,
+        valueOf: $7.DepositStatus.valueOf,
+        enumValues: $7.DepositStatus.values)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
@@ -538,52 +538,43 @@ class Deposit extends $pb.GeneratedMessage {
   void clearExecutorFeeAssetSymbol() => clearField(25);
 
   @$pb.TagNumber(26)
-  $core.String get assetApproveTransactionHash => $_getSZ(25);
+  $core.String get queuedTransactionHash => $_getSZ(25);
   @$pb.TagNumber(26)
-  set assetApproveTransactionHash($core.String v) {
+  set queuedTransactionHash($core.String v) {
     $_setString(25, v);
   }
 
   @$pb.TagNumber(26)
-  $core.bool hasAssetApproveTransactionHash() => $_has(25);
+  $core.bool hasQueuedTransactionHash() => $_has(25);
   @$pb.TagNumber(26)
-  void clearAssetApproveTransactionHash() => clearField(26);
+  void clearQueuedTransactionHash() => clearField(26);
 
   @$pb.TagNumber(27)
-  $core.String get queuedTransactionHash => $_getSZ(26);
+  $core.String get includedTransactionHash => $_getSZ(26);
   @$pb.TagNumber(27)
-  set queuedTransactionHash($core.String v) {
+  set includedTransactionHash($core.String v) {
     $_setString(26, v);
   }
 
   @$pb.TagNumber(27)
-  $core.bool hasQueuedTransactionHash() => $_has(26);
+  $core.bool hasIncludedTransactionHash() => $_has(26);
   @$pb.TagNumber(27)
-  void clearQueuedTransactionHash() => clearField(27);
+  void clearIncludedTransactionHash() => clearField(27);
 
   @$pb.TagNumber(28)
-  $core.String get includedTransactionHash => $_getSZ(27);
+  $core.String get srcChainTransactionHash => $_getSZ(27);
   @$pb.TagNumber(28)
-  set includedTransactionHash($core.String v) {
+  set srcChainTransactionHash($core.String v) {
     $_setString(27, v);
   }
 
   @$pb.TagNumber(28)
-  $core.bool hasIncludedTransactionHash() => $_has(27);
+  $core.bool hasSrcChainTransactionHash() => $_has(27);
   @$pb.TagNumber(28)
-  void clearIncludedTransactionHash() => clearField(28);
+  void clearSrcChainTransactionHash() => clearField(28);
 
   @$pb.TagNumber(29)
-  $core.String get srcChainTransactionHash => $_getSZ(28);
-  @$pb.TagNumber(29)
-  set srcChainTransactionHash($core.String v) {
-    $_setString(28, v);
-  }
-
-  @$pb.TagNumber(29)
-  $core.bool hasSrcChainTransactionHash() => $_has(28);
-  @$pb.TagNumber(29)
-  void clearSrcChainTransactionHash() => clearField(29);
+  $core.List<$core.String> get assetApproveTransactionHash => $_getList(28);
 
   @$pb.TagNumber(30)
   $core.String get errorMessage => $_getSZ(29);
@@ -598,9 +589,9 @@ class Deposit extends $pb.GeneratedMessage {
   void clearErrorMessage() => clearField(30);
 
   @$pb.TagNumber(31)
-  $0.BridgeType get bridgeType => $_getN(30);
+  $1.BridgeType get bridgeType => $_getN(30);
   @$pb.TagNumber(31)
-  set bridgeType($0.BridgeType v) {
+  set bridgeType($1.BridgeType v) {
     setField(31, v);
   }
 
@@ -610,9 +601,9 @@ class Deposit extends $pb.GeneratedMessage {
   void clearBridgeType() => clearField(31);
 
   @$pb.TagNumber(32)
-  $6.DepositStatus get status => $_getN(31);
+  $7.DepositStatus get status => $_getN(31);
   @$pb.TagNumber(32)
-  set status($6.DepositStatus v) {
+  set status($7.DepositStatus v) {
     setField(32, v);
   }
 

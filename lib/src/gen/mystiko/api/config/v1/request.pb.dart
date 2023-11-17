@@ -14,7 +14,7 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../common/v1/types.pbenum.dart' as $0;
+import '../../../common/v1/types.pbenum.dart' as $1;
 
 class GetConfigRequest extends $pb.GeneratedMessage {
   factory GetConfigRequest() => create();
@@ -59,7 +59,7 @@ class GetConfigRequest extends $pb.GeneratedMessage {
 
 class FindDefaultCircuitRequest extends $pb.GeneratedMessage {
   factory FindDefaultCircuitRequest({
-    $0.CircuitType? circuitType,
+    $1.CircuitType? circuitType,
   }) {
     final $result = create();
     if (circuitType != null) {
@@ -80,11 +80,11 @@ class FindDefaultCircuitRequest extends $pb.GeneratedMessage {
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.config.v1'),
       createEmptyInstance: create)
-    ..e<$0.CircuitType>(
+    ..e<$1.CircuitType>(
         1, _omitFieldNames ? '' : 'circuitType', $pb.PbFieldType.OE,
-        defaultOrMaker: $0.CircuitType.CIRCUIT_TYPE_UNSPECIFIED,
-        valueOf: $0.CircuitType.valueOf,
-        enumValues: $0.CircuitType.values)
+        defaultOrMaker: $1.CircuitType.CIRCUIT_TYPE_UNSPECIFIED,
+        valueOf: $1.CircuitType.valueOf,
+        enumValues: $1.CircuitType.values)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
@@ -113,9 +113,9 @@ class FindDefaultCircuitRequest extends $pb.GeneratedMessage {
   static FindDefaultCircuitRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $0.CircuitType get circuitType => $_getN(0);
+  $1.CircuitType get circuitType => $_getN(0);
   @$pb.TagNumber(1)
-  set circuitType($0.CircuitType v) {
+  set circuitType($1.CircuitType v) {
     setField(1, v);
   }
 
@@ -500,7 +500,7 @@ class FindBridgesRequest extends $pb.GeneratedMessage {
 
 class FindBridgeRequest extends $pb.GeneratedMessage {
   factory FindBridgeRequest({
-    $0.BridgeType? bridgeType,
+    $1.BridgeType? bridgeType,
   }) {
     final $result = create();
     if (bridgeType != null) {
@@ -521,11 +521,11 @@ class FindBridgeRequest extends $pb.GeneratedMessage {
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.config.v1'),
       createEmptyInstance: create)
-    ..e<$0.BridgeType>(
+    ..e<$1.BridgeType>(
         1, _omitFieldNames ? '' : 'bridgeType', $pb.PbFieldType.OE,
-        defaultOrMaker: $0.BridgeType.BRIDGE_TYPE_UNSPECIFIED,
-        valueOf: $0.BridgeType.valueOf,
-        enumValues: $0.BridgeType.values)
+        defaultOrMaker: $1.BridgeType.BRIDGE_TYPE_UNSPECIFIED,
+        valueOf: $1.BridgeType.valueOf,
+        enumValues: $1.BridgeType.values)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
@@ -552,9 +552,9 @@ class FindBridgeRequest extends $pb.GeneratedMessage {
   static FindBridgeRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $0.BridgeType get bridgeType => $_getN(0);
+  $1.BridgeType get bridgeType => $_getN(0);
   @$pb.TagNumber(1)
-  set bridgeType($0.BridgeType v) {
+  set bridgeType($1.BridgeType v) {
     setField(1, v);
   }
 
@@ -569,7 +569,7 @@ class FindDepositContractRequest extends $pb.GeneratedMessage {
     $fixnum.Int64? chainId,
     $fixnum.Int64? peerChainId,
     $core.String? assetSymbol,
-    $0.BridgeType? bridgeType,
+    $1.BridgeType? bridgeType,
   }) {
     final $result = create();
     if (chainId != null) {
@@ -605,11 +605,11 @@ class FindDepositContractRequest extends $pb.GeneratedMessage {
         2, _omitFieldNames ? '' : 'peerChainId', $pb.PbFieldType.OU6,
         defaultOrMaker: $fixnum.Int64.ZERO)
     ..aOS(3, _omitFieldNames ? '' : 'assetSymbol')
-    ..e<$0.BridgeType>(
+    ..e<$1.BridgeType>(
         4, _omitFieldNames ? '' : 'bridgeType', $pb.PbFieldType.OE,
-        defaultOrMaker: $0.BridgeType.BRIDGE_TYPE_UNSPECIFIED,
-        valueOf: $0.BridgeType.valueOf,
-        enumValues: $0.BridgeType.values)
+        defaultOrMaker: $1.BridgeType.BRIDGE_TYPE_UNSPECIFIED,
+        valueOf: $1.BridgeType.valueOf,
+        enumValues: $1.BridgeType.values)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
@@ -675,9 +675,9 @@ class FindDepositContractRequest extends $pb.GeneratedMessage {
   void clearAssetSymbol() => clearField(3);
 
   @$pb.TagNumber(4)
-  $0.BridgeType get bridgeType => $_getN(3);
+  $1.BridgeType get bridgeType => $_getN(3);
   @$pb.TagNumber(4)
-  set bridgeType($0.BridgeType v) {
+  set bridgeType($1.BridgeType v) {
     setField(4, v);
   }
 
@@ -777,7 +777,7 @@ class FindPoolContractRequest extends $pb.GeneratedMessage {
   factory FindPoolContractRequest({
     $fixnum.Int64? chainId,
     $core.String? assetSymbol,
-    $0.BridgeType? bridgeType,
+    $1.BridgeType? bridgeType,
     $core.int? version,
   }) {
     final $result = create();
@@ -811,11 +811,11 @@ class FindPoolContractRequest extends $pb.GeneratedMessage {
     ..a<$fixnum.Int64>(1, _omitFieldNames ? '' : 'chainId', $pb.PbFieldType.OU6,
         defaultOrMaker: $fixnum.Int64.ZERO)
     ..aOS(2, _omitFieldNames ? '' : 'assetSymbol')
-    ..e<$0.BridgeType>(
+    ..e<$1.BridgeType>(
         3, _omitFieldNames ? '' : 'bridgeType', $pb.PbFieldType.OE,
-        defaultOrMaker: $0.BridgeType.BRIDGE_TYPE_UNSPECIFIED,
-        valueOf: $0.BridgeType.valueOf,
-        enumValues: $0.BridgeType.values)
+        defaultOrMaker: $1.BridgeType.BRIDGE_TYPE_UNSPECIFIED,
+        valueOf: $1.BridgeType.valueOf,
+        enumValues: $1.BridgeType.values)
     ..a<$core.int>(4, _omitFieldNames ? '' : 'version', $pb.PbFieldType.OU3)
     ..hasRequiredFields = false;
 
@@ -869,9 +869,9 @@ class FindPoolContractRequest extends $pb.GeneratedMessage {
   void clearAssetSymbol() => clearField(2);
 
   @$pb.TagNumber(3)
-  $0.BridgeType get bridgeType => $_getN(2);
+  $1.BridgeType get bridgeType => $_getN(2);
   @$pb.TagNumber(3)
-  set bridgeType($0.BridgeType v) {
+  set bridgeType($1.BridgeType v) {
     setField(3, v);
   }
 
@@ -897,7 +897,7 @@ class FindPoolContractsRequest extends $pb.GeneratedMessage {
   factory FindPoolContractsRequest({
     $fixnum.Int64? chainId,
     $core.String? assetSymbol,
-    $0.BridgeType? bridgeType,
+    $1.BridgeType? bridgeType,
   }) {
     final $result = create();
     if (chainId != null) {
@@ -927,11 +927,11 @@ class FindPoolContractsRequest extends $pb.GeneratedMessage {
     ..a<$fixnum.Int64>(1, _omitFieldNames ? '' : 'chainId', $pb.PbFieldType.OU6,
         defaultOrMaker: $fixnum.Int64.ZERO)
     ..aOS(2, _omitFieldNames ? '' : 'assetSymbol')
-    ..e<$0.BridgeType>(
+    ..e<$1.BridgeType>(
         3, _omitFieldNames ? '' : 'bridgeType', $pb.PbFieldType.OE,
-        defaultOrMaker: $0.BridgeType.BRIDGE_TYPE_UNSPECIFIED,
-        valueOf: $0.BridgeType.valueOf,
-        enumValues: $0.BridgeType.values)
+        defaultOrMaker: $1.BridgeType.BRIDGE_TYPE_UNSPECIFIED,
+        valueOf: $1.BridgeType.valueOf,
+        enumValues: $1.BridgeType.values)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
@@ -984,9 +984,9 @@ class FindPoolContractsRequest extends $pb.GeneratedMessage {
   void clearAssetSymbol() => clearField(2);
 
   @$pb.TagNumber(3)
-  $0.BridgeType get bridgeType => $_getN(2);
+  $1.BridgeType get bridgeType => $_getN(2);
   @$pb.TagNumber(3)
-  set bridgeType($0.BridgeType v) {
+  set bridgeType($1.BridgeType v) {
     setField(3, v);
   }
 

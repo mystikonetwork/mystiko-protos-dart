@@ -14,15 +14,15 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../core/v1/common.pbenum.dart' as $6;
+import '../../core/v1/common.pbenum.dart' as $7;
 
 class PackerConfig extends $pb.GeneratedMessage {
   factory PackerConfig({
     $core.String? url,
     $fixnum.Int64? clientTimeoutMs,
     $core.int? version,
-    $6.PackerChecksum? checksum,
-    $6.PackerCompression? compression,
+    $7.PackerChecksum? checksum,
+    $7.PackerCompression? compression,
   }) {
     final $result = create();
     if (url != null) {
@@ -60,16 +60,16 @@ class PackerConfig extends $pb.GeneratedMessage {
         2, _omitFieldNames ? '' : 'clientTimeoutMs', $pb.PbFieldType.OU6,
         defaultOrMaker: $fixnum.Int64.ZERO)
     ..a<$core.int>(3, _omitFieldNames ? '' : 'version', $pb.PbFieldType.OU3)
-    ..e<$6.PackerChecksum>(
+    ..e<$7.PackerChecksum>(
         4, _omitFieldNames ? '' : 'checksum', $pb.PbFieldType.OE,
-        defaultOrMaker: $6.PackerChecksum.PACKER_CHECKSUM_UNSPECIFIED,
-        valueOf: $6.PackerChecksum.valueOf,
-        enumValues: $6.PackerChecksum.values)
-    ..e<$6.PackerCompression>(
+        defaultOrMaker: $7.PackerChecksum.PACKER_CHECKSUM_UNSPECIFIED,
+        valueOf: $7.PackerChecksum.valueOf,
+        enumValues: $7.PackerChecksum.values)
+    ..e<$7.PackerCompression>(
         5, _omitFieldNames ? '' : 'compression', $pb.PbFieldType.OE,
-        defaultOrMaker: $6.PackerCompression.PACKER_COMPRESSION_UNSPECIFIED,
-        valueOf: $6.PackerCompression.valueOf,
-        enumValues: $6.PackerCompression.values)
+        defaultOrMaker: $7.PackerCompression.PACKER_COMPRESSION_UNSPECIFIED,
+        valueOf: $7.PackerCompression.valueOf,
+        enumValues: $7.PackerCompression.values)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
@@ -132,9 +132,9 @@ class PackerConfig extends $pb.GeneratedMessage {
   void clearVersion() => clearField(3);
 
   @$pb.TagNumber(4)
-  $6.PackerChecksum get checksum => $_getN(3);
+  $7.PackerChecksum get checksum => $_getN(3);
   @$pb.TagNumber(4)
-  set checksum($6.PackerChecksum v) {
+  set checksum($7.PackerChecksum v) {
     setField(4, v);
   }
 
@@ -144,9 +144,9 @@ class PackerConfig extends $pb.GeneratedMessage {
   void clearChecksum() => clearField(4);
 
   @$pb.TagNumber(5)
-  $6.PackerCompression get compression => $_getN(4);
+  $7.PackerCompression get compression => $_getN(4);
   @$pb.TagNumber(5)
-  set compression($6.PackerCompression v) {
+  set compression($7.PackerCompression v) {
     setField(5, v);
   }
 

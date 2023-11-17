@@ -14,7 +14,7 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../v1/common.pbenum.dart' as $6;
+import '../../v1/common.pbenum.dart' as $7;
 
 class Spend extends $pb.GeneratedMessage {
   factory Spend({
@@ -45,8 +45,8 @@ class Spend extends $pb.GeneratedMessage {
     $core.String? randomAuditingPublicKey,
     $core.String? errorMessage,
     $core.String? transactionHash,
-    $6.SpendType? spendType,
-    $6.SpendStatus? status,
+    $7.SpendType? spendType,
+    $7.SpendStatus? status,
   }) {
     final $result = create();
     if (id != null) {
@@ -186,15 +186,15 @@ class Spend extends $pb.GeneratedMessage {
     ..aOS(25, _omitFieldNames ? '' : 'randomAuditingPublicKey')
     ..aOS(26, _omitFieldNames ? '' : 'errorMessage')
     ..aOS(27, _omitFieldNames ? '' : 'transactionHash')
-    ..e<$6.SpendType>(
+    ..e<$7.SpendType>(
         28, _omitFieldNames ? '' : 'spendType', $pb.PbFieldType.OE,
-        defaultOrMaker: $6.SpendType.SPEND_TYPE_UNSPECIFIED,
-        valueOf: $6.SpendType.valueOf,
-        enumValues: $6.SpendType.values)
-    ..e<$6.SpendStatus>(29, _omitFieldNames ? '' : 'status', $pb.PbFieldType.OE,
-        defaultOrMaker: $6.SpendStatus.SPEND_STATUS_UNSPECIFIED,
-        valueOf: $6.SpendStatus.valueOf,
-        enumValues: $6.SpendStatus.values)
+        defaultOrMaker: $7.SpendType.SPEND_TYPE_UNSPECIFIED,
+        valueOf: $7.SpendType.valueOf,
+        enumValues: $7.SpendType.values)
+    ..e<$7.SpendStatus>(29, _omitFieldNames ? '' : 'status', $pb.PbFieldType.OE,
+        defaultOrMaker: $7.SpendStatus.SPEND_STATUS_UNSPECIFIED,
+        valueOf: $7.SpendStatus.valueOf,
+        enumValues: $7.SpendStatus.values)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
@@ -498,9 +498,9 @@ class Spend extends $pb.GeneratedMessage {
   void clearTransactionHash() => clearField(27);
 
   @$pb.TagNumber(28)
-  $6.SpendType get spendType => $_getN(27);
+  $7.SpendType get spendType => $_getN(27);
   @$pb.TagNumber(28)
-  set spendType($6.SpendType v) {
+  set spendType($7.SpendType v) {
     setField(28, v);
   }
 
@@ -510,9 +510,9 @@ class Spend extends $pb.GeneratedMessage {
   void clearSpendType() => clearField(28);
 
   @$pb.TagNumber(29)
-  $6.SpendStatus get status => $_getN(28);
+  $7.SpendStatus get status => $_getN(28);
   @$pb.TagNumber(29)
-  set status($6.SpendStatus v) {
+  set status($7.SpendStatus v) {
     setField(29, v);
   }
 

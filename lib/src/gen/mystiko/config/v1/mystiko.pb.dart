@@ -14,22 +14,22 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../service/v1/client.pb.dart' as $7;
-import '../bridge/v1/bridge.pb.dart' as $10;
-import 'chain.pb.dart' as $9;
-import 'circuit.pb.dart' as $2;
-import 'packer.pb.dart' as $8;
+import '../../service/v1/client.pb.dart' as $8;
+import '../bridge/v1/bridge.pb.dart' as $11;
+import 'chain.pb.dart' as $10;
+import 'circuit.pb.dart' as $3;
+import 'packer.pb.dart' as $9;
 
 class MystikoConfig extends $pb.GeneratedMessage {
   factory MystikoConfig({
     $core.String? version,
-    $core.Map<$fixnum.Int64, $9.ChainConfig>? chainConfigs,
-    $core.Map<$core.int, $10.BridgeConfig>? bridgeConfigs,
+    $core.Map<$fixnum.Int64, $10.ChainConfig>? chainConfigs,
+    $core.Map<$core.int, $11.BridgeConfig>? bridgeConfigs,
     $core.String? gitRevision,
-    $7.ClientOptions? sequencerConfig,
-    $8.PackerConfig? packerConfig,
+    $8.ClientOptions? sequencerConfig,
+    $9.PackerConfig? packerConfig,
     $core.Iterable<$core.String>? countryBlacklist,
-    $core.Iterable<$2.CircuitConfig>? circuitConfigs,
+    $core.Iterable<$3.CircuitConfig>? circuitConfigs,
   }) {
     final $result = create();
     if (version != null) {
@@ -72,29 +72,30 @@ class MystikoConfig extends $pb.GeneratedMessage {
           const $pb.PackageName(_omitMessageNames ? '' : 'mystiko.config.v1'),
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'version')
-    ..m<$fixnum.Int64, $9.ChainConfig>(2, _omitFieldNames ? '' : 'chainConfigs',
+    ..m<$fixnum.Int64, $10.ChainConfig>(
+        2, _omitFieldNames ? '' : 'chainConfigs',
         entryClassName: 'MystikoConfig.ChainConfigsEntry',
         keyFieldType: $pb.PbFieldType.OU6,
         valueFieldType: $pb.PbFieldType.OM,
-        valueCreator: $9.ChainConfig.create,
-        valueDefaultOrMaker: $9.ChainConfig.getDefault,
+        valueCreator: $10.ChainConfig.create,
+        valueDefaultOrMaker: $10.ChainConfig.getDefault,
         packageName: const $pb.PackageName('mystiko.config.v1'))
-    ..m<$core.int, $10.BridgeConfig>(3, _omitFieldNames ? '' : 'bridgeConfigs',
+    ..m<$core.int, $11.BridgeConfig>(3, _omitFieldNames ? '' : 'bridgeConfigs',
         entryClassName: 'MystikoConfig.BridgeConfigsEntry',
         keyFieldType: $pb.PbFieldType.O3,
         valueFieldType: $pb.PbFieldType.OM,
-        valueCreator: $10.BridgeConfig.create,
-        valueDefaultOrMaker: $10.BridgeConfig.getDefault,
+        valueCreator: $11.BridgeConfig.create,
+        valueDefaultOrMaker: $11.BridgeConfig.getDefault,
         packageName: const $pb.PackageName('mystiko.config.v1'))
     ..aOS(4, _omitFieldNames ? '' : 'gitRevision')
-    ..aOM<$7.ClientOptions>(5, _omitFieldNames ? '' : 'sequencerConfig',
-        subBuilder: $7.ClientOptions.create)
-    ..aOM<$8.PackerConfig>(6, _omitFieldNames ? '' : 'packerConfig',
-        subBuilder: $8.PackerConfig.create)
+    ..aOM<$8.ClientOptions>(5, _omitFieldNames ? '' : 'sequencerConfig',
+        subBuilder: $8.ClientOptions.create)
+    ..aOM<$9.PackerConfig>(6, _omitFieldNames ? '' : 'packerConfig',
+        subBuilder: $9.PackerConfig.create)
     ..pPS(7, _omitFieldNames ? '' : 'countryBlacklist')
-    ..pc<$2.CircuitConfig>(
+    ..pc<$3.CircuitConfig>(
         8, _omitFieldNames ? '' : 'circuitConfigs', $pb.PbFieldType.PM,
-        subBuilder: $2.CircuitConfig.create)
+        subBuilder: $3.CircuitConfig.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
@@ -133,10 +134,10 @@ class MystikoConfig extends $pb.GeneratedMessage {
   void clearVersion() => clearField(1);
 
   @$pb.TagNumber(2)
-  $core.Map<$fixnum.Int64, $9.ChainConfig> get chainConfigs => $_getMap(1);
+  $core.Map<$fixnum.Int64, $10.ChainConfig> get chainConfigs => $_getMap(1);
 
   @$pb.TagNumber(3)
-  $core.Map<$core.int, $10.BridgeConfig> get bridgeConfigs => $_getMap(2);
+  $core.Map<$core.int, $11.BridgeConfig> get bridgeConfigs => $_getMap(2);
 
   @$pb.TagNumber(4)
   $core.String get gitRevision => $_getSZ(3);
@@ -151,9 +152,9 @@ class MystikoConfig extends $pb.GeneratedMessage {
   void clearGitRevision() => clearField(4);
 
   @$pb.TagNumber(5)
-  $7.ClientOptions get sequencerConfig => $_getN(4);
+  $8.ClientOptions get sequencerConfig => $_getN(4);
   @$pb.TagNumber(5)
-  set sequencerConfig($7.ClientOptions v) {
+  set sequencerConfig($8.ClientOptions v) {
     setField(5, v);
   }
 
@@ -162,12 +163,12 @@ class MystikoConfig extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearSequencerConfig() => clearField(5);
   @$pb.TagNumber(5)
-  $7.ClientOptions ensureSequencerConfig() => $_ensure(4);
+  $8.ClientOptions ensureSequencerConfig() => $_ensure(4);
 
   @$pb.TagNumber(6)
-  $8.PackerConfig get packerConfig => $_getN(5);
+  $9.PackerConfig get packerConfig => $_getN(5);
   @$pb.TagNumber(6)
-  set packerConfig($8.PackerConfig v) {
+  set packerConfig($9.PackerConfig v) {
     setField(6, v);
   }
 
@@ -176,13 +177,13 @@ class MystikoConfig extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   void clearPackerConfig() => clearField(6);
   @$pb.TagNumber(6)
-  $8.PackerConfig ensurePackerConfig() => $_ensure(5);
+  $9.PackerConfig ensurePackerConfig() => $_ensure(5);
 
   @$pb.TagNumber(7)
   $core.List<$core.String> get countryBlacklist => $_getList(6);
 
   @$pb.TagNumber(8)
-  $core.List<$2.CircuitConfig> get circuitConfigs => $_getList(7);
+  $core.List<$3.CircuitConfig> get circuitConfigs => $_getList(7);
 }
 
 const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');

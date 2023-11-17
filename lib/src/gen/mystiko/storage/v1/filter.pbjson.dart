@@ -299,11 +299,22 @@ const QueryFilter$json = {
       '10': 'orderBy',
       '17': true
     },
+    {
+      '1': 'additional_condition',
+      '3': 6,
+      '4': 1,
+      '5': 11,
+      '6': '.mystiko.storage.v1.Condition',
+      '9': 3,
+      '10': 'additionalCondition',
+      '17': true
+    },
   ],
   '8': [
     {'1': '_limit'},
     {'1': '_offset'},
     {'1': '_order_by'},
+    {'1': '_additional_condition'},
   ],
 };
 
@@ -314,4 +325,6 @@ final $typed_data.Uint8List queryFilterDescriptor = $convert.base64Decode(
     'dGlrby5zdG9yYWdlLnYxLkNvbmRpdGlvbk9wZXJhdG9yUhJjb25kaXRpb25zT3BlcmF0b3ISGQ'
     'oFbGltaXQYAyABKARIAFIFbGltaXSIAQESGwoGb2Zmc2V0GAQgASgESAFSBm9mZnNldIgBARI7'
     'CghvcmRlcl9ieRgFIAEoCzIbLm15c3Rpa28uc3RvcmFnZS52MS5PcmRlckJ5SAJSB29yZGVyQn'
-    'mIAQFCCAoGX2xpbWl0QgkKB19vZmZzZXRCCwoJX29yZGVyX2J5');
+    'mIAQESVQoUYWRkaXRpb25hbF9jb25kaXRpb24YBiABKAsyHS5teXN0aWtvLnN0b3JhZ2UudjEu'
+    'Q29uZGl0aW9uSANSE2FkZGl0aW9uYWxDb25kaXRpb26IAQFCCAoGX2xpbWl0QgkKB19vZmZzZX'
+    'RCCwoJX29yZGVyX2J5QhcKFV9hZGRpdGlvbmFsX2NvbmRpdGlvbg==');

@@ -13,11 +13,11 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../common/v1/types.pbenum.dart' as $0;
+import '../../common/v1/types.pbenum.dart' as $1;
 
 class AssetConfig extends $pb.GeneratedMessage {
   factory AssetConfig({
-    $0.AssetType? assetType,
+    $1.AssetType? assetType,
     $core.String? assetSymbol,
     $core.int? assetDecimals,
     $core.String? assetAddress,
@@ -54,10 +54,10 @@ class AssetConfig extends $pb.GeneratedMessage {
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'mystiko.config.v1'),
       createEmptyInstance: create)
-    ..e<$0.AssetType>(1, _omitFieldNames ? '' : 'assetType', $pb.PbFieldType.OE,
-        defaultOrMaker: $0.AssetType.ASSET_TYPE_UNSPECIFIED,
-        valueOf: $0.AssetType.valueOf,
-        enumValues: $0.AssetType.values)
+    ..e<$1.AssetType>(1, _omitFieldNames ? '' : 'assetType', $pb.PbFieldType.OE,
+        defaultOrMaker: $1.AssetType.ASSET_TYPE_UNSPECIFIED,
+        valueOf: $1.AssetType.valueOf,
+        enumValues: $1.AssetType.values)
     ..aOS(2, _omitFieldNames ? '' : 'assetSymbol')
     ..a<$core.int>(
         3, _omitFieldNames ? '' : 'assetDecimals', $pb.PbFieldType.OU3)
@@ -88,9 +88,9 @@ class AssetConfig extends $pb.GeneratedMessage {
   static AssetConfig? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $0.AssetType get assetType => $_getN(0);
+  $1.AssetType get assetType => $_getN(0);
   @$pb.TagNumber(1)
-  set assetType($0.AssetType v) {
+  set assetType($1.AssetType v) {
     setField(1, v);
   }
 

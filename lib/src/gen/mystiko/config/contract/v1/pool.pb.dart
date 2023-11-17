@@ -14,9 +14,9 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../common/v1/types.pbenum.dart' as $0;
-import '../../v1/asset.pb.dart' as $1;
-import '../../v1/circuit.pb.dart' as $2;
+import '../../../common/v1/types.pbenum.dart' as $1;
+import '../../v1/asset.pb.dart' as $2;
+import '../../v1/circuit.pb.dart' as $3;
 
 class PoolContractConfig extends $pb.GeneratedMessage {
   factory PoolContractConfig({
@@ -26,10 +26,10 @@ class PoolContractConfig extends $pb.GeneratedMessage {
     $fixnum.Int64? startBlock,
     $core.String? poolName,
     $core.String? minRollupFee,
-    $0.ContractType? contractType,
-    $0.BridgeType? bridgeType,
-    $1.AssetConfig? assetConfig,
-    $core.Iterable<$2.CircuitConfig>? circuitConfigs,
+    $1.ContractType? contractType,
+    $1.BridgeType? bridgeType,
+    $2.AssetConfig? assetConfig,
+    $core.Iterable<$3.CircuitConfig>? circuitConfigs,
     $core.Iterable<$core.String>? circuits,
   }) {
     final $result = create();
@@ -89,21 +89,21 @@ class PoolContractConfig extends $pb.GeneratedMessage {
         defaultOrMaker: $fixnum.Int64.ZERO)
     ..aOS(5, _omitFieldNames ? '' : 'poolName')
     ..aOS(6, _omitFieldNames ? '' : 'minRollupFee')
-    ..e<$0.ContractType>(
+    ..e<$1.ContractType>(
         7, _omitFieldNames ? '' : 'contractType', $pb.PbFieldType.OE,
-        defaultOrMaker: $0.ContractType.CONTRACT_TYPE_UNSPECIFIED,
-        valueOf: $0.ContractType.valueOf,
-        enumValues: $0.ContractType.values)
-    ..e<$0.BridgeType>(
+        defaultOrMaker: $1.ContractType.CONTRACT_TYPE_UNSPECIFIED,
+        valueOf: $1.ContractType.valueOf,
+        enumValues: $1.ContractType.values)
+    ..e<$1.BridgeType>(
         8, _omitFieldNames ? '' : 'bridgeType', $pb.PbFieldType.OE,
-        defaultOrMaker: $0.BridgeType.BRIDGE_TYPE_UNSPECIFIED,
-        valueOf: $0.BridgeType.valueOf,
-        enumValues: $0.BridgeType.values)
-    ..aOM<$1.AssetConfig>(9, _omitFieldNames ? '' : 'assetConfig',
-        subBuilder: $1.AssetConfig.create)
-    ..pc<$2.CircuitConfig>(
+        defaultOrMaker: $1.BridgeType.BRIDGE_TYPE_UNSPECIFIED,
+        valueOf: $1.BridgeType.valueOf,
+        enumValues: $1.BridgeType.values)
+    ..aOM<$2.AssetConfig>(9, _omitFieldNames ? '' : 'assetConfig',
+        subBuilder: $2.AssetConfig.create)
+    ..pc<$3.CircuitConfig>(
         10, _omitFieldNames ? '' : 'circuitConfigs', $pb.PbFieldType.PM,
-        subBuilder: $2.CircuitConfig.create)
+        subBuilder: $3.CircuitConfig.create)
     ..pPS(11, _omitFieldNames ? '' : 'circuits')
     ..hasRequiredFields = false;
 
@@ -203,9 +203,9 @@ class PoolContractConfig extends $pb.GeneratedMessage {
   void clearMinRollupFee() => clearField(6);
 
   @$pb.TagNumber(7)
-  $0.ContractType get contractType => $_getN(6);
+  $1.ContractType get contractType => $_getN(6);
   @$pb.TagNumber(7)
-  set contractType($0.ContractType v) {
+  set contractType($1.ContractType v) {
     setField(7, v);
   }
 
@@ -215,9 +215,9 @@ class PoolContractConfig extends $pb.GeneratedMessage {
   void clearContractType() => clearField(7);
 
   @$pb.TagNumber(8)
-  $0.BridgeType get bridgeType => $_getN(7);
+  $1.BridgeType get bridgeType => $_getN(7);
   @$pb.TagNumber(8)
-  set bridgeType($0.BridgeType v) {
+  set bridgeType($1.BridgeType v) {
     setField(8, v);
   }
 
@@ -227,9 +227,9 @@ class PoolContractConfig extends $pb.GeneratedMessage {
   void clearBridgeType() => clearField(8);
 
   @$pb.TagNumber(9)
-  $1.AssetConfig get assetConfig => $_getN(8);
+  $2.AssetConfig get assetConfig => $_getN(8);
   @$pb.TagNumber(9)
-  set assetConfig($1.AssetConfig v) {
+  set assetConfig($2.AssetConfig v) {
     setField(9, v);
   }
 
@@ -238,10 +238,10 @@ class PoolContractConfig extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   void clearAssetConfig() => clearField(9);
   @$pb.TagNumber(9)
-  $1.AssetConfig ensureAssetConfig() => $_ensure(8);
+  $2.AssetConfig ensureAssetConfig() => $_ensure(8);
 
   @$pb.TagNumber(10)
-  $core.List<$2.CircuitConfig> get circuitConfigs => $_getList(9);
+  $core.List<$3.CircuitConfig> get circuitConfigs => $_getList(9);
 
   @$pb.TagNumber(11)
   $core.List<$core.String> get circuits => $_getList(10);

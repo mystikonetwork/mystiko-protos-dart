@@ -9,7 +9,6 @@
 // ignore_for_file: non_constant_identifier_names, prefer_final_fields
 // ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
-import 'dart:async' as $async;
 import 'dart:core' as $core;
 
 import 'package:fixnum/fixnum.dart' as $fixnum;
@@ -942,20 +941,6 @@ class SendTransactionResponse extends $pb.GeneratedMessage {
   $core.bool hasTxHash() => $_has(1);
   @$pb.TagNumber(2)
   void clearTxHash() => clearField(2);
-}
-
-class TransactionServiceApi {
-  $pb.RpcClient _client;
-  TransactionServiceApi(this._client);
-
-  $async.Future<GetAddressResponse> getAddress(
-          $pb.ClientContext? ctx, GetAddressRequest request) =>
-      _client.invoke<GetAddressResponse>(ctx, 'TransactionService',
-          'GetAddress', request, GetAddressResponse());
-  $async.Future<SendTransactionResponse> sendTransaction(
-          $pb.ClientContext? ctx, SendTransactionRequest request) =>
-      _client.invoke<SendTransactionResponse>(ctx, 'TransactionService',
-          'SendTransaction', request, SendTransactionResponse());
 }
 
 const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');

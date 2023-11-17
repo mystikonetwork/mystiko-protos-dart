@@ -14,9 +14,9 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../common/v1/types.pbenum.dart' as $0;
-import '../../v1/asset.pb.dart' as $1;
-import 'pool.pb.dart' as $3;
+import '../../../common/v1/types.pbenum.dart' as $1;
+import '../../v1/asset.pb.dart' as $2;
+import 'pool.pb.dart' as $4;
 
 class DepositContractConfig extends $pb.GeneratedMessage {
   factory DepositContractConfig({
@@ -27,15 +27,15 @@ class DepositContractConfig extends $pb.GeneratedMessage {
     $core.bool? disabled,
     $core.String? minAmount,
     $core.String? maxAmount,
-    $3.PoolContractConfig? poolContractConfig,
-    $0.BridgeType? bridgeType,
-    $0.ContractType? contractType,
+    $4.PoolContractConfig? poolContractConfig,
+    $1.BridgeType? bridgeType,
+    $1.ContractType? contractType,
     $core.String? minBridgeFee,
     $core.String? minExecutorFee,
     $core.int? serviceFee,
     $core.int? serviceFeeDivider,
-    $1.AssetConfig? bridgeFeeAssetConfig,
-    $1.AssetConfig? executorFeeAssetConfig,
+    $2.AssetConfig? bridgeFeeAssetConfig,
+    $2.AssetConfig? executorFeeAssetConfig,
     $fixnum.Int64? peerChainId,
     $core.String? peerContractAddress,
   }) {
@@ -118,27 +118,27 @@ class DepositContractConfig extends $pb.GeneratedMessage {
     ..aOB(5, _omitFieldNames ? '' : 'disabled')
     ..aOS(6, _omitFieldNames ? '' : 'minAmount')
     ..aOS(7, _omitFieldNames ? '' : 'maxAmount')
-    ..aOM<$3.PoolContractConfig>(8, _omitFieldNames ? '' : 'poolContractConfig',
-        subBuilder: $3.PoolContractConfig.create)
-    ..e<$0.BridgeType>(
+    ..aOM<$4.PoolContractConfig>(8, _omitFieldNames ? '' : 'poolContractConfig',
+        subBuilder: $4.PoolContractConfig.create)
+    ..e<$1.BridgeType>(
         9, _omitFieldNames ? '' : 'bridgeType', $pb.PbFieldType.OE,
-        defaultOrMaker: $0.BridgeType.BRIDGE_TYPE_UNSPECIFIED,
-        valueOf: $0.BridgeType.valueOf,
-        enumValues: $0.BridgeType.values)
-    ..e<$0.ContractType>(
+        defaultOrMaker: $1.BridgeType.BRIDGE_TYPE_UNSPECIFIED,
+        valueOf: $1.BridgeType.valueOf,
+        enumValues: $1.BridgeType.values)
+    ..e<$1.ContractType>(
         10, _omitFieldNames ? '' : 'contractType', $pb.PbFieldType.OE,
-        defaultOrMaker: $0.ContractType.CONTRACT_TYPE_UNSPECIFIED,
-        valueOf: $0.ContractType.valueOf,
-        enumValues: $0.ContractType.values)
+        defaultOrMaker: $1.ContractType.CONTRACT_TYPE_UNSPECIFIED,
+        valueOf: $1.ContractType.valueOf,
+        enumValues: $1.ContractType.values)
     ..aOS(11, _omitFieldNames ? '' : 'minBridgeFee')
     ..aOS(12, _omitFieldNames ? '' : 'minExecutorFee')
     ..a<$core.int>(13, _omitFieldNames ? '' : 'serviceFee', $pb.PbFieldType.OU3)
     ..a<$core.int>(
         14, _omitFieldNames ? '' : 'serviceFeeDivider', $pb.PbFieldType.OU3)
-    ..aOM<$1.AssetConfig>(15, _omitFieldNames ? '' : 'bridgeFeeAssetConfig',
-        subBuilder: $1.AssetConfig.create)
-    ..aOM<$1.AssetConfig>(16, _omitFieldNames ? '' : 'executorFeeAssetConfig',
-        subBuilder: $1.AssetConfig.create)
+    ..aOM<$2.AssetConfig>(15, _omitFieldNames ? '' : 'bridgeFeeAssetConfig',
+        subBuilder: $2.AssetConfig.create)
+    ..aOM<$2.AssetConfig>(16, _omitFieldNames ? '' : 'executorFeeAssetConfig',
+        subBuilder: $2.AssetConfig.create)
     ..a<$fixnum.Int64>(
         17, _omitFieldNames ? '' : 'peerChainId', $pb.PbFieldType.OU6,
         defaultOrMaker: $fixnum.Int64.ZERO)
@@ -255,9 +255,9 @@ class DepositContractConfig extends $pb.GeneratedMessage {
   void clearMaxAmount() => clearField(7);
 
   @$pb.TagNumber(8)
-  $3.PoolContractConfig get poolContractConfig => $_getN(7);
+  $4.PoolContractConfig get poolContractConfig => $_getN(7);
   @$pb.TagNumber(8)
-  set poolContractConfig($3.PoolContractConfig v) {
+  set poolContractConfig($4.PoolContractConfig v) {
     setField(8, v);
   }
 
@@ -266,12 +266,12 @@ class DepositContractConfig extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   void clearPoolContractConfig() => clearField(8);
   @$pb.TagNumber(8)
-  $3.PoolContractConfig ensurePoolContractConfig() => $_ensure(7);
+  $4.PoolContractConfig ensurePoolContractConfig() => $_ensure(7);
 
   @$pb.TagNumber(9)
-  $0.BridgeType get bridgeType => $_getN(8);
+  $1.BridgeType get bridgeType => $_getN(8);
   @$pb.TagNumber(9)
-  set bridgeType($0.BridgeType v) {
+  set bridgeType($1.BridgeType v) {
     setField(9, v);
   }
 
@@ -281,9 +281,9 @@ class DepositContractConfig extends $pb.GeneratedMessage {
   void clearBridgeType() => clearField(9);
 
   @$pb.TagNumber(10)
-  $0.ContractType get contractType => $_getN(9);
+  $1.ContractType get contractType => $_getN(9);
   @$pb.TagNumber(10)
-  set contractType($0.ContractType v) {
+  set contractType($1.ContractType v) {
     setField(10, v);
   }
 
@@ -341,9 +341,9 @@ class DepositContractConfig extends $pb.GeneratedMessage {
   void clearServiceFeeDivider() => clearField(14);
 
   @$pb.TagNumber(15)
-  $1.AssetConfig get bridgeFeeAssetConfig => $_getN(14);
+  $2.AssetConfig get bridgeFeeAssetConfig => $_getN(14);
   @$pb.TagNumber(15)
-  set bridgeFeeAssetConfig($1.AssetConfig v) {
+  set bridgeFeeAssetConfig($2.AssetConfig v) {
     setField(15, v);
   }
 
@@ -352,12 +352,12 @@ class DepositContractConfig extends $pb.GeneratedMessage {
   @$pb.TagNumber(15)
   void clearBridgeFeeAssetConfig() => clearField(15);
   @$pb.TagNumber(15)
-  $1.AssetConfig ensureBridgeFeeAssetConfig() => $_ensure(14);
+  $2.AssetConfig ensureBridgeFeeAssetConfig() => $_ensure(14);
 
   @$pb.TagNumber(16)
-  $1.AssetConfig get executorFeeAssetConfig => $_getN(15);
+  $2.AssetConfig get executorFeeAssetConfig => $_getN(15);
   @$pb.TagNumber(16)
-  set executorFeeAssetConfig($1.AssetConfig v) {
+  set executorFeeAssetConfig($2.AssetConfig v) {
     setField(16, v);
   }
 
@@ -366,7 +366,7 @@ class DepositContractConfig extends $pb.GeneratedMessage {
   @$pb.TagNumber(16)
   void clearExecutorFeeAssetConfig() => clearField(16);
   @$pb.TagNumber(16)
-  $1.AssetConfig ensureExecutorFeeAssetConfig() => $_ensure(15);
+  $2.AssetConfig ensureExecutorFeeAssetConfig() => $_ensure(15);
 
   @$pb.TagNumber(17)
   $fixnum.Int64 get peerChainId => $_getI64(16);
