@@ -28,27 +28,38 @@ const MystikoOptions$json = {
       '17': true
     },
     {
-      '1': 'loader_config',
+      '1': 'relayer_client_options',
       '3': 2,
       '4': 1,
       '5': 11,
-      '6': '.mystiko.loader.v1.LoaderConfig',
+      '6': '.mystiko.relayer.v1.RelayerClientOptions',
       '9': 1,
+      '10': 'relayerClientOptions',
+      '17': true
+    },
+    {
+      '1': 'loader_config',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.mystiko.loader.v1.LoaderConfig',
+      '9': 2,
       '10': 'loaderConfig',
       '17': true
     },
     {
       '1': 'db_path',
-      '3': 3,
+      '3': 4,
       '4': 1,
       '5': 9,
-      '9': 2,
+      '9': 3,
       '10': 'dbPath',
       '17': true
     },
   ],
   '8': [
     {'1': '_config_options'},
+    {'1': '_relayer_client_options'},
     {'1': '_loader_config'},
     {'1': '_db_path'},
   ],
@@ -57,7 +68,9 @@ const MystikoOptions$json = {
 /// Descriptor for `MystikoOptions`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List mystikoOptionsDescriptor = $convert.base64Decode(
     'Cg5NeXN0aWtvT3B0aW9ucxJMCg5jb25maWdfb3B0aW9ucxgBIAEoCzIgLm15c3Rpa28uY29tbW'
-    '9uLnYxLkNvbmZpZ09wdGlvbnNIAFINY29uZmlnT3B0aW9uc4gBARJJCg1sb2FkZXJfY29uZmln'
-    'GAIgASgLMh8ubXlzdGlrby5sb2FkZXIudjEuTG9hZGVyQ29uZmlnSAFSDGxvYWRlckNvbmZpZ4'
-    'gBARIcCgdkYl9wYXRoGAMgASgJSAJSBmRiUGF0aIgBAUIRCg9fY29uZmlnX29wdGlvbnNCEAoO'
-    'X2xvYWRlcl9jb25maWdCCgoIX2RiX3BhdGg=');
+    '9uLnYxLkNvbmZpZ09wdGlvbnNIAFINY29uZmlnT3B0aW9uc4gBARJjChZyZWxheWVyX2NsaWVu'
+    'dF9vcHRpb25zGAIgASgLMigubXlzdGlrby5yZWxheWVyLnYxLlJlbGF5ZXJDbGllbnRPcHRpb2'
+    '5zSAFSFHJlbGF5ZXJDbGllbnRPcHRpb25ziAEBEkkKDWxvYWRlcl9jb25maWcYAyABKAsyHy5t'
+    'eXN0aWtvLmxvYWRlci52MS5Mb2FkZXJDb25maWdIAlIMbG9hZGVyQ29uZmlniAEBEhwKB2RiX3'
+    'BhdGgYBCABKAlIA1IGZGJQYXRoiAEBQhEKD19jb25maWdfb3B0aW9uc0IZChdfcmVsYXllcl9j'
+    'bGllbnRfb3B0aW9uc0IQCg5fbG9hZGVyX2NvbmZpZ0IKCghfZGJfcGF0aA==');

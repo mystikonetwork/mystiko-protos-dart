@@ -13,73 +13,323 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-class StatusCode extends $pb.ProtobufEnum {
-  static const StatusCode STATUS_CODE_UNSPECIFIED =
-      StatusCode._(0, _omitEnumNames ? '' : 'STATUS_CODE_UNSPECIFIED');
-  static const StatusCode STATUS_CODE_SUCCESS =
-      StatusCode._(1, _omitEnumNames ? '' : 'STATUS_CODE_SUCCESS');
-  static const StatusCode STATUS_CODE_UNKNOWN_ERROR =
-      StatusCode._(2, _omitEnumNames ? '' : 'STATUS_CODE_UNKNOWN_ERROR');
-  static const StatusCode STATUS_CODE_CONFIG_ERROR =
-      StatusCode._(3, _omitEnumNames ? '' : 'STATUS_CODE_CONFIG_ERROR');
-  static const StatusCode STATUS_CODE_DATABASE_MIGRATION_ERROR = StatusCode._(
-      4, _omitEnumNames ? '' : 'STATUS_CODE_DATABASE_MIGRATION_ERROR');
-  static const StatusCode STATUS_CODE_CRYPTO_ERROR =
-      StatusCode._(5, _omitEnumNames ? '' : 'STATUS_CODE_CRYPTO_ERROR');
-  static const StatusCode STATUS_CODE_MNEMONIC_ERROR =
-      StatusCode._(6, _omitEnumNames ? '' : 'STATUS_CODE_MNEMONIC_ERROR');
-  static const StatusCode STATUS_CODE_HEX_STRING_ERROR =
-      StatusCode._(7, _omitEnumNames ? '' : 'STATUS_CODE_HEX_STRING_ERROR');
-  static const StatusCode STATUS_CODE_STORAGE_ERROR =
-      StatusCode._(8, _omitEnumNames ? '' : 'STATUS_CODE_STORAGE_ERROR');
-  static const StatusCode STATUS_CODE_INVALID_PASSWORD_ERROR = StatusCode._(
-      9, _omitEnumNames ? '' : 'STATUS_CODE_INVALID_PASSWORD_ERROR');
-  static const StatusCode STATUS_CODE_MISMATCHED_PASSWORD_ERROR = StatusCode._(
-      10, _omitEnumNames ? '' : 'STATUS_CODE_MISMATCHED_PASSWORD_ERROR');
-  static const StatusCode STATUS_CODE_NO_EXISTING_WALLET_ERROR = StatusCode._(
-      11, _omitEnumNames ? '' : 'STATUS_CODE_NO_EXISTING_WALLET_ERROR');
-  static const StatusCode STATUS_CODE_NO_SUCH_ACCOUNT_ERROR = StatusCode._(
-      12, _omitEnumNames ? '' : 'STATUS_CODE_NO_SUCH_ACCOUNT_ERROR');
-  static const StatusCode STATUS_CODE_INVALID_PROVIDER_URL_ERROR = StatusCode._(
-      13, _omitEnumNames ? '' : 'STATUS_CODE_INVALID_PROVIDER_URL_ERROR');
-  static const StatusCode STATUS_CODE_DATA_LOADER_ERROR =
-      StatusCode._(14, _omitEnumNames ? '' : 'STATUS_CODE_DATA_LOADER_ERROR');
-  static const StatusCode STATUS_CODE_SYNCHRONIZER_ERROR =
-      StatusCode._(15, _omitEnumNames ? '' : 'STATUS_CODE_SYNCHRONIZER_ERROR');
-  static const StatusCode STATUS_CODE_SCANNER_ERROR =
-      StatusCode._(16, _omitEnumNames ? '' : 'STATUS_CODE_SCANNER_ERROR');
-  static const StatusCode STATUS_CODE_GET_MYSTIKO_GUARD_ERROR = StatusCode._(
-      17, _omitEnumNames ? '' : 'STATUS_CODE_GET_MYSTIKO_GUARD_ERROR');
-  static const StatusCode STATUS_CODE_DESERIALIZE_MESSAGE_ERROR = StatusCode._(
-      18, _omitEnumNames ? '' : 'STATUS_CODE_DESERIALIZE_MESSAGE_ERROR');
+class MystikoLibError extends $pb.ProtobufEnum {
+  static const MystikoLibError MYSTIKO_LIB_ERROR_UNSPECIFIED =
+      MystikoLibError._(
+          0, _omitEnumNames ? '' : 'MYSTIKO_LIB_ERROR_UNSPECIFIED');
+  static const MystikoLibError MYSTIKO_LIB_ERROR_GET_MYSTIKO_GUARD_ERROR =
+      MystikoLibError._(
+          1, _omitEnumNames ? '' : 'MYSTIKO_LIB_ERROR_GET_MYSTIKO_GUARD_ERROR');
+  static const MystikoLibError MYSTIKO_LIB_ERROR_DESERIALIZE_MESSAGE_ERROR =
+      MystikoLibError._(2,
+          _omitEnumNames ? '' : 'MYSTIKO_LIB_ERROR_DESERIALIZE_MESSAGE_ERROR');
+  static const MystikoLibError MYSTIKO_LIB_ERROR_STORAGE_ERROR =
+      MystikoLibError._(
+          3, _omitEnumNames ? '' : 'MYSTIKO_LIB_ERROR_STORAGE_ERROR');
 
-  static const $core.List<StatusCode> values = <StatusCode>[
-    STATUS_CODE_UNSPECIFIED,
-    STATUS_CODE_SUCCESS,
-    STATUS_CODE_UNKNOWN_ERROR,
-    STATUS_CODE_CONFIG_ERROR,
-    STATUS_CODE_DATABASE_MIGRATION_ERROR,
-    STATUS_CODE_CRYPTO_ERROR,
-    STATUS_CODE_MNEMONIC_ERROR,
-    STATUS_CODE_HEX_STRING_ERROR,
-    STATUS_CODE_STORAGE_ERROR,
-    STATUS_CODE_INVALID_PASSWORD_ERROR,
-    STATUS_CODE_MISMATCHED_PASSWORD_ERROR,
-    STATUS_CODE_NO_EXISTING_WALLET_ERROR,
-    STATUS_CODE_NO_SUCH_ACCOUNT_ERROR,
-    STATUS_CODE_INVALID_PROVIDER_URL_ERROR,
-    STATUS_CODE_DATA_LOADER_ERROR,
-    STATUS_CODE_SYNCHRONIZER_ERROR,
-    STATUS_CODE_SCANNER_ERROR,
-    STATUS_CODE_GET_MYSTIKO_GUARD_ERROR,
-    STATUS_CODE_DESERIALIZE_MESSAGE_ERROR,
+  static const $core.List<MystikoLibError> values = <MystikoLibError>[
+    MYSTIKO_LIB_ERROR_UNSPECIFIED,
+    MYSTIKO_LIB_ERROR_GET_MYSTIKO_GUARD_ERROR,
+    MYSTIKO_LIB_ERROR_DESERIALIZE_MESSAGE_ERROR,
+    MYSTIKO_LIB_ERROR_STORAGE_ERROR,
   ];
 
-  static final $core.Map<$core.int, StatusCode> _byValue =
+  static final $core.Map<$core.int, MystikoLibError> _byValue =
       $pb.ProtobufEnum.initByValue(values);
-  static StatusCode? valueOf($core.int value) => _byValue[value];
+  static MystikoLibError? valueOf($core.int value) => _byValue[value];
 
-  const StatusCode._($core.int v, $core.String n) : super(v, n);
+  const MystikoLibError._($core.int v, $core.String n) : super(v, n);
+}
+
+class MystikoError extends $pb.ProtobufEnum {
+  static const MystikoError MYSTIKO_ERROR_UNSPECIFIED =
+      MystikoError._(0, _omitEnumNames ? '' : 'MYSTIKO_ERROR_UNSPECIFIED');
+  static const MystikoError MYSTIKO_ERROR_SYNCHRONIZER_ERROR = MystikoError._(
+      1, _omitEnumNames ? '' : 'MYSTIKO_ERROR_SYNCHRONIZER_ERROR');
+  static const MystikoError MYSTIKO_ERROR_SCANNER_ERROR =
+      MystikoError._(2, _omitEnumNames ? '' : 'MYSTIKO_ERROR_SCANNER_ERROR');
+  static const MystikoError MYSTIKO_ERROR_DATALOADER_ERROR =
+      MystikoError._(3, _omitEnumNames ? '' : 'MYSTIKO_ERROR_DATALOADER_ERROR');
+  static const MystikoError MYSTIKO_ERROR_CONFIG_ERROR =
+      MystikoError._(4, _omitEnumNames ? '' : 'MYSTIKO_ERROR_CONFIG_ERROR');
+  static const MystikoError MYSTIKO_ERROR_DATABASE_MIGRATION_ERROR =
+      MystikoError._(
+          5, _omitEnumNames ? '' : 'MYSTIKO_ERROR_DATABASE_MIGRATION_ERROR');
+  static const MystikoError MYSTIKO_ERROR_INVALID_PROVIDER_URL_ERROR =
+      MystikoError._(
+          6, _omitEnumNames ? '' : 'MYSTIKO_ERROR_INVALID_PROVIDER_URL_ERROR');
+
+  static const $core.List<MystikoError> values = <MystikoError>[
+    MYSTIKO_ERROR_UNSPECIFIED,
+    MYSTIKO_ERROR_SYNCHRONIZER_ERROR,
+    MYSTIKO_ERROR_SCANNER_ERROR,
+    MYSTIKO_ERROR_DATALOADER_ERROR,
+    MYSTIKO_ERROR_CONFIG_ERROR,
+    MYSTIKO_ERROR_DATABASE_MIGRATION_ERROR,
+    MYSTIKO_ERROR_INVALID_PROVIDER_URL_ERROR,
+  ];
+
+  static final $core.Map<$core.int, MystikoError> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static MystikoError? valueOf($core.int value) => _byValue[value];
+
+  const MystikoError._($core.int v, $core.String n) : super(v, n);
+}
+
+class AccountError extends $pb.ProtobufEnum {
+  static const AccountError ACCOUNT_ERROR_UNSPECIFIED =
+      AccountError._(0, _omitEnumNames ? '' : 'ACCOUNT_ERROR_UNSPECIFIED');
+  static const AccountError ACCOUNT_ERROR_STORAGE_ERROR =
+      AccountError._(1, _omitEnumNames ? '' : 'ACCOUNT_ERROR_STORAGE_ERROR');
+  static const AccountError ACCOUNT_ERROR_CRYPTO_ERROR =
+      AccountError._(2, _omitEnumNames ? '' : 'ACCOUNT_ERROR_CRYPTO_ERROR');
+  static const AccountError ACCOUNT_ERROR_MNEMONIC_ERROR =
+      AccountError._(3, _omitEnumNames ? '' : 'ACCOUNT_ERROR_MNEMONIC_ERROR');
+  static const AccountError ACCOUNT_ERROR_HEX_STRING_ERROR =
+      AccountError._(4, _omitEnumNames ? '' : 'ACCOUNT_ERROR_HEX_STRING_ERROR');
+  static const AccountError ACCOUNT_ERROR_NO_SUCH_ACCOUNT_ERROR =
+      AccountError._(
+          5, _omitEnumNames ? '' : 'ACCOUNT_ERROR_NO_SUCH_ACCOUNT_ERROR');
+
+  static const $core.List<AccountError> values = <AccountError>[
+    ACCOUNT_ERROR_UNSPECIFIED,
+    ACCOUNT_ERROR_STORAGE_ERROR,
+    ACCOUNT_ERROR_CRYPTO_ERROR,
+    ACCOUNT_ERROR_MNEMONIC_ERROR,
+    ACCOUNT_ERROR_HEX_STRING_ERROR,
+    ACCOUNT_ERROR_NO_SUCH_ACCOUNT_ERROR,
+  ];
+
+  static final $core.Map<$core.int, AccountError> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static AccountError? valueOf($core.int value) => _byValue[value];
+
+  const AccountError._($core.int v, $core.String n) : super(v, n);
+}
+
+class WalletError extends $pb.ProtobufEnum {
+  static const WalletError WALLET_ERROR_UNSPECIFIED =
+      WalletError._(0, _omitEnumNames ? '' : 'WALLET_ERROR_UNSPECIFIED');
+  static const WalletError WALLET_ERROR_STORAGE_ERROR =
+      WalletError._(1, _omitEnumNames ? '' : 'WALLET_ERROR_STORAGE_ERROR');
+  static const WalletError WALLET_ERROR_CRYPTO_ERROR =
+      WalletError._(2, _omitEnumNames ? '' : 'WALLET_ERROR_CRYPTO_ERROR');
+  static const WalletError WALLET_ERROR_HEX_STRING_ERROR =
+      WalletError._(3, _omitEnumNames ? '' : 'WALLET_ERROR_HEX_STRING_ERROR');
+  static const WalletError WALLET_ERROR_MNEMONIC_ERROR =
+      WalletError._(4, _omitEnumNames ? '' : 'WALLET_ERROR_MNEMONIC_ERROR');
+  static const WalletError WALLET_ERROR_INVALID_PASSWORD_ERROR = WalletError._(
+      5, _omitEnumNames ? '' : 'WALLET_ERROR_INVALID_PASSWORD_ERROR');
+  static const WalletError WALLET_ERROR_MISMATCHED_PASSWORD_ERROR =
+      WalletError._(
+          6, _omitEnumNames ? '' : 'WALLET_ERROR_MISMATCHED_PASSWORD_ERROR');
+  static const WalletError WALLET_ERROR_NO_EXISTING_WALLET_ERROR =
+      WalletError._(
+          7, _omitEnumNames ? '' : 'WALLET_ERROR_NO_EXISTING_WALLET_ERROR');
+
+  static const $core.List<WalletError> values = <WalletError>[
+    WALLET_ERROR_UNSPECIFIED,
+    WALLET_ERROR_STORAGE_ERROR,
+    WALLET_ERROR_CRYPTO_ERROR,
+    WALLET_ERROR_HEX_STRING_ERROR,
+    WALLET_ERROR_MNEMONIC_ERROR,
+    WALLET_ERROR_INVALID_PASSWORD_ERROR,
+    WALLET_ERROR_MISMATCHED_PASSWORD_ERROR,
+    WALLET_ERROR_NO_EXISTING_WALLET_ERROR,
+  ];
+
+  static final $core.Map<$core.int, WalletError> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static WalletError? valueOf($core.int value) => _byValue[value];
+
+  const WalletError._($core.int v, $core.String n) : super(v, n);
+}
+
+class DepositError extends $pb.ProtobufEnum {
+  static const DepositError DEPOSIT_ERROR_UNSPECIFIED =
+      DepositError._(0, _omitEnumNames ? '' : 'DEPOSIT_ERROR_UNSPECIFIED');
+  static const DepositError DEPOSIT_ERROR_HEX_STRING_ERROR =
+      DepositError._(1, _omitEnumNames ? '' : 'DEPOSIT_ERROR_HEX_STRING_ERROR');
+  static const DepositError DEPOSIT_ERROR_FROM_DEC_STR_ERROR = DepositError._(
+      2, _omitEnumNames ? '' : 'DEPOSIT_ERROR_FROM_DEC_STR_ERROR');
+  static const DepositError DEPOSIT_ERROR_PARSE_BYTES_ERROR = DepositError._(
+      3, _omitEnumNames ? '' : 'DEPOSIT_ERROR_PARSE_BYTES_ERROR');
+  static const DepositError DEPOSIT_ERROR_PROVIDER_ERROR =
+      DepositError._(4, _omitEnumNames ? '' : 'DEPOSIT_ERROR_PROVIDER_ERROR');
+  static const DepositError DEPOSIT_ERROR_ANYHOW_ERROR =
+      DepositError._(5, _omitEnumNames ? '' : 'DEPOSIT_ERROR_ANYHOW_ERROR');
+  static const DepositError DEPOSIT_ERROR_PUBLIC_ASSETS_ERROR = DepositError._(
+      6, _omitEnumNames ? '' : 'DEPOSIT_ERROR_PUBLIC_ASSETS_ERROR');
+  static const DepositError DEPOSIT_ERROR_DEPOSIT_CONTRACTS_ERROR =
+      DepositError._(
+          7, _omitEnumNames ? '' : 'DEPOSIT_ERROR_DEPOSIT_CONTRACTS_ERROR');
+  static const DepositError DEPOSIT_ERROR_COMMITMENT_POOL_CONTRACTS_ERROR =
+      DepositError._(
+          8,
+          _omitEnumNames
+              ? ''
+              : 'DEPOSIT_ERROR_COMMITMENT_POOL_CONTRACTS_ERROR');
+  static const DepositError DEPOSIT_ERROR_TRANSACTIONS_ERROR = DepositError._(
+      9, _omitEnumNames ? '' : 'DEPOSIT_ERROR_TRANSACTIONS_ERROR');
+  static const DepositError DEPOSIT_ERROR_PROTOCOL_ERROR =
+      DepositError._(10, _omitEnumNames ? '' : 'DEPOSIT_ERROR_PROTOCOL_ERROR');
+  static const DepositError DEPOSIT_ERROR_STORAGE_ERROR =
+      DepositError._(11, _omitEnumNames ? '' : 'DEPOSIT_ERROR_STORAGE_ERROR');
+  static const DepositError DEPOSIT_ERROR_PARSE_BIG_INT_ERROR = DepositError._(
+      12, _omitEnumNames ? '' : 'DEPOSIT_ERROR_PARSE_BIG_INT_ERROR');
+  static const DepositError DEPOSIT_ERROR_UNSUPPORTED_CHAIN_ID_ERROR =
+      DepositError._(
+          13, _omitEnumNames ? '' : 'DEPOSIT_ERROR_UNSUPPORTED_CHAIN_ID_ERROR');
+  static const DepositError DEPOSIT_ERROR_NO_DEPOSIT_CONTRACT_FOUND_ERROR =
+      DepositError._(
+          14,
+          _omitEnumNames
+              ? ''
+              : 'DEPOSIT_ERROR_NO_DEPOSIT_CONTRACT_FOUND_ERROR');
+  static const DepositError DEPOSIT_ERROR_INVALID_DEPOSIT_AMOUNT_ERROR =
+      DepositError._(15,
+          _omitEnumNames ? '' : 'DEPOSIT_ERROR_INVALID_DEPOSIT_AMOUNT_ERROR');
+  static const DepositError DEPOSIT_ERROR_INVALID_ROLLUP_FEE_AMOUNT_ERROR =
+      DepositError._(
+          16,
+          _omitEnumNames
+              ? ''
+              : 'DEPOSIT_ERROR_INVALID_ROLLUP_FEE_AMOUNT_ERROR');
+  static const DepositError DEPOSIT_ERROR_INVALID_BRIDGE_FEE_AMOUNT_ERROR =
+      DepositError._(
+          17,
+          _omitEnumNames
+              ? ''
+              : 'DEPOSIT_ERROR_INVALID_BRIDGE_FEE_AMOUNT_ERROR');
+  static const DepositError DEPOSIT_ERROR_INVALID_EXECUTOR_FEE_AMOUNT_ERROR =
+      DepositError._(
+          18,
+          _omitEnumNames
+              ? ''
+              : 'DEPOSIT_ERROR_INVALID_EXECUTOR_FEE_AMOUNT_ERROR');
+  static const DepositError DEPOSIT_ERROR_INSUFFICIENT_BALANCE_ERROR =
+      DepositError._(
+          19, _omitEnumNames ? '' : 'DEPOSIT_ERROR_INSUFFICIENT_BALANCE_ERROR');
+  static const DepositError DEPOSIT_ERROR_ID_NOT_FOUND_ERROR = DepositError._(
+      20, _omitEnumNames ? '' : 'DEPOSIT_ERROR_ID_NOT_FOUND_ERROR');
+  static const DepositError DEPOSIT_ERROR_MISSING_PRIVATE_KEY_ERROR =
+      DepositError._(
+          21, _omitEnumNames ? '' : 'DEPOSIT_ERROR_MISSING_PRIVATE_KEY_ERROR');
+  static const DepositError DEPOSIT_ERROR_DEPOSIT_STATUS_ERROR = DepositError._(
+      22, _omitEnumNames ? '' : 'DEPOSIT_ERROR_DEPOSIT_STATUS_ERROR');
+  static const DepositError DEPOSIT_ERROR_DUPLICATE_COMMITMENT_ERROR =
+      DepositError._(
+          23, _omitEnumNames ? '' : 'DEPOSIT_ERROR_DUPLICATE_COMMITMENT_ERROR');
+
+  static const $core.List<DepositError> values = <DepositError>[
+    DEPOSIT_ERROR_UNSPECIFIED,
+    DEPOSIT_ERROR_HEX_STRING_ERROR,
+    DEPOSIT_ERROR_FROM_DEC_STR_ERROR,
+    DEPOSIT_ERROR_PARSE_BYTES_ERROR,
+    DEPOSIT_ERROR_PROVIDER_ERROR,
+    DEPOSIT_ERROR_ANYHOW_ERROR,
+    DEPOSIT_ERROR_PUBLIC_ASSETS_ERROR,
+    DEPOSIT_ERROR_DEPOSIT_CONTRACTS_ERROR,
+    DEPOSIT_ERROR_COMMITMENT_POOL_CONTRACTS_ERROR,
+    DEPOSIT_ERROR_TRANSACTIONS_ERROR,
+    DEPOSIT_ERROR_PROTOCOL_ERROR,
+    DEPOSIT_ERROR_STORAGE_ERROR,
+    DEPOSIT_ERROR_PARSE_BIG_INT_ERROR,
+    DEPOSIT_ERROR_UNSUPPORTED_CHAIN_ID_ERROR,
+    DEPOSIT_ERROR_NO_DEPOSIT_CONTRACT_FOUND_ERROR,
+    DEPOSIT_ERROR_INVALID_DEPOSIT_AMOUNT_ERROR,
+    DEPOSIT_ERROR_INVALID_ROLLUP_FEE_AMOUNT_ERROR,
+    DEPOSIT_ERROR_INVALID_BRIDGE_FEE_AMOUNT_ERROR,
+    DEPOSIT_ERROR_INVALID_EXECUTOR_FEE_AMOUNT_ERROR,
+    DEPOSIT_ERROR_INSUFFICIENT_BALANCE_ERROR,
+    DEPOSIT_ERROR_ID_NOT_FOUND_ERROR,
+    DEPOSIT_ERROR_MISSING_PRIVATE_KEY_ERROR,
+    DEPOSIT_ERROR_DEPOSIT_STATUS_ERROR,
+    DEPOSIT_ERROR_DUPLICATE_COMMITMENT_ERROR,
+  ];
+
+  static final $core.Map<$core.int, DepositError> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static DepositError? valueOf($core.int value) => _byValue[value];
+
+  const DepositError._($core.int v, $core.String n) : super(v, n);
+}
+
+class ScannerError extends $pb.ProtobufEnum {
+  static const ScannerError SCANNER_ERROR_UNSPECIFIED =
+      ScannerError._(0, _omitEnumNames ? '' : 'SCANNER_ERROR_UNSPECIFIED');
+  static const ScannerError SCANNER_ERROR_NO_SUCH_ACCOUNT_ERROR =
+      ScannerError._(
+          1, _omitEnumNames ? '' : 'SCANNER_ERROR_NO_SUCH_ACCOUNT_ERROR');
+  static const ScannerError SCANNER_ERROR_NO_SUCH_CONTRACT_CONFIG_ERROR =
+      ScannerError._(2,
+          _omitEnumNames ? '' : 'SCANNER_ERROR_NO_SUCH_CONTRACT_CONFIG_ERROR');
+  static const ScannerError SCANNER_ERROR_COMMITMENT_EMPTY_ERROR =
+      ScannerError._(
+          3, _omitEnumNames ? '' : 'SCANNER_ERROR_COMMITMENT_EMPTY_ERROR');
+  static const ScannerError SCANNER_ERROR_CRYPTO_ERROR =
+      ScannerError._(4, _omitEnumNames ? '' : 'SCANNER_ERROR_CRYPTO_ERROR');
+  static const ScannerError SCANNER_ERROR_STORAGE_ERROR =
+      ScannerError._(5, _omitEnumNames ? '' : 'SCANNER_ERROR_STORAGE_ERROR');
+  static const ScannerError SCANNER_ERROR_JOIN_ERROR =
+      ScannerError._(6, _omitEnumNames ? '' : 'SCANNER_ERROR_JOIN_ERROR');
+  static const ScannerError SCANNER_ERROR_PROTOCOL_ERROR =
+      ScannerError._(7, _omitEnumNames ? '' : 'SCANNER_ERROR_PROTOCOL_ERROR');
+  static const ScannerError SCANNER_ERROR_FROM_HEX_ERROR =
+      ScannerError._(8, _omitEnumNames ? '' : 'SCANNER_ERROR_FROM_HEX_ERROR');
+  static const ScannerError SCANNER_ERROR_ANYHOW_ERROR =
+      ScannerError._(9, _omitEnumNames ? '' : 'SCANNER_ERROR_ANYHOW_ERROR');
+
+  static const $core.List<ScannerError> values = <ScannerError>[
+    SCANNER_ERROR_UNSPECIFIED,
+    SCANNER_ERROR_NO_SUCH_ACCOUNT_ERROR,
+    SCANNER_ERROR_NO_SUCH_CONTRACT_CONFIG_ERROR,
+    SCANNER_ERROR_COMMITMENT_EMPTY_ERROR,
+    SCANNER_ERROR_CRYPTO_ERROR,
+    SCANNER_ERROR_STORAGE_ERROR,
+    SCANNER_ERROR_JOIN_ERROR,
+    SCANNER_ERROR_PROTOCOL_ERROR,
+    SCANNER_ERROR_FROM_HEX_ERROR,
+    SCANNER_ERROR_ANYHOW_ERROR,
+  ];
+
+  static final $core.Map<$core.int, ScannerError> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static ScannerError? valueOf($core.int value) => _byValue[value];
+
+  const ScannerError._($core.int v, $core.String n) : super(v, n);
+}
+
+class SynchronizeError extends $pb.ProtobufEnum {
+  static const SynchronizeError SYNCHRONIZE_ERROR_UNSPECIFIED =
+      SynchronizeError._(
+          0, _omitEnumNames ? '' : 'SYNCHRONIZE_ERROR_UNSPECIFIED');
+  static const SynchronizeError SYNCHRONIZE_ERROR_UNSUPPORTED_CHAIN_ERROR =
+      SynchronizeError._(
+          1, _omitEnumNames ? '' : 'SYNCHRONIZE_ERROR_UNSUPPORTED_CHAIN_ERROR');
+  static const SynchronizeError SYNCHRONIZE_ERROR_DATALOADER_ERROR =
+      SynchronizeError._(
+          2, _omitEnumNames ? '' : 'SYNCHRONIZE_ERROR_DATALOADER_ERROR');
+  static const SynchronizeError SYNCHRONIZE_ERROR_DATALOADER_CONFIG_ERROR =
+      SynchronizeError._(
+          3, _omitEnumNames ? '' : 'SYNCHRONIZE_ERROR_DATALOADER_CONFIG_ERROR');
+  static const SynchronizeError SYNCHRONIZE_ERROR_ANYHOW_ERROR =
+      SynchronizeError._(
+          4, _omitEnumNames ? '' : 'SYNCHRONIZE_ERROR_ANYHOW_ERROR');
+
+  static const $core.List<SynchronizeError> values = <SynchronizeError>[
+    SYNCHRONIZE_ERROR_UNSPECIFIED,
+    SYNCHRONIZE_ERROR_UNSUPPORTED_CHAIN_ERROR,
+    SYNCHRONIZE_ERROR_DATALOADER_ERROR,
+    SYNCHRONIZE_ERROR_DATALOADER_CONFIG_ERROR,
+    SYNCHRONIZE_ERROR_ANYHOW_ERROR,
+  ];
+
+  static final $core.Map<$core.int, SynchronizeError> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static SynchronizeError? valueOf($core.int value) => _byValue[value];
+
+  const SynchronizeError._($core.int v, $core.String n) : super(v, n);
 }
 
 const _omitEnumNames = $core.bool.fromEnvironment('protobuf.omit_enum_names');

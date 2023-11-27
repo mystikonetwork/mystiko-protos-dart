@@ -33,17 +33,24 @@ class Deposit extends $pb.GeneratedMessage {
     $core.String? randomS,
     $core.String? encryptedNote,
     $core.String? assetSymbol,
+    $core.int? assetDecimals,
     $core.double? amount,
+    $core.String? decimalAmount,
     $core.double? rollupFeeAmount,
-    $core.String? shieldedRecipientAddress,
+    $core.String? rollupFeeDecimalAmount,
+    $core.String? shieldedAddress,
     $core.String? walletId,
-    $core.double? bridgeFeeAmount,
-    $core.double? executorFeeAmount,
     $core.String? assetAddress,
+    $core.double? bridgeFeeAmount,
+    $core.String? bridgeFeeDecimalAmount,
+    $core.double? executorFeeAmount,
+    $core.String? executorFeeDecimalAmount,
     $core.String? bridgeFeeAssetAddress,
     $core.String? bridgeFeeAssetSymbol,
+    $core.int? bridgeFeeAssetDecimals,
     $core.String? executorFeeAssetAddress,
     $core.String? executorFeeAssetSymbol,
+    $core.int? executorFeeAssetDecimals,
     $core.String? queuedTransactionHash,
     $core.String? includedTransactionHash,
     $core.String? srcChainTransactionHash,
@@ -95,26 +102,41 @@ class Deposit extends $pb.GeneratedMessage {
     if (assetSymbol != null) {
       $result.assetSymbol = assetSymbol;
     }
+    if (assetDecimals != null) {
+      $result.assetDecimals = assetDecimals;
+    }
     if (amount != null) {
       $result.amount = amount;
+    }
+    if (decimalAmount != null) {
+      $result.decimalAmount = decimalAmount;
     }
     if (rollupFeeAmount != null) {
       $result.rollupFeeAmount = rollupFeeAmount;
     }
-    if (shieldedRecipientAddress != null) {
-      $result.shieldedRecipientAddress = shieldedRecipientAddress;
+    if (rollupFeeDecimalAmount != null) {
+      $result.rollupFeeDecimalAmount = rollupFeeDecimalAmount;
+    }
+    if (shieldedAddress != null) {
+      $result.shieldedAddress = shieldedAddress;
     }
     if (walletId != null) {
       $result.walletId = walletId;
     }
+    if (assetAddress != null) {
+      $result.assetAddress = assetAddress;
+    }
     if (bridgeFeeAmount != null) {
       $result.bridgeFeeAmount = bridgeFeeAmount;
+    }
+    if (bridgeFeeDecimalAmount != null) {
+      $result.bridgeFeeDecimalAmount = bridgeFeeDecimalAmount;
     }
     if (executorFeeAmount != null) {
       $result.executorFeeAmount = executorFeeAmount;
     }
-    if (assetAddress != null) {
-      $result.assetAddress = assetAddress;
+    if (executorFeeDecimalAmount != null) {
+      $result.executorFeeDecimalAmount = executorFeeDecimalAmount;
     }
     if (bridgeFeeAssetAddress != null) {
       $result.bridgeFeeAssetAddress = bridgeFeeAssetAddress;
@@ -122,11 +144,17 @@ class Deposit extends $pb.GeneratedMessage {
     if (bridgeFeeAssetSymbol != null) {
       $result.bridgeFeeAssetSymbol = bridgeFeeAssetSymbol;
     }
+    if (bridgeFeeAssetDecimals != null) {
+      $result.bridgeFeeAssetDecimals = bridgeFeeAssetDecimals;
+    }
     if (executorFeeAssetAddress != null) {
       $result.executorFeeAssetAddress = executorFeeAssetAddress;
     }
     if (executorFeeAssetSymbol != null) {
       $result.executorFeeAssetSymbol = executorFeeAssetSymbol;
+    }
+    if (executorFeeAssetDecimals != null) {
+      $result.executorFeeAssetDecimals = executorFeeAssetDecimals;
     }
     if (queuedTransactionHash != null) {
       $result.queuedTransactionHash = queuedTransactionHash;
@@ -185,32 +213,42 @@ class Deposit extends $pb.GeneratedMessage {
     ..aOS(12, _omitFieldNames ? '' : 'randomS')
     ..aOS(13, _omitFieldNames ? '' : 'encryptedNote')
     ..aOS(14, _omitFieldNames ? '' : 'assetSymbol')
-    ..a<$core.double>(15, _omitFieldNames ? '' : 'amount', $pb.PbFieldType.OD)
+    ..a<$core.int>(
+        15, _omitFieldNames ? '' : 'assetDecimals', $pb.PbFieldType.OU3)
+    ..a<$core.double>(16, _omitFieldNames ? '' : 'amount', $pb.PbFieldType.OD)
+    ..aOS(17, _omitFieldNames ? '' : 'decimalAmount')
     ..a<$core.double>(
-        16, _omitFieldNames ? '' : 'rollupFeeAmount', $pb.PbFieldType.OD)
-    ..aOS(17, _omitFieldNames ? '' : 'shieldedRecipientAddress')
-    ..aOS(18, _omitFieldNames ? '' : 'walletId')
+        18, _omitFieldNames ? '' : 'rollupFeeAmount', $pb.PbFieldType.OD)
+    ..aOS(19, _omitFieldNames ? '' : 'rollupFeeDecimalAmount')
+    ..aOS(20, _omitFieldNames ? '' : 'shieldedAddress')
+    ..aOS(21, _omitFieldNames ? '' : 'walletId')
+    ..aOS(22, _omitFieldNames ? '' : 'assetAddress')
     ..a<$core.double>(
-        19, _omitFieldNames ? '' : 'bridgeFeeAmount', $pb.PbFieldType.OD)
+        23, _omitFieldNames ? '' : 'bridgeFeeAmount', $pb.PbFieldType.OD)
+    ..aOS(24, _omitFieldNames ? '' : 'bridgeFeeDecimalAmount')
     ..a<$core.double>(
-        20, _omitFieldNames ? '' : 'executorFeeAmount', $pb.PbFieldType.OD)
-    ..aOS(21, _omitFieldNames ? '' : 'assetAddress')
-    ..aOS(22, _omitFieldNames ? '' : 'bridgeFeeAssetAddress')
-    ..aOS(23, _omitFieldNames ? '' : 'bridgeFeeAssetSymbol')
-    ..aOS(24, _omitFieldNames ? '' : 'executorFeeAssetAddress')
-    ..aOS(25, _omitFieldNames ? '' : 'executorFeeAssetSymbol')
-    ..aOS(26, _omitFieldNames ? '' : 'queuedTransactionHash')
-    ..aOS(27, _omitFieldNames ? '' : 'includedTransactionHash')
-    ..aOS(28, _omitFieldNames ? '' : 'srcChainTransactionHash')
-    ..pPS(29, _omitFieldNames ? '' : 'assetApproveTransactionHash')
-    ..aOS(30, _omitFieldNames ? '' : 'errorMessage')
+        25, _omitFieldNames ? '' : 'executorFeeAmount', $pb.PbFieldType.OD)
+    ..aOS(26, _omitFieldNames ? '' : 'executorFeeDecimalAmount')
+    ..aOS(27, _omitFieldNames ? '' : 'bridgeFeeAssetAddress')
+    ..aOS(28, _omitFieldNames ? '' : 'bridgeFeeAssetSymbol')
+    ..a<$core.int>(29, _omitFieldNames ? '' : 'bridgeFeeAssetDecimals',
+        $pb.PbFieldType.OU3)
+    ..aOS(30, _omitFieldNames ? '' : 'executorFeeAssetAddress')
+    ..aOS(31, _omitFieldNames ? '' : 'executorFeeAssetSymbol')
+    ..a<$core.int>(32, _omitFieldNames ? '' : 'executorFeeAssetDecimals',
+        $pb.PbFieldType.OU3)
+    ..aOS(33, _omitFieldNames ? '' : 'queuedTransactionHash')
+    ..aOS(34, _omitFieldNames ? '' : 'includedTransactionHash')
+    ..aOS(35, _omitFieldNames ? '' : 'srcChainTransactionHash')
+    ..pPS(36, _omitFieldNames ? '' : 'assetApproveTransactionHash')
+    ..aOS(37, _omitFieldNames ? '' : 'errorMessage')
     ..e<$1.BridgeType>(
-        31, _omitFieldNames ? '' : 'bridgeType', $pb.PbFieldType.OE,
+        38, _omitFieldNames ? '' : 'bridgeType', $pb.PbFieldType.OE,
         defaultOrMaker: $1.BridgeType.BRIDGE_TYPE_UNSPECIFIED,
         valueOf: $1.BridgeType.valueOf,
         enumValues: $1.BridgeType.values)
     ..e<$7.DepositStatus>(
-        32, _omitFieldNames ? '' : 'status', $pb.PbFieldType.OE,
+        39, _omitFieldNames ? '' : 'status', $pb.PbFieldType.OE,
         defaultOrMaker: $7.DepositStatus.DEPOSIT_STATUS_UNSPECIFIED,
         valueOf: $7.DepositStatus.valueOf,
         enumValues: $7.DepositStatus.values)
@@ -406,211 +444,295 @@ class Deposit extends $pb.GeneratedMessage {
   void clearAssetSymbol() => clearField(14);
 
   @$pb.TagNumber(15)
-  $core.double get amount => $_getN(14);
+  $core.int get assetDecimals => $_getIZ(14);
   @$pb.TagNumber(15)
-  set amount($core.double v) {
-    $_setDouble(14, v);
+  set assetDecimals($core.int v) {
+    $_setUnsignedInt32(14, v);
   }
 
   @$pb.TagNumber(15)
-  $core.bool hasAmount() => $_has(14);
+  $core.bool hasAssetDecimals() => $_has(14);
   @$pb.TagNumber(15)
-  void clearAmount() => clearField(15);
+  void clearAssetDecimals() => clearField(15);
 
   @$pb.TagNumber(16)
-  $core.double get rollupFeeAmount => $_getN(15);
+  $core.double get amount => $_getN(15);
   @$pb.TagNumber(16)
-  set rollupFeeAmount($core.double v) {
+  set amount($core.double v) {
     $_setDouble(15, v);
   }
 
   @$pb.TagNumber(16)
-  $core.bool hasRollupFeeAmount() => $_has(15);
+  $core.bool hasAmount() => $_has(15);
   @$pb.TagNumber(16)
-  void clearRollupFeeAmount() => clearField(16);
+  void clearAmount() => clearField(16);
 
   @$pb.TagNumber(17)
-  $core.String get shieldedRecipientAddress => $_getSZ(16);
+  $core.String get decimalAmount => $_getSZ(16);
   @$pb.TagNumber(17)
-  set shieldedRecipientAddress($core.String v) {
+  set decimalAmount($core.String v) {
     $_setString(16, v);
   }
 
   @$pb.TagNumber(17)
-  $core.bool hasShieldedRecipientAddress() => $_has(16);
+  $core.bool hasDecimalAmount() => $_has(16);
   @$pb.TagNumber(17)
-  void clearShieldedRecipientAddress() => clearField(17);
+  void clearDecimalAmount() => clearField(17);
 
   @$pb.TagNumber(18)
-  $core.String get walletId => $_getSZ(17);
+  $core.double get rollupFeeAmount => $_getN(17);
   @$pb.TagNumber(18)
+  set rollupFeeAmount($core.double v) {
+    $_setDouble(17, v);
+  }
+
+  @$pb.TagNumber(18)
+  $core.bool hasRollupFeeAmount() => $_has(17);
+  @$pb.TagNumber(18)
+  void clearRollupFeeAmount() => clearField(18);
+
+  @$pb.TagNumber(19)
+  $core.String get rollupFeeDecimalAmount => $_getSZ(18);
+  @$pb.TagNumber(19)
+  set rollupFeeDecimalAmount($core.String v) {
+    $_setString(18, v);
+  }
+
+  @$pb.TagNumber(19)
+  $core.bool hasRollupFeeDecimalAmount() => $_has(18);
+  @$pb.TagNumber(19)
+  void clearRollupFeeDecimalAmount() => clearField(19);
+
+  @$pb.TagNumber(20)
+  $core.String get shieldedAddress => $_getSZ(19);
+  @$pb.TagNumber(20)
+  set shieldedAddress($core.String v) {
+    $_setString(19, v);
+  }
+
+  @$pb.TagNumber(20)
+  $core.bool hasShieldedAddress() => $_has(19);
+  @$pb.TagNumber(20)
+  void clearShieldedAddress() => clearField(20);
+
+  @$pb.TagNumber(21)
+  $core.String get walletId => $_getSZ(20);
+  @$pb.TagNumber(21)
   set walletId($core.String v) {
-    $_setString(17, v);
-  }
-
-  @$pb.TagNumber(18)
-  $core.bool hasWalletId() => $_has(17);
-  @$pb.TagNumber(18)
-  void clearWalletId() => clearField(18);
-
-  @$pb.TagNumber(19)
-  $core.double get bridgeFeeAmount => $_getN(18);
-  @$pb.TagNumber(19)
-  set bridgeFeeAmount($core.double v) {
-    $_setDouble(18, v);
-  }
-
-  @$pb.TagNumber(19)
-  $core.bool hasBridgeFeeAmount() => $_has(18);
-  @$pb.TagNumber(19)
-  void clearBridgeFeeAmount() => clearField(19);
-
-  @$pb.TagNumber(20)
-  $core.double get executorFeeAmount => $_getN(19);
-  @$pb.TagNumber(20)
-  set executorFeeAmount($core.double v) {
-    $_setDouble(19, v);
-  }
-
-  @$pb.TagNumber(20)
-  $core.bool hasExecutorFeeAmount() => $_has(19);
-  @$pb.TagNumber(20)
-  void clearExecutorFeeAmount() => clearField(20);
-
-  @$pb.TagNumber(21)
-  $core.String get assetAddress => $_getSZ(20);
-  @$pb.TagNumber(21)
-  set assetAddress($core.String v) {
     $_setString(20, v);
   }
 
   @$pb.TagNumber(21)
-  $core.bool hasAssetAddress() => $_has(20);
+  $core.bool hasWalletId() => $_has(20);
   @$pb.TagNumber(21)
-  void clearAssetAddress() => clearField(21);
+  void clearWalletId() => clearField(21);
 
   @$pb.TagNumber(22)
-  $core.String get bridgeFeeAssetAddress => $_getSZ(21);
+  $core.String get assetAddress => $_getSZ(21);
   @$pb.TagNumber(22)
-  set bridgeFeeAssetAddress($core.String v) {
+  set assetAddress($core.String v) {
     $_setString(21, v);
   }
 
   @$pb.TagNumber(22)
-  $core.bool hasBridgeFeeAssetAddress() => $_has(21);
+  $core.bool hasAssetAddress() => $_has(21);
   @$pb.TagNumber(22)
-  void clearBridgeFeeAssetAddress() => clearField(22);
+  void clearAssetAddress() => clearField(22);
 
   @$pb.TagNumber(23)
-  $core.String get bridgeFeeAssetSymbol => $_getSZ(22);
+  $core.double get bridgeFeeAmount => $_getN(22);
   @$pb.TagNumber(23)
-  set bridgeFeeAssetSymbol($core.String v) {
-    $_setString(22, v);
+  set bridgeFeeAmount($core.double v) {
+    $_setDouble(22, v);
   }
 
   @$pb.TagNumber(23)
-  $core.bool hasBridgeFeeAssetSymbol() => $_has(22);
+  $core.bool hasBridgeFeeAmount() => $_has(22);
   @$pb.TagNumber(23)
-  void clearBridgeFeeAssetSymbol() => clearField(23);
+  void clearBridgeFeeAmount() => clearField(23);
 
   @$pb.TagNumber(24)
-  $core.String get executorFeeAssetAddress => $_getSZ(23);
+  $core.String get bridgeFeeDecimalAmount => $_getSZ(23);
   @$pb.TagNumber(24)
-  set executorFeeAssetAddress($core.String v) {
+  set bridgeFeeDecimalAmount($core.String v) {
     $_setString(23, v);
   }
 
   @$pb.TagNumber(24)
-  $core.bool hasExecutorFeeAssetAddress() => $_has(23);
+  $core.bool hasBridgeFeeDecimalAmount() => $_has(23);
   @$pb.TagNumber(24)
-  void clearExecutorFeeAssetAddress() => clearField(24);
+  void clearBridgeFeeDecimalAmount() => clearField(24);
 
   @$pb.TagNumber(25)
-  $core.String get executorFeeAssetSymbol => $_getSZ(24);
+  $core.double get executorFeeAmount => $_getN(24);
   @$pb.TagNumber(25)
-  set executorFeeAssetSymbol($core.String v) {
-    $_setString(24, v);
+  set executorFeeAmount($core.double v) {
+    $_setDouble(24, v);
   }
 
   @$pb.TagNumber(25)
-  $core.bool hasExecutorFeeAssetSymbol() => $_has(24);
+  $core.bool hasExecutorFeeAmount() => $_has(24);
   @$pb.TagNumber(25)
-  void clearExecutorFeeAssetSymbol() => clearField(25);
+  void clearExecutorFeeAmount() => clearField(25);
 
   @$pb.TagNumber(26)
-  $core.String get queuedTransactionHash => $_getSZ(25);
+  $core.String get executorFeeDecimalAmount => $_getSZ(25);
   @$pb.TagNumber(26)
-  set queuedTransactionHash($core.String v) {
+  set executorFeeDecimalAmount($core.String v) {
     $_setString(25, v);
   }
 
   @$pb.TagNumber(26)
-  $core.bool hasQueuedTransactionHash() => $_has(25);
+  $core.bool hasExecutorFeeDecimalAmount() => $_has(25);
   @$pb.TagNumber(26)
-  void clearQueuedTransactionHash() => clearField(26);
+  void clearExecutorFeeDecimalAmount() => clearField(26);
 
   @$pb.TagNumber(27)
-  $core.String get includedTransactionHash => $_getSZ(26);
+  $core.String get bridgeFeeAssetAddress => $_getSZ(26);
   @$pb.TagNumber(27)
-  set includedTransactionHash($core.String v) {
+  set bridgeFeeAssetAddress($core.String v) {
     $_setString(26, v);
   }
 
   @$pb.TagNumber(27)
-  $core.bool hasIncludedTransactionHash() => $_has(26);
+  $core.bool hasBridgeFeeAssetAddress() => $_has(26);
   @$pb.TagNumber(27)
-  void clearIncludedTransactionHash() => clearField(27);
+  void clearBridgeFeeAssetAddress() => clearField(27);
 
   @$pb.TagNumber(28)
-  $core.String get srcChainTransactionHash => $_getSZ(27);
+  $core.String get bridgeFeeAssetSymbol => $_getSZ(27);
   @$pb.TagNumber(28)
-  set srcChainTransactionHash($core.String v) {
+  set bridgeFeeAssetSymbol($core.String v) {
     $_setString(27, v);
   }
 
   @$pb.TagNumber(28)
-  $core.bool hasSrcChainTransactionHash() => $_has(27);
+  $core.bool hasBridgeFeeAssetSymbol() => $_has(27);
   @$pb.TagNumber(28)
-  void clearSrcChainTransactionHash() => clearField(28);
+  void clearBridgeFeeAssetSymbol() => clearField(28);
 
   @$pb.TagNumber(29)
-  $core.List<$core.String> get assetApproveTransactionHash => $_getList(28);
+  $core.int get bridgeFeeAssetDecimals => $_getIZ(28);
+  @$pb.TagNumber(29)
+  set bridgeFeeAssetDecimals($core.int v) {
+    $_setUnsignedInt32(28, v);
+  }
+
+  @$pb.TagNumber(29)
+  $core.bool hasBridgeFeeAssetDecimals() => $_has(28);
+  @$pb.TagNumber(29)
+  void clearBridgeFeeAssetDecimals() => clearField(29);
 
   @$pb.TagNumber(30)
-  $core.String get errorMessage => $_getSZ(29);
+  $core.String get executorFeeAssetAddress => $_getSZ(29);
   @$pb.TagNumber(30)
-  set errorMessage($core.String v) {
+  set executorFeeAssetAddress($core.String v) {
     $_setString(29, v);
   }
 
   @$pb.TagNumber(30)
-  $core.bool hasErrorMessage() => $_has(29);
+  $core.bool hasExecutorFeeAssetAddress() => $_has(29);
   @$pb.TagNumber(30)
-  void clearErrorMessage() => clearField(30);
+  void clearExecutorFeeAssetAddress() => clearField(30);
 
   @$pb.TagNumber(31)
-  $1.BridgeType get bridgeType => $_getN(30);
+  $core.String get executorFeeAssetSymbol => $_getSZ(30);
   @$pb.TagNumber(31)
+  set executorFeeAssetSymbol($core.String v) {
+    $_setString(30, v);
+  }
+
+  @$pb.TagNumber(31)
+  $core.bool hasExecutorFeeAssetSymbol() => $_has(30);
+  @$pb.TagNumber(31)
+  void clearExecutorFeeAssetSymbol() => clearField(31);
+
+  @$pb.TagNumber(32)
+  $core.int get executorFeeAssetDecimals => $_getIZ(31);
+  @$pb.TagNumber(32)
+  set executorFeeAssetDecimals($core.int v) {
+    $_setUnsignedInt32(31, v);
+  }
+
+  @$pb.TagNumber(32)
+  $core.bool hasExecutorFeeAssetDecimals() => $_has(31);
+  @$pb.TagNumber(32)
+  void clearExecutorFeeAssetDecimals() => clearField(32);
+
+  @$pb.TagNumber(33)
+  $core.String get queuedTransactionHash => $_getSZ(32);
+  @$pb.TagNumber(33)
+  set queuedTransactionHash($core.String v) {
+    $_setString(32, v);
+  }
+
+  @$pb.TagNumber(33)
+  $core.bool hasQueuedTransactionHash() => $_has(32);
+  @$pb.TagNumber(33)
+  void clearQueuedTransactionHash() => clearField(33);
+
+  @$pb.TagNumber(34)
+  $core.String get includedTransactionHash => $_getSZ(33);
+  @$pb.TagNumber(34)
+  set includedTransactionHash($core.String v) {
+    $_setString(33, v);
+  }
+
+  @$pb.TagNumber(34)
+  $core.bool hasIncludedTransactionHash() => $_has(33);
+  @$pb.TagNumber(34)
+  void clearIncludedTransactionHash() => clearField(34);
+
+  @$pb.TagNumber(35)
+  $core.String get srcChainTransactionHash => $_getSZ(34);
+  @$pb.TagNumber(35)
+  set srcChainTransactionHash($core.String v) {
+    $_setString(34, v);
+  }
+
+  @$pb.TagNumber(35)
+  $core.bool hasSrcChainTransactionHash() => $_has(34);
+  @$pb.TagNumber(35)
+  void clearSrcChainTransactionHash() => clearField(35);
+
+  @$pb.TagNumber(36)
+  $core.List<$core.String> get assetApproveTransactionHash => $_getList(35);
+
+  @$pb.TagNumber(37)
+  $core.String get errorMessage => $_getSZ(36);
+  @$pb.TagNumber(37)
+  set errorMessage($core.String v) {
+    $_setString(36, v);
+  }
+
+  @$pb.TagNumber(37)
+  $core.bool hasErrorMessage() => $_has(36);
+  @$pb.TagNumber(37)
+  void clearErrorMessage() => clearField(37);
+
+  @$pb.TagNumber(38)
+  $1.BridgeType get bridgeType => $_getN(37);
+  @$pb.TagNumber(38)
   set bridgeType($1.BridgeType v) {
-    setField(31, v);
+    setField(38, v);
   }
 
-  @$pb.TagNumber(31)
-  $core.bool hasBridgeType() => $_has(30);
-  @$pb.TagNumber(31)
-  void clearBridgeType() => clearField(31);
+  @$pb.TagNumber(38)
+  $core.bool hasBridgeType() => $_has(37);
+  @$pb.TagNumber(38)
+  void clearBridgeType() => clearField(38);
 
-  @$pb.TagNumber(32)
-  $7.DepositStatus get status => $_getN(31);
-  @$pb.TagNumber(32)
+  @$pb.TagNumber(39)
+  $7.DepositStatus get status => $_getN(38);
+  @$pb.TagNumber(39)
   set status($7.DepositStatus v) {
-    setField(32, v);
+    setField(39, v);
   }
 
-  @$pb.TagNumber(32)
-  $core.bool hasStatus() => $_has(31);
-  @$pb.TagNumber(32)
-  void clearStatus() => clearField(32);
+  @$pb.TagNumber(39)
+  $core.bool hasStatus() => $_has(38);
+  @$pb.TagNumber(39)
+  void clearStatus() => clearField(39);
 }
 
 const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');

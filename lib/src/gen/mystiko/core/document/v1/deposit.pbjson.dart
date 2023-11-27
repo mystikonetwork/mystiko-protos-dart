@@ -37,131 +37,170 @@ const Deposit$json = {
     {'1': 'random_s', '3': 12, '4': 1, '5': 9, '10': 'randomS'},
     {'1': 'encrypted_note', '3': 13, '4': 1, '5': 9, '10': 'encryptedNote'},
     {'1': 'asset_symbol', '3': 14, '4': 1, '5': 9, '10': 'assetSymbol'},
-    {'1': 'amount', '3': 15, '4': 1, '5': 1, '10': 'amount'},
+    {'1': 'asset_decimals', '3': 15, '4': 1, '5': 13, '10': 'assetDecimals'},
+    {'1': 'amount', '3': 16, '4': 1, '5': 1, '10': 'amount'},
+    {'1': 'decimal_amount', '3': 17, '4': 1, '5': 9, '10': 'decimalAmount'},
     {
       '1': 'rollup_fee_amount',
-      '3': 16,
+      '3': 18,
       '4': 1,
       '5': 1,
       '10': 'rollupFeeAmount'
     },
     {
-      '1': 'shielded_recipient_address',
-      '3': 17,
-      '4': 1,
-      '5': 9,
-      '10': 'shieldedRecipientAddress'
-    },
-    {'1': 'wallet_id', '3': 18, '4': 1, '5': 9, '10': 'walletId'},
-    {
-      '1': 'bridge_fee_amount',
+      '1': 'rollup_fee_decimal_amount',
       '3': 19,
       '4': 1,
-      '5': 1,
-      '9': 0,
-      '10': 'bridgeFeeAmount',
-      '17': true
+      '5': 9,
+      '10': 'rollupFeeDecimalAmount'
     },
-    {
-      '1': 'executor_fee_amount',
-      '3': 20,
-      '4': 1,
-      '5': 1,
-      '9': 1,
-      '10': 'executorFeeAmount',
-      '17': true
-    },
+    {'1': 'shielded_address', '3': 20, '4': 1, '5': 9, '10': 'shieldedAddress'},
+    {'1': 'wallet_id', '3': 21, '4': 1, '5': 9, '10': 'walletId'},
     {
       '1': 'asset_address',
-      '3': 21,
+      '3': 22,
       '4': 1,
       '5': 9,
-      '9': 2,
+      '9': 0,
       '10': 'assetAddress',
       '17': true
     },
     {
-      '1': 'bridge_fee_asset_address',
-      '3': 22,
+      '1': 'bridge_fee_amount',
+      '3': 23,
+      '4': 1,
+      '5': 1,
+      '9': 1,
+      '10': 'bridgeFeeAmount',
+      '17': true
+    },
+    {
+      '1': 'bridge_fee_decimal_amount',
+      '3': 24,
       '4': 1,
       '5': 9,
+      '9': 2,
+      '10': 'bridgeFeeDecimalAmount',
+      '17': true
+    },
+    {
+      '1': 'executor_fee_amount',
+      '3': 25,
+      '4': 1,
+      '5': 1,
       '9': 3,
+      '10': 'executorFeeAmount',
+      '17': true
+    },
+    {
+      '1': 'executor_fee_decimal_amount',
+      '3': 26,
+      '4': 1,
+      '5': 9,
+      '9': 4,
+      '10': 'executorFeeDecimalAmount',
+      '17': true
+    },
+    {
+      '1': 'bridge_fee_asset_address',
+      '3': 27,
+      '4': 1,
+      '5': 9,
+      '9': 5,
       '10': 'bridgeFeeAssetAddress',
       '17': true
     },
     {
       '1': 'bridge_fee_asset_symbol',
-      '3': 23,
+      '3': 28,
       '4': 1,
       '5': 9,
-      '9': 4,
+      '9': 6,
       '10': 'bridgeFeeAssetSymbol',
       '17': true
     },
     {
+      '1': 'bridge_fee_asset_decimals',
+      '3': 29,
+      '4': 1,
+      '5': 13,
+      '9': 7,
+      '10': 'bridgeFeeAssetDecimals',
+      '17': true
+    },
+    {
       '1': 'executor_fee_asset_address',
-      '3': 24,
+      '3': 30,
       '4': 1,
       '5': 9,
-      '9': 5,
+      '9': 8,
       '10': 'executorFeeAssetAddress',
       '17': true
     },
     {
       '1': 'executor_fee_asset_symbol',
-      '3': 25,
+      '3': 31,
       '4': 1,
       '5': 9,
-      '9': 6,
+      '9': 9,
       '10': 'executorFeeAssetSymbol',
       '17': true
     },
     {
+      '1': 'executor_fee_asset_decimals',
+      '3': 32,
+      '4': 1,
+      '5': 13,
+      '9': 10,
+      '10': 'executorFeeAssetDecimals',
+      '17': true
+    },
+    {
       '1': 'queued_transaction_hash',
-      '3': 26,
+      '3': 33,
       '4': 1,
       '5': 9,
-      '9': 7,
+      '9': 11,
       '10': 'queuedTransactionHash',
       '17': true
     },
     {
       '1': 'included_transaction_hash',
-      '3': 27,
+      '3': 34,
       '4': 1,
       '5': 9,
-      '9': 8,
+      '9': 12,
       '10': 'includedTransactionHash',
       '17': true
     },
     {
       '1': 'src_chain_transaction_hash',
-      '3': 28,
+      '3': 35,
       '4': 1,
       '5': 9,
-      '9': 9,
+      '9': 13,
       '10': 'srcChainTransactionHash',
       '17': true
     },
     {
       '1': 'asset_approve_transaction_hash',
-      '3': 29,
+      '3': 36,
       '4': 3,
       '5': 9,
       '10': 'assetApproveTransactionHash'
     },
     {
       '1': 'error_message',
-      '3': 30,
+      '3': 37,
       '4': 1,
       '5': 9,
-      '9': 10,
+      '9': 14,
       '10': 'errorMessage',
       '17': true
     },
     {
       '1': 'bridge_type',
-      '3': 31,
+      '3': 38,
       '4': 1,
       '5': 14,
       '6': '.mystiko.common.v1.BridgeType',
@@ -169,7 +208,7 @@ const Deposit$json = {
     },
     {
       '1': 'status',
-      '3': 32,
+      '3': 39,
       '4': 1,
       '5': 14,
       '6': '.mystiko.core.v1.DepositStatus',
@@ -177,13 +216,17 @@ const Deposit$json = {
     },
   ],
   '8': [
-    {'1': '_bridge_fee_amount'},
-    {'1': '_executor_fee_amount'},
     {'1': '_asset_address'},
+    {'1': '_bridge_fee_amount'},
+    {'1': '_bridge_fee_decimal_amount'},
+    {'1': '_executor_fee_amount'},
+    {'1': '_executor_fee_decimal_amount'},
     {'1': '_bridge_fee_asset_address'},
     {'1': '_bridge_fee_asset_symbol'},
+    {'1': '_bridge_fee_asset_decimals'},
     {'1': '_executor_fee_asset_address'},
     {'1': '_executor_fee_asset_symbol'},
+    {'1': '_executor_fee_asset_decimals'},
     {'1': '_queued_transaction_hash'},
     {'1': '_included_transaction_hash'},
     {'1': '_src_chain_transaction_hash'},
@@ -201,27 +244,36 @@ final $typed_data.Uint8List depositDescriptor = $convert.base64Decode(
     'FjdEFkZHJlc3MSKAoQZHN0X3Bvb2xfYWRkcmVzcxgJIAEoCVIOZHN0UG9vbEFkZHJlc3MSJwoP'
     'Y29tbWl0bWVudF9oYXNoGAogASgJUg5jb21taXRtZW50SGFzaBIVCgZoYXNoX2sYCyABKAlSBW'
     'hhc2hLEhkKCHJhbmRvbV9zGAwgASgJUgdyYW5kb21TEiUKDmVuY3J5cHRlZF9ub3RlGA0gASgJ'
-    'Ug1lbmNyeXB0ZWROb3RlEiEKDGFzc2V0X3N5bWJvbBgOIAEoCVILYXNzZXRTeW1ib2wSFgoGYW'
-    '1vdW50GA8gASgBUgZhbW91bnQSKgoRcm9sbHVwX2ZlZV9hbW91bnQYECABKAFSD3JvbGx1cEZl'
-    'ZUFtb3VudBI8ChpzaGllbGRlZF9yZWNpcGllbnRfYWRkcmVzcxgRIAEoCVIYc2hpZWxkZWRSZW'
-    'NpcGllbnRBZGRyZXNzEhsKCXdhbGxldF9pZBgSIAEoCVIId2FsbGV0SWQSLwoRYnJpZGdlX2Zl'
-    'ZV9hbW91bnQYEyABKAFIAFIPYnJpZGdlRmVlQW1vdW50iAEBEjMKE2V4ZWN1dG9yX2ZlZV9hbW'
-    '91bnQYFCABKAFIAVIRZXhlY3V0b3JGZWVBbW91bnSIAQESKAoNYXNzZXRfYWRkcmVzcxgVIAEo'
-    'CUgCUgxhc3NldEFkZHJlc3OIAQESPAoYYnJpZGdlX2ZlZV9hc3NldF9hZGRyZXNzGBYgASgJSA'
-    'NSFWJyaWRnZUZlZUFzc2V0QWRkcmVzc4gBARI6ChdicmlkZ2VfZmVlX2Fzc2V0X3N5bWJvbBgX'
-    'IAEoCUgEUhRicmlkZ2VGZWVBc3NldFN5bWJvbIgBARJAChpleGVjdXRvcl9mZWVfYXNzZXRfYW'
-    'RkcmVzcxgYIAEoCUgFUhdleGVjdXRvckZlZUFzc2V0QWRkcmVzc4gBARI+ChlleGVjdXRvcl9m'
-    'ZWVfYXNzZXRfc3ltYm9sGBkgASgJSAZSFmV4ZWN1dG9yRmVlQXNzZXRTeW1ib2yIAQESOwoXcX'
-    'VldWVkX3RyYW5zYWN0aW9uX2hhc2gYGiABKAlIB1IVcXVldWVkVHJhbnNhY3Rpb25IYXNoiAEB'
-    'Ej8KGWluY2x1ZGVkX3RyYW5zYWN0aW9uX2hhc2gYGyABKAlICFIXaW5jbHVkZWRUcmFuc2FjdG'
-    'lvbkhhc2iIAQESQAoac3JjX2NoYWluX3RyYW5zYWN0aW9uX2hhc2gYHCABKAlICVIXc3JjQ2hh'
-    'aW5UcmFuc2FjdGlvbkhhc2iIAQESQwoeYXNzZXRfYXBwcm92ZV90cmFuc2FjdGlvbl9oYXNoGB'
-    '0gAygJUhthc3NldEFwcHJvdmVUcmFuc2FjdGlvbkhhc2gSKAoNZXJyb3JfbWVzc2FnZRgeIAEo'
-    'CUgKUgxlcnJvck1lc3NhZ2WIAQESPgoLYnJpZGdlX3R5cGUYHyABKA4yHS5teXN0aWtvLmNvbW'
-    '1vbi52MS5CcmlkZ2VUeXBlUgpicmlkZ2VUeXBlEjYKBnN0YXR1cxggIAEoDjIeLm15c3Rpa28u'
-    'Y29yZS52MS5EZXBvc2l0U3RhdHVzUgZzdGF0dXNCFAoSX2JyaWRnZV9mZWVfYW1vdW50QhYKFF'
-    '9leGVjdXRvcl9mZWVfYW1vdW50QhAKDl9hc3NldF9hZGRyZXNzQhsKGV9icmlkZ2VfZmVlX2Fz'
-    'c2V0X2FkZHJlc3NCGgoYX2JyaWRnZV9mZWVfYXNzZXRfc3ltYm9sQh0KG19leGVjdXRvcl9mZW'
-    'VfYXNzZXRfYWRkcmVzc0IcChpfZXhlY3V0b3JfZmVlX2Fzc2V0X3N5bWJvbEIaChhfcXVldWVk'
-    'X3RyYW5zYWN0aW9uX2hhc2hCHAoaX2luY2x1ZGVkX3RyYW5zYWN0aW9uX2hhc2hCHQobX3NyY1'
-    '9jaGFpbl90cmFuc2FjdGlvbl9oYXNoQhAKDl9lcnJvcl9tZXNzYWdl');
+    'Ug1lbmNyeXB0ZWROb3RlEiEKDGFzc2V0X3N5bWJvbBgOIAEoCVILYXNzZXRTeW1ib2wSJQoOYX'
+    'NzZXRfZGVjaW1hbHMYDyABKA1SDWFzc2V0RGVjaW1hbHMSFgoGYW1vdW50GBAgASgBUgZhbW91'
+    'bnQSJQoOZGVjaW1hbF9hbW91bnQYESABKAlSDWRlY2ltYWxBbW91bnQSKgoRcm9sbHVwX2ZlZV'
+    '9hbW91bnQYEiABKAFSD3JvbGx1cEZlZUFtb3VudBI5Chlyb2xsdXBfZmVlX2RlY2ltYWxfYW1v'
+    'dW50GBMgASgJUhZyb2xsdXBGZWVEZWNpbWFsQW1vdW50EikKEHNoaWVsZGVkX2FkZHJlc3MYFC'
+    'ABKAlSD3NoaWVsZGVkQWRkcmVzcxIbCgl3YWxsZXRfaWQYFSABKAlSCHdhbGxldElkEigKDWFz'
+    'c2V0X2FkZHJlc3MYFiABKAlIAFIMYXNzZXRBZGRyZXNziAEBEi8KEWJyaWRnZV9mZWVfYW1vdW'
+    '50GBcgASgBSAFSD2JyaWRnZUZlZUFtb3VudIgBARI+ChlicmlkZ2VfZmVlX2RlY2ltYWxfYW1v'
+    'dW50GBggASgJSAJSFmJyaWRnZUZlZURlY2ltYWxBbW91bnSIAQESMwoTZXhlY3V0b3JfZmVlX2'
+    'Ftb3VudBgZIAEoAUgDUhFleGVjdXRvckZlZUFtb3VudIgBARJCChtleGVjdXRvcl9mZWVfZGVj'
+    'aW1hbF9hbW91bnQYGiABKAlIBFIYZXhlY3V0b3JGZWVEZWNpbWFsQW1vdW50iAEBEjwKGGJyaW'
+    'RnZV9mZWVfYXNzZXRfYWRkcmVzcxgbIAEoCUgFUhVicmlkZ2VGZWVBc3NldEFkZHJlc3OIAQES'
+    'OgoXYnJpZGdlX2ZlZV9hc3NldF9zeW1ib2wYHCABKAlIBlIUYnJpZGdlRmVlQXNzZXRTeW1ib2'
+    'yIAQESPgoZYnJpZGdlX2ZlZV9hc3NldF9kZWNpbWFscxgdIAEoDUgHUhZicmlkZ2VGZWVBc3Nl'
+    'dERlY2ltYWxziAEBEkAKGmV4ZWN1dG9yX2ZlZV9hc3NldF9hZGRyZXNzGB4gASgJSAhSF2V4ZW'
+    'N1dG9yRmVlQXNzZXRBZGRyZXNziAEBEj4KGWV4ZWN1dG9yX2ZlZV9hc3NldF9zeW1ib2wYHyAB'
+    'KAlICVIWZXhlY3V0b3JGZWVBc3NldFN5bWJvbIgBARJCChtleGVjdXRvcl9mZWVfYXNzZXRfZG'
+    'VjaW1hbHMYICABKA1IClIYZXhlY3V0b3JGZWVBc3NldERlY2ltYWxziAEBEjsKF3F1ZXVlZF90'
+    'cmFuc2FjdGlvbl9oYXNoGCEgASgJSAtSFXF1ZXVlZFRyYW5zYWN0aW9uSGFzaIgBARI/Chlpbm'
+    'NsdWRlZF90cmFuc2FjdGlvbl9oYXNoGCIgASgJSAxSF2luY2x1ZGVkVHJhbnNhY3Rpb25IYXNo'
+    'iAEBEkAKGnNyY19jaGFpbl90cmFuc2FjdGlvbl9oYXNoGCMgASgJSA1SF3NyY0NoYWluVHJhbn'
+    'NhY3Rpb25IYXNoiAEBEkMKHmFzc2V0X2FwcHJvdmVfdHJhbnNhY3Rpb25faGFzaBgkIAMoCVIb'
+    'YXNzZXRBcHByb3ZlVHJhbnNhY3Rpb25IYXNoEigKDWVycm9yX21lc3NhZ2UYJSABKAlIDlIMZX'
+    'Jyb3JNZXNzYWdliAEBEj4KC2JyaWRnZV90eXBlGCYgASgOMh0ubXlzdGlrby5jb21tb24udjEu'
+    'QnJpZGdlVHlwZVIKYnJpZGdlVHlwZRI2CgZzdGF0dXMYJyABKA4yHi5teXN0aWtvLmNvcmUudj'
+    'EuRGVwb3NpdFN0YXR1c1IGc3RhdHVzQhAKDl9hc3NldF9hZGRyZXNzQhQKEl9icmlkZ2VfZmVl'
+    'X2Ftb3VudEIcChpfYnJpZGdlX2ZlZV9kZWNpbWFsX2Ftb3VudEIWChRfZXhlY3V0b3JfZmVlX2'
+    'Ftb3VudEIeChxfZXhlY3V0b3JfZmVlX2RlY2ltYWxfYW1vdW50QhsKGV9icmlkZ2VfZmVlX2Fz'
+    'c2V0X2FkZHJlc3NCGgoYX2JyaWRnZV9mZWVfYXNzZXRfc3ltYm9sQhwKGl9icmlkZ2VfZmVlX2'
+    'Fzc2V0X2RlY2ltYWxzQh0KG19leGVjdXRvcl9mZWVfYXNzZXRfYWRkcmVzc0IcChpfZXhlY3V0'
+    'b3JfZmVlX2Fzc2V0X3N5bWJvbEIeChxfZXhlY3V0b3JfZmVlX2Fzc2V0X2RlY2ltYWxzQhoKGF'
+    '9xdWV1ZWRfdHJhbnNhY3Rpb25faGFzaEIcChpfaW5jbHVkZWRfdHJhbnNhY3Rpb25faGFzaEId'
+    'Chtfc3JjX2NoYWluX3RyYW5zYWN0aW9uX2hhc2hCEAoOX2Vycm9yX21lc3NhZ2U=');

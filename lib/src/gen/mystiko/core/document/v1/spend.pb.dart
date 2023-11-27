@@ -24,9 +24,11 @@ class Spend extends $pb.GeneratedMessage {
     $fixnum.Int64? chainId,
     $core.String? contractAddress,
     $core.String? assetSymbol,
+    $core.int? assetDecimals,
     $core.String? rootHash,
     $core.double? amount,
-    $core.double? publicAmount,
+    $core.String? decimalAmount,
+    $core.String? recipient,
     $core.String? walletId,
     $core.Iterable<$core.String>? inputCommitments,
     $core.Iterable<$core.String>? outputCommitments,
@@ -34,12 +36,12 @@ class Spend extends $pb.GeneratedMessage {
     $core.Iterable<$core.String>? signaturePublicKeyHashes,
     $core.Iterable<$core.String>? encryptedAuditorNotes,
     $core.double? rollupFeeAmount,
+    $core.String? rollupFeeDecimalAmount,
     $core.double? gasRelayerFeeAmount,
+    $core.String? gasRelayerFeeDecimalAmount,
     $core.String? signaturePublicKey,
     $core.String? assetAddress,
     $core.String? proof,
-    $core.String? shieldedAddress,
-    $core.String? publicAddress,
     $core.String? gasRelayerAddress,
     $core.String? signature,
     $core.String? randomAuditingPublicKey,
@@ -67,14 +69,20 @@ class Spend extends $pb.GeneratedMessage {
     if (assetSymbol != null) {
       $result.assetSymbol = assetSymbol;
     }
+    if (assetDecimals != null) {
+      $result.assetDecimals = assetDecimals;
+    }
     if (rootHash != null) {
       $result.rootHash = rootHash;
     }
     if (amount != null) {
       $result.amount = amount;
     }
-    if (publicAmount != null) {
-      $result.publicAmount = publicAmount;
+    if (decimalAmount != null) {
+      $result.decimalAmount = decimalAmount;
+    }
+    if (recipient != null) {
+      $result.recipient = recipient;
     }
     if (walletId != null) {
       $result.walletId = walletId;
@@ -97,8 +105,14 @@ class Spend extends $pb.GeneratedMessage {
     if (rollupFeeAmount != null) {
       $result.rollupFeeAmount = rollupFeeAmount;
     }
+    if (rollupFeeDecimalAmount != null) {
+      $result.rollupFeeDecimalAmount = rollupFeeDecimalAmount;
+    }
     if (gasRelayerFeeAmount != null) {
       $result.gasRelayerFeeAmount = gasRelayerFeeAmount;
+    }
+    if (gasRelayerFeeDecimalAmount != null) {
+      $result.gasRelayerFeeDecimalAmount = gasRelayerFeeDecimalAmount;
     }
     if (signaturePublicKey != null) {
       $result.signaturePublicKey = signaturePublicKey;
@@ -108,12 +122,6 @@ class Spend extends $pb.GeneratedMessage {
     }
     if (proof != null) {
       $result.proof = proof;
-    }
-    if (shieldedAddress != null) {
-      $result.shieldedAddress = shieldedAddress;
-    }
-    if (publicAddress != null) {
-      $result.publicAddress = publicAddress;
     }
     if (gasRelayerAddress != null) {
       $result.gasRelayerAddress = gasRelayerAddress;
@@ -162,36 +170,38 @@ class Spend extends $pb.GeneratedMessage {
         defaultOrMaker: $fixnum.Int64.ZERO)
     ..aOS(5, _omitFieldNames ? '' : 'contractAddress')
     ..aOS(6, _omitFieldNames ? '' : 'assetSymbol')
-    ..aOS(7, _omitFieldNames ? '' : 'rootHash')
-    ..a<$core.double>(8, _omitFieldNames ? '' : 'amount', $pb.PbFieldType.OD)
+    ..a<$core.int>(
+        7, _omitFieldNames ? '' : 'assetDecimals', $pb.PbFieldType.OU3)
+    ..aOS(8, _omitFieldNames ? '' : 'rootHash')
+    ..a<$core.double>(9, _omitFieldNames ? '' : 'amount', $pb.PbFieldType.OD)
+    ..aOS(10, _omitFieldNames ? '' : 'decimalAmount')
+    ..aOS(11, _omitFieldNames ? '' : 'recipient')
+    ..aOS(12, _omitFieldNames ? '' : 'walletId')
+    ..pPS(13, _omitFieldNames ? '' : 'inputCommitments')
+    ..pPS(14, _omitFieldNames ? '' : 'outputCommitments')
+    ..pPS(15, _omitFieldNames ? '' : 'nullifiers')
+    ..pPS(16, _omitFieldNames ? '' : 'signaturePublicKeyHashes')
+    ..pPS(17, _omitFieldNames ? '' : 'encryptedAuditorNotes')
     ..a<$core.double>(
-        9, _omitFieldNames ? '' : 'publicAmount', $pb.PbFieldType.OD)
-    ..aOS(10, _omitFieldNames ? '' : 'walletId')
-    ..pPS(11, _omitFieldNames ? '' : 'inputCommitments')
-    ..pPS(12, _omitFieldNames ? '' : 'outputCommitments')
-    ..pPS(13, _omitFieldNames ? '' : 'nullifiers')
-    ..pPS(14, _omitFieldNames ? '' : 'signaturePublicKeyHashes')
-    ..pPS(15, _omitFieldNames ? '' : 'encryptedAuditorNotes')
+        18, _omitFieldNames ? '' : 'rollupFeeAmount', $pb.PbFieldType.OD)
+    ..aOS(19, _omitFieldNames ? '' : 'rollupFeeDecimalAmount')
     ..a<$core.double>(
-        16, _omitFieldNames ? '' : 'rollupFeeAmount', $pb.PbFieldType.OD)
-    ..a<$core.double>(
-        17, _omitFieldNames ? '' : 'gasRelayerFeeAmount', $pb.PbFieldType.OD)
-    ..aOS(18, _omitFieldNames ? '' : 'signaturePublicKey')
-    ..aOS(19, _omitFieldNames ? '' : 'assetAddress')
-    ..aOS(20, _omitFieldNames ? '' : 'proof')
-    ..aOS(21, _omitFieldNames ? '' : 'shieldedAddress')
-    ..aOS(22, _omitFieldNames ? '' : 'publicAddress')
-    ..aOS(23, _omitFieldNames ? '' : 'gasRelayerAddress')
-    ..aOS(24, _omitFieldNames ? '' : 'signature')
-    ..aOS(25, _omitFieldNames ? '' : 'randomAuditingPublicKey')
-    ..aOS(26, _omitFieldNames ? '' : 'errorMessage')
-    ..aOS(27, _omitFieldNames ? '' : 'transactionHash')
+        20, _omitFieldNames ? '' : 'gasRelayerFeeAmount', $pb.PbFieldType.OD)
+    ..aOS(21, _omitFieldNames ? '' : 'gasRelayerFeeDecimalAmount')
+    ..aOS(22, _omitFieldNames ? '' : 'signaturePublicKey')
+    ..aOS(23, _omitFieldNames ? '' : 'assetAddress')
+    ..aOS(24, _omitFieldNames ? '' : 'proof')
+    ..aOS(25, _omitFieldNames ? '' : 'gasRelayerAddress')
+    ..aOS(26, _omitFieldNames ? '' : 'signature')
+    ..aOS(27, _omitFieldNames ? '' : 'randomAuditingPublicKey')
+    ..aOS(28, _omitFieldNames ? '' : 'errorMessage')
+    ..aOS(29, _omitFieldNames ? '' : 'transactionHash')
     ..e<$7.SpendType>(
-        28, _omitFieldNames ? '' : 'spendType', $pb.PbFieldType.OE,
+        30, _omitFieldNames ? '' : 'spendType', $pb.PbFieldType.OE,
         defaultOrMaker: $7.SpendType.SPEND_TYPE_UNSPECIFIED,
         valueOf: $7.SpendType.valueOf,
         enumValues: $7.SpendType.values)
-    ..e<$7.SpendStatus>(29, _omitFieldNames ? '' : 'status', $pb.PbFieldType.OE,
+    ..e<$7.SpendStatus>(31, _omitFieldNames ? '' : 'status', $pb.PbFieldType.OE,
         defaultOrMaker: $7.SpendStatus.SPEND_STATUS_UNSPECIFIED,
         valueOf: $7.SpendStatus.valueOf,
         enumValues: $7.SpendStatus.values)
@@ -291,235 +301,259 @@ class Spend extends $pb.GeneratedMessage {
   void clearAssetSymbol() => clearField(6);
 
   @$pb.TagNumber(7)
-  $core.String get rootHash => $_getSZ(6);
+  $core.int get assetDecimals => $_getIZ(6);
   @$pb.TagNumber(7)
+  set assetDecimals($core.int v) {
+    $_setUnsignedInt32(6, v);
+  }
+
+  @$pb.TagNumber(7)
+  $core.bool hasAssetDecimals() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearAssetDecimals() => clearField(7);
+
+  @$pb.TagNumber(8)
+  $core.String get rootHash => $_getSZ(7);
+  @$pb.TagNumber(8)
   set rootHash($core.String v) {
-    $_setString(6, v);
+    $_setString(7, v);
   }
 
-  @$pb.TagNumber(7)
-  $core.bool hasRootHash() => $_has(6);
-  @$pb.TagNumber(7)
-  void clearRootHash() => clearField(7);
+  @$pb.TagNumber(8)
+  $core.bool hasRootHash() => $_has(7);
+  @$pb.TagNumber(8)
+  void clearRootHash() => clearField(8);
 
-  @$pb.TagNumber(8)
-  $core.double get amount => $_getN(7);
-  @$pb.TagNumber(8)
+  @$pb.TagNumber(9)
+  $core.double get amount => $_getN(8);
+  @$pb.TagNumber(9)
   set amount($core.double v) {
-    $_setDouble(7, v);
-  }
-
-  @$pb.TagNumber(8)
-  $core.bool hasAmount() => $_has(7);
-  @$pb.TagNumber(8)
-  void clearAmount() => clearField(8);
-
-  @$pb.TagNumber(9)
-  $core.double get publicAmount => $_getN(8);
-  @$pb.TagNumber(9)
-  set publicAmount($core.double v) {
     $_setDouble(8, v);
   }
 
   @$pb.TagNumber(9)
-  $core.bool hasPublicAmount() => $_has(8);
+  $core.bool hasAmount() => $_has(8);
   @$pb.TagNumber(9)
-  void clearPublicAmount() => clearField(9);
+  void clearAmount() => clearField(9);
 
   @$pb.TagNumber(10)
-  $core.String get walletId => $_getSZ(9);
+  $core.String get decimalAmount => $_getSZ(9);
   @$pb.TagNumber(10)
-  set walletId($core.String v) {
+  set decimalAmount($core.String v) {
     $_setString(9, v);
   }
 
   @$pb.TagNumber(10)
-  $core.bool hasWalletId() => $_has(9);
+  $core.bool hasDecimalAmount() => $_has(9);
   @$pb.TagNumber(10)
-  void clearWalletId() => clearField(10);
+  void clearDecimalAmount() => clearField(10);
 
   @$pb.TagNumber(11)
-  $core.List<$core.String> get inputCommitments => $_getList(10);
+  $core.String get recipient => $_getSZ(10);
+  @$pb.TagNumber(11)
+  set recipient($core.String v) {
+    $_setString(10, v);
+  }
+
+  @$pb.TagNumber(11)
+  $core.bool hasRecipient() => $_has(10);
+  @$pb.TagNumber(11)
+  void clearRecipient() => clearField(11);
 
   @$pb.TagNumber(12)
-  $core.List<$core.String> get outputCommitments => $_getList(11);
+  $core.String get walletId => $_getSZ(11);
+  @$pb.TagNumber(12)
+  set walletId($core.String v) {
+    $_setString(11, v);
+  }
+
+  @$pb.TagNumber(12)
+  $core.bool hasWalletId() => $_has(11);
+  @$pb.TagNumber(12)
+  void clearWalletId() => clearField(12);
 
   @$pb.TagNumber(13)
-  $core.List<$core.String> get nullifiers => $_getList(12);
+  $core.List<$core.String> get inputCommitments => $_getList(12);
 
   @$pb.TagNumber(14)
-  $core.List<$core.String> get signaturePublicKeyHashes => $_getList(13);
+  $core.List<$core.String> get outputCommitments => $_getList(13);
 
   @$pb.TagNumber(15)
-  $core.List<$core.String> get encryptedAuditorNotes => $_getList(14);
+  $core.List<$core.String> get nullifiers => $_getList(14);
 
   @$pb.TagNumber(16)
-  $core.double get rollupFeeAmount => $_getN(15);
-  @$pb.TagNumber(16)
+  $core.List<$core.String> get signaturePublicKeyHashes => $_getList(15);
+
+  @$pb.TagNumber(17)
+  $core.List<$core.String> get encryptedAuditorNotes => $_getList(16);
+
+  @$pb.TagNumber(18)
+  $core.double get rollupFeeAmount => $_getN(17);
+  @$pb.TagNumber(18)
   set rollupFeeAmount($core.double v) {
-    $_setDouble(15, v);
-  }
-
-  @$pb.TagNumber(16)
-  $core.bool hasRollupFeeAmount() => $_has(15);
-  @$pb.TagNumber(16)
-  void clearRollupFeeAmount() => clearField(16);
-
-  @$pb.TagNumber(17)
-  $core.double get gasRelayerFeeAmount => $_getN(16);
-  @$pb.TagNumber(17)
-  set gasRelayerFeeAmount($core.double v) {
-    $_setDouble(16, v);
-  }
-
-  @$pb.TagNumber(17)
-  $core.bool hasGasRelayerFeeAmount() => $_has(16);
-  @$pb.TagNumber(17)
-  void clearGasRelayerFeeAmount() => clearField(17);
-
-  @$pb.TagNumber(18)
-  $core.String get signaturePublicKey => $_getSZ(17);
-  @$pb.TagNumber(18)
-  set signaturePublicKey($core.String v) {
-    $_setString(17, v);
+    $_setDouble(17, v);
   }
 
   @$pb.TagNumber(18)
-  $core.bool hasSignaturePublicKey() => $_has(17);
+  $core.bool hasRollupFeeAmount() => $_has(17);
   @$pb.TagNumber(18)
-  void clearSignaturePublicKey() => clearField(18);
+  void clearRollupFeeAmount() => clearField(18);
 
   @$pb.TagNumber(19)
-  $core.String get assetAddress => $_getSZ(18);
+  $core.String get rollupFeeDecimalAmount => $_getSZ(18);
   @$pb.TagNumber(19)
-  set assetAddress($core.String v) {
+  set rollupFeeDecimalAmount($core.String v) {
     $_setString(18, v);
   }
 
   @$pb.TagNumber(19)
-  $core.bool hasAssetAddress() => $_has(18);
+  $core.bool hasRollupFeeDecimalAmount() => $_has(18);
   @$pb.TagNumber(19)
-  void clearAssetAddress() => clearField(19);
+  void clearRollupFeeDecimalAmount() => clearField(19);
 
   @$pb.TagNumber(20)
-  $core.String get proof => $_getSZ(19);
+  $core.double get gasRelayerFeeAmount => $_getN(19);
   @$pb.TagNumber(20)
-  set proof($core.String v) {
-    $_setString(19, v);
+  set gasRelayerFeeAmount($core.double v) {
+    $_setDouble(19, v);
   }
 
   @$pb.TagNumber(20)
-  $core.bool hasProof() => $_has(19);
+  $core.bool hasGasRelayerFeeAmount() => $_has(19);
   @$pb.TagNumber(20)
-  void clearProof() => clearField(20);
+  void clearGasRelayerFeeAmount() => clearField(20);
 
   @$pb.TagNumber(21)
-  $core.String get shieldedAddress => $_getSZ(20);
+  $core.String get gasRelayerFeeDecimalAmount => $_getSZ(20);
   @$pb.TagNumber(21)
-  set shieldedAddress($core.String v) {
+  set gasRelayerFeeDecimalAmount($core.String v) {
     $_setString(20, v);
   }
 
   @$pb.TagNumber(21)
-  $core.bool hasShieldedAddress() => $_has(20);
+  $core.bool hasGasRelayerFeeDecimalAmount() => $_has(20);
   @$pb.TagNumber(21)
-  void clearShieldedAddress() => clearField(21);
+  void clearGasRelayerFeeDecimalAmount() => clearField(21);
 
   @$pb.TagNumber(22)
-  $core.String get publicAddress => $_getSZ(21);
+  $core.String get signaturePublicKey => $_getSZ(21);
   @$pb.TagNumber(22)
-  set publicAddress($core.String v) {
+  set signaturePublicKey($core.String v) {
     $_setString(21, v);
   }
 
   @$pb.TagNumber(22)
-  $core.bool hasPublicAddress() => $_has(21);
+  $core.bool hasSignaturePublicKey() => $_has(21);
   @$pb.TagNumber(22)
-  void clearPublicAddress() => clearField(22);
+  void clearSignaturePublicKey() => clearField(22);
 
   @$pb.TagNumber(23)
-  $core.String get gasRelayerAddress => $_getSZ(22);
+  $core.String get assetAddress => $_getSZ(22);
   @$pb.TagNumber(23)
-  set gasRelayerAddress($core.String v) {
+  set assetAddress($core.String v) {
     $_setString(22, v);
   }
 
   @$pb.TagNumber(23)
-  $core.bool hasGasRelayerAddress() => $_has(22);
+  $core.bool hasAssetAddress() => $_has(22);
   @$pb.TagNumber(23)
-  void clearGasRelayerAddress() => clearField(23);
+  void clearAssetAddress() => clearField(23);
 
   @$pb.TagNumber(24)
-  $core.String get signature => $_getSZ(23);
+  $core.String get proof => $_getSZ(23);
   @$pb.TagNumber(24)
-  set signature($core.String v) {
+  set proof($core.String v) {
     $_setString(23, v);
   }
 
   @$pb.TagNumber(24)
-  $core.bool hasSignature() => $_has(23);
+  $core.bool hasProof() => $_has(23);
   @$pb.TagNumber(24)
-  void clearSignature() => clearField(24);
+  void clearProof() => clearField(24);
 
   @$pb.TagNumber(25)
-  $core.String get randomAuditingPublicKey => $_getSZ(24);
+  $core.String get gasRelayerAddress => $_getSZ(24);
   @$pb.TagNumber(25)
-  set randomAuditingPublicKey($core.String v) {
+  set gasRelayerAddress($core.String v) {
     $_setString(24, v);
   }
 
   @$pb.TagNumber(25)
-  $core.bool hasRandomAuditingPublicKey() => $_has(24);
+  $core.bool hasGasRelayerAddress() => $_has(24);
   @$pb.TagNumber(25)
-  void clearRandomAuditingPublicKey() => clearField(25);
+  void clearGasRelayerAddress() => clearField(25);
 
   @$pb.TagNumber(26)
-  $core.String get errorMessage => $_getSZ(25);
+  $core.String get signature => $_getSZ(25);
   @$pb.TagNumber(26)
-  set errorMessage($core.String v) {
+  set signature($core.String v) {
     $_setString(25, v);
   }
 
   @$pb.TagNumber(26)
-  $core.bool hasErrorMessage() => $_has(25);
+  $core.bool hasSignature() => $_has(25);
   @$pb.TagNumber(26)
-  void clearErrorMessage() => clearField(26);
+  void clearSignature() => clearField(26);
 
   @$pb.TagNumber(27)
-  $core.String get transactionHash => $_getSZ(26);
+  $core.String get randomAuditingPublicKey => $_getSZ(26);
   @$pb.TagNumber(27)
-  set transactionHash($core.String v) {
+  set randomAuditingPublicKey($core.String v) {
     $_setString(26, v);
   }
 
   @$pb.TagNumber(27)
-  $core.bool hasTransactionHash() => $_has(26);
+  $core.bool hasRandomAuditingPublicKey() => $_has(26);
   @$pb.TagNumber(27)
-  void clearTransactionHash() => clearField(27);
+  void clearRandomAuditingPublicKey() => clearField(27);
 
   @$pb.TagNumber(28)
-  $7.SpendType get spendType => $_getN(27);
+  $core.String get errorMessage => $_getSZ(27);
   @$pb.TagNumber(28)
+  set errorMessage($core.String v) {
+    $_setString(27, v);
+  }
+
+  @$pb.TagNumber(28)
+  $core.bool hasErrorMessage() => $_has(27);
+  @$pb.TagNumber(28)
+  void clearErrorMessage() => clearField(28);
+
+  @$pb.TagNumber(29)
+  $core.String get transactionHash => $_getSZ(28);
+  @$pb.TagNumber(29)
+  set transactionHash($core.String v) {
+    $_setString(28, v);
+  }
+
+  @$pb.TagNumber(29)
+  $core.bool hasTransactionHash() => $_has(28);
+  @$pb.TagNumber(29)
+  void clearTransactionHash() => clearField(29);
+
+  @$pb.TagNumber(30)
+  $7.SpendType get spendType => $_getN(29);
+  @$pb.TagNumber(30)
   set spendType($7.SpendType v) {
-    setField(28, v);
+    setField(30, v);
   }
 
-  @$pb.TagNumber(28)
-  $core.bool hasSpendType() => $_has(27);
-  @$pb.TagNumber(28)
-  void clearSpendType() => clearField(28);
+  @$pb.TagNumber(30)
+  $core.bool hasSpendType() => $_has(29);
+  @$pb.TagNumber(30)
+  void clearSpendType() => clearField(30);
 
-  @$pb.TagNumber(29)
-  $7.SpendStatus get status => $_getN(28);
-  @$pb.TagNumber(29)
+  @$pb.TagNumber(31)
+  $7.SpendStatus get status => $_getN(30);
+  @$pb.TagNumber(31)
   set status($7.SpendStatus v) {
-    setField(29, v);
+    setField(31, v);
   }
 
-  @$pb.TagNumber(29)
-  $core.bool hasStatus() => $_has(28);
-  @$pb.TagNumber(29)
-  void clearStatus() => clearField(29);
+  @$pb.TagNumber(31)
+  $core.bool hasStatus() => $_has(30);
+  @$pb.TagNumber(31)
+  void clearStatus() => clearField(31);
 }
 
 const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
