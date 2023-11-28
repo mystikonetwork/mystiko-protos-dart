@@ -639,43 +639,87 @@ class SendDepositOptions extends $pb.GeneratedMessage {
 
 class DepositQuote extends $pb.GeneratedMessage {
   factory DepositQuote({
+    $core.String? assetSymbol,
+    $core.int? assetDecimals,
     $core.double? minAmount,
+    $core.String? minDecimalAmount,
     $core.double? maxAmount,
+    $core.String? maxDecimalAmount,
     $core.double? minRollupFeeAmount,
+    $core.String? minRollupFeeDecimalAmount,
     $core.String? rollupFeeAssetSymbol,
+    $core.int? rollupFeeAssetDecimals,
     $core.double? minBridgeFeeAmount,
+    $core.String? minBridgeFeeDecimalAmount,
     $core.String? bridgeFeeAssetSymbol,
+    $core.int? bridgeFeeAssetDecimals,
     $core.double? minExecutorFeeAmount,
+    $core.String? minExecutorFeeDecimalAmount,
     $core.String? executorFeeAssetSymbol,
+    $core.int? executorFeeAssetDecimals,
     $core.Iterable<$core.double>? recommendedAmounts,
+    $core.Iterable<$core.String>? recommendedDecimalAmounts,
   }) {
     final $result = create();
+    if (assetSymbol != null) {
+      $result.assetSymbol = assetSymbol;
+    }
+    if (assetDecimals != null) {
+      $result.assetDecimals = assetDecimals;
+    }
     if (minAmount != null) {
       $result.minAmount = minAmount;
+    }
+    if (minDecimalAmount != null) {
+      $result.minDecimalAmount = minDecimalAmount;
     }
     if (maxAmount != null) {
       $result.maxAmount = maxAmount;
     }
+    if (maxDecimalAmount != null) {
+      $result.maxDecimalAmount = maxDecimalAmount;
+    }
     if (minRollupFeeAmount != null) {
       $result.minRollupFeeAmount = minRollupFeeAmount;
+    }
+    if (minRollupFeeDecimalAmount != null) {
+      $result.minRollupFeeDecimalAmount = minRollupFeeDecimalAmount;
     }
     if (rollupFeeAssetSymbol != null) {
       $result.rollupFeeAssetSymbol = rollupFeeAssetSymbol;
     }
+    if (rollupFeeAssetDecimals != null) {
+      $result.rollupFeeAssetDecimals = rollupFeeAssetDecimals;
+    }
     if (minBridgeFeeAmount != null) {
       $result.minBridgeFeeAmount = minBridgeFeeAmount;
+    }
+    if (minBridgeFeeDecimalAmount != null) {
+      $result.minBridgeFeeDecimalAmount = minBridgeFeeDecimalAmount;
     }
     if (bridgeFeeAssetSymbol != null) {
       $result.bridgeFeeAssetSymbol = bridgeFeeAssetSymbol;
     }
+    if (bridgeFeeAssetDecimals != null) {
+      $result.bridgeFeeAssetDecimals = bridgeFeeAssetDecimals;
+    }
     if (minExecutorFeeAmount != null) {
       $result.minExecutorFeeAmount = minExecutorFeeAmount;
+    }
+    if (minExecutorFeeDecimalAmount != null) {
+      $result.minExecutorFeeDecimalAmount = minExecutorFeeDecimalAmount;
     }
     if (executorFeeAssetSymbol != null) {
       $result.executorFeeAssetSymbol = executorFeeAssetSymbol;
     }
+    if (executorFeeAssetDecimals != null) {
+      $result.executorFeeAssetDecimals = executorFeeAssetDecimals;
+    }
     if (recommendedAmounts != null) {
       $result.recommendedAmounts.addAll(recommendedAmounts);
+    }
+    if (recommendedDecimalAmounts != null) {
+      $result.recommendedDecimalAmounts.addAll(recommendedDecimalAmounts);
     }
     return $result;
   }
@@ -692,19 +736,34 @@ class DepositQuote extends $pb.GeneratedMessage {
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.core.handler.v1'),
       createEmptyInstance: create)
-    ..a<$core.double>(1, _omitFieldNames ? '' : 'minAmount', $pb.PbFieldType.OD)
-    ..a<$core.double>(2, _omitFieldNames ? '' : 'maxAmount', $pb.PbFieldType.OD)
+    ..aOS(1, _omitFieldNames ? '' : 'assetSymbol')
+    ..a<$core.int>(
+        2, _omitFieldNames ? '' : 'assetDecimals', $pb.PbFieldType.OU3)
+    ..a<$core.double>(3, _omitFieldNames ? '' : 'minAmount', $pb.PbFieldType.OD)
+    ..aOS(4, _omitFieldNames ? '' : 'minDecimalAmount')
+    ..a<$core.double>(5, _omitFieldNames ? '' : 'maxAmount', $pb.PbFieldType.OD)
+    ..aOS(6, _omitFieldNames ? '' : 'maxDecimalAmount')
     ..a<$core.double>(
-        3, _omitFieldNames ? '' : 'minRollupFeeAmount', $pb.PbFieldType.OD)
-    ..aOS(4, _omitFieldNames ? '' : 'rollupFeeAssetSymbol')
+        7, _omitFieldNames ? '' : 'minRollupFeeAmount', $pb.PbFieldType.OD)
+    ..aOS(8, _omitFieldNames ? '' : 'minRollupFeeDecimalAmount')
+    ..aOS(9, _omitFieldNames ? '' : 'rollupFeeAssetSymbol')
+    ..a<$core.int>(10, _omitFieldNames ? '' : 'rollupFeeAssetDecimals',
+        $pb.PbFieldType.OU3)
     ..a<$core.double>(
-        5, _omitFieldNames ? '' : 'minBridgeFeeAmount', $pb.PbFieldType.OD)
-    ..aOS(6, _omitFieldNames ? '' : 'bridgeFeeAssetSymbol')
+        11, _omitFieldNames ? '' : 'minBridgeFeeAmount', $pb.PbFieldType.OD)
+    ..aOS(12, _omitFieldNames ? '' : 'minBridgeFeeDecimalAmount')
+    ..aOS(13, _omitFieldNames ? '' : 'bridgeFeeAssetSymbol')
+    ..a<$core.int>(14, _omitFieldNames ? '' : 'bridgeFeeAssetDecimals',
+        $pb.PbFieldType.OU3)
     ..a<$core.double>(
-        7, _omitFieldNames ? '' : 'minExecutorFeeAmount', $pb.PbFieldType.OD)
-    ..aOS(8, _omitFieldNames ? '' : 'executorFeeAssetSymbol')
+        15, _omitFieldNames ? '' : 'minExecutorFeeAmount', $pb.PbFieldType.OD)
+    ..aOS(16, _omitFieldNames ? '' : 'minExecutorFeeDecimalAmount')
+    ..aOS(17, _omitFieldNames ? '' : 'executorFeeAssetSymbol')
+    ..a<$core.int>(18, _omitFieldNames ? '' : 'executorFeeAssetDecimals',
+        $pb.PbFieldType.OU3)
     ..p<$core.double>(
-        9, _omitFieldNames ? '' : 'recommendedAmounts', $pb.PbFieldType.KD)
+        19, _omitFieldNames ? '' : 'recommendedAmounts', $pb.PbFieldType.KD)
+    ..pPS(20, _omitFieldNames ? '' : 'recommendedDecimalAmounts')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
@@ -731,120 +790,252 @@ class DepositQuote extends $pb.GeneratedMessage {
   static DepositQuote? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.double get minAmount => $_getN(0);
+  $core.String get assetSymbol => $_getSZ(0);
   @$pb.TagNumber(1)
+  set assetSymbol($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasAssetSymbol() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearAssetSymbol() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.int get assetDecimals => $_getIZ(1);
+  @$pb.TagNumber(2)
+  set assetDecimals($core.int v) {
+    $_setUnsignedInt32(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasAssetDecimals() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearAssetDecimals() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.double get minAmount => $_getN(2);
+  @$pb.TagNumber(3)
   set minAmount($core.double v) {
-    $_setDouble(0, v);
-  }
-
-  @$pb.TagNumber(1)
-  $core.bool hasMinAmount() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearMinAmount() => clearField(1);
-
-  @$pb.TagNumber(2)
-  $core.double get maxAmount => $_getN(1);
-  @$pb.TagNumber(2)
-  set maxAmount($core.double v) {
-    $_setDouble(1, v);
-  }
-
-  @$pb.TagNumber(2)
-  $core.bool hasMaxAmount() => $_has(1);
-  @$pb.TagNumber(2)
-  void clearMaxAmount() => clearField(2);
-
-  @$pb.TagNumber(3)
-  $core.double get minRollupFeeAmount => $_getN(2);
-  @$pb.TagNumber(3)
-  set minRollupFeeAmount($core.double v) {
     $_setDouble(2, v);
   }
 
   @$pb.TagNumber(3)
-  $core.bool hasMinRollupFeeAmount() => $_has(2);
+  $core.bool hasMinAmount() => $_has(2);
   @$pb.TagNumber(3)
-  void clearMinRollupFeeAmount() => clearField(3);
+  void clearMinAmount() => clearField(3);
 
   @$pb.TagNumber(4)
-  $core.String get rollupFeeAssetSymbol => $_getSZ(3);
+  $core.String get minDecimalAmount => $_getSZ(3);
   @$pb.TagNumber(4)
-  set rollupFeeAssetSymbol($core.String v) {
+  set minDecimalAmount($core.String v) {
     $_setString(3, v);
   }
 
   @$pb.TagNumber(4)
-  $core.bool hasRollupFeeAssetSymbol() => $_has(3);
+  $core.bool hasMinDecimalAmount() => $_has(3);
   @$pb.TagNumber(4)
-  void clearRollupFeeAssetSymbol() => clearField(4);
+  void clearMinDecimalAmount() => clearField(4);
 
   @$pb.TagNumber(5)
-  $core.double get minBridgeFeeAmount => $_getN(4);
+  $core.double get maxAmount => $_getN(4);
   @$pb.TagNumber(5)
-  set minBridgeFeeAmount($core.double v) {
+  set maxAmount($core.double v) {
     $_setDouble(4, v);
   }
 
   @$pb.TagNumber(5)
-  $core.bool hasMinBridgeFeeAmount() => $_has(4);
+  $core.bool hasMaxAmount() => $_has(4);
   @$pb.TagNumber(5)
-  void clearMinBridgeFeeAmount() => clearField(5);
+  void clearMaxAmount() => clearField(5);
 
   @$pb.TagNumber(6)
-  $core.String get bridgeFeeAssetSymbol => $_getSZ(5);
+  $core.String get maxDecimalAmount => $_getSZ(5);
   @$pb.TagNumber(6)
-  set bridgeFeeAssetSymbol($core.String v) {
+  set maxDecimalAmount($core.String v) {
     $_setString(5, v);
   }
 
   @$pb.TagNumber(6)
-  $core.bool hasBridgeFeeAssetSymbol() => $_has(5);
+  $core.bool hasMaxDecimalAmount() => $_has(5);
   @$pb.TagNumber(6)
-  void clearBridgeFeeAssetSymbol() => clearField(6);
+  void clearMaxDecimalAmount() => clearField(6);
 
   @$pb.TagNumber(7)
-  $core.double get minExecutorFeeAmount => $_getN(6);
+  $core.double get minRollupFeeAmount => $_getN(6);
   @$pb.TagNumber(7)
-  set minExecutorFeeAmount($core.double v) {
+  set minRollupFeeAmount($core.double v) {
     $_setDouble(6, v);
   }
 
   @$pb.TagNumber(7)
-  $core.bool hasMinExecutorFeeAmount() => $_has(6);
+  $core.bool hasMinRollupFeeAmount() => $_has(6);
   @$pb.TagNumber(7)
-  void clearMinExecutorFeeAmount() => clearField(7);
+  void clearMinRollupFeeAmount() => clearField(7);
 
   @$pb.TagNumber(8)
-  $core.String get executorFeeAssetSymbol => $_getSZ(7);
+  $core.String get minRollupFeeDecimalAmount => $_getSZ(7);
   @$pb.TagNumber(8)
-  set executorFeeAssetSymbol($core.String v) {
+  set minRollupFeeDecimalAmount($core.String v) {
     $_setString(7, v);
   }
 
   @$pb.TagNumber(8)
-  $core.bool hasExecutorFeeAssetSymbol() => $_has(7);
+  $core.bool hasMinRollupFeeDecimalAmount() => $_has(7);
   @$pb.TagNumber(8)
-  void clearExecutorFeeAssetSymbol() => clearField(8);
+  void clearMinRollupFeeDecimalAmount() => clearField(8);
 
   @$pb.TagNumber(9)
-  $core.List<$core.double> get recommendedAmounts => $_getList(8);
+  $core.String get rollupFeeAssetSymbol => $_getSZ(8);
+  @$pb.TagNumber(9)
+  set rollupFeeAssetSymbol($core.String v) {
+    $_setString(8, v);
+  }
+
+  @$pb.TagNumber(9)
+  $core.bool hasRollupFeeAssetSymbol() => $_has(8);
+  @$pb.TagNumber(9)
+  void clearRollupFeeAssetSymbol() => clearField(9);
+
+  @$pb.TagNumber(10)
+  $core.int get rollupFeeAssetDecimals => $_getIZ(9);
+  @$pb.TagNumber(10)
+  set rollupFeeAssetDecimals($core.int v) {
+    $_setUnsignedInt32(9, v);
+  }
+
+  @$pb.TagNumber(10)
+  $core.bool hasRollupFeeAssetDecimals() => $_has(9);
+  @$pb.TagNumber(10)
+  void clearRollupFeeAssetDecimals() => clearField(10);
+
+  @$pb.TagNumber(11)
+  $core.double get minBridgeFeeAmount => $_getN(10);
+  @$pb.TagNumber(11)
+  set minBridgeFeeAmount($core.double v) {
+    $_setDouble(10, v);
+  }
+
+  @$pb.TagNumber(11)
+  $core.bool hasMinBridgeFeeAmount() => $_has(10);
+  @$pb.TagNumber(11)
+  void clearMinBridgeFeeAmount() => clearField(11);
+
+  @$pb.TagNumber(12)
+  $core.String get minBridgeFeeDecimalAmount => $_getSZ(11);
+  @$pb.TagNumber(12)
+  set minBridgeFeeDecimalAmount($core.String v) {
+    $_setString(11, v);
+  }
+
+  @$pb.TagNumber(12)
+  $core.bool hasMinBridgeFeeDecimalAmount() => $_has(11);
+  @$pb.TagNumber(12)
+  void clearMinBridgeFeeDecimalAmount() => clearField(12);
+
+  @$pb.TagNumber(13)
+  $core.String get bridgeFeeAssetSymbol => $_getSZ(12);
+  @$pb.TagNumber(13)
+  set bridgeFeeAssetSymbol($core.String v) {
+    $_setString(12, v);
+  }
+
+  @$pb.TagNumber(13)
+  $core.bool hasBridgeFeeAssetSymbol() => $_has(12);
+  @$pb.TagNumber(13)
+  void clearBridgeFeeAssetSymbol() => clearField(13);
+
+  @$pb.TagNumber(14)
+  $core.int get bridgeFeeAssetDecimals => $_getIZ(13);
+  @$pb.TagNumber(14)
+  set bridgeFeeAssetDecimals($core.int v) {
+    $_setUnsignedInt32(13, v);
+  }
+
+  @$pb.TagNumber(14)
+  $core.bool hasBridgeFeeAssetDecimals() => $_has(13);
+  @$pb.TagNumber(14)
+  void clearBridgeFeeAssetDecimals() => clearField(14);
+
+  @$pb.TagNumber(15)
+  $core.double get minExecutorFeeAmount => $_getN(14);
+  @$pb.TagNumber(15)
+  set minExecutorFeeAmount($core.double v) {
+    $_setDouble(14, v);
+  }
+
+  @$pb.TagNumber(15)
+  $core.bool hasMinExecutorFeeAmount() => $_has(14);
+  @$pb.TagNumber(15)
+  void clearMinExecutorFeeAmount() => clearField(15);
+
+  @$pb.TagNumber(16)
+  $core.String get minExecutorFeeDecimalAmount => $_getSZ(15);
+  @$pb.TagNumber(16)
+  set minExecutorFeeDecimalAmount($core.String v) {
+    $_setString(15, v);
+  }
+
+  @$pb.TagNumber(16)
+  $core.bool hasMinExecutorFeeDecimalAmount() => $_has(15);
+  @$pb.TagNumber(16)
+  void clearMinExecutorFeeDecimalAmount() => clearField(16);
+
+  @$pb.TagNumber(17)
+  $core.String get executorFeeAssetSymbol => $_getSZ(16);
+  @$pb.TagNumber(17)
+  set executorFeeAssetSymbol($core.String v) {
+    $_setString(16, v);
+  }
+
+  @$pb.TagNumber(17)
+  $core.bool hasExecutorFeeAssetSymbol() => $_has(16);
+  @$pb.TagNumber(17)
+  void clearExecutorFeeAssetSymbol() => clearField(17);
+
+  @$pb.TagNumber(18)
+  $core.int get executorFeeAssetDecimals => $_getIZ(17);
+  @$pb.TagNumber(18)
+  set executorFeeAssetDecimals($core.int v) {
+    $_setUnsignedInt32(17, v);
+  }
+
+  @$pb.TagNumber(18)
+  $core.bool hasExecutorFeeAssetDecimals() => $_has(17);
+  @$pb.TagNumber(18)
+  void clearExecutorFeeAssetDecimals() => clearField(18);
+
+  @$pb.TagNumber(19)
+  $core.List<$core.double> get recommendedAmounts => $_getList(18);
+
+  @$pb.TagNumber(20)
+  $core.List<$core.String> get recommendedDecimalAmounts => $_getList(19);
 }
 
 class DepositSummary extends $pb.GeneratedMessage {
   factory DepositSummary({
     $fixnum.Int64? chainId,
     $core.String? assetSymbol,
+    $core.int? assetDecimals,
     $core.double? amount,
+    $core.String? decimalAmount,
     $core.String? shieldedAddress,
     $core.double? rollupFeeAmount,
+    $core.String? rollupFeeDecimalAmount,
     $core.String? rollupFeeAssetSymbol,
+    $core.int? rollupFeeAssetDecimals,
     $fixnum.Int64? dstChainId,
     $core.double? bridgeFeeAmount,
+    $core.String? bridgeFeeDecimalAmount,
     $core.String? bridgeFeeAssetSymbol,
+    $core.int? bridgeFeeAssetDecimals,
     $core.double? executorFeeAmount,
+    $core.String? executorFeeDecimalAmount,
     $core.String? executorFeeAssetSymbol,
+    $core.int? executorFeeAssetDecimals,
     $1.BridgeType? bridgeType,
     $core.Map<$core.String, $core.double>? totalAmounts,
+    $core.Map<$core.String, $core.String>? totalDecimalAmounts,
   }) {
     final $result = create();
     if (chainId != null) {
@@ -853,8 +1044,14 @@ class DepositSummary extends $pb.GeneratedMessage {
     if (assetSymbol != null) {
       $result.assetSymbol = assetSymbol;
     }
+    if (assetDecimals != null) {
+      $result.assetDecimals = assetDecimals;
+    }
     if (amount != null) {
       $result.amount = amount;
+    }
+    if (decimalAmount != null) {
+      $result.decimalAmount = decimalAmount;
     }
     if (shieldedAddress != null) {
       $result.shieldedAddress = shieldedAddress;
@@ -862,8 +1059,14 @@ class DepositSummary extends $pb.GeneratedMessage {
     if (rollupFeeAmount != null) {
       $result.rollupFeeAmount = rollupFeeAmount;
     }
+    if (rollupFeeDecimalAmount != null) {
+      $result.rollupFeeDecimalAmount = rollupFeeDecimalAmount;
+    }
     if (rollupFeeAssetSymbol != null) {
       $result.rollupFeeAssetSymbol = rollupFeeAssetSymbol;
+    }
+    if (rollupFeeAssetDecimals != null) {
+      $result.rollupFeeAssetDecimals = rollupFeeAssetDecimals;
     }
     if (dstChainId != null) {
       $result.dstChainId = dstChainId;
@@ -871,20 +1074,35 @@ class DepositSummary extends $pb.GeneratedMessage {
     if (bridgeFeeAmount != null) {
       $result.bridgeFeeAmount = bridgeFeeAmount;
     }
+    if (bridgeFeeDecimalAmount != null) {
+      $result.bridgeFeeDecimalAmount = bridgeFeeDecimalAmount;
+    }
     if (bridgeFeeAssetSymbol != null) {
       $result.bridgeFeeAssetSymbol = bridgeFeeAssetSymbol;
+    }
+    if (bridgeFeeAssetDecimals != null) {
+      $result.bridgeFeeAssetDecimals = bridgeFeeAssetDecimals;
     }
     if (executorFeeAmount != null) {
       $result.executorFeeAmount = executorFeeAmount;
     }
+    if (executorFeeDecimalAmount != null) {
+      $result.executorFeeDecimalAmount = executorFeeDecimalAmount;
+    }
     if (executorFeeAssetSymbol != null) {
       $result.executorFeeAssetSymbol = executorFeeAssetSymbol;
+    }
+    if (executorFeeAssetDecimals != null) {
+      $result.executorFeeAssetDecimals = executorFeeAssetDecimals;
     }
     if (bridgeType != null) {
       $result.bridgeType = bridgeType;
     }
     if (totalAmounts != null) {
       $result.totalAmounts.addAll(totalAmounts);
+    }
+    if (totalDecimalAmounts != null) {
+      $result.totalDecimalAmounts.addAll(totalDecimalAmounts);
     }
     return $result;
   }
@@ -904,29 +1122,47 @@ class DepositSummary extends $pb.GeneratedMessage {
     ..a<$fixnum.Int64>(1, _omitFieldNames ? '' : 'chainId', $pb.PbFieldType.OU6,
         defaultOrMaker: $fixnum.Int64.ZERO)
     ..aOS(2, _omitFieldNames ? '' : 'assetSymbol')
-    ..a<$core.double>(3, _omitFieldNames ? '' : 'amount', $pb.PbFieldType.OD)
-    ..aOS(4, _omitFieldNames ? '' : 'shieldedAddress')
+    ..a<$core.int>(
+        3, _omitFieldNames ? '' : 'assetDecimals', $pb.PbFieldType.OU3)
+    ..a<$core.double>(4, _omitFieldNames ? '' : 'amount', $pb.PbFieldType.OD)
+    ..aOS(5, _omitFieldNames ? '' : 'decimalAmount')
+    ..aOS(6, _omitFieldNames ? '' : 'shieldedAddress')
     ..a<$core.double>(
-        5, _omitFieldNames ? '' : 'rollupFeeAmount', $pb.PbFieldType.OD)
-    ..aOS(6, _omitFieldNames ? '' : 'rollupFeeAssetSymbol')
+        7, _omitFieldNames ? '' : 'rollupFeeAmount', $pb.PbFieldType.OD)
+    ..aOS(8, _omitFieldNames ? '' : 'rollupFeeDecimalAmount')
+    ..aOS(9, _omitFieldNames ? '' : 'rollupFeeAssetSymbol')
+    ..a<$core.int>(10, _omitFieldNames ? '' : 'rollupFeeAssetDecimals',
+        $pb.PbFieldType.OU3)
     ..a<$fixnum.Int64>(
-        7, _omitFieldNames ? '' : 'dstChainId', $pb.PbFieldType.OU6,
+        11, _omitFieldNames ? '' : 'dstChainId', $pb.PbFieldType.OU6,
         defaultOrMaker: $fixnum.Int64.ZERO)
     ..a<$core.double>(
-        8, _omitFieldNames ? '' : 'bridgeFeeAmount', $pb.PbFieldType.OD)
-    ..aOS(9, _omitFieldNames ? '' : 'bridgeFeeAssetSymbol')
+        12, _omitFieldNames ? '' : 'bridgeFeeAmount', $pb.PbFieldType.OD)
+    ..aOS(13, _omitFieldNames ? '' : 'bridgeFeeDecimalAmount')
+    ..aOS(14, _omitFieldNames ? '' : 'bridgeFeeAssetSymbol')
+    ..a<$core.int>(15, _omitFieldNames ? '' : 'bridgeFeeAssetDecimals',
+        $pb.PbFieldType.OU3)
     ..a<$core.double>(
-        10, _omitFieldNames ? '' : 'executorFeeAmount', $pb.PbFieldType.OD)
-    ..aOS(11, _omitFieldNames ? '' : 'executorFeeAssetSymbol')
+        16, _omitFieldNames ? '' : 'executorFeeAmount', $pb.PbFieldType.OD)
+    ..aOS(17, _omitFieldNames ? '' : 'executorFeeDecimalAmount')
+    ..aOS(18, _omitFieldNames ? '' : 'executorFeeAssetSymbol')
+    ..a<$core.int>(19, _omitFieldNames ? '' : 'executorFeeAssetDecimals',
+        $pb.PbFieldType.OU3)
     ..e<$1.BridgeType>(
-        12, _omitFieldNames ? '' : 'bridgeType', $pb.PbFieldType.OE,
+        20, _omitFieldNames ? '' : 'bridgeType', $pb.PbFieldType.OE,
         defaultOrMaker: $1.BridgeType.BRIDGE_TYPE_UNSPECIFIED,
         valueOf: $1.BridgeType.valueOf,
         enumValues: $1.BridgeType.values)
-    ..m<$core.String, $core.double>(13, _omitFieldNames ? '' : 'totalAmounts',
+    ..m<$core.String, $core.double>(21, _omitFieldNames ? '' : 'totalAmounts',
         entryClassName: 'DepositSummary.TotalAmountsEntry',
         keyFieldType: $pb.PbFieldType.OS,
         valueFieldType: $pb.PbFieldType.OD,
+        packageName: const $pb.PackageName('mystiko.core.handler.v1'))
+    ..m<$core.String, $core.String>(
+        22, _omitFieldNames ? '' : 'totalDecimalAmounts',
+        entryClassName: 'DepositSummary.TotalDecimalAmountsEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OS,
         packageName: const $pb.PackageName('mystiko.core.handler.v1'))
     ..hasRequiredFields = false;
 
@@ -978,127 +1214,226 @@ class DepositSummary extends $pb.GeneratedMessage {
   void clearAssetSymbol() => clearField(2);
 
   @$pb.TagNumber(3)
-  $core.double get amount => $_getN(2);
+  $core.int get assetDecimals => $_getIZ(2);
   @$pb.TagNumber(3)
+  set assetDecimals($core.int v) {
+    $_setUnsignedInt32(2, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasAssetDecimals() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearAssetDecimals() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.double get amount => $_getN(3);
+  @$pb.TagNumber(4)
   set amount($core.double v) {
-    $_setDouble(2, v);
+    $_setDouble(3, v);
   }
 
-  @$pb.TagNumber(3)
-  $core.bool hasAmount() => $_has(2);
-  @$pb.TagNumber(3)
-  void clearAmount() => clearField(3);
+  @$pb.TagNumber(4)
+  $core.bool hasAmount() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearAmount() => clearField(4);
 
-  @$pb.TagNumber(4)
-  $core.String get shieldedAddress => $_getSZ(3);
-  @$pb.TagNumber(4)
+  @$pb.TagNumber(5)
+  $core.String get decimalAmount => $_getSZ(4);
+  @$pb.TagNumber(5)
+  set decimalAmount($core.String v) {
+    $_setString(4, v);
+  }
+
+  @$pb.TagNumber(5)
+  $core.bool hasDecimalAmount() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearDecimalAmount() => clearField(5);
+
+  @$pb.TagNumber(6)
+  $core.String get shieldedAddress => $_getSZ(5);
+  @$pb.TagNumber(6)
   set shieldedAddress($core.String v) {
-    $_setString(3, v);
-  }
-
-  @$pb.TagNumber(4)
-  $core.bool hasShieldedAddress() => $_has(3);
-  @$pb.TagNumber(4)
-  void clearShieldedAddress() => clearField(4);
-
-  @$pb.TagNumber(5)
-  $core.double get rollupFeeAmount => $_getN(4);
-  @$pb.TagNumber(5)
-  set rollupFeeAmount($core.double v) {
-    $_setDouble(4, v);
-  }
-
-  @$pb.TagNumber(5)
-  $core.bool hasRollupFeeAmount() => $_has(4);
-  @$pb.TagNumber(5)
-  void clearRollupFeeAmount() => clearField(5);
-
-  @$pb.TagNumber(6)
-  $core.String get rollupFeeAssetSymbol => $_getSZ(5);
-  @$pb.TagNumber(6)
-  set rollupFeeAssetSymbol($core.String v) {
     $_setString(5, v);
   }
 
   @$pb.TagNumber(6)
-  $core.bool hasRollupFeeAssetSymbol() => $_has(5);
+  $core.bool hasShieldedAddress() => $_has(5);
   @$pb.TagNumber(6)
-  void clearRollupFeeAssetSymbol() => clearField(6);
+  void clearShieldedAddress() => clearField(6);
 
   @$pb.TagNumber(7)
-  $fixnum.Int64 get dstChainId => $_getI64(6);
+  $core.double get rollupFeeAmount => $_getN(6);
   @$pb.TagNumber(7)
-  set dstChainId($fixnum.Int64 v) {
-    $_setInt64(6, v);
+  set rollupFeeAmount($core.double v) {
+    $_setDouble(6, v);
   }
 
   @$pb.TagNumber(7)
-  $core.bool hasDstChainId() => $_has(6);
+  $core.bool hasRollupFeeAmount() => $_has(6);
   @$pb.TagNumber(7)
-  void clearDstChainId() => clearField(7);
+  void clearRollupFeeAmount() => clearField(7);
 
   @$pb.TagNumber(8)
-  $core.double get bridgeFeeAmount => $_getN(7);
+  $core.String get rollupFeeDecimalAmount => $_getSZ(7);
   @$pb.TagNumber(8)
-  set bridgeFeeAmount($core.double v) {
-    $_setDouble(7, v);
+  set rollupFeeDecimalAmount($core.String v) {
+    $_setString(7, v);
   }
 
   @$pb.TagNumber(8)
-  $core.bool hasBridgeFeeAmount() => $_has(7);
+  $core.bool hasRollupFeeDecimalAmount() => $_has(7);
   @$pb.TagNumber(8)
-  void clearBridgeFeeAmount() => clearField(8);
+  void clearRollupFeeDecimalAmount() => clearField(8);
 
   @$pb.TagNumber(9)
-  $core.String get bridgeFeeAssetSymbol => $_getSZ(8);
+  $core.String get rollupFeeAssetSymbol => $_getSZ(8);
   @$pb.TagNumber(9)
-  set bridgeFeeAssetSymbol($core.String v) {
+  set rollupFeeAssetSymbol($core.String v) {
     $_setString(8, v);
   }
 
   @$pb.TagNumber(9)
-  $core.bool hasBridgeFeeAssetSymbol() => $_has(8);
+  $core.bool hasRollupFeeAssetSymbol() => $_has(8);
   @$pb.TagNumber(9)
-  void clearBridgeFeeAssetSymbol() => clearField(9);
+  void clearRollupFeeAssetSymbol() => clearField(9);
 
   @$pb.TagNumber(10)
-  $core.double get executorFeeAmount => $_getN(9);
+  $core.int get rollupFeeAssetDecimals => $_getIZ(9);
   @$pb.TagNumber(10)
-  set executorFeeAmount($core.double v) {
-    $_setDouble(9, v);
+  set rollupFeeAssetDecimals($core.int v) {
+    $_setUnsignedInt32(9, v);
   }
 
   @$pb.TagNumber(10)
-  $core.bool hasExecutorFeeAmount() => $_has(9);
+  $core.bool hasRollupFeeAssetDecimals() => $_has(9);
   @$pb.TagNumber(10)
-  void clearExecutorFeeAmount() => clearField(10);
+  void clearRollupFeeAssetDecimals() => clearField(10);
 
   @$pb.TagNumber(11)
-  $core.String get executorFeeAssetSymbol => $_getSZ(10);
+  $fixnum.Int64 get dstChainId => $_getI64(10);
   @$pb.TagNumber(11)
-  set executorFeeAssetSymbol($core.String v) {
-    $_setString(10, v);
+  set dstChainId($fixnum.Int64 v) {
+    $_setInt64(10, v);
   }
 
   @$pb.TagNumber(11)
-  $core.bool hasExecutorFeeAssetSymbol() => $_has(10);
+  $core.bool hasDstChainId() => $_has(10);
   @$pb.TagNumber(11)
-  void clearExecutorFeeAssetSymbol() => clearField(11);
+  void clearDstChainId() => clearField(11);
 
   @$pb.TagNumber(12)
-  $1.BridgeType get bridgeType => $_getN(11);
+  $core.double get bridgeFeeAmount => $_getN(11);
   @$pb.TagNumber(12)
-  set bridgeType($1.BridgeType v) {
-    setField(12, v);
+  set bridgeFeeAmount($core.double v) {
+    $_setDouble(11, v);
   }
 
   @$pb.TagNumber(12)
-  $core.bool hasBridgeType() => $_has(11);
+  $core.bool hasBridgeFeeAmount() => $_has(11);
   @$pb.TagNumber(12)
-  void clearBridgeType() => clearField(12);
+  void clearBridgeFeeAmount() => clearField(12);
 
   @$pb.TagNumber(13)
-  $core.Map<$core.String, $core.double> get totalAmounts => $_getMap(12);
+  $core.String get bridgeFeeDecimalAmount => $_getSZ(12);
+  @$pb.TagNumber(13)
+  set bridgeFeeDecimalAmount($core.String v) {
+    $_setString(12, v);
+  }
+
+  @$pb.TagNumber(13)
+  $core.bool hasBridgeFeeDecimalAmount() => $_has(12);
+  @$pb.TagNumber(13)
+  void clearBridgeFeeDecimalAmount() => clearField(13);
+
+  @$pb.TagNumber(14)
+  $core.String get bridgeFeeAssetSymbol => $_getSZ(13);
+  @$pb.TagNumber(14)
+  set bridgeFeeAssetSymbol($core.String v) {
+    $_setString(13, v);
+  }
+
+  @$pb.TagNumber(14)
+  $core.bool hasBridgeFeeAssetSymbol() => $_has(13);
+  @$pb.TagNumber(14)
+  void clearBridgeFeeAssetSymbol() => clearField(14);
+
+  @$pb.TagNumber(15)
+  $core.int get bridgeFeeAssetDecimals => $_getIZ(14);
+  @$pb.TagNumber(15)
+  set bridgeFeeAssetDecimals($core.int v) {
+    $_setUnsignedInt32(14, v);
+  }
+
+  @$pb.TagNumber(15)
+  $core.bool hasBridgeFeeAssetDecimals() => $_has(14);
+  @$pb.TagNumber(15)
+  void clearBridgeFeeAssetDecimals() => clearField(15);
+
+  @$pb.TagNumber(16)
+  $core.double get executorFeeAmount => $_getN(15);
+  @$pb.TagNumber(16)
+  set executorFeeAmount($core.double v) {
+    $_setDouble(15, v);
+  }
+
+  @$pb.TagNumber(16)
+  $core.bool hasExecutorFeeAmount() => $_has(15);
+  @$pb.TagNumber(16)
+  void clearExecutorFeeAmount() => clearField(16);
+
+  @$pb.TagNumber(17)
+  $core.String get executorFeeDecimalAmount => $_getSZ(16);
+  @$pb.TagNumber(17)
+  set executorFeeDecimalAmount($core.String v) {
+    $_setString(16, v);
+  }
+
+  @$pb.TagNumber(17)
+  $core.bool hasExecutorFeeDecimalAmount() => $_has(16);
+  @$pb.TagNumber(17)
+  void clearExecutorFeeDecimalAmount() => clearField(17);
+
+  @$pb.TagNumber(18)
+  $core.String get executorFeeAssetSymbol => $_getSZ(17);
+  @$pb.TagNumber(18)
+  set executorFeeAssetSymbol($core.String v) {
+    $_setString(17, v);
+  }
+
+  @$pb.TagNumber(18)
+  $core.bool hasExecutorFeeAssetSymbol() => $_has(17);
+  @$pb.TagNumber(18)
+  void clearExecutorFeeAssetSymbol() => clearField(18);
+
+  @$pb.TagNumber(19)
+  $core.int get executorFeeAssetDecimals => $_getIZ(18);
+  @$pb.TagNumber(19)
+  set executorFeeAssetDecimals($core.int v) {
+    $_setUnsignedInt32(18, v);
+  }
+
+  @$pb.TagNumber(19)
+  $core.bool hasExecutorFeeAssetDecimals() => $_has(18);
+  @$pb.TagNumber(19)
+  void clearExecutorFeeAssetDecimals() => clearField(19);
+
+  @$pb.TagNumber(20)
+  $1.BridgeType get bridgeType => $_getN(19);
+  @$pb.TagNumber(20)
+  set bridgeType($1.BridgeType v) {
+    setField(20, v);
+  }
+
+  @$pb.TagNumber(20)
+  $core.bool hasBridgeType() => $_has(19);
+  @$pb.TagNumber(20)
+  void clearBridgeType() => clearField(20);
+
+  @$pb.TagNumber(21)
+  $core.Map<$core.String, $core.double> get totalAmounts => $_getMap(20);
+
+  @$pb.TagNumber(22)
+  $core.Map<$core.String, $core.String> get totalDecimalAmounts => $_getMap(21);
 }
 
 const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');

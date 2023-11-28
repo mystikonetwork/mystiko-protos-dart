@@ -14,17 +14,22 @@ import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import '../../common/v1/config.pb.dart' as $19;
-import '../../loader/v1/loader.pb.dart' as $22;
+import '../../loader/v1/loader.pb.dart' as $23;
+import '../../relayer/v1/client.pb.dart' as $22;
 
 class MystikoOptions extends $pb.GeneratedMessage {
   factory MystikoOptions({
     $19.ConfigOptions? configOptions,
-    $22.LoaderConfig? loaderConfig,
+    $22.RelayerClientOptions? relayerClientOptions,
+    $23.LoaderConfig? loaderConfig,
     $core.String? dbPath,
   }) {
     final $result = create();
     if (configOptions != null) {
       $result.configOptions = configOptions;
+    }
+    if (relayerClientOptions != null) {
+      $result.relayerClientOptions = relayerClientOptions;
     }
     if (loaderConfig != null) {
       $result.loaderConfig = loaderConfig;
@@ -49,9 +54,12 @@ class MystikoOptions extends $pb.GeneratedMessage {
       createEmptyInstance: create)
     ..aOM<$19.ConfigOptions>(1, _omitFieldNames ? '' : 'configOptions',
         subBuilder: $19.ConfigOptions.create)
-    ..aOM<$22.LoaderConfig>(2, _omitFieldNames ? '' : 'loaderConfig',
-        subBuilder: $22.LoaderConfig.create)
-    ..aOS(3, _omitFieldNames ? '' : 'dbPath')
+    ..aOM<$22.RelayerClientOptions>(
+        2, _omitFieldNames ? '' : 'relayerClientOptions',
+        subBuilder: $22.RelayerClientOptions.create)
+    ..aOM<$23.LoaderConfig>(3, _omitFieldNames ? '' : 'loaderConfig',
+        subBuilder: $23.LoaderConfig.create)
+    ..aOS(4, _omitFieldNames ? '' : 'dbPath')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
@@ -92,30 +100,44 @@ class MystikoOptions extends $pb.GeneratedMessage {
   $19.ConfigOptions ensureConfigOptions() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $22.LoaderConfig get loaderConfig => $_getN(1);
+  $22.RelayerClientOptions get relayerClientOptions => $_getN(1);
   @$pb.TagNumber(2)
-  set loaderConfig($22.LoaderConfig v) {
+  set relayerClientOptions($22.RelayerClientOptions v) {
     setField(2, v);
   }
 
   @$pb.TagNumber(2)
-  $core.bool hasLoaderConfig() => $_has(1);
+  $core.bool hasRelayerClientOptions() => $_has(1);
   @$pb.TagNumber(2)
-  void clearLoaderConfig() => clearField(2);
+  void clearRelayerClientOptions() => clearField(2);
   @$pb.TagNumber(2)
-  $22.LoaderConfig ensureLoaderConfig() => $_ensure(1);
+  $22.RelayerClientOptions ensureRelayerClientOptions() => $_ensure(1);
 
   @$pb.TagNumber(3)
-  $core.String get dbPath => $_getSZ(2);
+  $23.LoaderConfig get loaderConfig => $_getN(2);
   @$pb.TagNumber(3)
-  set dbPath($core.String v) {
-    $_setString(2, v);
+  set loaderConfig($23.LoaderConfig v) {
+    setField(3, v);
   }
 
   @$pb.TagNumber(3)
-  $core.bool hasDbPath() => $_has(2);
+  $core.bool hasLoaderConfig() => $_has(2);
   @$pb.TagNumber(3)
-  void clearDbPath() => clearField(3);
+  void clearLoaderConfig() => clearField(3);
+  @$pb.TagNumber(3)
+  $23.LoaderConfig ensureLoaderConfig() => $_ensure(2);
+
+  @$pb.TagNumber(4)
+  $core.String get dbPath => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set dbPath($core.String v) {
+    $_setString(3, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasDbPath() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearDbPath() => clearField(4);
 }
 
 const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
