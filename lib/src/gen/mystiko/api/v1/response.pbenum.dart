@@ -90,6 +90,8 @@ class AccountError extends $pb.ProtobufEnum {
   static const AccountError ACCOUNT_ERROR_NO_SUCH_ACCOUNT_ERROR =
       AccountError._(
           5, _omitEnumNames ? '' : 'ACCOUNT_ERROR_NO_SUCH_ACCOUNT_ERROR');
+  static const AccountError ACCOUNT_ERROR_WALLETS_ERROR =
+      AccountError._(6, _omitEnumNames ? '' : 'ACCOUNT_ERROR_WALLETS_ERROR');
 
   static const $core.List<AccountError> values = <AccountError>[
     ACCOUNT_ERROR_UNSPECIFIED,
@@ -98,6 +100,7 @@ class AccountError extends $pb.ProtobufEnum {
     ACCOUNT_ERROR_MNEMONIC_ERROR,
     ACCOUNT_ERROR_HEX_STRING_ERROR,
     ACCOUNT_ERROR_NO_SUCH_ACCOUNT_ERROR,
+    ACCOUNT_ERROR_WALLETS_ERROR,
   ];
 
   static final $core.Map<$core.int, AccountError> _byValue =
@@ -220,6 +223,10 @@ class DepositError extends $pb.ProtobufEnum {
   static const DepositError DEPOSIT_ERROR_DUPLICATE_COMMITMENT_ERROR =
       DepositError._(
           23, _omitEnumNames ? '' : 'DEPOSIT_ERROR_DUPLICATE_COMMITMENT_ERROR');
+  static const DepositError DEPOSIT_ERROR_WALLETS_ERROR =
+      DepositError._(24, _omitEnumNames ? '' : 'DEPOSIT_ERROR_WALLETS_ERROR');
+  static const DepositError DEPOSIT_ERROR_ACCOUNTS_ERROR =
+      DepositError._(25, _omitEnumNames ? '' : 'DEPOSIT_ERROR_ACCOUNTS_ERROR');
 
   static const $core.List<DepositError> values = <DepositError>[
     DEPOSIT_ERROR_UNSPECIFIED,
@@ -246,6 +253,8 @@ class DepositError extends $pb.ProtobufEnum {
     DEPOSIT_ERROR_MISSING_PRIVATE_KEY_ERROR,
     DEPOSIT_ERROR_DEPOSIT_STATUS_ERROR,
     DEPOSIT_ERROR_DUPLICATE_COMMITMENT_ERROR,
+    DEPOSIT_ERROR_WALLETS_ERROR,
+    DEPOSIT_ERROR_ACCOUNTS_ERROR,
   ];
 
   static final $core.Map<$core.int, DepositError> _byValue =
@@ -279,6 +288,11 @@ class ScannerError extends $pb.ProtobufEnum {
       ScannerError._(8, _omitEnumNames ? '' : 'SCANNER_ERROR_FROM_HEX_ERROR');
   static const ScannerError SCANNER_ERROR_ANYHOW_ERROR =
       ScannerError._(9, _omitEnumNames ? '' : 'SCANNER_ERROR_ANYHOW_ERROR');
+  static const ScannerError SCANNER_ERROR_ACCOUNT_HANDLER_ERROR =
+      ScannerError._(
+          10, _omitEnumNames ? '' : 'SCANNER_ERROR_ACCOUNT_HANDLER_ERROR');
+  static const ScannerError SCANNER_ERROR_WALLET_HANDLER_ERROR = ScannerError._(
+      11, _omitEnumNames ? '' : 'SCANNER_ERROR_WALLET_HANDLER_ERROR');
 
   static const $core.List<ScannerError> values = <ScannerError>[
     SCANNER_ERROR_UNSPECIFIED,
@@ -291,6 +305,8 @@ class ScannerError extends $pb.ProtobufEnum {
     SCANNER_ERROR_PROTOCOL_ERROR,
     SCANNER_ERROR_FROM_HEX_ERROR,
     SCANNER_ERROR_ANYHOW_ERROR,
+    SCANNER_ERROR_ACCOUNT_HANDLER_ERROR,
+    SCANNER_ERROR_WALLET_HANDLER_ERROR,
   ];
 
   static final $core.Map<$core.int, ScannerError> _byValue =
