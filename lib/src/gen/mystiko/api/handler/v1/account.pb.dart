@@ -1,6 +1,6 @@
 //
 //  Generated code. Do not modify.
-//  source: mystiko/api/handler/v1/response.proto
+//  source: mystiko/api/handler/v1/account.proto
 //
 // @dart = 2.12
 
@@ -14,344 +14,704 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../core/document/v1/account.pb.dart' as $18;
-import '../../../core/document/v1/wallet.pb.dart' as $17;
+import '../../../core/document/v1/account.pb.dart' as $16;
+import '../../../core/handler/v1/account.pb.dart' as $14;
+import '../../../storage/v1/filter.pb.dart' as $15;
 
-class CreateWalletResponse extends $pb.GeneratedMessage {
-  factory CreateWalletResponse({
-    $17.Wallet? wallet,
+class CreateAccountRequest extends $pb.GeneratedMessage {
+  factory CreateAccountRequest({
+    $14.CreateAccountOptions? options,
   }) {
     final $result = create();
-    if (wallet != null) {
-      $result.wallet = wallet;
+    if (options != null) {
+      $result.options = options;
     }
     return $result;
   }
-  CreateWalletResponse._() : super();
-  factory CreateWalletResponse.fromBuffer($core.List<$core.int> i,
+  CreateAccountRequest._() : super();
+  factory CreateAccountRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
-  factory CreateWalletResponse.fromJson($core.String i,
+  factory CreateAccountRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'CreateWalletResponse',
+      _omitMessageNames ? '' : 'CreateAccountRequest',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.handler.v1'),
       createEmptyInstance: create)
-    ..aOM<$17.Wallet>(1, _omitFieldNames ? '' : 'wallet',
-        subBuilder: $17.Wallet.create)
+    ..aOM<$14.CreateAccountOptions>(1, _omitFieldNames ? '' : 'options',
+        subBuilder: $14.CreateAccountOptions.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
-  CreateWalletResponse clone() =>
-      CreateWalletResponse()..mergeFromMessage(this);
+  CreateAccountRequest clone() =>
+      CreateAccountRequest()..mergeFromMessage(this);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
-  CreateWalletResponse copyWith(void Function(CreateWalletResponse) updates) =>
-      super.copyWith((message) => updates(message as CreateWalletResponse))
-          as CreateWalletResponse;
+  CreateAccountRequest copyWith(void Function(CreateAccountRequest) updates) =>
+      super.copyWith((message) => updates(message as CreateAccountRequest))
+          as CreateAccountRequest;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static CreateWalletResponse create() => CreateWalletResponse._();
-  CreateWalletResponse createEmptyInstance() => create();
-  static $pb.PbList<CreateWalletResponse> createRepeated() =>
-      $pb.PbList<CreateWalletResponse>();
+  static CreateAccountRequest create() => CreateAccountRequest._();
+  CreateAccountRequest createEmptyInstance() => create();
+  static $pb.PbList<CreateAccountRequest> createRepeated() =>
+      $pb.PbList<CreateAccountRequest>();
   @$core.pragma('dart2js:noInline')
-  static CreateWalletResponse getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<CreateWalletResponse>(create);
-  static CreateWalletResponse? _defaultInstance;
+  static CreateAccountRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateAccountRequest>(create);
+  static CreateAccountRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $17.Wallet get wallet => $_getN(0);
+  $14.CreateAccountOptions get options => $_getN(0);
   @$pb.TagNumber(1)
-  set wallet($17.Wallet v) {
+  set options($14.CreateAccountOptions v) {
     setField(1, v);
   }
 
   @$pb.TagNumber(1)
-  $core.bool hasWallet() => $_has(0);
+  $core.bool hasOptions() => $_has(0);
   @$pb.TagNumber(1)
-  void clearWallet() => clearField(1);
+  void clearOptions() => clearField(1);
   @$pb.TagNumber(1)
-  $17.Wallet ensureWallet() => $_ensure(0);
+  $14.CreateAccountOptions ensureOptions() => $_ensure(0);
 }
 
-class CheckCurrentResponse extends $pb.GeneratedMessage {
-  factory CheckCurrentResponse({
-    $17.Wallet? wallet,
+class CountAccountRequest extends $pb.GeneratedMessage {
+  factory CountAccountRequest({
+    $15.QueryFilter? filter,
   }) {
     final $result = create();
-    if (wallet != null) {
-      $result.wallet = wallet;
+    if (filter != null) {
+      $result.filter = filter;
     }
     return $result;
   }
-  CheckCurrentResponse._() : super();
-  factory CheckCurrentResponse.fromBuffer($core.List<$core.int> i,
+  CountAccountRequest._() : super();
+  factory CountAccountRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
-  factory CheckCurrentResponse.fromJson($core.String i,
+  factory CountAccountRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'CheckCurrentResponse',
+      _omitMessageNames ? '' : 'CountAccountRequest',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.handler.v1'),
       createEmptyInstance: create)
-    ..aOM<$17.Wallet>(1, _omitFieldNames ? '' : 'wallet',
-        subBuilder: $17.Wallet.create)
+    ..aOM<$15.QueryFilter>(1, _omitFieldNames ? '' : 'filter',
+        subBuilder: $15.QueryFilter.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
-  CheckCurrentResponse clone() =>
-      CheckCurrentResponse()..mergeFromMessage(this);
+  CountAccountRequest clone() => CountAccountRequest()..mergeFromMessage(this);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
-  CheckCurrentResponse copyWith(void Function(CheckCurrentResponse) updates) =>
-      super.copyWith((message) => updates(message as CheckCurrentResponse))
-          as CheckCurrentResponse;
+  CountAccountRequest copyWith(void Function(CountAccountRequest) updates) =>
+      super.copyWith((message) => updates(message as CountAccountRequest))
+          as CountAccountRequest;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static CheckCurrentResponse create() => CheckCurrentResponse._();
-  CheckCurrentResponse createEmptyInstance() => create();
-  static $pb.PbList<CheckCurrentResponse> createRepeated() =>
-      $pb.PbList<CheckCurrentResponse>();
+  static CountAccountRequest create() => CountAccountRequest._();
+  CountAccountRequest createEmptyInstance() => create();
+  static $pb.PbList<CountAccountRequest> createRepeated() =>
+      $pb.PbList<CountAccountRequest>();
   @$core.pragma('dart2js:noInline')
-  static CheckCurrentResponse getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<CheckCurrentResponse>(create);
-  static CheckCurrentResponse? _defaultInstance;
+  static CountAccountRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CountAccountRequest>(create);
+  static CountAccountRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $17.Wallet get wallet => $_getN(0);
+  $15.QueryFilter get filter => $_getN(0);
   @$pb.TagNumber(1)
-  set wallet($17.Wallet v) {
+  set filter($15.QueryFilter v) {
     setField(1, v);
   }
 
   @$pb.TagNumber(1)
-  $core.bool hasWallet() => $_has(0);
+  $core.bool hasFilter() => $_has(0);
   @$pb.TagNumber(1)
-  void clearWallet() => clearField(1);
+  void clearFilter() => clearField(1);
   @$pb.TagNumber(1)
-  $17.Wallet ensureWallet() => $_ensure(0);
+  $15.QueryFilter ensureFilter() => $_ensure(0);
 }
 
-class CheckPasswordResponse extends $pb.GeneratedMessage {
-  factory CheckPasswordResponse({
-    $17.Wallet? wallet,
+enum FindAccountRequest_Condition { filter, findAll, notSet }
+
+class FindAccountRequest extends $pb.GeneratedMessage {
+  factory FindAccountRequest({
+    $15.QueryFilter? filter,
+    $core.bool? findAll,
   }) {
     final $result = create();
-    if (wallet != null) {
-      $result.wallet = wallet;
+    if (filter != null) {
+      $result.filter = filter;
+    }
+    if (findAll != null) {
+      $result.findAll = findAll;
     }
     return $result;
   }
-  CheckPasswordResponse._() : super();
-  factory CheckPasswordResponse.fromBuffer($core.List<$core.int> i,
+  FindAccountRequest._() : super();
+  factory FindAccountRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
-  factory CheckPasswordResponse.fromJson($core.String i,
+  factory FindAccountRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
 
+  static const $core.Map<$core.int, FindAccountRequest_Condition>
+      _FindAccountRequest_ConditionByTag = {
+    1: FindAccountRequest_Condition.filter,
+    2: FindAccountRequest_Condition.findAll,
+    0: FindAccountRequest_Condition.notSet
+  };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'CheckPasswordResponse',
+      _omitMessageNames ? '' : 'FindAccountRequest',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.handler.v1'),
       createEmptyInstance: create)
-    ..aOM<$17.Wallet>(1, _omitFieldNames ? '' : 'wallet',
-        subBuilder: $17.Wallet.create)
+    ..oo(0, [1, 2])
+    ..aOM<$15.QueryFilter>(1, _omitFieldNames ? '' : 'filter',
+        subBuilder: $15.QueryFilter.create)
+    ..aOB(2, _omitFieldNames ? '' : 'findAll')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
-  CheckPasswordResponse clone() =>
-      CheckPasswordResponse()..mergeFromMessage(this);
+  FindAccountRequest clone() => FindAccountRequest()..mergeFromMessage(this);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
-  CheckPasswordResponse copyWith(
-          void Function(CheckPasswordResponse) updates) =>
-      super.copyWith((message) => updates(message as CheckPasswordResponse))
-          as CheckPasswordResponse;
+  FindAccountRequest copyWith(void Function(FindAccountRequest) updates) =>
+      super.copyWith((message) => updates(message as FindAccountRequest))
+          as FindAccountRequest;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static CheckPasswordResponse create() => CheckPasswordResponse._();
-  CheckPasswordResponse createEmptyInstance() => create();
-  static $pb.PbList<CheckPasswordResponse> createRepeated() =>
-      $pb.PbList<CheckPasswordResponse>();
+  static FindAccountRequest create() => FindAccountRequest._();
+  FindAccountRequest createEmptyInstance() => create();
+  static $pb.PbList<FindAccountRequest> createRepeated() =>
+      $pb.PbList<FindAccountRequest>();
   @$core.pragma('dart2js:noInline')
-  static CheckPasswordResponse getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<CheckPasswordResponse>(create);
-  static CheckPasswordResponse? _defaultInstance;
+  static FindAccountRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<FindAccountRequest>(create);
+  static FindAccountRequest? _defaultInstance;
+
+  FindAccountRequest_Condition whichCondition() =>
+      _FindAccountRequest_ConditionByTag[$_whichOneof(0)]!;
+  void clearCondition() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
-  $17.Wallet get wallet => $_getN(0);
+  $15.QueryFilter get filter => $_getN(0);
   @$pb.TagNumber(1)
-  set wallet($17.Wallet v) {
+  set filter($15.QueryFilter v) {
     setField(1, v);
   }
 
   @$pb.TagNumber(1)
-  $core.bool hasWallet() => $_has(0);
+  $core.bool hasFilter() => $_has(0);
   @$pb.TagNumber(1)
-  void clearWallet() => clearField(1);
+  void clearFilter() => clearField(1);
   @$pb.TagNumber(1)
-  $17.Wallet ensureWallet() => $_ensure(0);
+  $15.QueryFilter ensureFilter() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  $core.bool get findAll => $_getBF(1);
+  @$pb.TagNumber(2)
+  set findAll($core.bool v) {
+    $_setBool(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasFindAll() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearFindAll() => clearField(2);
 }
 
-class UpdatePasswordResponse extends $pb.GeneratedMessage {
-  factory UpdatePasswordResponse({
-    $17.Wallet? wallet,
+enum FindAccountByIdentifierRequest_Identifier {
+  id,
+  shieldedAddress,
+  publicKey,
+  notSet
+}
+
+class FindAccountByIdentifierRequest extends $pb.GeneratedMessage {
+  factory FindAccountByIdentifierRequest({
+    $core.String? id,
+    $core.String? shieldedAddress,
+    $core.String? publicKey,
   }) {
     final $result = create();
-    if (wallet != null) {
-      $result.wallet = wallet;
+    if (id != null) {
+      $result.id = id;
+    }
+    if (shieldedAddress != null) {
+      $result.shieldedAddress = shieldedAddress;
+    }
+    if (publicKey != null) {
+      $result.publicKey = publicKey;
     }
     return $result;
   }
-  UpdatePasswordResponse._() : super();
-  factory UpdatePasswordResponse.fromBuffer($core.List<$core.int> i,
+  FindAccountByIdentifierRequest._() : super();
+  factory FindAccountByIdentifierRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
-  factory UpdatePasswordResponse.fromJson($core.String i,
+  factory FindAccountByIdentifierRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
 
+  static const $core.Map<$core.int, FindAccountByIdentifierRequest_Identifier>
+      _FindAccountByIdentifierRequest_IdentifierByTag = {
+    2: FindAccountByIdentifierRequest_Identifier.id,
+    3: FindAccountByIdentifierRequest_Identifier.shieldedAddress,
+    4: FindAccountByIdentifierRequest_Identifier.publicKey,
+    0: FindAccountByIdentifierRequest_Identifier.notSet
+  };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'UpdatePasswordResponse',
+      _omitMessageNames ? '' : 'FindAccountByIdentifierRequest',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.handler.v1'),
       createEmptyInstance: create)
-    ..aOM<$17.Wallet>(1, _omitFieldNames ? '' : 'wallet',
-        subBuilder: $17.Wallet.create)
+    ..oo(0, [2, 3, 4])
+    ..aOS(2, _omitFieldNames ? '' : 'id')
+    ..aOS(3, _omitFieldNames ? '' : 'shieldedAddress')
+    ..aOS(4, _omitFieldNames ? '' : 'publicKey')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
-  UpdatePasswordResponse clone() =>
-      UpdatePasswordResponse()..mergeFromMessage(this);
+  FindAccountByIdentifierRequest clone() =>
+      FindAccountByIdentifierRequest()..mergeFromMessage(this);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
-  UpdatePasswordResponse copyWith(
-          void Function(UpdatePasswordResponse) updates) =>
-      super.copyWith((message) => updates(message as UpdatePasswordResponse))
-          as UpdatePasswordResponse;
-
-  $pb.BuilderInfo get info_ => _i;
-
-  @$core.pragma('dart2js:noInline')
-  static UpdatePasswordResponse create() => UpdatePasswordResponse._();
-  UpdatePasswordResponse createEmptyInstance() => create();
-  static $pb.PbList<UpdatePasswordResponse> createRepeated() =>
-      $pb.PbList<UpdatePasswordResponse>();
-  @$core.pragma('dart2js:noInline')
-  static UpdatePasswordResponse getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<UpdatePasswordResponse>(create);
-  static UpdatePasswordResponse? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  $17.Wallet get wallet => $_getN(0);
-  @$pb.TagNumber(1)
-  set wallet($17.Wallet v) {
-    setField(1, v);
-  }
-
-  @$pb.TagNumber(1)
-  $core.bool hasWallet() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearWallet() => clearField(1);
-  @$pb.TagNumber(1)
-  $17.Wallet ensureWallet() => $_ensure(0);
-}
-
-class ExportMnemonicPhraseResponse extends $pb.GeneratedMessage {
-  factory ExportMnemonicPhraseResponse({
-    $core.String? mnemonicPhrase,
-  }) {
-    final $result = create();
-    if (mnemonicPhrase != null) {
-      $result.mnemonicPhrase = mnemonicPhrase;
-    }
-    return $result;
-  }
-  ExportMnemonicPhraseResponse._() : super();
-  factory ExportMnemonicPhraseResponse.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ExportMnemonicPhraseResponse.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
-
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'ExportMnemonicPhraseResponse',
-      package: const $pb.PackageName(
-          _omitMessageNames ? '' : 'mystiko.api.handler.v1'),
-      createEmptyInstance: create)
-    ..aOS(1, _omitFieldNames ? '' : 'mnemonicPhrase')
-    ..hasRequiredFields = false;
-
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  ExportMnemonicPhraseResponse clone() =>
-      ExportMnemonicPhraseResponse()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
-  ExportMnemonicPhraseResponse copyWith(
-          void Function(ExportMnemonicPhraseResponse) updates) =>
+  FindAccountByIdentifierRequest copyWith(
+          void Function(FindAccountByIdentifierRequest) updates) =>
       super.copyWith(
-              (message) => updates(message as ExportMnemonicPhraseResponse))
-          as ExportMnemonicPhraseResponse;
+              (message) => updates(message as FindAccountByIdentifierRequest))
+          as FindAccountByIdentifierRequest;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static ExportMnemonicPhraseResponse create() =>
-      ExportMnemonicPhraseResponse._();
-  ExportMnemonicPhraseResponse createEmptyInstance() => create();
-  static $pb.PbList<ExportMnemonicPhraseResponse> createRepeated() =>
-      $pb.PbList<ExportMnemonicPhraseResponse>();
+  static FindAccountByIdentifierRequest create() =>
+      FindAccountByIdentifierRequest._();
+  FindAccountByIdentifierRequest createEmptyInstance() => create();
+  static $pb.PbList<FindAccountByIdentifierRequest> createRepeated() =>
+      $pb.PbList<FindAccountByIdentifierRequest>();
   @$core.pragma('dart2js:noInline')
-  static ExportMnemonicPhraseResponse getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<ExportMnemonicPhraseResponse>(create);
-  static ExportMnemonicPhraseResponse? _defaultInstance;
+  static FindAccountByIdentifierRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<FindAccountByIdentifierRequest>(create);
+  static FindAccountByIdentifierRequest? _defaultInstance;
+
+  FindAccountByIdentifierRequest_Identifier whichIdentifier() =>
+      _FindAccountByIdentifierRequest_IdentifierByTag[$_whichOneof(0)]!;
+  void clearIdentifier() => clearField($_whichOneof(0));
+
+  @$pb.TagNumber(2)
+  $core.String get id => $_getSZ(0);
+  @$pb.TagNumber(2)
+  set id($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasId() => $_has(0);
+  @$pb.TagNumber(2)
+  void clearId() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get shieldedAddress => $_getSZ(1);
+  @$pb.TagNumber(3)
+  set shieldedAddress($core.String v) {
+    $_setString(1, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasShieldedAddress() => $_has(1);
+  @$pb.TagNumber(3)
+  void clearShieldedAddress() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get publicKey => $_getSZ(2);
+  @$pb.TagNumber(4)
+  set publicKey($core.String v) {
+    $_setString(2, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasPublicKey() => $_has(2);
+  @$pb.TagNumber(4)
+  void clearPublicKey() => clearField(4);
+}
+
+enum UpdateAccountRequest_Identifier { id, shieldedAddress, publicKey, notSet }
+
+class UpdateAccountRequest extends $pb.GeneratedMessage {
+  factory UpdateAccountRequest({
+    $14.UpdateAccountOptions? options,
+    $core.String? id,
+    $core.String? shieldedAddress,
+    $core.String? publicKey,
+  }) {
+    final $result = create();
+    if (options != null) {
+      $result.options = options;
+    }
+    if (id != null) {
+      $result.id = id;
+    }
+    if (shieldedAddress != null) {
+      $result.shieldedAddress = shieldedAddress;
+    }
+    if (publicKey != null) {
+      $result.publicKey = publicKey;
+    }
+    return $result;
+  }
+  UpdateAccountRequest._() : super();
+  factory UpdateAccountRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UpdateAccountRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+
+  static const $core.Map<$core.int, UpdateAccountRequest_Identifier>
+      _UpdateAccountRequest_IdentifierByTag = {
+    2: UpdateAccountRequest_Identifier.id,
+    3: UpdateAccountRequest_Identifier.shieldedAddress,
+    4: UpdateAccountRequest_Identifier.publicKey,
+    0: UpdateAccountRequest_Identifier.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'UpdateAccountRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'mystiko.api.handler.v1'),
+      createEmptyInstance: create)
+    ..oo(0, [2, 3, 4])
+    ..aOM<$14.UpdateAccountOptions>(1, _omitFieldNames ? '' : 'options',
+        subBuilder: $14.UpdateAccountOptions.create)
+    ..aOS(2, _omitFieldNames ? '' : 'id')
+    ..aOS(3, _omitFieldNames ? '' : 'shieldedAddress')
+    ..aOS(4, _omitFieldNames ? '' : 'publicKey')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  UpdateAccountRequest clone() =>
+      UpdateAccountRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  UpdateAccountRequest copyWith(void Function(UpdateAccountRequest) updates) =>
+      super.copyWith((message) => updates(message as UpdateAccountRequest))
+          as UpdateAccountRequest;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static UpdateAccountRequest create() => UpdateAccountRequest._();
+  UpdateAccountRequest createEmptyInstance() => create();
+  static $pb.PbList<UpdateAccountRequest> createRepeated() =>
+      $pb.PbList<UpdateAccountRequest>();
+  @$core.pragma('dart2js:noInline')
+  static UpdateAccountRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateAccountRequest>(create);
+  static UpdateAccountRequest? _defaultInstance;
+
+  UpdateAccountRequest_Identifier whichIdentifier() =>
+      _UpdateAccountRequest_IdentifierByTag[$_whichOneof(0)]!;
+  void clearIdentifier() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
-  $core.String get mnemonicPhrase => $_getSZ(0);
+  $14.UpdateAccountOptions get options => $_getN(0);
   @$pb.TagNumber(1)
-  set mnemonicPhrase($core.String v) {
+  set options($14.UpdateAccountOptions v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasOptions() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearOptions() => clearField(1);
+  @$pb.TagNumber(1)
+  $14.UpdateAccountOptions ensureOptions() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  $core.String get id => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set id($core.String v) {
+    $_setString(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearId() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get shieldedAddress => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set shieldedAddress($core.String v) {
+    $_setString(2, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasShieldedAddress() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearShieldedAddress() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get publicKey => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set publicKey($core.String v) {
+    $_setString(3, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasPublicKey() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearPublicKey() => clearField(4);
+}
+
+class UpdateEncryptionRequest extends $pb.GeneratedMessage {
+  factory UpdateEncryptionRequest({
+    $core.String? oldWalletPassword,
+    $core.String? newWalletPassword,
+  }) {
+    final $result = create();
+    if (oldWalletPassword != null) {
+      $result.oldWalletPassword = oldWalletPassword;
+    }
+    if (newWalletPassword != null) {
+      $result.newWalletPassword = newWalletPassword;
+    }
+    return $result;
+  }
+  UpdateEncryptionRequest._() : super();
+  factory UpdateEncryptionRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory UpdateEncryptionRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'UpdateEncryptionRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'mystiko.api.handler.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'oldWalletPassword')
+    ..aOS(2, _omitFieldNames ? '' : 'newWalletPassword')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  UpdateEncryptionRequest clone() =>
+      UpdateEncryptionRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  UpdateEncryptionRequest copyWith(
+          void Function(UpdateEncryptionRequest) updates) =>
+      super.copyWith((message) => updates(message as UpdateEncryptionRequest))
+          as UpdateEncryptionRequest;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static UpdateEncryptionRequest create() => UpdateEncryptionRequest._();
+  UpdateEncryptionRequest createEmptyInstance() => create();
+  static $pb.PbList<UpdateEncryptionRequest> createRepeated() =>
+      $pb.PbList<UpdateEncryptionRequest>();
+  @$core.pragma('dart2js:noInline')
+  static UpdateEncryptionRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateEncryptionRequest>(create);
+  static UpdateEncryptionRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get oldWalletPassword => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set oldWalletPassword($core.String v) {
     $_setString(0, v);
   }
 
   @$pb.TagNumber(1)
-  $core.bool hasMnemonicPhrase() => $_has(0);
+  $core.bool hasOldWalletPassword() => $_has(0);
   @$pb.TagNumber(1)
-  void clearMnemonicPhrase() => clearField(1);
+  void clearOldWalletPassword() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get newWalletPassword => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set newWalletPassword($core.String v) {
+    $_setString(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasNewWalletPassword() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearNewWalletPassword() => clearField(2);
+}
+
+enum ExportSecretKeyRequest_Identifier {
+  id,
+  publicKey,
+  shieldedAddress,
+  notSet
+}
+
+class ExportSecretKeyRequest extends $pb.GeneratedMessage {
+  factory ExportSecretKeyRequest({
+    $core.String? walletPassword,
+    $core.String? id,
+    $core.String? publicKey,
+    $core.String? shieldedAddress,
+  }) {
+    final $result = create();
+    if (walletPassword != null) {
+      $result.walletPassword = walletPassword;
+    }
+    if (id != null) {
+      $result.id = id;
+    }
+    if (publicKey != null) {
+      $result.publicKey = publicKey;
+    }
+    if (shieldedAddress != null) {
+      $result.shieldedAddress = shieldedAddress;
+    }
+    return $result;
+  }
+  ExportSecretKeyRequest._() : super();
+  factory ExportSecretKeyRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ExportSecretKeyRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+
+  static const $core.Map<$core.int, ExportSecretKeyRequest_Identifier>
+      _ExportSecretKeyRequest_IdentifierByTag = {
+    2: ExportSecretKeyRequest_Identifier.id,
+    3: ExportSecretKeyRequest_Identifier.publicKey,
+    4: ExportSecretKeyRequest_Identifier.shieldedAddress,
+    0: ExportSecretKeyRequest_Identifier.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ExportSecretKeyRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'mystiko.api.handler.v1'),
+      createEmptyInstance: create)
+    ..oo(0, [2, 3, 4])
+    ..aOS(1, _omitFieldNames ? '' : 'walletPassword')
+    ..aOS(2, _omitFieldNames ? '' : 'id')
+    ..aOS(3, _omitFieldNames ? '' : 'publicKey')
+    ..aOS(4, _omitFieldNames ? '' : 'shieldedAddress')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  ExportSecretKeyRequest clone() =>
+      ExportSecretKeyRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  ExportSecretKeyRequest copyWith(
+          void Function(ExportSecretKeyRequest) updates) =>
+      super.copyWith((message) => updates(message as ExportSecretKeyRequest))
+          as ExportSecretKeyRequest;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ExportSecretKeyRequest create() => ExportSecretKeyRequest._();
+  ExportSecretKeyRequest createEmptyInstance() => create();
+  static $pb.PbList<ExportSecretKeyRequest> createRepeated() =>
+      $pb.PbList<ExportSecretKeyRequest>();
+  @$core.pragma('dart2js:noInline')
+  static ExportSecretKeyRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ExportSecretKeyRequest>(create);
+  static ExportSecretKeyRequest? _defaultInstance;
+
+  ExportSecretKeyRequest_Identifier whichIdentifier() =>
+      _ExportSecretKeyRequest_IdentifierByTag[$_whichOneof(0)]!;
+  void clearIdentifier() => clearField($_whichOneof(0));
+
+  @$pb.TagNumber(1)
+  $core.String get walletPassword => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set walletPassword($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasWalletPassword() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearWalletPassword() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get id => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set id($core.String v) {
+    $_setString(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearId() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get publicKey => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set publicKey($core.String v) {
+    $_setString(2, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasPublicKey() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearPublicKey() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get shieldedAddress => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set shieldedAddress($core.String v) {
+    $_setString(3, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasShieldedAddress() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearShieldedAddress() => clearField(4);
 }
 
 class CreateAccountResponse extends $pb.GeneratedMessage {
   factory CreateAccountResponse({
-    $18.Account? account,
+    $16.Account? account,
   }) {
     final $result = create();
     if (account != null) {
@@ -372,8 +732,8 @@ class CreateAccountResponse extends $pb.GeneratedMessage {
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.handler.v1'),
       createEmptyInstance: create)
-    ..aOM<$18.Account>(1, _omitFieldNames ? '' : 'account',
-        subBuilder: $18.Account.create)
+    ..aOM<$16.Account>(1, _omitFieldNames ? '' : 'account',
+        subBuilder: $16.Account.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
@@ -402,9 +762,9 @@ class CreateAccountResponse extends $pb.GeneratedMessage {
   static CreateAccountResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $18.Account get account => $_getN(0);
+  $16.Account get account => $_getN(0);
   @$pb.TagNumber(1)
-  set account($18.Account v) {
+  set account($16.Account v) {
     setField(1, v);
   }
 
@@ -413,7 +773,7 @@ class CreateAccountResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearAccount() => clearField(1);
   @$pb.TagNumber(1)
-  $18.Account ensureAccount() => $_ensure(0);
+  $16.Account ensureAccount() => $_ensure(0);
 }
 
 class CountAccountResponse extends $pb.GeneratedMessage {
@@ -482,7 +842,7 @@ class CountAccountResponse extends $pb.GeneratedMessage {
 
 class FindAccountResponse extends $pb.GeneratedMessage {
   factory FindAccountResponse({
-    $core.Iterable<$18.Account>? account,
+    $core.Iterable<$16.Account>? account,
   }) {
     final $result = create();
     if (account != null) {
@@ -503,8 +863,8 @@ class FindAccountResponse extends $pb.GeneratedMessage {
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.handler.v1'),
       createEmptyInstance: create)
-    ..pc<$18.Account>(1, _omitFieldNames ? '' : 'account', $pb.PbFieldType.PM,
-        subBuilder: $18.Account.create)
+    ..pc<$16.Account>(1, _omitFieldNames ? '' : 'account', $pb.PbFieldType.PM,
+        subBuilder: $16.Account.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
@@ -531,12 +891,12 @@ class FindAccountResponse extends $pb.GeneratedMessage {
   static FindAccountResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.List<$18.Account> get account => $_getList(0);
+  $core.List<$16.Account> get account => $_getList(0);
 }
 
 class FindAccountByIdentifierResponse extends $pb.GeneratedMessage {
   factory FindAccountByIdentifierResponse({
-    $18.Account? account,
+    $16.Account? account,
   }) {
     final $result = create();
     if (account != null) {
@@ -557,8 +917,8 @@ class FindAccountByIdentifierResponse extends $pb.GeneratedMessage {
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.handler.v1'),
       createEmptyInstance: create)
-    ..aOM<$18.Account>(1, _omitFieldNames ? '' : 'account',
-        subBuilder: $18.Account.create)
+    ..aOM<$16.Account>(1, _omitFieldNames ? '' : 'account',
+        subBuilder: $16.Account.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
@@ -590,9 +950,9 @@ class FindAccountByIdentifierResponse extends $pb.GeneratedMessage {
   static FindAccountByIdentifierResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $18.Account get account => $_getN(0);
+  $16.Account get account => $_getN(0);
   @$pb.TagNumber(1)
-  set account($18.Account v) {
+  set account($16.Account v) {
     setField(1, v);
   }
 
@@ -601,12 +961,12 @@ class FindAccountByIdentifierResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearAccount() => clearField(1);
   @$pb.TagNumber(1)
-  $18.Account ensureAccount() => $_ensure(0);
+  $16.Account ensureAccount() => $_ensure(0);
 }
 
 class UpdateAccountResponse extends $pb.GeneratedMessage {
   factory UpdateAccountResponse({
-    $18.Account? account,
+    $16.Account? account,
   }) {
     final $result = create();
     if (account != null) {
@@ -627,8 +987,8 @@ class UpdateAccountResponse extends $pb.GeneratedMessage {
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.handler.v1'),
       createEmptyInstance: create)
-    ..aOM<$18.Account>(1, _omitFieldNames ? '' : 'account',
-        subBuilder: $18.Account.create)
+    ..aOM<$16.Account>(1, _omitFieldNames ? '' : 'account',
+        subBuilder: $16.Account.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
@@ -657,9 +1017,9 @@ class UpdateAccountResponse extends $pb.GeneratedMessage {
   static UpdateAccountResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $18.Account get account => $_getN(0);
+  $16.Account get account => $_getN(0);
   @$pb.TagNumber(1)
-  set account($18.Account v) {
+  set account($16.Account v) {
     setField(1, v);
   }
 
@@ -668,12 +1028,12 @@ class UpdateAccountResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearAccount() => clearField(1);
   @$pb.TagNumber(1)
-  $18.Account ensureAccount() => $_ensure(0);
+  $16.Account ensureAccount() => $_ensure(0);
 }
 
 class UpdateEncryptionResponse extends $pb.GeneratedMessage {
   factory UpdateEncryptionResponse({
-    $core.Iterable<$18.Account>? account,
+    $core.Iterable<$16.Account>? account,
   }) {
     final $result = create();
     if (account != null) {
@@ -694,8 +1054,8 @@ class UpdateEncryptionResponse extends $pb.GeneratedMessage {
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.handler.v1'),
       createEmptyInstance: create)
-    ..pc<$18.Account>(1, _omitFieldNames ? '' : 'account', $pb.PbFieldType.PM,
-        subBuilder: $18.Account.create)
+    ..pc<$16.Account>(1, _omitFieldNames ? '' : 'account', $pb.PbFieldType.PM,
+        subBuilder: $16.Account.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
@@ -724,7 +1084,7 @@ class UpdateEncryptionResponse extends $pb.GeneratedMessage {
   static UpdateEncryptionResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.List<$18.Account> get account => $_getList(0);
+  $core.List<$16.Account> get account => $_getList(0);
 }
 
 class ExportSecretKeyResponse extends $pb.GeneratedMessage {

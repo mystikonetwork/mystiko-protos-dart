@@ -13,24 +13,6 @@ import 'dart:convert' as $convert;
 import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
 
-@$core.Deprecated('Use mystikoLibErrorDescriptor instead')
-const MystikoLibError$json = {
-  '1': 'MystikoLibError',
-  '2': [
-    {'1': 'MYSTIKO_LIB_ERROR_UNSPECIFIED', '2': 0},
-    {'1': 'MYSTIKO_LIB_ERROR_GET_MYSTIKO_GUARD_ERROR', '2': 1},
-    {'1': 'MYSTIKO_LIB_ERROR_DESERIALIZE_MESSAGE_ERROR', '2': 2},
-    {'1': 'MYSTIKO_LIB_ERROR_STORAGE_ERROR', '2': 3},
-  ],
-};
-
-/// Descriptor for `MystikoLibError`. Decode as a `google.protobuf.EnumDescriptorProto`.
-final $typed_data.Uint8List mystikoLibErrorDescriptor = $convert.base64Decode(
-    'Cg9NeXN0aWtvTGliRXJyb3ISIQodTVlTVElLT19MSUJfRVJST1JfVU5TUEVDSUZJRUQQABItCi'
-    'lNWVNUSUtPX0xJQl9FUlJPUl9HRVRfTVlTVElLT19HVUFSRF9FUlJPUhABEi8KK01ZU1RJS09f'
-    'TElCX0VSUk9SX0RFU0VSSUFMSVpFX01FU1NBR0VfRVJST1IQAhIjCh9NWVNUSUtPX0xJQl9FUl'
-    'JPUl9TVE9SQUdFX0VSUk9SEAM=');
-
 @$core.Deprecated('Use mystikoErrorDescriptor instead')
 const MystikoError$json = {
   '1': 'MystikoError',
@@ -42,6 +24,7 @@ const MystikoError$json = {
     {'1': 'MYSTIKO_ERROR_CONFIG_ERROR', '2': 4},
     {'1': 'MYSTIKO_ERROR_DATABASE_MIGRATION_ERROR', '2': 5},
     {'1': 'MYSTIKO_ERROR_INVALID_PROVIDER_URL_ERROR', '2': 6},
+    {'1': 'MYSTIKO_ERROR_STORAGE_ERROR', '2': 7},
   ],
 };
 
@@ -51,7 +34,24 @@ final $typed_data.Uint8List mystikoErrorDescriptor = $convert.base64Decode(
     '9fRVJST1JfU1lOQ0hST05JWkVSX0VSUk9SEAESHwobTVlTVElLT19FUlJPUl9TQ0FOTkVSX0VS'
     'Uk9SEAISIgoeTVlTVElLT19FUlJPUl9EQVRBTE9BREVSX0VSUk9SEAMSHgoaTVlTVElLT19FUl'
     'JPUl9DT05GSUdfRVJST1IQBBIqCiZNWVNUSUtPX0VSUk9SX0RBVEFCQVNFX01JR1JBVElPTl9F'
-    'UlJPUhAFEiwKKE1ZU1RJS09fRVJST1JfSU5WQUxJRF9QUk9WSURFUl9VUkxfRVJST1IQBg==');
+    'UlJPUhAFEiwKKE1ZU1RJS09fRVJST1JfSU5WQUxJRF9QUk9WSURFUl9VUkxfRVJST1IQBhIfCh'
+    'tNWVNUSUtPX0VSUk9SX1NUT1JBR0VfRVJST1IQBw==');
+
+@$core.Deprecated('Use configErrorDescriptor instead')
+const ConfigError$json = {
+  '1': 'ConfigError',
+  '2': [
+    {'1': 'CONFIG_ERROR_UNSPECIFIED', '2': 0},
+    {'1': 'CONFIG_ERROR_DESERIALIZE_MESSAGE_ERROR', '2': 1},
+    {'1': 'CONFIG_ERROR_GET_MYSTIKO_GUARD_ERROR', '2': 2},
+  ],
+};
+
+/// Descriptor for `ConfigError`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List configErrorDescriptor = $convert.base64Decode(
+    'CgtDb25maWdFcnJvchIcChhDT05GSUdfRVJST1JfVU5TUEVDSUZJRUQQABIqCiZDT05GSUdfRV'
+    'JST1JfREVTRVJJQUxJWkVfTUVTU0FHRV9FUlJPUhABEigKJENPTkZJR19FUlJPUl9HRVRfTVlT'
+    'VElLT19HVUFSRF9FUlJPUhAC');
 
 @$core.Deprecated('Use accountErrorDescriptor instead')
 const AccountError$json = {
@@ -64,6 +64,8 @@ const AccountError$json = {
     {'1': 'ACCOUNT_ERROR_HEX_STRING_ERROR', '2': 4},
     {'1': 'ACCOUNT_ERROR_NO_SUCH_ACCOUNT_ERROR', '2': 5},
     {'1': 'ACCOUNT_ERROR_WALLETS_ERROR', '2': 6},
+    {'1': 'ACCOUNT_ERROR_GET_MYSTIKO_GUARD_ERROR', '2': 7},
+    {'1': 'ACCOUNT_ERROR_DESERIALIZE_MESSAGE_ERROR', '2': 8},
   ],
 };
 
@@ -73,7 +75,9 @@ final $typed_data.Uint8List accountErrorDescriptor = $convert.base64Decode(
     'RfRVJST1JfU1RPUkFHRV9FUlJPUhABEh4KGkFDQ09VTlRfRVJST1JfQ1JZUFRPX0VSUk9SEAIS'
     'IAocQUNDT1VOVF9FUlJPUl9NTkVNT05JQ19FUlJPUhADEiIKHkFDQ09VTlRfRVJST1JfSEVYX1'
     'NUUklOR19FUlJPUhAEEicKI0FDQ09VTlRfRVJST1JfTk9fU1VDSF9BQ0NPVU5UX0VSUk9SEAUS'
-    'HwobQUNDT1VOVF9FUlJPUl9XQUxMRVRTX0VSUk9SEAY=');
+    'HwobQUNDT1VOVF9FUlJPUl9XQUxMRVRTX0VSUk9SEAYSKQolQUNDT1VOVF9FUlJPUl9HRVRfTV'
+    'lTVElLT19HVUFSRF9FUlJPUhAHEisKJ0FDQ09VTlRfRVJST1JfREVTRVJJQUxJWkVfTUVTU0FH'
+    'RV9FUlJPUhAI');
 
 @$core.Deprecated('Use walletErrorDescriptor instead')
 const WalletError$json = {
@@ -87,6 +91,8 @@ const WalletError$json = {
     {'1': 'WALLET_ERROR_INVALID_PASSWORD_ERROR', '2': 5},
     {'1': 'WALLET_ERROR_MISMATCHED_PASSWORD_ERROR', '2': 6},
     {'1': 'WALLET_ERROR_NO_EXISTING_WALLET_ERROR', '2': 7},
+    {'1': 'WALLET_ERROR_GET_MYSTIKO_GUARD_ERROR', '2': 8},
+    {'1': 'WALLET_ERROR_DESERIALIZE_MESSAGE_ERROR', '2': 9},
   ],
 };
 
@@ -97,7 +103,9 @@ final $typed_data.Uint8List walletErrorDescriptor = $convert.base64Decode(
     'QUxMRVRfRVJST1JfSEVYX1NUUklOR19FUlJPUhADEh8KG1dBTExFVF9FUlJPUl9NTkVNT05JQ1'
     '9FUlJPUhAEEicKI1dBTExFVF9FUlJPUl9JTlZBTElEX1BBU1NXT1JEX0VSUk9SEAUSKgomV0FM'
     'TEVUX0VSUk9SX01JU01BVENIRURfUEFTU1dPUkRfRVJST1IQBhIpCiVXQUxMRVRfRVJST1JfTk'
-    '9fRVhJU1RJTkdfV0FMTEVUX0VSUk9SEAc=');
+    '9fRVhJU1RJTkdfV0FMTEVUX0VSUk9SEAcSKAokV0FMTEVUX0VSUk9SX0dFVF9NWVNUSUtPX0dV'
+    'QVJEX0VSUk9SEAgSKgomV0FMTEVUX0VSUk9SX0RFU0VSSUFMSVpFX01FU1NBR0VfRVJST1IQCQ'
+    '==');
 
 @$core.Deprecated('Use depositErrorDescriptor instead')
 const DepositError$json = {
@@ -129,6 +137,8 @@ const DepositError$json = {
     {'1': 'DEPOSIT_ERROR_DUPLICATE_COMMITMENT_ERROR', '2': 23},
     {'1': 'DEPOSIT_ERROR_WALLETS_ERROR', '2': 24},
     {'1': 'DEPOSIT_ERROR_ACCOUNTS_ERROR', '2': 25},
+    {'1': 'DEPOSIT_ERROR_GET_MYSTIKO_GUARD_ERROR', '2': 26},
+    {'1': 'DEPOSIT_ERROR_DESERIALIZE_MESSAGE_ERROR', '2': 27},
   ],
 };
 
@@ -153,7 +163,9 @@ final $typed_data.Uint8List depositErrorDescriptor = $convert.base64Decode(
     'RVBPU0lUX0VSUk9SX01JU1NJTkdfUFJJVkFURV9LRVlfRVJST1IQFRImCiJERVBPU0lUX0VSUk'
     '9SX0RFUE9TSVRfU1RBVFVTX0VSUk9SEBYSLAooREVQT1NJVF9FUlJPUl9EVVBMSUNBVEVfQ09N'
     'TUlUTUVOVF9FUlJPUhAXEh8KG0RFUE9TSVRfRVJST1JfV0FMTEVUU19FUlJPUhAYEiAKHERFUE'
-    '9TSVRfRVJST1JfQUNDT1VOVFNfRVJST1IQGQ==');
+    '9TSVRfRVJST1JfQUNDT1VOVFNfRVJST1IQGRIpCiVERVBPU0lUX0VSUk9SX0dFVF9NWVNUSUtP'
+    'X0dVQVJEX0VSUk9SEBoSKwonREVQT1NJVF9FUlJPUl9ERVNFUklBTElaRV9NRVNTQUdFX0VSUk'
+    '9SEBs=');
 
 @$core.Deprecated('Use scannerErrorDescriptor instead')
 const ScannerError$json = {
@@ -171,6 +183,8 @@ const ScannerError$json = {
     {'1': 'SCANNER_ERROR_ANYHOW_ERROR', '2': 9},
     {'1': 'SCANNER_ERROR_ACCOUNT_HANDLER_ERROR', '2': 10},
     {'1': 'SCANNER_ERROR_WALLET_HANDLER_ERROR', '2': 11},
+    {'1': 'SCANNER_ERROR_GET_MYSTIKO_GUARD_ERROR', '2': 12},
+    {'1': 'SCANNER_ERROR_DESERIALIZE_MESSAGE_ERROR', '2': 13},
   ],
 };
 
@@ -184,7 +198,8 @@ final $typed_data.Uint8List scannerErrorDescriptor = $convert.base64Decode(
     'NBTk5FUl9FUlJPUl9QUk9UT0NPTF9FUlJPUhAHEiAKHFNDQU5ORVJfRVJST1JfRlJPTV9IRVhf'
     'RVJST1IQCBIeChpTQ0FOTkVSX0VSUk9SX0FOWUhPV19FUlJPUhAJEicKI1NDQU5ORVJfRVJST1'
     'JfQUNDT1VOVF9IQU5ETEVSX0VSUk9SEAoSJgoiU0NBTk5FUl9FUlJPUl9XQUxMRVRfSEFORExF'
-    'Ul9FUlJPUhAL');
+    'Ul9FUlJPUhALEikKJVNDQU5ORVJfRVJST1JfR0VUX01ZU1RJS09fR1VBUkRfRVJST1IQDBIrCi'
+    'dTQ0FOTkVSX0VSUk9SX0RFU0VSSUFMSVpFX01FU1NBR0VfRVJST1IQDQ==');
 
 @$core.Deprecated('Use synchronizeErrorDescriptor instead')
 const SynchronizeError$json = {
@@ -195,6 +210,8 @@ const SynchronizeError$json = {
     {'1': 'SYNCHRONIZE_ERROR_DATALOADER_ERROR', '2': 2},
     {'1': 'SYNCHRONIZE_ERROR_DATALOADER_CONFIG_ERROR', '2': 3},
     {'1': 'SYNCHRONIZE_ERROR_ANYHOW_ERROR', '2': 4},
+    {'1': 'SYNCHRONIZE_ERROR_GET_MYSTIKO_GUARD_ERROR', '2': 5},
+    {'1': 'SYNCHRONIZE_ERROR_DESERIALIZE_MESSAGE_ERROR', '2': 6},
   ],
 };
 
@@ -204,7 +221,8 @@ final $typed_data.Uint8List synchronizeErrorDescriptor = $convert.base64Decode(
     'opU1lOQ0hST05JWkVfRVJST1JfVU5TVVBQT1JURURfQ0hBSU5fRVJST1IQARImCiJTWU5DSFJP'
     'TklaRV9FUlJPUl9EQVRBTE9BREVSX0VSUk9SEAISLQopU1lOQ0hST05JWkVfRVJST1JfREFUQU'
     'xPQURFUl9DT05GSUdfRVJST1IQAxIiCh5TWU5DSFJPTklaRV9FUlJPUl9BTllIT1dfRVJST1IQ'
-    'BA==');
+    'BBItCilTWU5DSFJPTklaRV9FUlJPUl9HRVRfTVlTVElLT19HVUFSRF9FUlJPUhAFEi8KK1NZTk'
+    'NIUk9OSVpFX0VSUk9SX0RFU0VSSUFMSVpFX01FU1NBR0VfRVJST1IQBg==');
 
 @$core.Deprecated('Use apiResponseDescriptor instead')
 const ApiResponse$json = {
@@ -245,17 +263,8 @@ const StatusCode$json = {
   '2': [
     {'1': 'success', '3': 1, '4': 1, '5': 8, '10': 'success'},
     {
-      '1': 'lib',
-      '3': 2,
-      '4': 1,
-      '5': 14,
-      '6': '.mystiko.api.v1.MystikoLibError',
-      '9': 0,
-      '10': 'lib'
-    },
-    {
       '1': 'mystiko',
-      '3': 3,
+      '3': 2,
       '4': 1,
       '5': 14,
       '6': '.mystiko.api.v1.MystikoError',
@@ -264,7 +273,7 @@ const StatusCode$json = {
     },
     {
       '1': 'wallet',
-      '3': 4,
+      '3': 3,
       '4': 1,
       '5': 14,
       '6': '.mystiko.api.v1.WalletError',
@@ -273,7 +282,7 @@ const StatusCode$json = {
     },
     {
       '1': 'account',
-      '3': 5,
+      '3': 4,
       '4': 1,
       '5': 14,
       '6': '.mystiko.api.v1.AccountError',
@@ -282,7 +291,7 @@ const StatusCode$json = {
     },
     {
       '1': 'deposit',
-      '3': 6,
+      '3': 5,
       '4': 1,
       '5': 14,
       '6': '.mystiko.api.v1.DepositError',
@@ -291,7 +300,7 @@ const StatusCode$json = {
     },
     {
       '1': 'scanner',
-      '3': 7,
+      '3': 6,
       '4': 1,
       '5': 14,
       '6': '.mystiko.api.v1.ScannerError',
@@ -300,12 +309,21 @@ const StatusCode$json = {
     },
     {
       '1': 'synchronize',
-      '3': 8,
+      '3': 7,
       '4': 1,
       '5': 14,
       '6': '.mystiko.api.v1.SynchronizeError',
       '9': 0,
       '10': 'synchronize'
+    },
+    {
+      '1': 'config',
+      '3': 8,
+      '4': 1,
+      '5': 14,
+      '6': '.mystiko.api.v1.ConfigError',
+      '9': 0,
+      '10': 'config'
     },
   ],
   '8': [
@@ -315,12 +333,12 @@ const StatusCode$json = {
 
 /// Descriptor for `StatusCode`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List statusCodeDescriptor = $convert.base64Decode(
-    'CgpTdGF0dXNDb2RlEhgKB3N1Y2Nlc3MYASABKAhSB3N1Y2Nlc3MSMwoDbGliGAIgASgOMh8ubX'
-    'lzdGlrby5hcGkudjEuTXlzdGlrb0xpYkVycm9ySABSA2xpYhI4CgdteXN0aWtvGAMgASgOMhwu'
-    'bXlzdGlrby5hcGkudjEuTXlzdGlrb0Vycm9ySABSB215c3Rpa28SNQoGd2FsbGV0GAQgASgOMh'
-    'subXlzdGlrby5hcGkudjEuV2FsbGV0RXJyb3JIAFIGd2FsbGV0EjgKB2FjY291bnQYBSABKA4y'
-    'HC5teXN0aWtvLmFwaS52MS5BY2NvdW50RXJyb3JIAFIHYWNjb3VudBI4CgdkZXBvc2l0GAYgAS'
-    'gOMhwubXlzdGlrby5hcGkudjEuRGVwb3NpdEVycm9ySABSB2RlcG9zaXQSOAoHc2Nhbm5lchgH'
-    'IAEoDjIcLm15c3Rpa28uYXBpLnYxLlNjYW5uZXJFcnJvckgAUgdzY2FubmVyEkQKC3N5bmNocm'
-    '9uaXplGAggASgOMiAubXlzdGlrby5hcGkudjEuU3luY2hyb25pemVFcnJvckgAUgtzeW5jaHJv'
-    'bml6ZUIHCgVlcnJvcg==');
+    'CgpTdGF0dXNDb2RlEhgKB3N1Y2Nlc3MYASABKAhSB3N1Y2Nlc3MSOAoHbXlzdGlrbxgCIAEoDj'
+    'IcLm15c3Rpa28uYXBpLnYxLk15c3Rpa29FcnJvckgAUgdteXN0aWtvEjUKBndhbGxldBgDIAEo'
+    'DjIbLm15c3Rpa28uYXBpLnYxLldhbGxldEVycm9ySABSBndhbGxldBI4CgdhY2NvdW50GAQgAS'
+    'gOMhwubXlzdGlrby5hcGkudjEuQWNjb3VudEVycm9ySABSB2FjY291bnQSOAoHZGVwb3NpdBgF'
+    'IAEoDjIcLm15c3Rpa28uYXBpLnYxLkRlcG9zaXRFcnJvckgAUgdkZXBvc2l0EjgKB3NjYW5uZX'
+    'IYBiABKA4yHC5teXN0aWtvLmFwaS52MS5TY2FubmVyRXJyb3JIAFIHc2Nhbm5lchJECgtzeW5j'
+    'aHJvbml6ZRgHIAEoDjIgLm15c3Rpa28uYXBpLnYxLlN5bmNocm9uaXplRXJyb3JIAFILc3luY2'
+    'hyb25pemUSNQoGY29uZmlnGAggASgOMhsubXlzdGlrby5hcGkudjEuQ29uZmlnRXJyb3JIAFIG'
+    'Y29uZmlnQgcKBWVycm9y');
