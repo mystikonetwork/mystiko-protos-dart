@@ -13,34 +13,6 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-class MystikoLibError extends $pb.ProtobufEnum {
-  static const MystikoLibError MYSTIKO_LIB_ERROR_UNSPECIFIED =
-      MystikoLibError._(
-          0, _omitEnumNames ? '' : 'MYSTIKO_LIB_ERROR_UNSPECIFIED');
-  static const MystikoLibError MYSTIKO_LIB_ERROR_GET_MYSTIKO_GUARD_ERROR =
-      MystikoLibError._(
-          1, _omitEnumNames ? '' : 'MYSTIKO_LIB_ERROR_GET_MYSTIKO_GUARD_ERROR');
-  static const MystikoLibError MYSTIKO_LIB_ERROR_DESERIALIZE_MESSAGE_ERROR =
-      MystikoLibError._(2,
-          _omitEnumNames ? '' : 'MYSTIKO_LIB_ERROR_DESERIALIZE_MESSAGE_ERROR');
-  static const MystikoLibError MYSTIKO_LIB_ERROR_STORAGE_ERROR =
-      MystikoLibError._(
-          3, _omitEnumNames ? '' : 'MYSTIKO_LIB_ERROR_STORAGE_ERROR');
-
-  static const $core.List<MystikoLibError> values = <MystikoLibError>[
-    MYSTIKO_LIB_ERROR_UNSPECIFIED,
-    MYSTIKO_LIB_ERROR_GET_MYSTIKO_GUARD_ERROR,
-    MYSTIKO_LIB_ERROR_DESERIALIZE_MESSAGE_ERROR,
-    MYSTIKO_LIB_ERROR_STORAGE_ERROR,
-  ];
-
-  static final $core.Map<$core.int, MystikoLibError> _byValue =
-      $pb.ProtobufEnum.initByValue(values);
-  static MystikoLibError? valueOf($core.int value) => _byValue[value];
-
-  const MystikoLibError._($core.int v, $core.String n) : super(v, n);
-}
-
 class MystikoError extends $pb.ProtobufEnum {
   static const MystikoError MYSTIKO_ERROR_UNSPECIFIED =
       MystikoError._(0, _omitEnumNames ? '' : 'MYSTIKO_ERROR_UNSPECIFIED');
@@ -58,6 +30,8 @@ class MystikoError extends $pb.ProtobufEnum {
   static const MystikoError MYSTIKO_ERROR_INVALID_PROVIDER_URL_ERROR =
       MystikoError._(
           6, _omitEnumNames ? '' : 'MYSTIKO_ERROR_INVALID_PROVIDER_URL_ERROR');
+  static const MystikoError MYSTIKO_ERROR_STORAGE_ERROR =
+      MystikoError._(7, _omitEnumNames ? '' : 'MYSTIKO_ERROR_STORAGE_ERROR');
 
   static const $core.List<MystikoError> values = <MystikoError>[
     MYSTIKO_ERROR_UNSPECIFIED,
@@ -67,6 +41,7 @@ class MystikoError extends $pb.ProtobufEnum {
     MYSTIKO_ERROR_CONFIG_ERROR,
     MYSTIKO_ERROR_DATABASE_MIGRATION_ERROR,
     MYSTIKO_ERROR_INVALID_PROVIDER_URL_ERROR,
+    MYSTIKO_ERROR_STORAGE_ERROR,
   ];
 
   static final $core.Map<$core.int, MystikoError> _byValue =
@@ -74,6 +49,28 @@ class MystikoError extends $pb.ProtobufEnum {
   static MystikoError? valueOf($core.int value) => _byValue[value];
 
   const MystikoError._($core.int v, $core.String n) : super(v, n);
+}
+
+class ConfigError extends $pb.ProtobufEnum {
+  static const ConfigError CONFIG_ERROR_UNSPECIFIED =
+      ConfigError._(0, _omitEnumNames ? '' : 'CONFIG_ERROR_UNSPECIFIED');
+  static const ConfigError CONFIG_ERROR_DESERIALIZE_MESSAGE_ERROR =
+      ConfigError._(
+          1, _omitEnumNames ? '' : 'CONFIG_ERROR_DESERIALIZE_MESSAGE_ERROR');
+  static const ConfigError CONFIG_ERROR_GET_MYSTIKO_GUARD_ERROR = ConfigError._(
+      2, _omitEnumNames ? '' : 'CONFIG_ERROR_GET_MYSTIKO_GUARD_ERROR');
+
+  static const $core.List<ConfigError> values = <ConfigError>[
+    CONFIG_ERROR_UNSPECIFIED,
+    CONFIG_ERROR_DESERIALIZE_MESSAGE_ERROR,
+    CONFIG_ERROR_GET_MYSTIKO_GUARD_ERROR,
+  ];
+
+  static final $core.Map<$core.int, ConfigError> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static ConfigError? valueOf($core.int value) => _byValue[value];
+
+  const ConfigError._($core.int v, $core.String n) : super(v, n);
 }
 
 class AccountError extends $pb.ProtobufEnum {
@@ -92,6 +89,12 @@ class AccountError extends $pb.ProtobufEnum {
           5, _omitEnumNames ? '' : 'ACCOUNT_ERROR_NO_SUCH_ACCOUNT_ERROR');
   static const AccountError ACCOUNT_ERROR_WALLETS_ERROR =
       AccountError._(6, _omitEnumNames ? '' : 'ACCOUNT_ERROR_WALLETS_ERROR');
+  static const AccountError ACCOUNT_ERROR_GET_MYSTIKO_GUARD_ERROR =
+      AccountError._(
+          7, _omitEnumNames ? '' : 'ACCOUNT_ERROR_GET_MYSTIKO_GUARD_ERROR');
+  static const AccountError ACCOUNT_ERROR_DESERIALIZE_MESSAGE_ERROR =
+      AccountError._(
+          8, _omitEnumNames ? '' : 'ACCOUNT_ERROR_DESERIALIZE_MESSAGE_ERROR');
 
   static const $core.List<AccountError> values = <AccountError>[
     ACCOUNT_ERROR_UNSPECIFIED,
@@ -101,6 +104,8 @@ class AccountError extends $pb.ProtobufEnum {
     ACCOUNT_ERROR_HEX_STRING_ERROR,
     ACCOUNT_ERROR_NO_SUCH_ACCOUNT_ERROR,
     ACCOUNT_ERROR_WALLETS_ERROR,
+    ACCOUNT_ERROR_GET_MYSTIKO_GUARD_ERROR,
+    ACCOUNT_ERROR_DESERIALIZE_MESSAGE_ERROR,
   ];
 
   static final $core.Map<$core.int, AccountError> _byValue =
@@ -129,6 +134,11 @@ class WalletError extends $pb.ProtobufEnum {
   static const WalletError WALLET_ERROR_NO_EXISTING_WALLET_ERROR =
       WalletError._(
           7, _omitEnumNames ? '' : 'WALLET_ERROR_NO_EXISTING_WALLET_ERROR');
+  static const WalletError WALLET_ERROR_GET_MYSTIKO_GUARD_ERROR = WalletError._(
+      8, _omitEnumNames ? '' : 'WALLET_ERROR_GET_MYSTIKO_GUARD_ERROR');
+  static const WalletError WALLET_ERROR_DESERIALIZE_MESSAGE_ERROR =
+      WalletError._(
+          9, _omitEnumNames ? '' : 'WALLET_ERROR_DESERIALIZE_MESSAGE_ERROR');
 
   static const $core.List<WalletError> values = <WalletError>[
     WALLET_ERROR_UNSPECIFIED,
@@ -139,6 +149,8 @@ class WalletError extends $pb.ProtobufEnum {
     WALLET_ERROR_INVALID_PASSWORD_ERROR,
     WALLET_ERROR_MISMATCHED_PASSWORD_ERROR,
     WALLET_ERROR_NO_EXISTING_WALLET_ERROR,
+    WALLET_ERROR_GET_MYSTIKO_GUARD_ERROR,
+    WALLET_ERROR_DESERIALIZE_MESSAGE_ERROR,
   ];
 
   static final $core.Map<$core.int, WalletError> _byValue =
@@ -227,6 +239,12 @@ class DepositError extends $pb.ProtobufEnum {
       DepositError._(24, _omitEnumNames ? '' : 'DEPOSIT_ERROR_WALLETS_ERROR');
   static const DepositError DEPOSIT_ERROR_ACCOUNTS_ERROR =
       DepositError._(25, _omitEnumNames ? '' : 'DEPOSIT_ERROR_ACCOUNTS_ERROR');
+  static const DepositError DEPOSIT_ERROR_GET_MYSTIKO_GUARD_ERROR =
+      DepositError._(
+          26, _omitEnumNames ? '' : 'DEPOSIT_ERROR_GET_MYSTIKO_GUARD_ERROR');
+  static const DepositError DEPOSIT_ERROR_DESERIALIZE_MESSAGE_ERROR =
+      DepositError._(
+          27, _omitEnumNames ? '' : 'DEPOSIT_ERROR_DESERIALIZE_MESSAGE_ERROR');
 
   static const $core.List<DepositError> values = <DepositError>[
     DEPOSIT_ERROR_UNSPECIFIED,
@@ -255,6 +273,8 @@ class DepositError extends $pb.ProtobufEnum {
     DEPOSIT_ERROR_DUPLICATE_COMMITMENT_ERROR,
     DEPOSIT_ERROR_WALLETS_ERROR,
     DEPOSIT_ERROR_ACCOUNTS_ERROR,
+    DEPOSIT_ERROR_GET_MYSTIKO_GUARD_ERROR,
+    DEPOSIT_ERROR_DESERIALIZE_MESSAGE_ERROR,
   ];
 
   static final $core.Map<$core.int, DepositError> _byValue =
@@ -293,6 +313,12 @@ class ScannerError extends $pb.ProtobufEnum {
           10, _omitEnumNames ? '' : 'SCANNER_ERROR_ACCOUNT_HANDLER_ERROR');
   static const ScannerError SCANNER_ERROR_WALLET_HANDLER_ERROR = ScannerError._(
       11, _omitEnumNames ? '' : 'SCANNER_ERROR_WALLET_HANDLER_ERROR');
+  static const ScannerError SCANNER_ERROR_GET_MYSTIKO_GUARD_ERROR =
+      ScannerError._(
+          12, _omitEnumNames ? '' : 'SCANNER_ERROR_GET_MYSTIKO_GUARD_ERROR');
+  static const ScannerError SCANNER_ERROR_DESERIALIZE_MESSAGE_ERROR =
+      ScannerError._(
+          13, _omitEnumNames ? '' : 'SCANNER_ERROR_DESERIALIZE_MESSAGE_ERROR');
 
   static const $core.List<ScannerError> values = <ScannerError>[
     SCANNER_ERROR_UNSPECIFIED,
@@ -307,6 +333,8 @@ class ScannerError extends $pb.ProtobufEnum {
     SCANNER_ERROR_ANYHOW_ERROR,
     SCANNER_ERROR_ACCOUNT_HANDLER_ERROR,
     SCANNER_ERROR_WALLET_HANDLER_ERROR,
+    SCANNER_ERROR_GET_MYSTIKO_GUARD_ERROR,
+    SCANNER_ERROR_DESERIALIZE_MESSAGE_ERROR,
   ];
 
   static final $core.Map<$core.int, ScannerError> _byValue =
@@ -332,6 +360,12 @@ class SynchronizeError extends $pb.ProtobufEnum {
   static const SynchronizeError SYNCHRONIZE_ERROR_ANYHOW_ERROR =
       SynchronizeError._(
           4, _omitEnumNames ? '' : 'SYNCHRONIZE_ERROR_ANYHOW_ERROR');
+  static const SynchronizeError SYNCHRONIZE_ERROR_GET_MYSTIKO_GUARD_ERROR =
+      SynchronizeError._(
+          5, _omitEnumNames ? '' : 'SYNCHRONIZE_ERROR_GET_MYSTIKO_GUARD_ERROR');
+  static const SynchronizeError SYNCHRONIZE_ERROR_DESERIALIZE_MESSAGE_ERROR =
+      SynchronizeError._(6,
+          _omitEnumNames ? '' : 'SYNCHRONIZE_ERROR_DESERIALIZE_MESSAGE_ERROR');
 
   static const $core.List<SynchronizeError> values = <SynchronizeError>[
     SYNCHRONIZE_ERROR_UNSPECIFIED,
@@ -339,6 +373,8 @@ class SynchronizeError extends $pb.ProtobufEnum {
     SYNCHRONIZE_ERROR_DATALOADER_ERROR,
     SYNCHRONIZE_ERROR_DATALOADER_CONFIG_ERROR,
     SYNCHRONIZE_ERROR_ANYHOW_ERROR,
+    SYNCHRONIZE_ERROR_GET_MYSTIKO_GUARD_ERROR,
+    SYNCHRONIZE_ERROR_DESERIALIZE_MESSAGE_ERROR,
   ];
 
   static final $core.Map<$core.int, SynchronizeError> _byValue =

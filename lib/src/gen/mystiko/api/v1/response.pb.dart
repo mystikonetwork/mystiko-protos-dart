@@ -129,33 +129,30 @@ class ApiResponse extends $pb.GeneratedMessage {
 }
 
 enum StatusCode_Error {
-  lib,
   mystiko,
   wallet,
   account,
   deposit,
   scanner,
   synchronize,
+  config,
   notSet
 }
 
 class StatusCode extends $pb.GeneratedMessage {
   factory StatusCode({
     $core.bool? success,
-    MystikoLibError? lib,
     MystikoError? mystiko,
     WalletError? wallet,
     AccountError? account,
     DepositError? deposit,
     ScannerError? scanner,
     SynchronizeError? synchronize,
+    ConfigError? config,
   }) {
     final $result = create();
     if (success != null) {
       $result.success = success;
-    }
-    if (lib != null) {
-      $result.lib = lib;
     }
     if (mystiko != null) {
       $result.mystiko = mystiko;
@@ -175,6 +172,9 @@ class StatusCode extends $pb.GeneratedMessage {
     if (synchronize != null) {
       $result.synchronize = synchronize;
     }
+    if (config != null) {
+      $result.config = config;
+    }
     return $result;
   }
   StatusCode._() : super();
@@ -186,13 +186,13 @@ class StatusCode extends $pb.GeneratedMessage {
       create()..mergeFromJson(i, r);
 
   static const $core.Map<$core.int, StatusCode_Error> _StatusCode_ErrorByTag = {
-    2: StatusCode_Error.lib,
-    3: StatusCode_Error.mystiko,
-    4: StatusCode_Error.wallet,
-    5: StatusCode_Error.account,
-    6: StatusCode_Error.deposit,
-    7: StatusCode_Error.scanner,
-    8: StatusCode_Error.synchronize,
+    2: StatusCode_Error.mystiko,
+    3: StatusCode_Error.wallet,
+    4: StatusCode_Error.account,
+    5: StatusCode_Error.deposit,
+    6: StatusCode_Error.scanner,
+    7: StatusCode_Error.synchronize,
+    8: StatusCode_Error.config,
     0: StatusCode_Error.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
@@ -201,35 +201,35 @@ class StatusCode extends $pb.GeneratedMessage {
       createEmptyInstance: create)
     ..oo(0, [2, 3, 4, 5, 6, 7, 8])
     ..aOB(1, _omitFieldNames ? '' : 'success')
-    ..e<MystikoLibError>(2, _omitFieldNames ? '' : 'lib', $pb.PbFieldType.OE,
-        defaultOrMaker: MystikoLibError.MYSTIKO_LIB_ERROR_UNSPECIFIED,
-        valueOf: MystikoLibError.valueOf,
-        enumValues: MystikoLibError.values)
-    ..e<MystikoError>(3, _omitFieldNames ? '' : 'mystiko', $pb.PbFieldType.OE,
+    ..e<MystikoError>(2, _omitFieldNames ? '' : 'mystiko', $pb.PbFieldType.OE,
         defaultOrMaker: MystikoError.MYSTIKO_ERROR_UNSPECIFIED,
         valueOf: MystikoError.valueOf,
         enumValues: MystikoError.values)
-    ..e<WalletError>(4, _omitFieldNames ? '' : 'wallet', $pb.PbFieldType.OE,
+    ..e<WalletError>(3, _omitFieldNames ? '' : 'wallet', $pb.PbFieldType.OE,
         defaultOrMaker: WalletError.WALLET_ERROR_UNSPECIFIED,
         valueOf: WalletError.valueOf,
         enumValues: WalletError.values)
-    ..e<AccountError>(5, _omitFieldNames ? '' : 'account', $pb.PbFieldType.OE,
+    ..e<AccountError>(4, _omitFieldNames ? '' : 'account', $pb.PbFieldType.OE,
         defaultOrMaker: AccountError.ACCOUNT_ERROR_UNSPECIFIED,
         valueOf: AccountError.valueOf,
         enumValues: AccountError.values)
-    ..e<DepositError>(6, _omitFieldNames ? '' : 'deposit', $pb.PbFieldType.OE,
+    ..e<DepositError>(5, _omitFieldNames ? '' : 'deposit', $pb.PbFieldType.OE,
         defaultOrMaker: DepositError.DEPOSIT_ERROR_UNSPECIFIED,
         valueOf: DepositError.valueOf,
         enumValues: DepositError.values)
-    ..e<ScannerError>(7, _omitFieldNames ? '' : 'scanner', $pb.PbFieldType.OE,
+    ..e<ScannerError>(6, _omitFieldNames ? '' : 'scanner', $pb.PbFieldType.OE,
         defaultOrMaker: ScannerError.SCANNER_ERROR_UNSPECIFIED,
         valueOf: ScannerError.valueOf,
         enumValues: ScannerError.values)
     ..e<SynchronizeError>(
-        8, _omitFieldNames ? '' : 'synchronize', $pb.PbFieldType.OE,
+        7, _omitFieldNames ? '' : 'synchronize', $pb.PbFieldType.OE,
         defaultOrMaker: SynchronizeError.SYNCHRONIZE_ERROR_UNSPECIFIED,
         valueOf: SynchronizeError.valueOf,
         enumValues: SynchronizeError.values)
+    ..e<ConfigError>(8, _omitFieldNames ? '' : 'config', $pb.PbFieldType.OE,
+        defaultOrMaker: ConfigError.CONFIG_ERROR_UNSPECIFIED,
+        valueOf: ConfigError.valueOf,
+        enumValues: ConfigError.values)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
@@ -269,88 +269,88 @@ class StatusCode extends $pb.GeneratedMessage {
   void clearSuccess() => clearField(1);
 
   @$pb.TagNumber(2)
-  MystikoLibError get lib => $_getN(1);
+  MystikoError get mystiko => $_getN(1);
   @$pb.TagNumber(2)
-  set lib(MystikoLibError v) {
+  set mystiko(MystikoError v) {
     setField(2, v);
   }
 
   @$pb.TagNumber(2)
-  $core.bool hasLib() => $_has(1);
+  $core.bool hasMystiko() => $_has(1);
   @$pb.TagNumber(2)
-  void clearLib() => clearField(2);
+  void clearMystiko() => clearField(2);
 
   @$pb.TagNumber(3)
-  MystikoError get mystiko => $_getN(2);
+  WalletError get wallet => $_getN(2);
   @$pb.TagNumber(3)
-  set mystiko(MystikoError v) {
+  set wallet(WalletError v) {
     setField(3, v);
   }
 
   @$pb.TagNumber(3)
-  $core.bool hasMystiko() => $_has(2);
+  $core.bool hasWallet() => $_has(2);
   @$pb.TagNumber(3)
-  void clearMystiko() => clearField(3);
+  void clearWallet() => clearField(3);
 
   @$pb.TagNumber(4)
-  WalletError get wallet => $_getN(3);
+  AccountError get account => $_getN(3);
   @$pb.TagNumber(4)
-  set wallet(WalletError v) {
+  set account(AccountError v) {
     setField(4, v);
   }
 
   @$pb.TagNumber(4)
-  $core.bool hasWallet() => $_has(3);
+  $core.bool hasAccount() => $_has(3);
   @$pb.TagNumber(4)
-  void clearWallet() => clearField(4);
+  void clearAccount() => clearField(4);
 
   @$pb.TagNumber(5)
-  AccountError get account => $_getN(4);
+  DepositError get deposit => $_getN(4);
   @$pb.TagNumber(5)
-  set account(AccountError v) {
+  set deposit(DepositError v) {
     setField(5, v);
   }
 
   @$pb.TagNumber(5)
-  $core.bool hasAccount() => $_has(4);
+  $core.bool hasDeposit() => $_has(4);
   @$pb.TagNumber(5)
-  void clearAccount() => clearField(5);
+  void clearDeposit() => clearField(5);
 
   @$pb.TagNumber(6)
-  DepositError get deposit => $_getN(5);
+  ScannerError get scanner => $_getN(5);
   @$pb.TagNumber(6)
-  set deposit(DepositError v) {
+  set scanner(ScannerError v) {
     setField(6, v);
   }
 
   @$pb.TagNumber(6)
-  $core.bool hasDeposit() => $_has(5);
+  $core.bool hasScanner() => $_has(5);
   @$pb.TagNumber(6)
-  void clearDeposit() => clearField(6);
+  void clearScanner() => clearField(6);
 
   @$pb.TagNumber(7)
-  ScannerError get scanner => $_getN(6);
+  SynchronizeError get synchronize => $_getN(6);
   @$pb.TagNumber(7)
-  set scanner(ScannerError v) {
+  set synchronize(SynchronizeError v) {
     setField(7, v);
   }
 
   @$pb.TagNumber(7)
-  $core.bool hasScanner() => $_has(6);
+  $core.bool hasSynchronize() => $_has(6);
   @$pb.TagNumber(7)
-  void clearScanner() => clearField(7);
+  void clearSynchronize() => clearField(7);
 
   @$pb.TagNumber(8)
-  SynchronizeError get synchronize => $_getN(7);
+  ConfigError get config => $_getN(7);
   @$pb.TagNumber(8)
-  set synchronize(SynchronizeError v) {
+  set config(ConfigError v) {
     setField(8, v);
   }
 
   @$pb.TagNumber(8)
-  $core.bool hasSynchronize() => $_has(7);
+  $core.bool hasConfig() => $_has(7);
   @$pb.TagNumber(8)
-  void clearSynchronize() => clearField(8);
+  void clearConfig() => clearField(8);
 }
 
 const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');

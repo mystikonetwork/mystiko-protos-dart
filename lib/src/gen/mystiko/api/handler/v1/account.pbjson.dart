@@ -1,6 +1,6 @@
 //
 //  Generated code. Do not modify.
-//  source: mystiko/api/handler/v1/request.proto
+//  source: mystiko/api/handler/v1/account.proto
 //
 // @dart = 2.12
 
@@ -12,76 +12,6 @@
 import 'dart:convert' as $convert;
 import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
-
-@$core.Deprecated('Use createWalletRequestDescriptor instead')
-const CreateWalletRequest$json = {
-  '1': 'CreateWalletRequest',
-  '2': [
-    {
-      '1': 'options',
-      '3': 1,
-      '4': 1,
-      '5': 11,
-      '6': '.mystiko.core.handler.v1.CreateWalletOptions',
-      '10': 'options'
-    },
-  ],
-};
-
-/// Descriptor for `CreateWalletRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List createWalletRequestDescriptor = $convert.base64Decode(
-    'ChNDcmVhdGVXYWxsZXRSZXF1ZXN0EkYKB29wdGlvbnMYASABKAsyLC5teXN0aWtvLmNvcmUuaG'
-    'FuZGxlci52MS5DcmVhdGVXYWxsZXRPcHRpb25zUgdvcHRpb25z');
-
-@$core.Deprecated('Use checkCurrentRequestDescriptor instead')
-const CheckCurrentRequest$json = {
-  '1': 'CheckCurrentRequest',
-};
-
-/// Descriptor for `CheckCurrentRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List checkCurrentRequestDescriptor =
-    $convert.base64Decode('ChNDaGVja0N1cnJlbnRSZXF1ZXN0');
-
-@$core.Deprecated('Use checkPasswordRequestDescriptor instead')
-const CheckPasswordRequest$json = {
-  '1': 'CheckPasswordRequest',
-  '2': [
-    {'1': 'password', '3': 1, '4': 1, '5': 9, '10': 'password'},
-  ],
-};
-
-/// Descriptor for `CheckPasswordRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List checkPasswordRequestDescriptor =
-    $convert.base64Decode(
-        'ChRDaGVja1Bhc3N3b3JkUmVxdWVzdBIaCghwYXNzd29yZBgBIAEoCVIIcGFzc3dvcmQ=');
-
-@$core.Deprecated('Use updatePasswordRequestDescriptor instead')
-const UpdatePasswordRequest$json = {
-  '1': 'UpdatePasswordRequest',
-  '2': [
-    {'1': 'old_password', '3': 1, '4': 1, '5': 9, '10': 'oldPassword'},
-    {'1': 'new_password', '3': 2, '4': 1, '5': 9, '10': 'newPassword'},
-  ],
-};
-
-/// Descriptor for `UpdatePasswordRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List updatePasswordRequestDescriptor = $convert.base64Decode(
-    'ChVVcGRhdGVQYXNzd29yZFJlcXVlc3QSIQoMb2xkX3Bhc3N3b3JkGAEgASgJUgtvbGRQYXNzd2'
-    '9yZBIhCgxuZXdfcGFzc3dvcmQYAiABKAlSC25ld1Bhc3N3b3Jk');
-
-@$core.Deprecated('Use exportMnemonicPhraseRequestDescriptor instead')
-const ExportMnemonicPhraseRequest$json = {
-  '1': 'ExportMnemonicPhraseRequest',
-  '2': [
-    {'1': 'password', '3': 1, '4': 1, '5': 9, '10': 'password'},
-  ],
-};
-
-/// Descriptor for `ExportMnemonicPhraseRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List exportMnemonicPhraseRequestDescriptor =
-    $convert.base64Decode(
-        'ChtFeHBvcnRNbmVtb25pY1BocmFzZVJlcXVlc3QSGgoIcGFzc3dvcmQYASABKAlSCHBhc3N3b3'
-        'Jk');
 
 @$core.Deprecated('Use createAccountRequestDescriptor instead')
 const CreateAccountRequest$json = {
@@ -265,3 +195,137 @@ final $typed_data.Uint8List exportSecretKeyRequestDescriptor = $convert.base64De
     'V0UGFzc3dvcmQSEAoCaWQYAiABKAlIAFICaWQSHwoKcHVibGljX2tleRgDIAEoCUgAUglwdWJs'
     'aWNLZXkSKwoQc2hpZWxkZWRfYWRkcmVzcxgEIAEoCUgAUg9zaGllbGRlZEFkZHJlc3NCDAoKaW'
     'RlbnRpZmllcg==');
+
+@$core.Deprecated('Use createAccountResponseDescriptor instead')
+const CreateAccountResponse$json = {
+  '1': 'CreateAccountResponse',
+  '2': [
+    {
+      '1': 'account',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.mystiko.core.document.v1.Account',
+      '10': 'account'
+    },
+  ],
+};
+
+/// Descriptor for `CreateAccountResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List createAccountResponseDescriptor = $convert.base64Decode(
+    'ChVDcmVhdGVBY2NvdW50UmVzcG9uc2USOwoHYWNjb3VudBgBIAEoCzIhLm15c3Rpa28uY29yZS'
+    '5kb2N1bWVudC52MS5BY2NvdW50UgdhY2NvdW50');
+
+@$core.Deprecated('Use countAccountResponseDescriptor instead')
+const CountAccountResponse$json = {
+  '1': 'CountAccountResponse',
+  '2': [
+    {'1': 'count', '3': 1, '4': 1, '5': 4, '10': 'count'},
+  ],
+};
+
+/// Descriptor for `CountAccountResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List countAccountResponseDescriptor =
+    $convert.base64Decode(
+        'ChRDb3VudEFjY291bnRSZXNwb25zZRIUCgVjb3VudBgBIAEoBFIFY291bnQ=');
+
+@$core.Deprecated('Use findAccountResponseDescriptor instead')
+const FindAccountResponse$json = {
+  '1': 'FindAccountResponse',
+  '2': [
+    {
+      '1': 'account',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.mystiko.core.document.v1.Account',
+      '10': 'account'
+    },
+  ],
+};
+
+/// Descriptor for `FindAccountResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List findAccountResponseDescriptor = $convert.base64Decode(
+    'ChNGaW5kQWNjb3VudFJlc3BvbnNlEjsKB2FjY291bnQYASADKAsyIS5teXN0aWtvLmNvcmUuZG'
+    '9jdW1lbnQudjEuQWNjb3VudFIHYWNjb3VudA==');
+
+@$core.Deprecated('Use findAccountByIdentifierResponseDescriptor instead')
+const FindAccountByIdentifierResponse$json = {
+  '1': 'FindAccountByIdentifierResponse',
+  '2': [
+    {
+      '1': 'account',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.mystiko.core.document.v1.Account',
+      '9': 0,
+      '10': 'account',
+      '17': true
+    },
+  ],
+  '8': [
+    {'1': '_account'},
+  ],
+};
+
+/// Descriptor for `FindAccountByIdentifierResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List findAccountByIdentifierResponseDescriptor =
+    $convert.base64Decode(
+        'Ch9GaW5kQWNjb3VudEJ5SWRlbnRpZmllclJlc3BvbnNlEkAKB2FjY291bnQYASABKAsyIS5teX'
+        'N0aWtvLmNvcmUuZG9jdW1lbnQudjEuQWNjb3VudEgAUgdhY2NvdW50iAEBQgoKCF9hY2NvdW50');
+
+@$core.Deprecated('Use updateAccountResponseDescriptor instead')
+const UpdateAccountResponse$json = {
+  '1': 'UpdateAccountResponse',
+  '2': [
+    {
+      '1': 'account',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.mystiko.core.document.v1.Account',
+      '10': 'account'
+    },
+  ],
+};
+
+/// Descriptor for `UpdateAccountResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List updateAccountResponseDescriptor = $convert.base64Decode(
+    'ChVVcGRhdGVBY2NvdW50UmVzcG9uc2USOwoHYWNjb3VudBgBIAEoCzIhLm15c3Rpa28uY29yZS'
+    '5kb2N1bWVudC52MS5BY2NvdW50UgdhY2NvdW50');
+
+@$core.Deprecated('Use updateEncryptionResponseDescriptor instead')
+const UpdateEncryptionResponse$json = {
+  '1': 'UpdateEncryptionResponse',
+  '2': [
+    {
+      '1': 'account',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.mystiko.core.document.v1.Account',
+      '10': 'account'
+    },
+  ],
+};
+
+/// Descriptor for `UpdateEncryptionResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List updateEncryptionResponseDescriptor =
+    $convert.base64Decode(
+        'ChhVcGRhdGVFbmNyeXB0aW9uUmVzcG9uc2USOwoHYWNjb3VudBgBIAMoCzIhLm15c3Rpa28uY2'
+        '9yZS5kb2N1bWVudC52MS5BY2NvdW50UgdhY2NvdW50');
+
+@$core.Deprecated('Use exportSecretKeyResponseDescriptor instead')
+const ExportSecretKeyResponse$json = {
+  '1': 'ExportSecretKeyResponse',
+  '2': [
+    {'1': 'secret_key', '3': 1, '4': 1, '5': 9, '10': 'secretKey'},
+  ],
+};
+
+/// Descriptor for `ExportSecretKeyResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List exportSecretKeyResponseDescriptor =
+    $convert.base64Decode(
+        'ChdFeHBvcnRTZWNyZXRLZXlSZXNwb25zZRIdCgpzZWNyZXRfa2V5GAEgASgJUglzZWNyZXRLZX'
+        'k=');
