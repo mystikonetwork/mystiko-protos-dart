@@ -33,15 +33,6 @@ final $typed_data.Uint8List createWalletRequestDescriptor = $convert.base64Decod
     'ChNDcmVhdGVXYWxsZXRSZXF1ZXN0EkYKB29wdGlvbnMYASABKAsyLC5teXN0aWtvLmNvcmUuaG'
     'FuZGxlci52MS5DcmVhdGVXYWxsZXRPcHRpb25zUgdvcHRpb25z');
 
-@$core.Deprecated('Use checkCurrentRequestDescriptor instead')
-const CheckCurrentRequest$json = {
-  '1': 'CheckCurrentRequest',
-};
-
-/// Descriptor for `CheckCurrentRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List checkCurrentRequestDescriptor =
-    $convert.base64Decode('ChNDaGVja0N1cnJlbnRSZXF1ZXN0');
-
 @$core.Deprecated('Use checkPasswordRequestDescriptor instead')
 const CheckPasswordRequest$json = {
   '1': 'CheckPasswordRequest',

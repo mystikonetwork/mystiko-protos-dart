@@ -23,6 +23,7 @@ class MystikoOptions extends $pb.GeneratedMessage {
     $24.RelayerClientOptions? relayerClientOptions,
     $25.LoaderConfig? loaderConfig,
     $core.String? dbPath,
+    $core.String? staticCachePath,
   }) {
     final $result = create();
     if (configOptions != null) {
@@ -36,6 +37,9 @@ class MystikoOptions extends $pb.GeneratedMessage {
     }
     if (dbPath != null) {
       $result.dbPath = dbPath;
+    }
+    if (staticCachePath != null) {
+      $result.staticCachePath = staticCachePath;
     }
     return $result;
   }
@@ -60,6 +64,7 @@ class MystikoOptions extends $pb.GeneratedMessage {
     ..aOM<$25.LoaderConfig>(3, _omitFieldNames ? '' : 'loaderConfig',
         subBuilder: $25.LoaderConfig.create)
     ..aOS(4, _omitFieldNames ? '' : 'dbPath')
+    ..aOS(5, _omitFieldNames ? '' : 'staticCachePath')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
@@ -138,6 +143,18 @@ class MystikoOptions extends $pb.GeneratedMessage {
   $core.bool hasDbPath() => $_has(3);
   @$pb.TagNumber(4)
   void clearDbPath() => clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.String get staticCachePath => $_getSZ(4);
+  @$pb.TagNumber(5)
+  set staticCachePath($core.String v) {
+    $_setString(4, v);
+  }
+
+  @$pb.TagNumber(5)
+  $core.bool hasStaticCachePath() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearStaticCachePath() => clearField(5);
 }
 
 const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');

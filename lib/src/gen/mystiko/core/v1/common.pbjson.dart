@@ -41,17 +41,20 @@ const SpendStatus$json = {
   '1': 'SpendStatus',
   '2': [
     {'1': 'SPEND_STATUS_UNSPECIFIED', '2': 0},
-    {'1': 'SPEND_STATUS_PENDING', '2': 1},
-    {'1': 'SPEND_STATUS_SUCCEEDED', '2': 2},
-    {'1': 'SPEND_STATUS_FAILED', '2': 3},
+    {'1': 'SPEND_STATUS_PROOF_GENERATING', '2': 1},
+    {'1': 'SPEND_STATUS_PROOF_GENERATED', '2': 2},
+    {'1': 'SPEND_STATUS_PENDING', '2': 3},
+    {'1': 'SPEND_STATUS_SUCCEEDED', '2': 4},
+    {'1': 'SPEND_STATUS_FAILED', '2': 5},
   ],
 };
 
 /// Descriptor for `SpendStatus`. Decode as a `google.protobuf.EnumDescriptorProto`.
 final $typed_data.Uint8List spendStatusDescriptor = $convert.base64Decode(
-    'CgtTcGVuZFN0YXR1cxIcChhTUEVORF9TVEFUVVNfVU5TUEVDSUZJRUQQABIYChRTUEVORF9TVE'
-    'FUVVNfUEVORElORxABEhoKFlNQRU5EX1NUQVRVU19TVUNDRUVERUQQAhIXChNTUEVORF9TVEFU'
-    'VVNfRkFJTEVEEAM=');
+    'CgtTcGVuZFN0YXR1cxIcChhTUEVORF9TVEFUVVNfVU5TUEVDSUZJRUQQABIhCh1TUEVORF9TVE'
+    'FUVVNfUFJPT0ZfR0VORVJBVElORxABEiAKHFNQRU5EX1NUQVRVU19QUk9PRl9HRU5FUkFURUQQ'
+    'AhIYChRTUEVORF9TVEFUVVNfUEVORElORxADEhoKFlNQRU5EX1NUQVRVU19TVUNDRUVERUQQBB'
+    'IXChNTUEVORF9TVEFUVVNfRkFJTEVEEAU=');
 
 @$core.Deprecated('Use spendTypeDescriptor instead')
 const SpendType$json = {

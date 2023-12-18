@@ -16,47 +16,6 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 import '../../../common/v1/types.pbenum.dart' as $1;
 
-class GetConfigRequest extends $pb.GeneratedMessage {
-  factory GetConfigRequest() => create();
-  GetConfigRequest._() : super();
-  factory GetConfigRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory GetConfigRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
-
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'GetConfigRequest',
-      package: const $pb.PackageName(
-          _omitMessageNames ? '' : 'mystiko.api.config.v1'),
-      createEmptyInstance: create)
-    ..hasRequiredFields = false;
-
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  GetConfigRequest clone() => GetConfigRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
-  GetConfigRequest copyWith(void Function(GetConfigRequest) updates) =>
-      super.copyWith((message) => updates(message as GetConfigRequest))
-          as GetConfigRequest;
-
-  $pb.BuilderInfo get info_ => _i;
-
-  @$core.pragma('dart2js:noInline')
-  static GetConfigRequest create() => GetConfigRequest._();
-  GetConfigRequest createEmptyInstance() => create();
-  static $pb.PbList<GetConfigRequest> createRepeated() =>
-      $pb.PbList<GetConfigRequest>();
-  @$core.pragma('dart2js:noInline')
-  static GetConfigRequest getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<GetConfigRequest>(create);
-  static GetConfigRequest? _defaultInstance;
-}
-
 class FindDefaultCircuitRequest extends $pb.GeneratedMessage {
   factory FindDefaultCircuitRequest({
     $1.CircuitType? circuitType,

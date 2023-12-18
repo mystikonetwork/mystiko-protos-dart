@@ -81,47 +81,6 @@ class CreateWalletRequest extends $pb.GeneratedMessage {
   $19.CreateWalletOptions ensureOptions() => $_ensure(0);
 }
 
-class CheckCurrentRequest extends $pb.GeneratedMessage {
-  factory CheckCurrentRequest() => create();
-  CheckCurrentRequest._() : super();
-  factory CheckCurrentRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory CheckCurrentRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
-
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'CheckCurrentRequest',
-      package: const $pb.PackageName(
-          _omitMessageNames ? '' : 'mystiko.api.handler.v1'),
-      createEmptyInstance: create)
-    ..hasRequiredFields = false;
-
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  CheckCurrentRequest clone() => CheckCurrentRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
-  CheckCurrentRequest copyWith(void Function(CheckCurrentRequest) updates) =>
-      super.copyWith((message) => updates(message as CheckCurrentRequest))
-          as CheckCurrentRequest;
-
-  $pb.BuilderInfo get info_ => _i;
-
-  @$core.pragma('dart2js:noInline')
-  static CheckCurrentRequest create() => CheckCurrentRequest._();
-  CheckCurrentRequest createEmptyInstance() => create();
-  static $pb.PbList<CheckCurrentRequest> createRepeated() =>
-      $pb.PbList<CheckCurrentRequest>();
-  @$core.pragma('dart2js:noInline')
-  static CheckCurrentRequest getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<CheckCurrentRequest>(create);
-  static CheckCurrentRequest? _defaultInstance;
-}
-
 class CheckPasswordRequest extends $pb.GeneratedMessage {
   factory CheckPasswordRequest({
     $core.String? password,

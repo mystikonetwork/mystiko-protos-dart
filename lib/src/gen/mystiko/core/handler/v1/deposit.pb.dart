@@ -162,8 +162,8 @@ class CreateDepositOptions extends $pb.GeneratedMessage {
     $core.String? assetSymbol,
     $core.double? amount,
     $core.String? shieldedAddress,
-    $core.double? rollupFeeAmount,
     $fixnum.Int64? dstChainId,
+    $core.double? rollupFeeAmount,
     $core.double? bridgeFeeAmount,
     $core.double? executorFeeAmount,
     $fixnum.Int64? queryTimeoutMs,
@@ -183,11 +183,11 @@ class CreateDepositOptions extends $pb.GeneratedMessage {
     if (shieldedAddress != null) {
       $result.shieldedAddress = shieldedAddress;
     }
-    if (rollupFeeAmount != null) {
-      $result.rollupFeeAmount = rollupFeeAmount;
-    }
     if (dstChainId != null) {
       $result.dstChainId = dstChainId;
+    }
+    if (rollupFeeAmount != null) {
+      $result.rollupFeeAmount = rollupFeeAmount;
     }
     if (bridgeFeeAmount != null) {
       $result.bridgeFeeAmount = bridgeFeeAmount;
@@ -224,11 +224,11 @@ class CreateDepositOptions extends $pb.GeneratedMessage {
     ..aOS(2, _omitFieldNames ? '' : 'assetSymbol')
     ..a<$core.double>(3, _omitFieldNames ? '' : 'amount', $pb.PbFieldType.OD)
     ..aOS(4, _omitFieldNames ? '' : 'shieldedAddress')
-    ..a<$core.double>(
-        5, _omitFieldNames ? '' : 'rollupFeeAmount', $pb.PbFieldType.OD)
     ..a<$fixnum.Int64>(
-        6, _omitFieldNames ? '' : 'dstChainId', $pb.PbFieldType.OU6,
+        5, _omitFieldNames ? '' : 'dstChainId', $pb.PbFieldType.OU6,
         defaultOrMaker: $fixnum.Int64.ZERO)
+    ..a<$core.double>(
+        6, _omitFieldNames ? '' : 'rollupFeeAmount', $pb.PbFieldType.OD)
     ..a<$core.double>(
         7, _omitFieldNames ? '' : 'bridgeFeeAmount', $pb.PbFieldType.OD)
     ..a<$core.double>(
@@ -318,28 +318,28 @@ class CreateDepositOptions extends $pb.GeneratedMessage {
   void clearShieldedAddress() => clearField(4);
 
   @$pb.TagNumber(5)
-  $core.double get rollupFeeAmount => $_getN(4);
+  $fixnum.Int64 get dstChainId => $_getI64(4);
   @$pb.TagNumber(5)
-  set rollupFeeAmount($core.double v) {
-    $_setDouble(4, v);
-  }
-
-  @$pb.TagNumber(5)
-  $core.bool hasRollupFeeAmount() => $_has(4);
-  @$pb.TagNumber(5)
-  void clearRollupFeeAmount() => clearField(5);
-
-  @$pb.TagNumber(6)
-  $fixnum.Int64 get dstChainId => $_getI64(5);
-  @$pb.TagNumber(6)
   set dstChainId($fixnum.Int64 v) {
-    $_setInt64(5, v);
+    $_setInt64(4, v);
+  }
+
+  @$pb.TagNumber(5)
+  $core.bool hasDstChainId() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearDstChainId() => clearField(5);
+
+  @$pb.TagNumber(6)
+  $core.double get rollupFeeAmount => $_getN(5);
+  @$pb.TagNumber(6)
+  set rollupFeeAmount($core.double v) {
+    $_setDouble(5, v);
   }
 
   @$pb.TagNumber(6)
-  $core.bool hasDstChainId() => $_has(5);
+  $core.bool hasRollupFeeAmount() => $_has(5);
   @$pb.TagNumber(6)
-  void clearDstChainId() => clearField(6);
+  void clearRollupFeeAmount() => clearField(6);
 
   @$pb.TagNumber(7)
   $core.double get bridgeFeeAmount => $_getN(6);
