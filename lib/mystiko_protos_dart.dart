@@ -23,6 +23,7 @@ export 'package:mystiko_protos_dart/src/gen/mystiko/core/v1/mystiko.pb.dart';
 export 'package:mystiko_protos_dart/src/gen/mystiko/core/v1/transaction.pbgrpc.dart';
 export 'package:mystiko_protos_dart/src/gen/mystiko/core/handler/v1/account.pb.dart';
 export 'package:mystiko_protos_dart/src/gen/mystiko/core/handler/v1/wallet.pb.dart';
+export 'package:mystiko_protos_dart/src/gen/mystiko/core/handler/v1/deposit.pb.dart';
 export 'package:mystiko_protos_dart/src/gen/mystiko/core/document/v1/wallet.pb.dart';
 export 'package:mystiko_protos_dart/src/gen/mystiko/core/document/v1/account.pb.dart';
 export 'package:mystiko_protos_dart/src/gen/mystiko/service/v1/client.pb.dart';

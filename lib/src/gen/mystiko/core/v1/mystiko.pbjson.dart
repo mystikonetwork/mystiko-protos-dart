@@ -56,12 +56,22 @@ const MystikoOptions$json = {
       '10': 'dbPath',
       '17': true
     },
+    {
+      '1': 'static_cache_path',
+      '3': 5,
+      '4': 1,
+      '5': 9,
+      '9': 4,
+      '10': 'staticCachePath',
+      '17': true
+    },
   ],
   '8': [
     {'1': '_config_options'},
     {'1': '_relayer_client_options'},
     {'1': '_loader_config'},
     {'1': '_db_path'},
+    {'1': '_static_cache_path'},
   ],
 };
 
@@ -72,5 +82,7 @@ final $typed_data.Uint8List mystikoOptionsDescriptor = $convert.base64Decode(
     'dF9vcHRpb25zGAIgASgLMigubXlzdGlrby5yZWxheWVyLnYxLlJlbGF5ZXJDbGllbnRPcHRpb2'
     '5zSAFSFHJlbGF5ZXJDbGllbnRPcHRpb25ziAEBEkkKDWxvYWRlcl9jb25maWcYAyABKAsyHy5t'
     'eXN0aWtvLmxvYWRlci52MS5Mb2FkZXJDb25maWdIAlIMbG9hZGVyQ29uZmlniAEBEhwKB2RiX3'
-    'BhdGgYBCABKAlIA1IGZGJQYXRoiAEBQhEKD19jb25maWdfb3B0aW9uc0IZChdfcmVsYXllcl9j'
-    'bGllbnRfb3B0aW9uc0IQCg5fbG9hZGVyX2NvbmZpZ0IKCghfZGJfcGF0aA==');
+    'BhdGgYBCABKAlIA1IGZGJQYXRoiAEBEi8KEXN0YXRpY19jYWNoZV9wYXRoGAUgASgJSARSD3N0'
+    'YXRpY0NhY2hlUGF0aIgBAUIRCg9fY29uZmlnX29wdGlvbnNCGQoXX3JlbGF5ZXJfY2xpZW50X2'
+    '9wdGlvbnNCEAoOX2xvYWRlcl9jb25maWdCCgoIX2RiX3BhdGhCFAoSX3N0YXRpY19jYWNoZV9w'
+    'YXRo');

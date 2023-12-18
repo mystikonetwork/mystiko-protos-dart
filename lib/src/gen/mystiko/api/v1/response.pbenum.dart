@@ -32,6 +32,11 @@ class MystikoError extends $pb.ProtobufEnum {
           6, _omitEnumNames ? '' : 'MYSTIKO_ERROR_INVALID_PROVIDER_URL_ERROR');
   static const MystikoError MYSTIKO_ERROR_STORAGE_ERROR =
       MystikoError._(7, _omitEnumNames ? '' : 'MYSTIKO_ERROR_STORAGE_ERROR');
+  static const MystikoError MYSTIKO_ERROR_RELAYER_CLIENT_ERROR = MystikoError._(
+      8, _omitEnumNames ? '' : 'MYSTIKO_ERROR_RELAYER_CLIENT_ERROR');
+  static const MystikoError MYSTIKO_ERROR_FILE_STATIC_CACHE_ERROR =
+      MystikoError._(
+          9, _omitEnumNames ? '' : 'MYSTIKO_ERROR_FILE_STATIC_CACHE_ERROR');
 
   static const $core.List<MystikoError> values = <MystikoError>[
     MYSTIKO_ERROR_UNSPECIFIED,
@@ -42,6 +47,8 @@ class MystikoError extends $pb.ProtobufEnum {
     MYSTIKO_ERROR_DATABASE_MIGRATION_ERROR,
     MYSTIKO_ERROR_INVALID_PROVIDER_URL_ERROR,
     MYSTIKO_ERROR_STORAGE_ERROR,
+    MYSTIKO_ERROR_RELAYER_CLIENT_ERROR,
+    MYSTIKO_ERROR_FILE_STATIC_CACHE_ERROR,
   ];
 
   static final $core.Map<$core.int, MystikoError> _byValue =
@@ -95,6 +102,8 @@ class AccountError extends $pb.ProtobufEnum {
   static const AccountError ACCOUNT_ERROR_DESERIALIZE_MESSAGE_ERROR =
       AccountError._(
           8, _omitEnumNames ? '' : 'ACCOUNT_ERROR_DESERIALIZE_MESSAGE_ERROR');
+  static const AccountError ACCOUNT_ERROR_PROTOCOL_KEY_ERROR = AccountError._(
+      9, _omitEnumNames ? '' : 'ACCOUNT_ERROR_PROTOCOL_KEY_ERROR');
 
   static const $core.List<AccountError> values = <AccountError>[
     ACCOUNT_ERROR_UNSPECIFIED,
@@ -106,6 +115,7 @@ class AccountError extends $pb.ProtobufEnum {
     ACCOUNT_ERROR_WALLETS_ERROR,
     ACCOUNT_ERROR_GET_MYSTIKO_GUARD_ERROR,
     ACCOUNT_ERROR_DESERIALIZE_MESSAGE_ERROR,
+    ACCOUNT_ERROR_PROTOCOL_KEY_ERROR,
   ];
 
   static final $core.Map<$core.int, AccountError> _byValue =
@@ -245,6 +255,10 @@ class DepositError extends $pb.ProtobufEnum {
   static const DepositError DEPOSIT_ERROR_DESERIALIZE_MESSAGE_ERROR =
       DepositError._(
           27, _omitEnumNames ? '' : 'DEPOSIT_ERROR_DESERIALIZE_MESSAGE_ERROR');
+  static const DepositError DEPOSIT_ERROR_PROTOCOL_KEY_ERROR = DepositError._(
+      28, _omitEnumNames ? '' : 'DEPOSIT_ERROR_PROTOCOL_KEY_ERROR');
+  static const DepositError DEPOSIT_ERROR_GRPC_CONNECT_ERROR = DepositError._(
+      29, _omitEnumNames ? '' : 'DEPOSIT_ERROR_GRPC_CONNECT_ERROR');
 
   static const $core.List<DepositError> values = <DepositError>[
     DEPOSIT_ERROR_UNSPECIFIED,
@@ -275,6 +289,8 @@ class DepositError extends $pb.ProtobufEnum {
     DEPOSIT_ERROR_ACCOUNTS_ERROR,
     DEPOSIT_ERROR_GET_MYSTIKO_GUARD_ERROR,
     DEPOSIT_ERROR_DESERIALIZE_MESSAGE_ERROR,
+    DEPOSIT_ERROR_PROTOCOL_KEY_ERROR,
+    DEPOSIT_ERROR_GRPC_CONNECT_ERROR,
   ];
 
   static final $core.Map<$core.int, DepositError> _byValue =
@@ -319,6 +335,8 @@ class ScannerError extends $pb.ProtobufEnum {
   static const ScannerError SCANNER_ERROR_DESERIALIZE_MESSAGE_ERROR =
       ScannerError._(
           13, _omitEnumNames ? '' : 'SCANNER_ERROR_DESERIALIZE_MESSAGE_ERROR');
+  static const ScannerError SCANNER_ERROR_PROTOCOL_KEY_ERROR = ScannerError._(
+      14, _omitEnumNames ? '' : 'SCANNER_ERROR_PROTOCOL_KEY_ERROR');
 
   static const $core.List<ScannerError> values = <ScannerError>[
     SCANNER_ERROR_UNSPECIFIED,
@@ -335,6 +353,7 @@ class ScannerError extends $pb.ProtobufEnum {
     SCANNER_ERROR_WALLET_HANDLER_ERROR,
     SCANNER_ERROR_GET_MYSTIKO_GUARD_ERROR,
     SCANNER_ERROR_DESERIALIZE_MESSAGE_ERROR,
+    SCANNER_ERROR_PROTOCOL_KEY_ERROR,
   ];
 
   static final $core.Map<$core.int, ScannerError> _byValue =

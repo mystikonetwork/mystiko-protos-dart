@@ -72,10 +72,9 @@ const CreateDepositOptions$json = {
     {'1': 'asset_symbol', '3': 2, '4': 1, '5': 9, '10': 'assetSymbol'},
     {'1': 'amount', '3': 3, '4': 1, '5': 1, '10': 'amount'},
     {'1': 'shielded_address', '3': 4, '4': 1, '5': 9, '10': 'shieldedAddress'},
-    {'1': 'rollup_fee_amount', '3': 5, '4': 1, '5': 1, '10': 'rollupFeeAmount'},
     {
       '1': 'dst_chain_id',
-      '3': 6,
+      '3': 5,
       '4': 1,
       '5': 4,
       '9': 0,
@@ -83,11 +82,20 @@ const CreateDepositOptions$json = {
       '17': true
     },
     {
+      '1': 'rollup_fee_amount',
+      '3': 6,
+      '4': 1,
+      '5': 1,
+      '9': 1,
+      '10': 'rollupFeeAmount',
+      '17': true
+    },
+    {
       '1': 'bridge_fee_amount',
       '3': 7,
       '4': 1,
       '5': 1,
-      '9': 1,
+      '9': 2,
       '10': 'bridgeFeeAmount',
       '17': true
     },
@@ -96,7 +104,7 @@ const CreateDepositOptions$json = {
       '3': 8,
       '4': 1,
       '5': 1,
-      '9': 2,
+      '9': 3,
       '10': 'executorFeeAmount',
       '17': true
     },
@@ -105,7 +113,7 @@ const CreateDepositOptions$json = {
       '3': 9,
       '4': 1,
       '5': 4,
-      '9': 3,
+      '9': 4,
       '10': 'queryTimeoutMs',
       '17': true
     },
@@ -115,7 +123,7 @@ const CreateDepositOptions$json = {
       '4': 1,
       '5': 11,
       '6': '.mystiko.core.handler.v1.DepositQuote',
-      '9': 4,
+      '9': 5,
       '10': 'depositQuote',
       '17': true
     },
@@ -125,13 +133,14 @@ const CreateDepositOptions$json = {
       '4': 1,
       '5': 14,
       '6': '.mystiko.common.v1.BridgeType',
-      '9': 5,
+      '9': 6,
       '10': 'bridgeType',
       '17': true
     },
   ],
   '8': [
     {'1': '_dst_chain_id'},
+    {'1': '_rollup_fee_amount'},
     {'1': '_bridge_fee_amount'},
     {'1': '_executor_fee_amount'},
     {'1': '_query_timeout_ms'},
@@ -144,16 +153,17 @@ const CreateDepositOptions$json = {
 final $typed_data.Uint8List createDepositOptionsDescriptor = $convert.base64Decode(
     'ChRDcmVhdGVEZXBvc2l0T3B0aW9ucxIZCghjaGFpbl9pZBgBIAEoBFIHY2hhaW5JZBIhCgxhc3'
     'NldF9zeW1ib2wYAiABKAlSC2Fzc2V0U3ltYm9sEhYKBmFtb3VudBgDIAEoAVIGYW1vdW50EikK'
-    'EHNoaWVsZGVkX2FkZHJlc3MYBCABKAlSD3NoaWVsZGVkQWRkcmVzcxIqChFyb2xsdXBfZmVlX2'
-    'Ftb3VudBgFIAEoAVIPcm9sbHVwRmVlQW1vdW50EiUKDGRzdF9jaGFpbl9pZBgGIAEoBEgAUgpk'
-    'c3RDaGFpbklkiAEBEi8KEWJyaWRnZV9mZWVfYW1vdW50GAcgASgBSAFSD2JyaWRnZUZlZUFtb3'
-    'VudIgBARIzChNleGVjdXRvcl9mZWVfYW1vdW50GAggASgBSAJSEWV4ZWN1dG9yRmVlQW1vdW50'
-    'iAEBEi0KEHF1ZXJ5X3RpbWVvdXRfbXMYCSABKARIA1IOcXVlcnlUaW1lb3V0TXOIAQESTwoNZG'
-    'Vwb3NpdF9xdW90ZRgKIAEoCzIlLm15c3Rpa28uY29yZS5oYW5kbGVyLnYxLkRlcG9zaXRRdW90'
-    'ZUgEUgxkZXBvc2l0UXVvdGWIAQESQwoLYnJpZGdlX3R5cGUYCyABKA4yHS5teXN0aWtvLmNvbW'
-    '1vbi52MS5CcmlkZ2VUeXBlSAVSCmJyaWRnZVR5cGWIAQFCDwoNX2RzdF9jaGFpbl9pZEIUChJf'
-    'YnJpZGdlX2ZlZV9hbW91bnRCFgoUX2V4ZWN1dG9yX2ZlZV9hbW91bnRCEwoRX3F1ZXJ5X3RpbW'
-    'VvdXRfbXNCEAoOX2RlcG9zaXRfcXVvdGVCDgoMX2JyaWRnZV90eXBl');
+    'EHNoaWVsZGVkX2FkZHJlc3MYBCABKAlSD3NoaWVsZGVkQWRkcmVzcxIlCgxkc3RfY2hhaW5faW'
+    'QYBSABKARIAFIKZHN0Q2hhaW5JZIgBARIvChFyb2xsdXBfZmVlX2Ftb3VudBgGIAEoAUgBUg9y'
+    'b2xsdXBGZWVBbW91bnSIAQESLwoRYnJpZGdlX2ZlZV9hbW91bnQYByABKAFIAlIPYnJpZGdlRm'
+    'VlQW1vdW50iAEBEjMKE2V4ZWN1dG9yX2ZlZV9hbW91bnQYCCABKAFIA1IRZXhlY3V0b3JGZWVB'
+    'bW91bnSIAQESLQoQcXVlcnlfdGltZW91dF9tcxgJIAEoBEgEUg5xdWVyeVRpbWVvdXRNc4gBAR'
+    'JPCg1kZXBvc2l0X3F1b3RlGAogASgLMiUubXlzdGlrby5jb3JlLmhhbmRsZXIudjEuRGVwb3Np'
+    'dFF1b3RlSAVSDGRlcG9zaXRRdW90ZYgBARJDCgticmlkZ2VfdHlwZRgLIAEoDjIdLm15c3Rpa2'
+    '8uY29tbW9uLnYxLkJyaWRnZVR5cGVIBlIKYnJpZGdlVHlwZYgBAUIPCg1fZHN0X2NoYWluX2lk'
+    'QhQKEl9yb2xsdXBfZmVlX2Ftb3VudEIUChJfYnJpZGdlX2ZlZV9hbW91bnRCFgoUX2V4ZWN1dG'
+    '9yX2ZlZV9hbW91bnRCEwoRX3F1ZXJ5X3RpbWVvdXRfbXNCEAoOX2RlcG9zaXRfcXVvdGVCDgoM'
+    'X2JyaWRnZV90eXBl');
 
 @$core.Deprecated('Use sendDepositOptionsDescriptor instead')
 const SendDepositOptions$json = {
