@@ -149,19 +149,13 @@ class CountAccountRequest extends $pb.GeneratedMessage {
   $15.QueryFilter ensureFilter() => $_ensure(0);
 }
 
-enum FindAccountRequest_Condition { filter, findAll, notSet }
-
 class FindAccountRequest extends $pb.GeneratedMessage {
   factory FindAccountRequest({
     $15.QueryFilter? filter,
-    $core.bool? findAll,
   }) {
     final $result = create();
     if (filter != null) {
       $result.filter = filter;
-    }
-    if (findAll != null) {
-      $result.findAll = findAll;
     }
     return $result;
   }
@@ -173,21 +167,13 @@ class FindAccountRequest extends $pb.GeneratedMessage {
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
 
-  static const $core.Map<$core.int, FindAccountRequest_Condition>
-      _FindAccountRequest_ConditionByTag = {
-    1: FindAccountRequest_Condition.filter,
-    2: FindAccountRequest_Condition.findAll,
-    0: FindAccountRequest_Condition.notSet
-  };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'FindAccountRequest',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.handler.v1'),
       createEmptyInstance: create)
-    ..oo(0, [1, 2])
     ..aOM<$15.QueryFilter>(1, _omitFieldNames ? '' : 'filter',
         subBuilder: $15.QueryFilter.create)
-    ..aOB(2, _omitFieldNames ? '' : 'findAll')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
@@ -213,10 +199,6 @@ class FindAccountRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<FindAccountRequest>(create);
   static FindAccountRequest? _defaultInstance;
 
-  FindAccountRequest_Condition whichCondition() =>
-      _FindAccountRequest_ConditionByTag[$_whichOneof(0)]!;
-  void clearCondition() => clearField($_whichOneof(0));
-
   @$pb.TagNumber(1)
   $15.QueryFilter get filter => $_getN(0);
   @$pb.TagNumber(1)
@@ -230,42 +212,15 @@ class FindAccountRequest extends $pb.GeneratedMessage {
   void clearFilter() => clearField(1);
   @$pb.TagNumber(1)
   $15.QueryFilter ensureFilter() => $_ensure(0);
-
-  @$pb.TagNumber(2)
-  $core.bool get findAll => $_getBF(1);
-  @$pb.TagNumber(2)
-  set findAll($core.bool v) {
-    $_setBool(1, v);
-  }
-
-  @$pb.TagNumber(2)
-  $core.bool hasFindAll() => $_has(1);
-  @$pb.TagNumber(2)
-  void clearFindAll() => clearField(2);
-}
-
-enum FindAccountByIdentifierRequest_Identifier {
-  id,
-  shieldedAddress,
-  publicKey,
-  notSet
 }
 
 class FindAccountByIdentifierRequest extends $pb.GeneratedMessage {
   factory FindAccountByIdentifierRequest({
-    $core.String? id,
-    $core.String? shieldedAddress,
-    $core.String? publicKey,
+    $core.String? identifier,
   }) {
     final $result = create();
-    if (id != null) {
-      $result.id = id;
-    }
-    if (shieldedAddress != null) {
-      $result.shieldedAddress = shieldedAddress;
-    }
-    if (publicKey != null) {
-      $result.publicKey = publicKey;
+    if (identifier != null) {
+      $result.identifier = identifier;
     }
     return $result;
   }
@@ -277,22 +232,12 @@ class FindAccountByIdentifierRequest extends $pb.GeneratedMessage {
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
 
-  static const $core.Map<$core.int, FindAccountByIdentifierRequest_Identifier>
-      _FindAccountByIdentifierRequest_IdentifierByTag = {
-    2: FindAccountByIdentifierRequest_Identifier.id,
-    3: FindAccountByIdentifierRequest_Identifier.shieldedAddress,
-    4: FindAccountByIdentifierRequest_Identifier.publicKey,
-    0: FindAccountByIdentifierRequest_Identifier.notSet
-  };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'FindAccountByIdentifierRequest',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.handler.v1'),
       createEmptyInstance: create)
-    ..oo(0, [2, 3, 4])
-    ..aOS(2, _omitFieldNames ? '' : 'id')
-    ..aOS(3, _omitFieldNames ? '' : 'shieldedAddress')
-    ..aOS(4, _omitFieldNames ? '' : 'publicKey')
+    ..aOS(1, _omitFieldNames ? '' : 'identifier')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
@@ -322,68 +267,30 @@ class FindAccountByIdentifierRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<FindAccountByIdentifierRequest>(create);
   static FindAccountByIdentifierRequest? _defaultInstance;
 
-  FindAccountByIdentifierRequest_Identifier whichIdentifier() =>
-      _FindAccountByIdentifierRequest_IdentifierByTag[$_whichOneof(0)]!;
-  void clearIdentifier() => clearField($_whichOneof(0));
-
-  @$pb.TagNumber(2)
-  $core.String get id => $_getSZ(0);
-  @$pb.TagNumber(2)
-  set id($core.String v) {
+  @$pb.TagNumber(1)
+  $core.String get identifier => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set identifier($core.String v) {
     $_setString(0, v);
   }
 
-  @$pb.TagNumber(2)
-  $core.bool hasId() => $_has(0);
-  @$pb.TagNumber(2)
-  void clearId() => clearField(2);
-
-  @$pb.TagNumber(3)
-  $core.String get shieldedAddress => $_getSZ(1);
-  @$pb.TagNumber(3)
-  set shieldedAddress($core.String v) {
-    $_setString(1, v);
-  }
-
-  @$pb.TagNumber(3)
-  $core.bool hasShieldedAddress() => $_has(1);
-  @$pb.TagNumber(3)
-  void clearShieldedAddress() => clearField(3);
-
-  @$pb.TagNumber(4)
-  $core.String get publicKey => $_getSZ(2);
-  @$pb.TagNumber(4)
-  set publicKey($core.String v) {
-    $_setString(2, v);
-  }
-
-  @$pb.TagNumber(4)
-  $core.bool hasPublicKey() => $_has(2);
-  @$pb.TagNumber(4)
-  void clearPublicKey() => clearField(4);
+  @$pb.TagNumber(1)
+  $core.bool hasIdentifier() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearIdentifier() => clearField(1);
 }
-
-enum UpdateAccountRequest_Identifier { id, shieldedAddress, publicKey, notSet }
 
 class UpdateAccountRequest extends $pb.GeneratedMessage {
   factory UpdateAccountRequest({
     $14.UpdateAccountOptions? options,
-    $core.String? id,
-    $core.String? shieldedAddress,
-    $core.String? publicKey,
+    $core.String? identifier,
   }) {
     final $result = create();
     if (options != null) {
       $result.options = options;
     }
-    if (id != null) {
-      $result.id = id;
-    }
-    if (shieldedAddress != null) {
-      $result.shieldedAddress = shieldedAddress;
-    }
-    if (publicKey != null) {
-      $result.publicKey = publicKey;
+    if (identifier != null) {
+      $result.identifier = identifier;
     }
     return $result;
   }
@@ -395,24 +302,14 @@ class UpdateAccountRequest extends $pb.GeneratedMessage {
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
 
-  static const $core.Map<$core.int, UpdateAccountRequest_Identifier>
-      _UpdateAccountRequest_IdentifierByTag = {
-    2: UpdateAccountRequest_Identifier.id,
-    3: UpdateAccountRequest_Identifier.shieldedAddress,
-    4: UpdateAccountRequest_Identifier.publicKey,
-    0: UpdateAccountRequest_Identifier.notSet
-  };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'UpdateAccountRequest',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.handler.v1'),
       createEmptyInstance: create)
-    ..oo(0, [2, 3, 4])
     ..aOM<$14.UpdateAccountOptions>(1, _omitFieldNames ? '' : 'options',
         subBuilder: $14.UpdateAccountOptions.create)
-    ..aOS(2, _omitFieldNames ? '' : 'id')
-    ..aOS(3, _omitFieldNames ? '' : 'shieldedAddress')
-    ..aOS(4, _omitFieldNames ? '' : 'publicKey')
+    ..aOS(2, _omitFieldNames ? '' : 'identifier')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
@@ -439,10 +336,6 @@ class UpdateAccountRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<UpdateAccountRequest>(create);
   static UpdateAccountRequest? _defaultInstance;
 
-  UpdateAccountRequest_Identifier whichIdentifier() =>
-      _UpdateAccountRequest_IdentifierByTag[$_whichOneof(0)]!;
-  void clearIdentifier() => clearField($_whichOneof(0));
-
   @$pb.TagNumber(1)
   $14.UpdateAccountOptions get options => $_getN(0);
   @$pb.TagNumber(1)
@@ -458,40 +351,16 @@ class UpdateAccountRequest extends $pb.GeneratedMessage {
   $14.UpdateAccountOptions ensureOptions() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $core.String get id => $_getSZ(1);
+  $core.String get identifier => $_getSZ(1);
   @$pb.TagNumber(2)
-  set id($core.String v) {
+  set identifier($core.String v) {
     $_setString(1, v);
   }
 
   @$pb.TagNumber(2)
-  $core.bool hasId() => $_has(1);
+  $core.bool hasIdentifier() => $_has(1);
   @$pb.TagNumber(2)
-  void clearId() => clearField(2);
-
-  @$pb.TagNumber(3)
-  $core.String get shieldedAddress => $_getSZ(2);
-  @$pb.TagNumber(3)
-  set shieldedAddress($core.String v) {
-    $_setString(2, v);
-  }
-
-  @$pb.TagNumber(3)
-  $core.bool hasShieldedAddress() => $_has(2);
-  @$pb.TagNumber(3)
-  void clearShieldedAddress() => clearField(3);
-
-  @$pb.TagNumber(4)
-  $core.String get publicKey => $_getSZ(3);
-  @$pb.TagNumber(4)
-  set publicKey($core.String v) {
-    $_setString(3, v);
-  }
-
-  @$pb.TagNumber(4)
-  $core.bool hasPublicKey() => $_has(3);
-  @$pb.TagNumber(4)
-  void clearPublicKey() => clearField(4);
+  void clearIdentifier() => clearField(2);
 }
 
 class UpdateEncryptionRequest extends $pb.GeneratedMessage {
@@ -575,32 +444,17 @@ class UpdateEncryptionRequest extends $pb.GeneratedMessage {
   void clearNewWalletPassword() => clearField(2);
 }
 
-enum ExportSecretKeyRequest_Identifier {
-  id,
-  publicKey,
-  shieldedAddress,
-  notSet
-}
-
 class ExportSecretKeyRequest extends $pb.GeneratedMessage {
   factory ExportSecretKeyRequest({
     $core.String? walletPassword,
-    $core.String? id,
-    $core.String? publicKey,
-    $core.String? shieldedAddress,
+    $core.String? identifier,
   }) {
     final $result = create();
     if (walletPassword != null) {
       $result.walletPassword = walletPassword;
     }
-    if (id != null) {
-      $result.id = id;
-    }
-    if (publicKey != null) {
-      $result.publicKey = publicKey;
-    }
-    if (shieldedAddress != null) {
-      $result.shieldedAddress = shieldedAddress;
+    if (identifier != null) {
+      $result.identifier = identifier;
     }
     return $result;
   }
@@ -612,23 +466,13 @@ class ExportSecretKeyRequest extends $pb.GeneratedMessage {
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
 
-  static const $core.Map<$core.int, ExportSecretKeyRequest_Identifier>
-      _ExportSecretKeyRequest_IdentifierByTag = {
-    2: ExportSecretKeyRequest_Identifier.id,
-    3: ExportSecretKeyRequest_Identifier.publicKey,
-    4: ExportSecretKeyRequest_Identifier.shieldedAddress,
-    0: ExportSecretKeyRequest_Identifier.notSet
-  };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'ExportSecretKeyRequest',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.handler.v1'),
       createEmptyInstance: create)
-    ..oo(0, [2, 3, 4])
     ..aOS(1, _omitFieldNames ? '' : 'walletPassword')
-    ..aOS(2, _omitFieldNames ? '' : 'id')
-    ..aOS(3, _omitFieldNames ? '' : 'publicKey')
-    ..aOS(4, _omitFieldNames ? '' : 'shieldedAddress')
+    ..aOS(2, _omitFieldNames ? '' : 'identifier')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
@@ -656,10 +500,6 @@ class ExportSecretKeyRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ExportSecretKeyRequest>(create);
   static ExportSecretKeyRequest? _defaultInstance;
 
-  ExportSecretKeyRequest_Identifier whichIdentifier() =>
-      _ExportSecretKeyRequest_IdentifierByTag[$_whichOneof(0)]!;
-  void clearIdentifier() => clearField($_whichOneof(0));
-
   @$pb.TagNumber(1)
   $core.String get walletPassword => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -673,40 +513,16 @@ class ExportSecretKeyRequest extends $pb.GeneratedMessage {
   void clearWalletPassword() => clearField(1);
 
   @$pb.TagNumber(2)
-  $core.String get id => $_getSZ(1);
+  $core.String get identifier => $_getSZ(1);
   @$pb.TagNumber(2)
-  set id($core.String v) {
+  set identifier($core.String v) {
     $_setString(1, v);
   }
 
   @$pb.TagNumber(2)
-  $core.bool hasId() => $_has(1);
+  $core.bool hasIdentifier() => $_has(1);
   @$pb.TagNumber(2)
-  void clearId() => clearField(2);
-
-  @$pb.TagNumber(3)
-  $core.String get publicKey => $_getSZ(2);
-  @$pb.TagNumber(3)
-  set publicKey($core.String v) {
-    $_setString(2, v);
-  }
-
-  @$pb.TagNumber(3)
-  $core.bool hasPublicKey() => $_has(2);
-  @$pb.TagNumber(3)
-  void clearPublicKey() => clearField(3);
-
-  @$pb.TagNumber(4)
-  $core.String get shieldedAddress => $_getSZ(3);
-  @$pb.TagNumber(4)
-  set shieldedAddress($core.String v) {
-    $_setString(3, v);
-  }
-
-  @$pb.TagNumber(4)
-  $core.bool hasShieldedAddress() => $_has(3);
-  @$pb.TagNumber(4)
-  void clearShieldedAddress() => clearField(4);
+  void clearIdentifier() => clearField(2);
 }
 
 class CreateAccountResponse extends $pb.GeneratedMessage {

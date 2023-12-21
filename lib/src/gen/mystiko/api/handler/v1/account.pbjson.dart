@@ -63,48 +63,29 @@ const FindAccountRequest$json = {
       '4': 1,
       '5': 11,
       '6': '.mystiko.storage.v1.QueryFilter',
-      '9': 0,
       '10': 'filter'
     },
-    {'1': 'find_all', '3': 2, '4': 1, '5': 8, '9': 0, '10': 'findAll'},
-  ],
-  '8': [
-    {'1': 'condition'},
   ],
 };
 
 /// Descriptor for `FindAccountRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List findAccountRequestDescriptor = $convert.base64Decode(
-    'ChJGaW5kQWNjb3VudFJlcXVlc3QSOQoGZmlsdGVyGAEgASgLMh8ubXlzdGlrby5zdG9yYWdlLn'
-    'YxLlF1ZXJ5RmlsdGVySABSBmZpbHRlchIbCghmaW5kX2FsbBgCIAEoCEgAUgdmaW5kQWxsQgsK'
-    'CWNvbmRpdGlvbg==');
+    'ChJGaW5kQWNjb3VudFJlcXVlc3QSNwoGZmlsdGVyGAEgASgLMh8ubXlzdGlrby5zdG9yYWdlLn'
+    'YxLlF1ZXJ5RmlsdGVyUgZmaWx0ZXI=');
 
 @$core.Deprecated('Use findAccountByIdentifierRequestDescriptor instead')
 const FindAccountByIdentifierRequest$json = {
   '1': 'FindAccountByIdentifierRequest',
   '2': [
-    {'1': 'id', '3': 2, '4': 1, '5': 9, '9': 0, '10': 'id'},
-    {
-      '1': 'shielded_address',
-      '3': 3,
-      '4': 1,
-      '5': 9,
-      '9': 0,
-      '10': 'shieldedAddress'
-    },
-    {'1': 'public_key', '3': 4, '4': 1, '5': 9, '9': 0, '10': 'publicKey'},
-  ],
-  '8': [
-    {'1': 'identifier'},
+    {'1': 'identifier', '3': 1, '4': 1, '5': 9, '10': 'identifier'},
   ],
 };
 
 /// Descriptor for `FindAccountByIdentifierRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List findAccountByIdentifierRequestDescriptor =
     $convert.base64Decode(
-        'Ch5GaW5kQWNjb3VudEJ5SWRlbnRpZmllclJlcXVlc3QSEAoCaWQYAiABKAlIAFICaWQSKwoQc2'
-        'hpZWxkZWRfYWRkcmVzcxgDIAEoCUgAUg9zaGllbGRlZEFkZHJlc3MSHwoKcHVibGljX2tleRgE'
-        'IAEoCUgAUglwdWJsaWNLZXlCDAoKaWRlbnRpZmllcg==');
+        'Ch5GaW5kQWNjb3VudEJ5SWRlbnRpZmllclJlcXVlc3QSHgoKaWRlbnRpZmllchgBIAEoCVIKaW'
+        'RlbnRpZmllcg==');
 
 @$core.Deprecated('Use updateAccountRequestDescriptor instead')
 const UpdateAccountRequest$json = {
@@ -118,28 +99,15 @@ const UpdateAccountRequest$json = {
       '6': '.mystiko.core.handler.v1.UpdateAccountOptions',
       '10': 'options'
     },
-    {'1': 'id', '3': 2, '4': 1, '5': 9, '9': 0, '10': 'id'},
-    {
-      '1': 'shielded_address',
-      '3': 3,
-      '4': 1,
-      '5': 9,
-      '9': 0,
-      '10': 'shieldedAddress'
-    },
-    {'1': 'public_key', '3': 4, '4': 1, '5': 9, '9': 0, '10': 'publicKey'},
-  ],
-  '8': [
-    {'1': 'identifier'},
+    {'1': 'identifier', '3': 2, '4': 1, '5': 9, '10': 'identifier'},
   ],
 };
 
 /// Descriptor for `UpdateAccountRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List updateAccountRequestDescriptor = $convert.base64Decode(
     'ChRVcGRhdGVBY2NvdW50UmVxdWVzdBJHCgdvcHRpb25zGAEgASgLMi0ubXlzdGlrby5jb3JlLm'
-    'hhbmRsZXIudjEuVXBkYXRlQWNjb3VudE9wdGlvbnNSB29wdGlvbnMSEAoCaWQYAiABKAlIAFIC'
-    'aWQSKwoQc2hpZWxkZWRfYWRkcmVzcxgDIAEoCUgAUg9zaGllbGRlZEFkZHJlc3MSHwoKcHVibG'
-    'ljX2tleRgEIAEoCUgAUglwdWJsaWNLZXlCDAoKaWRlbnRpZmllcg==');
+    'hhbmRsZXIudjEuVXBkYXRlQWNjb3VudE9wdGlvbnNSB29wdGlvbnMSHgoKaWRlbnRpZmllchgC'
+    'IAEoCVIKaWRlbnRpZmllcg==');
 
 @$core.Deprecated('Use updateEncryptionRequestDescriptor instead')
 const UpdateEncryptionRequest$json = {
@@ -173,28 +141,15 @@ const ExportSecretKeyRequest$json = {
   '1': 'ExportSecretKeyRequest',
   '2': [
     {'1': 'wallet_password', '3': 1, '4': 1, '5': 9, '10': 'walletPassword'},
-    {'1': 'id', '3': 2, '4': 1, '5': 9, '9': 0, '10': 'id'},
-    {'1': 'public_key', '3': 3, '4': 1, '5': 9, '9': 0, '10': 'publicKey'},
-    {
-      '1': 'shielded_address',
-      '3': 4,
-      '4': 1,
-      '5': 9,
-      '9': 0,
-      '10': 'shieldedAddress'
-    },
-  ],
-  '8': [
-    {'1': 'identifier'},
+    {'1': 'identifier', '3': 2, '4': 1, '5': 9, '10': 'identifier'},
   ],
 };
 
 /// Descriptor for `ExportSecretKeyRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List exportSecretKeyRequestDescriptor = $convert.base64Decode(
-    'ChZFeHBvcnRTZWNyZXRLZXlSZXF1ZXN0EicKD3dhbGxldF9wYXNzd29yZBgBIAEoCVIOd2FsbG'
-    'V0UGFzc3dvcmQSEAoCaWQYAiABKAlIAFICaWQSHwoKcHVibGljX2tleRgDIAEoCUgAUglwdWJs'
-    'aWNLZXkSKwoQc2hpZWxkZWRfYWRkcmVzcxgEIAEoCUgAUg9zaGllbGRlZEFkZHJlc3NCDAoKaW'
-    'RlbnRpZmllcg==');
+final $typed_data.Uint8List exportSecretKeyRequestDescriptor =
+    $convert.base64Decode(
+        'ChZFeHBvcnRTZWNyZXRLZXlSZXF1ZXN0EicKD3dhbGxldF9wYXNzd29yZBgBIAEoCVIOd2FsbG'
+        'V0UGFzc3dvcmQSHgoKaWRlbnRpZmllchgCIAEoCVIKaWRlbnRpZmllcg==');
 
 @$core.Deprecated('Use createAccountResponseDescriptor instead')
 const CreateAccountResponse$json = {

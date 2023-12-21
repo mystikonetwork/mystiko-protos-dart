@@ -211,28 +211,28 @@ final $typed_data.Uint8List scannerErrorDescriptor = $convert.base64Decode(
     'dTQ0FOTkVSX0VSUk9SX0RFU0VSSUFMSVpFX01FU1NBR0VfRVJST1IQDRIkCiBTQ0FOTkVSX0VS'
     'Uk9SX1BST1RPQ09MX0tFWV9FUlJPUhAO');
 
-@$core.Deprecated('Use synchronizeErrorDescriptor instead')
-const SynchronizeError$json = {
-  '1': 'SynchronizeError',
+@$core.Deprecated('Use synchronizerErrorDescriptor instead')
+const SynchronizerError$json = {
+  '1': 'SynchronizerError',
   '2': [
-    {'1': 'SYNCHRONIZE_ERROR_UNSPECIFIED', '2': 0},
-    {'1': 'SYNCHRONIZE_ERROR_UNSUPPORTED_CHAIN_ERROR', '2': 1},
-    {'1': 'SYNCHRONIZE_ERROR_DATALOADER_ERROR', '2': 2},
-    {'1': 'SYNCHRONIZE_ERROR_DATALOADER_CONFIG_ERROR', '2': 3},
-    {'1': 'SYNCHRONIZE_ERROR_ANYHOW_ERROR', '2': 4},
-    {'1': 'SYNCHRONIZE_ERROR_GET_MYSTIKO_GUARD_ERROR', '2': 5},
-    {'1': 'SYNCHRONIZE_ERROR_DESERIALIZE_MESSAGE_ERROR', '2': 6},
+    {'1': 'SYNCHRONIZER_ERROR_UNSPECIFIED', '2': 0},
+    {'1': 'SYNCHRONIZER_ERROR_UNSUPPORTED_CHAIN_ERROR', '2': 1},
+    {'1': 'SYNCHRONIZER_ERROR_DATALOADER_ERROR', '2': 2},
+    {'1': 'SYNCHRONIZER_ERROR_DATALOADER_CONFIG_ERROR', '2': 3},
+    {'1': 'SYNCHRONIZER_ERROR_ANYHOW_ERROR', '2': 4},
+    {'1': 'SYNCHRONIZER_ERROR_GET_MYSTIKO_GUARD_ERROR', '2': 5},
+    {'1': 'SYNCHRONIZER_ERROR_DESERIALIZE_MESSAGE_ERROR', '2': 6},
   ],
 };
 
-/// Descriptor for `SynchronizeError`. Decode as a `google.protobuf.EnumDescriptorProto`.
-final $typed_data.Uint8List synchronizeErrorDescriptor = $convert.base64Decode(
-    'ChBTeW5jaHJvbml6ZUVycm9yEiEKHVNZTkNIUk9OSVpFX0VSUk9SX1VOU1BFQ0lGSUVEEAASLQ'
-    'opU1lOQ0hST05JWkVfRVJST1JfVU5TVVBQT1JURURfQ0hBSU5fRVJST1IQARImCiJTWU5DSFJP'
-    'TklaRV9FUlJPUl9EQVRBTE9BREVSX0VSUk9SEAISLQopU1lOQ0hST05JWkVfRVJST1JfREFUQU'
-    'xPQURFUl9DT05GSUdfRVJST1IQAxIiCh5TWU5DSFJPTklaRV9FUlJPUl9BTllIT1dfRVJST1IQ'
-    'BBItCilTWU5DSFJPTklaRV9FUlJPUl9HRVRfTVlTVElLT19HVUFSRF9FUlJPUhAFEi8KK1NZTk'
-    'NIUk9OSVpFX0VSUk9SX0RFU0VSSUFMSVpFX01FU1NBR0VfRVJST1IQBg==');
+/// Descriptor for `SynchronizerError`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List synchronizerErrorDescriptor = $convert.base64Decode(
+    'ChFTeW5jaHJvbml6ZXJFcnJvchIiCh5TWU5DSFJPTklaRVJfRVJST1JfVU5TUEVDSUZJRUQQAB'
+    'IuCipTWU5DSFJPTklaRVJfRVJST1JfVU5TVVBQT1JURURfQ0hBSU5fRVJST1IQARInCiNTWU5D'
+    'SFJPTklaRVJfRVJST1JfREFUQUxPQURFUl9FUlJPUhACEi4KKlNZTkNIUk9OSVpFUl9FUlJPUl'
+    '9EQVRBTE9BREVSX0NPTkZJR19FUlJPUhADEiMKH1NZTkNIUk9OSVpFUl9FUlJPUl9BTllIT1df'
+    'RVJST1IQBBIuCipTWU5DSFJPTklaRVJfRVJST1JfR0VUX01ZU1RJS09fR1VBUkRfRVJST1IQBR'
+    'IwCixTWU5DSFJPTklaRVJfRVJST1JfREVTRVJJQUxJWkVfTUVTU0FHRV9FUlJPUhAG');
 
 @$core.Deprecated('Use apiResponseDescriptor instead')
 const ApiResponse$json = {
@@ -318,13 +318,13 @@ const StatusCode$json = {
       '10': 'scanner'
     },
     {
-      '1': 'synchronize',
+      '1': 'synchronizer',
       '3': 7,
       '4': 1,
       '5': 14,
-      '6': '.mystiko.api.v1.SynchronizeError',
+      '6': '.mystiko.api.v1.SynchronizerError',
       '9': 0,
-      '10': 'synchronize'
+      '10': 'synchronizer'
     },
     {
       '1': 'config',
@@ -348,7 +348,7 @@ final $typed_data.Uint8List statusCodeDescriptor = $convert.base64Decode(
     'DjIbLm15c3Rpa28uYXBpLnYxLldhbGxldEVycm9ySABSBndhbGxldBI4CgdhY2NvdW50GAQgAS'
     'gOMhwubXlzdGlrby5hcGkudjEuQWNjb3VudEVycm9ySABSB2FjY291bnQSOAoHZGVwb3NpdBgF'
     'IAEoDjIcLm15c3Rpa28uYXBpLnYxLkRlcG9zaXRFcnJvckgAUgdkZXBvc2l0EjgKB3NjYW5uZX'
-    'IYBiABKA4yHC5teXN0aWtvLmFwaS52MS5TY2FubmVyRXJyb3JIAFIHc2Nhbm5lchJECgtzeW5j'
-    'aHJvbml6ZRgHIAEoDjIgLm15c3Rpa28uYXBpLnYxLlN5bmNocm9uaXplRXJyb3JIAFILc3luY2'
-    'hyb25pemUSNQoGY29uZmlnGAggASgOMhsubXlzdGlrby5hcGkudjEuQ29uZmlnRXJyb3JIAFIG'
-    'Y29uZmlnQgcKBWVycm9y');
+    'IYBiABKA4yHC5teXN0aWtvLmFwaS52MS5TY2FubmVyRXJyb3JIAFIHc2Nhbm5lchJHCgxzeW5j'
+    'aHJvbml6ZXIYByABKA4yIS5teXN0aWtvLmFwaS52MS5TeW5jaHJvbml6ZXJFcnJvckgAUgxzeW'
+    '5jaHJvbml6ZXISNQoGY29uZmlnGAggASgOMhsubXlzdGlrby5hcGkudjEuQ29uZmlnRXJyb3JI'
+    'AFIGY29uZmlnQgcKBWVycm9y');

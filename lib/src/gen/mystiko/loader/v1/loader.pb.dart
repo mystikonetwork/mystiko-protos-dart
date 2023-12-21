@@ -13,19 +13,19 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../common/v1/config.pb.dart' as $21;
-import 'fetcher.pb.dart' as $22;
-import 'fetcher.pbenum.dart' as $22;
-import 'validator.pb.dart' as $23;
-import 'validator.pbenum.dart' as $23;
+import '../../common/v1/config.pb.dart' as $28;
+import 'fetcher.pb.dart' as $29;
+import 'fetcher.pbenum.dart' as $29;
+import 'validator.pb.dart' as $30;
+import 'validator.pbenum.dart' as $30;
 
 class LoaderConfig extends $pb.GeneratedMessage {
   factory LoaderConfig({
-    $core.Map<$core.int, $22.FetcherType>? fetchers,
-    $core.Map<$core.int, $23.ValidatorType>? validators,
-    $21.ConfigOptions? mystikoConfigOptions,
-    $22.FetcherConfig? fetcherConfig,
-    $23.ValidatorConfig? validatorConfig,
+    $core.Map<$core.int, $29.FetcherType>? fetchers,
+    $core.Map<$core.int, $30.ValidatorType>? validators,
+    $28.ConfigOptions? mystikoConfigOptions,
+    $29.FetcherConfig? fetcherConfig,
+    $30.ValidatorConfig? validatorConfig,
   }) {
     final $result = create();
     if (fetchers != null) {
@@ -58,30 +58,30 @@ class LoaderConfig extends $pb.GeneratedMessage {
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'mystiko.loader.v1'),
       createEmptyInstance: create)
-    ..m<$core.int, $22.FetcherType>(1, _omitFieldNames ? '' : 'fetchers',
+    ..m<$core.int, $29.FetcherType>(1, _omitFieldNames ? '' : 'fetchers',
         entryClassName: 'LoaderConfig.FetchersEntry',
         keyFieldType: $pb.PbFieldType.OU3,
         valueFieldType: $pb.PbFieldType.OE,
-        valueOf: $22.FetcherType.valueOf,
-        enumValues: $22.FetcherType.values,
-        valueDefaultOrMaker: $22.FetcherType.FETCHER_TYPE_UNSPECIFIED,
-        defaultEnumValue: $22.FetcherType.FETCHER_TYPE_UNSPECIFIED,
+        valueOf: $29.FetcherType.valueOf,
+        enumValues: $29.FetcherType.values,
+        valueDefaultOrMaker: $29.FetcherType.FETCHER_TYPE_UNSPECIFIED,
+        defaultEnumValue: $29.FetcherType.FETCHER_TYPE_UNSPECIFIED,
         packageName: const $pb.PackageName('mystiko.loader.v1'))
-    ..m<$core.int, $23.ValidatorType>(2, _omitFieldNames ? '' : 'validators',
+    ..m<$core.int, $30.ValidatorType>(2, _omitFieldNames ? '' : 'validators',
         entryClassName: 'LoaderConfig.ValidatorsEntry',
         keyFieldType: $pb.PbFieldType.OU3,
         valueFieldType: $pb.PbFieldType.OE,
-        valueOf: $23.ValidatorType.valueOf,
-        enumValues: $23.ValidatorType.values,
-        valueDefaultOrMaker: $23.ValidatorType.VALIDATOR_TYPE_UNSPECIFIED,
-        defaultEnumValue: $23.ValidatorType.VALIDATOR_TYPE_UNSPECIFIED,
+        valueOf: $30.ValidatorType.valueOf,
+        enumValues: $30.ValidatorType.values,
+        valueDefaultOrMaker: $30.ValidatorType.VALIDATOR_TYPE_UNSPECIFIED,
+        defaultEnumValue: $30.ValidatorType.VALIDATOR_TYPE_UNSPECIFIED,
         packageName: const $pb.PackageName('mystiko.loader.v1'))
-    ..aOM<$21.ConfigOptions>(3, _omitFieldNames ? '' : 'mystikoConfigOptions',
-        subBuilder: $21.ConfigOptions.create)
-    ..aOM<$22.FetcherConfig>(4, _omitFieldNames ? '' : 'fetcherConfig',
-        subBuilder: $22.FetcherConfig.create)
-    ..aOM<$23.ValidatorConfig>(5, _omitFieldNames ? '' : 'validatorConfig',
-        subBuilder: $23.ValidatorConfig.create)
+    ..aOM<$28.ConfigOptions>(3, _omitFieldNames ? '' : 'mystikoConfigOptions',
+        subBuilder: $28.ConfigOptions.create)
+    ..aOM<$29.FetcherConfig>(4, _omitFieldNames ? '' : 'fetcherConfig',
+        subBuilder: $29.FetcherConfig.create)
+    ..aOM<$30.ValidatorConfig>(5, _omitFieldNames ? '' : 'validatorConfig',
+        subBuilder: $30.ValidatorConfig.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
@@ -108,15 +108,15 @@ class LoaderConfig extends $pb.GeneratedMessage {
   static LoaderConfig? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.Map<$core.int, $22.FetcherType> get fetchers => $_getMap(0);
+  $core.Map<$core.int, $29.FetcherType> get fetchers => $_getMap(0);
 
   @$pb.TagNumber(2)
-  $core.Map<$core.int, $23.ValidatorType> get validators => $_getMap(1);
+  $core.Map<$core.int, $30.ValidatorType> get validators => $_getMap(1);
 
   @$pb.TagNumber(3)
-  $21.ConfigOptions get mystikoConfigOptions => $_getN(2);
+  $28.ConfigOptions get mystikoConfigOptions => $_getN(2);
   @$pb.TagNumber(3)
-  set mystikoConfigOptions($21.ConfigOptions v) {
+  set mystikoConfigOptions($28.ConfigOptions v) {
     setField(3, v);
   }
 
@@ -125,12 +125,12 @@ class LoaderConfig extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearMystikoConfigOptions() => clearField(3);
   @$pb.TagNumber(3)
-  $21.ConfigOptions ensureMystikoConfigOptions() => $_ensure(2);
+  $28.ConfigOptions ensureMystikoConfigOptions() => $_ensure(2);
 
   @$pb.TagNumber(4)
-  $22.FetcherConfig get fetcherConfig => $_getN(3);
+  $29.FetcherConfig get fetcherConfig => $_getN(3);
   @$pb.TagNumber(4)
-  set fetcherConfig($22.FetcherConfig v) {
+  set fetcherConfig($29.FetcherConfig v) {
     setField(4, v);
   }
 
@@ -139,12 +139,12 @@ class LoaderConfig extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearFetcherConfig() => clearField(4);
   @$pb.TagNumber(4)
-  $22.FetcherConfig ensureFetcherConfig() => $_ensure(3);
+  $29.FetcherConfig ensureFetcherConfig() => $_ensure(3);
 
   @$pb.TagNumber(5)
-  $23.ValidatorConfig get validatorConfig => $_getN(4);
+  $30.ValidatorConfig get validatorConfig => $_getN(4);
   @$pb.TagNumber(5)
-  set validatorConfig($23.ValidatorConfig v) {
+  set validatorConfig($30.ValidatorConfig v) {
     setField(5, v);
   }
 
@@ -153,7 +153,7 @@ class LoaderConfig extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearValidatorConfig() => clearField(5);
   @$pb.TagNumber(5)
-  $23.ValidatorConfig ensureValidatorConfig() => $_ensure(4);
+  $30.ValidatorConfig ensureValidatorConfig() => $_ensure(4);
 }
 
 const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');

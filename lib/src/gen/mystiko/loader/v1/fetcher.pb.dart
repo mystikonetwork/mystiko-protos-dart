@@ -149,6 +149,7 @@ class EtherscanFetcherConfig extends $pb.GeneratedMessage {
     $core.int? concurrency,
     $core.Map<$fixnum.Int64, EtherscanFetcherChainConfig>? chains,
     $core.bool? skipValidation,
+    $core.int? targetBlockPriority,
   }) {
     final $result = create();
     if (concurrency != null) {
@@ -159,6 +160,9 @@ class EtherscanFetcherConfig extends $pb.GeneratedMessage {
     }
     if (skipValidation != null) {
       $result.skipValidation = skipValidation;
+    }
+    if (targetBlockPriority != null) {
+      $result.targetBlockPriority = targetBlockPriority;
     }
     return $result;
   }
@@ -185,6 +189,8 @@ class EtherscanFetcherConfig extends $pb.GeneratedMessage {
         valueDefaultOrMaker: EtherscanFetcherChainConfig.getDefault,
         packageName: const $pb.PackageName('mystiko.loader.v1'))
     ..aOB(3, _omitFieldNames ? '' : 'skipValidation')
+    ..a<$core.int>(
+        4, _omitFieldNames ? '' : 'targetBlockPriority', $pb.PbFieldType.OU3)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
@@ -239,6 +245,18 @@ class EtherscanFetcherConfig extends $pb.GeneratedMessage {
   $core.bool hasSkipValidation() => $_has(2);
   @$pb.TagNumber(3)
   void clearSkipValidation() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.int get targetBlockPriority => $_getIZ(3);
+  @$pb.TagNumber(4)
+  set targetBlockPriority($core.int v) {
+    $_setUnsignedInt32(3, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasTargetBlockPriority() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearTargetBlockPriority() => clearField(4);
 }
 
 class EtherscanFetcherChainConfig extends $pb.GeneratedMessage {
@@ -404,6 +422,7 @@ class ProviderFetcherConfig extends $pb.GeneratedMessage {
     $fixnum.Int64? timeoutMs,
     $core.Map<$fixnum.Int64, ProviderFetcherChainConfig>? chains,
     $core.bool? skipValidation,
+    $core.int? targetBlockPriority,
   }) {
     final $result = create();
     if (concurrency != null) {
@@ -417,6 +436,9 @@ class ProviderFetcherConfig extends $pb.GeneratedMessage {
     }
     if (skipValidation != null) {
       $result.skipValidation = skipValidation;
+    }
+    if (targetBlockPriority != null) {
+      $result.targetBlockPriority = targetBlockPriority;
     }
     return $result;
   }
@@ -446,6 +468,8 @@ class ProviderFetcherConfig extends $pb.GeneratedMessage {
         valueDefaultOrMaker: ProviderFetcherChainConfig.getDefault,
         packageName: const $pb.PackageName('mystiko.loader.v1'))
     ..aOB(4, _omitFieldNames ? '' : 'skipValidation')
+    ..a<$core.int>(
+        5, _omitFieldNames ? '' : 'targetBlockPriority', $pb.PbFieldType.OU3)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
@@ -512,6 +536,18 @@ class ProviderFetcherConfig extends $pb.GeneratedMessage {
   $core.bool hasSkipValidation() => $_has(3);
   @$pb.TagNumber(4)
   void clearSkipValidation() => clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.int get targetBlockPriority => $_getIZ(4);
+  @$pb.TagNumber(5)
+  set targetBlockPriority($core.int v) {
+    $_setUnsignedInt32(4, v);
+  }
+
+  @$pb.TagNumber(5)
+  $core.bool hasTargetBlockPriority() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearTargetBlockPriority() => clearField(5);
 }
 
 class ProviderFetcherChainConfig extends $pb.GeneratedMessage {
@@ -617,10 +653,14 @@ class ProviderFetcherChainConfig extends $pb.GeneratedMessage {
 class PackerFetcherConfig extends $pb.GeneratedMessage {
   factory PackerFetcherConfig({
     $core.bool? skipValidation,
+    $core.int? targetBlockPriority,
   }) {
     final $result = create();
     if (skipValidation != null) {
       $result.skipValidation = skipValidation;
+    }
+    if (targetBlockPriority != null) {
+      $result.targetBlockPriority = targetBlockPriority;
     }
     return $result;
   }
@@ -638,6 +678,8 @@ class PackerFetcherConfig extends $pb.GeneratedMessage {
           const $pb.PackageName(_omitMessageNames ? '' : 'mystiko.loader.v1'),
       createEmptyInstance: create)
     ..aOB(1, _omitFieldNames ? '' : 'skipValidation')
+    ..a<$core.int>(
+        2, _omitFieldNames ? '' : 'targetBlockPriority', $pb.PbFieldType.OU3)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
@@ -674,16 +716,32 @@ class PackerFetcherConfig extends $pb.GeneratedMessage {
   $core.bool hasSkipValidation() => $_has(0);
   @$pb.TagNumber(1)
   void clearSkipValidation() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.int get targetBlockPriority => $_getIZ(1);
+  @$pb.TagNumber(2)
+  set targetBlockPriority($core.int v) {
+    $_setUnsignedInt32(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasTargetBlockPriority() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearTargetBlockPriority() => clearField(2);
 }
 
 class SequencerFetcherConfig extends $pb.GeneratedMessage {
   factory SequencerFetcherConfig({
     $core.bool? skipValidation,
+    $core.int? targetBlockPriority,
     $8.ClientOptions? options,
   }) {
     final $result = create();
     if (skipValidation != null) {
       $result.skipValidation = skipValidation;
+    }
+    if (targetBlockPriority != null) {
+      $result.targetBlockPriority = targetBlockPriority;
     }
     if (options != null) {
       $result.options = options;
@@ -704,7 +762,9 @@ class SequencerFetcherConfig extends $pb.GeneratedMessage {
           const $pb.PackageName(_omitMessageNames ? '' : 'mystiko.loader.v1'),
       createEmptyInstance: create)
     ..aOB(1, _omitFieldNames ? '' : 'skipValidation')
-    ..aOM<$8.ClientOptions>(2, _omitFieldNames ? '' : 'options',
+    ..a<$core.int>(
+        2, _omitFieldNames ? '' : 'targetBlockPriority', $pb.PbFieldType.OU3)
+    ..aOM<$8.ClientOptions>(3, _omitFieldNames ? '' : 'options',
         subBuilder: $8.ClientOptions.create)
     ..hasRequiredFields = false;
 
@@ -746,18 +806,30 @@ class SequencerFetcherConfig extends $pb.GeneratedMessage {
   void clearSkipValidation() => clearField(1);
 
   @$pb.TagNumber(2)
-  $8.ClientOptions get options => $_getN(1);
+  $core.int get targetBlockPriority => $_getIZ(1);
   @$pb.TagNumber(2)
-  set options($8.ClientOptions v) {
-    setField(2, v);
+  set targetBlockPriority($core.int v) {
+    $_setUnsignedInt32(1, v);
   }
 
   @$pb.TagNumber(2)
-  $core.bool hasOptions() => $_has(1);
+  $core.bool hasTargetBlockPriority() => $_has(1);
   @$pb.TagNumber(2)
-  void clearOptions() => clearField(2);
-  @$pb.TagNumber(2)
-  $8.ClientOptions ensureOptions() => $_ensure(1);
+  void clearTargetBlockPriority() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $8.ClientOptions get options => $_getN(2);
+  @$pb.TagNumber(3)
+  set options($8.ClientOptions v) {
+    setField(3, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasOptions() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearOptions() => clearField(3);
+  @$pb.TagNumber(3)
+  $8.ClientOptions ensureOptions() => $_ensure(2);
 }
 
 const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
