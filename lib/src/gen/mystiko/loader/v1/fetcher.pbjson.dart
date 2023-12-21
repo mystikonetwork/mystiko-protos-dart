@@ -124,11 +124,21 @@ const EtherscanFetcherConfig$json = {
       '10': 'skipValidation',
       '17': true
     },
+    {
+      '1': 'target_block_priority',
+      '3': 4,
+      '4': 1,
+      '5': 13,
+      '9': 2,
+      '10': 'targetBlockPriority',
+      '17': true
+    },
   ],
   '3': [EtherscanFetcherConfig_ChainsEntry$json],
   '8': [
     {'1': '_concurrency'},
     {'1': '_skip_validation'},
+    {'1': '_target_block_priority'},
   ],
 };
 
@@ -154,9 +164,11 @@ final $typed_data.Uint8List etherscanFetcherConfigDescriptor = $convert.base64De
     'ChZFdGhlcnNjYW5GZXRjaGVyQ29uZmlnEiUKC2NvbmN1cnJlbmN5GAEgASgNSABSC2NvbmN1cn'
     'JlbmN5iAEBEk0KBmNoYWlucxgCIAMoCzI1Lm15c3Rpa28ubG9hZGVyLnYxLkV0aGVyc2NhbkZl'
     'dGNoZXJDb25maWcuQ2hhaW5zRW50cnlSBmNoYWlucxIsCg9za2lwX3ZhbGlkYXRpb24YAyABKA'
-    'hIAVIOc2tpcFZhbGlkYXRpb26IAQEaaQoLQ2hhaW5zRW50cnkSEAoDa2V5GAEgASgEUgNrZXkS'
-    'RAoFdmFsdWUYAiABKAsyLi5teXN0aWtvLmxvYWRlci52MS5FdGhlcnNjYW5GZXRjaGVyQ2hhaW'
-    '5Db25maWdSBXZhbHVlOgI4AUIOCgxfY29uY3VycmVuY3lCEgoQX3NraXBfdmFsaWRhdGlvbg==');
+    'hIAVIOc2tpcFZhbGlkYXRpb26IAQESNwoVdGFyZ2V0X2Jsb2NrX3ByaW9yaXR5GAQgASgNSAJS'
+    'E3RhcmdldEJsb2NrUHJpb3JpdHmIAQEaaQoLQ2hhaW5zRW50cnkSEAoDa2V5GAEgASgEUgNrZX'
+    'kSRAoFdmFsdWUYAiABKAsyLi5teXN0aWtvLmxvYWRlci52MS5FdGhlcnNjYW5GZXRjaGVyQ2hh'
+    'aW5Db25maWdSBXZhbHVlOgI4AUIOCgxfY29uY3VycmVuY3lCEgoQX3NraXBfdmFsaWRhdGlvbk'
+    'IYChZfdGFyZ2V0X2Jsb2NrX3ByaW9yaXR5');
 
 @$core.Deprecated('Use etherscanFetcherChainConfigDescriptor instead')
 const EtherscanFetcherChainConfig$json = {
@@ -268,12 +280,22 @@ const ProviderFetcherConfig$json = {
       '10': 'skipValidation',
       '17': true
     },
+    {
+      '1': 'target_block_priority',
+      '3': 5,
+      '4': 1,
+      '5': 13,
+      '9': 3,
+      '10': 'targetBlockPriority',
+      '17': true
+    },
   ],
   '3': [ProviderFetcherConfig_ChainsEntry$json],
   '8': [
     {'1': '_concurrency'},
     {'1': '_timeout_ms'},
     {'1': '_skip_validation'},
+    {'1': '_target_block_priority'},
   ],
 };
 
@@ -300,9 +322,11 @@ final $typed_data.Uint8List providerFetcherConfigDescriptor = $convert.base64Dec
     'VuY3mIAQESIgoKdGltZW91dF9tcxgCIAEoBEgBUgl0aW1lb3V0TXOIAQESTAoGY2hhaW5zGAMg'
     'AygLMjQubXlzdGlrby5sb2FkZXIudjEuUHJvdmlkZXJGZXRjaGVyQ29uZmlnLkNoYWluc0VudH'
     'J5UgZjaGFpbnMSLAoPc2tpcF92YWxpZGF0aW9uGAQgASgISAJSDnNraXBWYWxpZGF0aW9uiAEB'
-    'GmgKC0NoYWluc0VudHJ5EhAKA2tleRgBIAEoBFIDa2V5EkMKBXZhbHVlGAIgASgLMi0ubXlzdG'
-    'lrby5sb2FkZXIudjEuUHJvdmlkZXJGZXRjaGVyQ2hhaW5Db25maWdSBXZhbHVlOgI4AUIOCgxf'
-    'Y29uY3VycmVuY3lCDQoLX3RpbWVvdXRfbXNCEgoQX3NraXBfdmFsaWRhdGlvbg==');
+    'EjcKFXRhcmdldF9ibG9ja19wcmlvcml0eRgFIAEoDUgDUhN0YXJnZXRCbG9ja1ByaW9yaXR5iA'
+    'EBGmgKC0NoYWluc0VudHJ5EhAKA2tleRgBIAEoBFIDa2V5EkMKBXZhbHVlGAIgASgLMi0ubXlz'
+    'dGlrby5sb2FkZXIudjEuUHJvdmlkZXJGZXRjaGVyQ2hhaW5Db25maWdSBXZhbHVlOgI4AUIOCg'
+    'xfY29uY3VycmVuY3lCDQoLX3RpbWVvdXRfbXNCEgoQX3NraXBfdmFsaWRhdGlvbkIYChZfdGFy'
+    'Z2V0X2Jsb2NrX3ByaW9yaXR5');
 
 @$core.Deprecated('Use providerFetcherChainConfigDescriptor instead')
 const ProviderFetcherChainConfig$json = {
@@ -375,16 +399,28 @@ const PackerFetcherConfig$json = {
       '10': 'skipValidation',
       '17': true
     },
+    {
+      '1': 'target_block_priority',
+      '3': 2,
+      '4': 1,
+      '5': 13,
+      '9': 1,
+      '10': 'targetBlockPriority',
+      '17': true
+    },
   ],
   '8': [
     {'1': '_skip_validation'},
+    {'1': '_target_block_priority'},
   ],
 };
 
 /// Descriptor for `PackerFetcherConfig`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List packerFetcherConfigDescriptor = $convert.base64Decode(
     'ChNQYWNrZXJGZXRjaGVyQ29uZmlnEiwKD3NraXBfdmFsaWRhdGlvbhgBIAEoCEgAUg5za2lwVm'
-    'FsaWRhdGlvbogBAUISChBfc2tpcF92YWxpZGF0aW9u');
+    'FsaWRhdGlvbogBARI3ChV0YXJnZXRfYmxvY2tfcHJpb3JpdHkYAiABKA1IAVITdGFyZ2V0Qmxv'
+    'Y2tQcmlvcml0eYgBAUISChBfc2tpcF92YWxpZGF0aW9uQhgKFl90YXJnZXRfYmxvY2tfcHJpb3'
+    'JpdHk=');
 
 @$core.Deprecated('Use sequencerFetcherConfigDescriptor instead')
 const SequencerFetcherConfig$json = {
@@ -400,18 +436,28 @@ const SequencerFetcherConfig$json = {
       '17': true
     },
     {
-      '1': 'options',
+      '1': 'target_block_priority',
       '3': 2,
+      '4': 1,
+      '5': 13,
+      '9': 1,
+      '10': 'targetBlockPriority',
+      '17': true
+    },
+    {
+      '1': 'options',
+      '3': 3,
       '4': 1,
       '5': 11,
       '6': '.mystiko.service.v1.ClientOptions',
-      '9': 1,
+      '9': 2,
       '10': 'options',
       '17': true
     },
   ],
   '8': [
     {'1': '_skip_validation'},
+    {'1': '_target_block_priority'},
     {'1': '_options'},
   ],
 };
@@ -419,6 +465,7 @@ const SequencerFetcherConfig$json = {
 /// Descriptor for `SequencerFetcherConfig`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List sequencerFetcherConfigDescriptor = $convert.base64Decode(
     'ChZTZXF1ZW5jZXJGZXRjaGVyQ29uZmlnEiwKD3NraXBfdmFsaWRhdGlvbhgBIAEoCEgAUg5za2'
-    'lwVmFsaWRhdGlvbogBARJACgdvcHRpb25zGAIgASgLMiEubXlzdGlrby5zZXJ2aWNlLnYxLkNs'
-    'aWVudE9wdGlvbnNIAVIHb3B0aW9uc4gBAUISChBfc2tpcF92YWxpZGF0aW9uQgoKCF9vcHRpb2'
-    '5z');
+    'lwVmFsaWRhdGlvbogBARI3ChV0YXJnZXRfYmxvY2tfcHJpb3JpdHkYAiABKA1IAVITdGFyZ2V0'
+    'QmxvY2tQcmlvcml0eYgBARJACgdvcHRpb25zGAMgASgLMiEubXlzdGlrby5zZXJ2aWNlLnYxLk'
+    'NsaWVudE9wdGlvbnNIAlIHb3B0aW9uc4gBAUISChBfc2tpcF92YWxpZGF0aW9uQhgKFl90YXJn'
+    'ZXRfYmxvY2tfcHJpb3JpdHlCCgoIX29wdGlvbnM=');

@@ -134,7 +134,7 @@ enum StatusCode_Error {
   account,
   deposit,
   scanner,
-  synchronize,
+  synchronizer,
   config,
   notSet
 }
@@ -147,7 +147,7 @@ class StatusCode extends $pb.GeneratedMessage {
     AccountError? account,
     DepositError? deposit,
     ScannerError? scanner,
-    SynchronizeError? synchronize,
+    SynchronizerError? synchronizer,
     ConfigError? config,
   }) {
     final $result = create();
@@ -169,8 +169,8 @@ class StatusCode extends $pb.GeneratedMessage {
     if (scanner != null) {
       $result.scanner = scanner;
     }
-    if (synchronize != null) {
-      $result.synchronize = synchronize;
+    if (synchronizer != null) {
+      $result.synchronizer = synchronizer;
     }
     if (config != null) {
       $result.config = config;
@@ -191,7 +191,7 @@ class StatusCode extends $pb.GeneratedMessage {
     4: StatusCode_Error.account,
     5: StatusCode_Error.deposit,
     6: StatusCode_Error.scanner,
-    7: StatusCode_Error.synchronize,
+    7: StatusCode_Error.synchronizer,
     8: StatusCode_Error.config,
     0: StatusCode_Error.notSet
   };
@@ -221,11 +221,11 @@ class StatusCode extends $pb.GeneratedMessage {
         defaultOrMaker: ScannerError.SCANNER_ERROR_UNSPECIFIED,
         valueOf: ScannerError.valueOf,
         enumValues: ScannerError.values)
-    ..e<SynchronizeError>(
-        7, _omitFieldNames ? '' : 'synchronize', $pb.PbFieldType.OE,
-        defaultOrMaker: SynchronizeError.SYNCHRONIZE_ERROR_UNSPECIFIED,
-        valueOf: SynchronizeError.valueOf,
-        enumValues: SynchronizeError.values)
+    ..e<SynchronizerError>(
+        7, _omitFieldNames ? '' : 'synchronizer', $pb.PbFieldType.OE,
+        defaultOrMaker: SynchronizerError.SYNCHRONIZER_ERROR_UNSPECIFIED,
+        valueOf: SynchronizerError.valueOf,
+        enumValues: SynchronizerError.values)
     ..e<ConfigError>(8, _omitFieldNames ? '' : 'config', $pb.PbFieldType.OE,
         defaultOrMaker: ConfigError.CONFIG_ERROR_UNSPECIFIED,
         valueOf: ConfigError.valueOf,
@@ -329,16 +329,16 @@ class StatusCode extends $pb.GeneratedMessage {
   void clearScanner() => clearField(6);
 
   @$pb.TagNumber(7)
-  SynchronizeError get synchronize => $_getN(6);
+  SynchronizerError get synchronizer => $_getN(6);
   @$pb.TagNumber(7)
-  set synchronize(SynchronizeError v) {
+  set synchronizer(SynchronizerError v) {
     setField(7, v);
   }
 
   @$pb.TagNumber(7)
-  $core.bool hasSynchronize() => $_has(6);
+  $core.bool hasSynchronizer() => $_has(6);
   @$pb.TagNumber(7)
-  void clearSynchronize() => clearField(7);
+  void clearSynchronizer() => clearField(7);
 
   @$pb.TagNumber(8)
   ConfigError get config => $_getN(7);

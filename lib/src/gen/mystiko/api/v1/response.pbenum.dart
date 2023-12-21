@@ -363,44 +363,44 @@ class ScannerError extends $pb.ProtobufEnum {
   const ScannerError._($core.int v, $core.String n) : super(v, n);
 }
 
-class SynchronizeError extends $pb.ProtobufEnum {
-  static const SynchronizeError SYNCHRONIZE_ERROR_UNSPECIFIED =
-      SynchronizeError._(
-          0, _omitEnumNames ? '' : 'SYNCHRONIZE_ERROR_UNSPECIFIED');
-  static const SynchronizeError SYNCHRONIZE_ERROR_UNSUPPORTED_CHAIN_ERROR =
-      SynchronizeError._(
-          1, _omitEnumNames ? '' : 'SYNCHRONIZE_ERROR_UNSUPPORTED_CHAIN_ERROR');
-  static const SynchronizeError SYNCHRONIZE_ERROR_DATALOADER_ERROR =
-      SynchronizeError._(
-          2, _omitEnumNames ? '' : 'SYNCHRONIZE_ERROR_DATALOADER_ERROR');
-  static const SynchronizeError SYNCHRONIZE_ERROR_DATALOADER_CONFIG_ERROR =
-      SynchronizeError._(
-          3, _omitEnumNames ? '' : 'SYNCHRONIZE_ERROR_DATALOADER_CONFIG_ERROR');
-  static const SynchronizeError SYNCHRONIZE_ERROR_ANYHOW_ERROR =
-      SynchronizeError._(
-          4, _omitEnumNames ? '' : 'SYNCHRONIZE_ERROR_ANYHOW_ERROR');
-  static const SynchronizeError SYNCHRONIZE_ERROR_GET_MYSTIKO_GUARD_ERROR =
-      SynchronizeError._(
-          5, _omitEnumNames ? '' : 'SYNCHRONIZE_ERROR_GET_MYSTIKO_GUARD_ERROR');
-  static const SynchronizeError SYNCHRONIZE_ERROR_DESERIALIZE_MESSAGE_ERROR =
-      SynchronizeError._(6,
-          _omitEnumNames ? '' : 'SYNCHRONIZE_ERROR_DESERIALIZE_MESSAGE_ERROR');
+class SynchronizerError extends $pb.ProtobufEnum {
+  static const SynchronizerError SYNCHRONIZER_ERROR_UNSPECIFIED =
+      SynchronizerError._(
+          0, _omitEnumNames ? '' : 'SYNCHRONIZER_ERROR_UNSPECIFIED');
+  static const SynchronizerError SYNCHRONIZER_ERROR_UNSUPPORTED_CHAIN_ERROR =
+      SynchronizerError._(1,
+          _omitEnumNames ? '' : 'SYNCHRONIZER_ERROR_UNSUPPORTED_CHAIN_ERROR');
+  static const SynchronizerError SYNCHRONIZER_ERROR_DATALOADER_ERROR =
+      SynchronizerError._(
+          2, _omitEnumNames ? '' : 'SYNCHRONIZER_ERROR_DATALOADER_ERROR');
+  static const SynchronizerError SYNCHRONIZER_ERROR_DATALOADER_CONFIG_ERROR =
+      SynchronizerError._(3,
+          _omitEnumNames ? '' : 'SYNCHRONIZER_ERROR_DATALOADER_CONFIG_ERROR');
+  static const SynchronizerError SYNCHRONIZER_ERROR_ANYHOW_ERROR =
+      SynchronizerError._(
+          4, _omitEnumNames ? '' : 'SYNCHRONIZER_ERROR_ANYHOW_ERROR');
+  static const SynchronizerError SYNCHRONIZER_ERROR_GET_MYSTIKO_GUARD_ERROR =
+      SynchronizerError._(5,
+          _omitEnumNames ? '' : 'SYNCHRONIZER_ERROR_GET_MYSTIKO_GUARD_ERROR');
+  static const SynchronizerError SYNCHRONIZER_ERROR_DESERIALIZE_MESSAGE_ERROR =
+      SynchronizerError._(6,
+          _omitEnumNames ? '' : 'SYNCHRONIZER_ERROR_DESERIALIZE_MESSAGE_ERROR');
 
-  static const $core.List<SynchronizeError> values = <SynchronizeError>[
-    SYNCHRONIZE_ERROR_UNSPECIFIED,
-    SYNCHRONIZE_ERROR_UNSUPPORTED_CHAIN_ERROR,
-    SYNCHRONIZE_ERROR_DATALOADER_ERROR,
-    SYNCHRONIZE_ERROR_DATALOADER_CONFIG_ERROR,
-    SYNCHRONIZE_ERROR_ANYHOW_ERROR,
-    SYNCHRONIZE_ERROR_GET_MYSTIKO_GUARD_ERROR,
-    SYNCHRONIZE_ERROR_DESERIALIZE_MESSAGE_ERROR,
+  static const $core.List<SynchronizerError> values = <SynchronizerError>[
+    SYNCHRONIZER_ERROR_UNSPECIFIED,
+    SYNCHRONIZER_ERROR_UNSUPPORTED_CHAIN_ERROR,
+    SYNCHRONIZER_ERROR_DATALOADER_ERROR,
+    SYNCHRONIZER_ERROR_DATALOADER_CONFIG_ERROR,
+    SYNCHRONIZER_ERROR_ANYHOW_ERROR,
+    SYNCHRONIZER_ERROR_GET_MYSTIKO_GUARD_ERROR,
+    SYNCHRONIZER_ERROR_DESERIALIZE_MESSAGE_ERROR,
   ];
 
-  static final $core.Map<$core.int, SynchronizeError> _byValue =
+  static final $core.Map<$core.int, SynchronizerError> _byValue =
       $pb.ProtobufEnum.initByValue(values);
-  static SynchronizeError? valueOf($core.int value) => _byValue[value];
+  static SynchronizerError? valueOf($core.int value) => _byValue[value];
 
-  const SynchronizeError._($core.int v, $core.String n) : super(v, n);
+  const SynchronizerError._($core.int v, $core.String n) : super(v, n);
 }
 
 const _omitEnumNames = $core.bool.fromEnvironment('protobuf.omit_enum_names');
