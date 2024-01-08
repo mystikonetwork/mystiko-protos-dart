@@ -13,12 +13,12 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../core/document/v1/wallet.pb.dart' as $20;
-import '../../../core/handler/v1/wallet.pb.dart' as $19;
+import '../../../core/document/v1/wallet.pb.dart' as $23;
+import '../../../core/handler/v1/wallet.pb.dart' as $22;
 
 class CreateWalletRequest extends $pb.GeneratedMessage {
   factory CreateWalletRequest({
-    $19.CreateWalletOptions? options,
+    $22.CreateWalletOptions? options,
   }) {
     final $result = create();
     if (options != null) {
@@ -39,8 +39,8 @@ class CreateWalletRequest extends $pb.GeneratedMessage {
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.handler.v1'),
       createEmptyInstance: create)
-    ..aOM<$19.CreateWalletOptions>(1, _omitFieldNames ? '' : 'options',
-        subBuilder: $19.CreateWalletOptions.create)
+    ..aOM<$22.CreateWalletOptions>(1, _omitFieldNames ? '' : 'options',
+        subBuilder: $22.CreateWalletOptions.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
@@ -67,9 +67,9 @@ class CreateWalletRequest extends $pb.GeneratedMessage {
   static CreateWalletRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $19.CreateWalletOptions get options => $_getN(0);
+  $22.CreateWalletOptions get options => $_getN(0);
   @$pb.TagNumber(1)
-  set options($19.CreateWalletOptions v) {
+  set options($22.CreateWalletOptions v) {
     setField(1, v);
   }
 
@@ -78,7 +78,7 @@ class CreateWalletRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearOptions() => clearField(1);
   @$pb.TagNumber(1)
-  $19.CreateWalletOptions ensureOptions() => $_ensure(0);
+  $22.CreateWalletOptions ensureOptions() => $_ensure(0);
 }
 
 class CheckPasswordRequest extends $pb.GeneratedMessage {
@@ -293,7 +293,7 @@ class ExportMnemonicPhraseRequest extends $pb.GeneratedMessage {
 
 class CreateWalletResponse extends $pb.GeneratedMessage {
   factory CreateWalletResponse({
-    $20.Wallet? wallet,
+    $23.Wallet? wallet,
   }) {
     final $result = create();
     if (wallet != null) {
@@ -314,8 +314,8 @@ class CreateWalletResponse extends $pb.GeneratedMessage {
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.handler.v1'),
       createEmptyInstance: create)
-    ..aOM<$20.Wallet>(1, _omitFieldNames ? '' : 'wallet',
-        subBuilder: $20.Wallet.create)
+    ..aOM<$23.Wallet>(1, _omitFieldNames ? '' : 'wallet',
+        subBuilder: $23.Wallet.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
@@ -343,9 +343,9 @@ class CreateWalletResponse extends $pb.GeneratedMessage {
   static CreateWalletResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $20.Wallet get wallet => $_getN(0);
+  $23.Wallet get wallet => $_getN(0);
   @$pb.TagNumber(1)
-  set wallet($20.Wallet v) {
+  set wallet($23.Wallet v) {
     setField(1, v);
   }
 
@@ -354,12 +354,12 @@ class CreateWalletResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearWallet() => clearField(1);
   @$pb.TagNumber(1)
-  $20.Wallet ensureWallet() => $_ensure(0);
+  $23.Wallet ensureWallet() => $_ensure(0);
 }
 
 class CheckCurrentResponse extends $pb.GeneratedMessage {
   factory CheckCurrentResponse({
-    $20.Wallet? wallet,
+    $23.Wallet? wallet,
   }) {
     final $result = create();
     if (wallet != null) {
@@ -380,8 +380,8 @@ class CheckCurrentResponse extends $pb.GeneratedMessage {
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.handler.v1'),
       createEmptyInstance: create)
-    ..aOM<$20.Wallet>(1, _omitFieldNames ? '' : 'wallet',
-        subBuilder: $20.Wallet.create)
+    ..aOM<$23.Wallet>(1, _omitFieldNames ? '' : 'wallet',
+        subBuilder: $23.Wallet.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
@@ -409,9 +409,9 @@ class CheckCurrentResponse extends $pb.GeneratedMessage {
   static CheckCurrentResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $20.Wallet get wallet => $_getN(0);
+  $23.Wallet get wallet => $_getN(0);
   @$pb.TagNumber(1)
-  set wallet($20.Wallet v) {
+  set wallet($23.Wallet v) {
     setField(1, v);
   }
 
@@ -420,12 +420,12 @@ class CheckCurrentResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearWallet() => clearField(1);
   @$pb.TagNumber(1)
-  $20.Wallet ensureWallet() => $_ensure(0);
+  $23.Wallet ensureWallet() => $_ensure(0);
 }
 
 class CheckPasswordResponse extends $pb.GeneratedMessage {
   factory CheckPasswordResponse({
-    $20.Wallet? wallet,
+    $23.Wallet? wallet,
   }) {
     final $result = create();
     if (wallet != null) {
@@ -446,8 +446,8 @@ class CheckPasswordResponse extends $pb.GeneratedMessage {
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.handler.v1'),
       createEmptyInstance: create)
-    ..aOM<$20.Wallet>(1, _omitFieldNames ? '' : 'wallet',
-        subBuilder: $20.Wallet.create)
+    ..aOM<$23.Wallet>(1, _omitFieldNames ? '' : 'wallet',
+        subBuilder: $23.Wallet.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
@@ -476,9 +476,9 @@ class CheckPasswordResponse extends $pb.GeneratedMessage {
   static CheckPasswordResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $20.Wallet get wallet => $_getN(0);
+  $23.Wallet get wallet => $_getN(0);
   @$pb.TagNumber(1)
-  set wallet($20.Wallet v) {
+  set wallet($23.Wallet v) {
     setField(1, v);
   }
 
@@ -487,12 +487,12 @@ class CheckPasswordResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearWallet() => clearField(1);
   @$pb.TagNumber(1)
-  $20.Wallet ensureWallet() => $_ensure(0);
+  $23.Wallet ensureWallet() => $_ensure(0);
 }
 
 class UpdatePasswordResponse extends $pb.GeneratedMessage {
   factory UpdatePasswordResponse({
-    $20.Wallet? wallet,
+    $23.Wallet? wallet,
   }) {
     final $result = create();
     if (wallet != null) {
@@ -513,8 +513,8 @@ class UpdatePasswordResponse extends $pb.GeneratedMessage {
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.handler.v1'),
       createEmptyInstance: create)
-    ..aOM<$20.Wallet>(1, _omitFieldNames ? '' : 'wallet',
-        subBuilder: $20.Wallet.create)
+    ..aOM<$23.Wallet>(1, _omitFieldNames ? '' : 'wallet',
+        subBuilder: $23.Wallet.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
@@ -543,9 +543,9 @@ class UpdatePasswordResponse extends $pb.GeneratedMessage {
   static UpdatePasswordResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $20.Wallet get wallet => $_getN(0);
+  $23.Wallet get wallet => $_getN(0);
   @$pb.TagNumber(1)
-  set wallet($20.Wallet v) {
+  set wallet($23.Wallet v) {
     setField(1, v);
   }
 
@@ -554,7 +554,7 @@ class UpdatePasswordResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearWallet() => clearField(1);
   @$pb.TagNumber(1)
-  $20.Wallet ensureWallet() => $_ensure(0);
+  $23.Wallet ensureWallet() => $_ensure(0);
 }
 
 class ExportMnemonicPhraseResponse extends $pb.GeneratedMessage {

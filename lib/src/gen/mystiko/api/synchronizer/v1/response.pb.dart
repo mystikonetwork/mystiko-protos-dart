@@ -14,7 +14,7 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../core/synchronizer/v1/status.pb.dart' as $27;
+import '../../../core/synchronizer/v1/status.pb.dart' as $30;
 
 class ChainSyncedBlockResponse extends $pb.GeneratedMessage {
   factory ChainSyncedBlockResponse({
@@ -150,7 +150,7 @@ class ContractSyncedBlockResponse extends $pb.GeneratedMessage {
 
 class StatusResponse extends $pb.GeneratedMessage {
   factory StatusResponse({
-    $27.SynchronizerStatus? status,
+    $30.SynchronizerStatus? status,
   }) {
     final $result = create();
     if (status != null) {
@@ -171,8 +171,8 @@ class StatusResponse extends $pb.GeneratedMessage {
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.synchronizer.v1'),
       createEmptyInstance: create)
-    ..aOM<$27.SynchronizerStatus>(1, _omitFieldNames ? '' : 'status',
-        subBuilder: $27.SynchronizerStatus.create)
+    ..aOM<$30.SynchronizerStatus>(1, _omitFieldNames ? '' : 'status',
+        subBuilder: $30.SynchronizerStatus.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
@@ -199,9 +199,9 @@ class StatusResponse extends $pb.GeneratedMessage {
   static StatusResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $27.SynchronizerStatus get status => $_getN(0);
+  $30.SynchronizerStatus get status => $_getN(0);
   @$pb.TagNumber(1)
-  set status($27.SynchronizerStatus v) {
+  set status($30.SynchronizerStatus v) {
     setField(1, v);
   }
 
@@ -210,7 +210,7 @@ class StatusResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearStatus() => clearField(1);
   @$pb.TagNumber(1)
-  $27.SynchronizerStatus ensureStatus() => $_ensure(0);
+  $30.SynchronizerStatus ensureStatus() => $_ensure(0);
 }
 
 const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');

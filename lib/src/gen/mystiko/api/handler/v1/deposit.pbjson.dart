@@ -502,24 +502,3 @@ final $typed_data.Uint8List updateDepositBatchResponseDescriptor =
     $convert.base64Decode(
         'ChpVcGRhdGVEZXBvc2l0QmF0Y2hSZXNwb25zZRI9CghkZXBvc2l0cxgBIAMoCzIhLm15c3Rpa2'
         '8uY29yZS5kb2N1bWVudC52MS5EZXBvc2l0UghkZXBvc2l0cw==');
-
-@$core.Deprecated('Use columnValuePairDescriptor instead')
-const ColumnValuePair$json = {
-  '1': 'ColumnValuePair',
-  '2': [
-    {'1': 'column', '3': 1, '4': 1, '5': 9, '10': 'column'},
-    {
-      '1': 'value',
-      '3': 2,
-      '4': 1,
-      '5': 11,
-      '6': '.mystiko.storage.v1.ColumnValue',
-      '10': 'value'
-    },
-  ],
-};
-
-/// Descriptor for `ColumnValuePair`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List columnValuePairDescriptor = $convert.base64Decode(
-    'Cg9Db2x1bW5WYWx1ZVBhaXISFgoGY29sdW1uGAEgASgJUgZjb2x1bW4SNQoFdmFsdWUYAiABKA'
-    'syHy5teXN0aWtvLnN0b3JhZ2UudjEuQ29sdW1uVmFsdWVSBXZhbHVl');

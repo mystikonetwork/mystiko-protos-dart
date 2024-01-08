@@ -14,14 +14,14 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../core/scanner/v1/asset.pb.dart' as $24;
-import '../../../core/scanner/v1/balance.pb.dart' as $23;
-import '../../../core/scanner/v1/reset.pb.dart' as $22;
-import '../../../core/scanner/v1/scan.pb.dart' as $21;
+import '../../../core/scanner/v1/asset.pb.dart' as $27;
+import '../../../core/scanner/v1/balance.pb.dart' as $26;
+import '../../../core/scanner/v1/reset.pb.dart' as $25;
+import '../../../core/scanner/v1/scan.pb.dart' as $24;
 
 class ScanRequest extends $pb.GeneratedMessage {
   factory ScanRequest({
-    $21.ScanOptions? options,
+    $24.ScanOptions? options,
   }) {
     final $result = create();
     if (options != null) {
@@ -42,8 +42,8 @@ class ScanRequest extends $pb.GeneratedMessage {
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.scanner.v1'),
       createEmptyInstance: create)
-    ..aOM<$21.ScanOptions>(1, _omitFieldNames ? '' : 'options',
-        subBuilder: $21.ScanOptions.create)
+    ..aOM<$24.ScanOptions>(1, _omitFieldNames ? '' : 'options',
+        subBuilder: $24.ScanOptions.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
@@ -69,9 +69,9 @@ class ScanRequest extends $pb.GeneratedMessage {
   static ScanRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $21.ScanOptions get options => $_getN(0);
+  $24.ScanOptions get options => $_getN(0);
   @$pb.TagNumber(1)
-  set options($21.ScanOptions v) {
+  set options($24.ScanOptions v) {
     setField(1, v);
   }
 
@@ -80,12 +80,12 @@ class ScanRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearOptions() => clearField(1);
   @$pb.TagNumber(1)
-  $21.ScanOptions ensureOptions() => $_ensure(0);
+  $24.ScanOptions ensureOptions() => $_ensure(0);
 }
 
 class ResetRequest extends $pb.GeneratedMessage {
   factory ResetRequest({
-    $22.ResetOptions? options,
+    $25.ResetOptions? options,
   }) {
     final $result = create();
     if (options != null) {
@@ -106,8 +106,8 @@ class ResetRequest extends $pb.GeneratedMessage {
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.scanner.v1'),
       createEmptyInstance: create)
-    ..aOM<$22.ResetOptions>(1, _omitFieldNames ? '' : 'options',
-        subBuilder: $22.ResetOptions.create)
+    ..aOM<$25.ResetOptions>(1, _omitFieldNames ? '' : 'options',
+        subBuilder: $25.ResetOptions.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
@@ -134,9 +134,9 @@ class ResetRequest extends $pb.GeneratedMessage {
   static ResetRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $22.ResetOptions get options => $_getN(0);
+  $25.ResetOptions get options => $_getN(0);
   @$pb.TagNumber(1)
-  set options($22.ResetOptions v) {
+  set options($25.ResetOptions v) {
     setField(1, v);
   }
 
@@ -145,12 +145,12 @@ class ResetRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearOptions() => clearField(1);
   @$pb.TagNumber(1)
-  $22.ResetOptions ensureOptions() => $_ensure(0);
+  $25.ResetOptions ensureOptions() => $_ensure(0);
 }
 
 class BalanceRequest extends $pb.GeneratedMessage {
   factory BalanceRequest({
-    $23.BalanceOptions? options,
+    $26.BalanceOptions? options,
   }) {
     final $result = create();
     if (options != null) {
@@ -171,8 +171,8 @@ class BalanceRequest extends $pb.GeneratedMessage {
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.scanner.v1'),
       createEmptyInstance: create)
-    ..aOM<$23.BalanceOptions>(1, _omitFieldNames ? '' : 'options',
-        subBuilder: $23.BalanceOptions.create)
+    ..aOM<$26.BalanceOptions>(1, _omitFieldNames ? '' : 'options',
+        subBuilder: $26.BalanceOptions.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
@@ -199,9 +199,9 @@ class BalanceRequest extends $pb.GeneratedMessage {
   static BalanceRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $23.BalanceOptions get options => $_getN(0);
+  $26.BalanceOptions get options => $_getN(0);
   @$pb.TagNumber(1)
-  set options($23.BalanceOptions v) {
+  set options($26.BalanceOptions v) {
     setField(1, v);
   }
 
@@ -210,12 +210,12 @@ class BalanceRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearOptions() => clearField(1);
   @$pb.TagNumber(1)
-  $23.BalanceOptions ensureOptions() => $_ensure(0);
+  $26.BalanceOptions ensureOptions() => $_ensure(0);
 }
 
 class AssetsRequest extends $pb.GeneratedMessage {
   factory AssetsRequest({
-    $24.AssetsOptions? options,
+    $27.AssetsOptions? options,
   }) {
     final $result = create();
     if (options != null) {
@@ -236,8 +236,8 @@ class AssetsRequest extends $pb.GeneratedMessage {
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.scanner.v1'),
       createEmptyInstance: create)
-    ..aOM<$24.AssetsOptions>(1, _omitFieldNames ? '' : 'options',
-        subBuilder: $24.AssetsOptions.create)
+    ..aOM<$27.AssetsOptions>(1, _omitFieldNames ? '' : 'options',
+        subBuilder: $27.AssetsOptions.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
@@ -264,9 +264,9 @@ class AssetsRequest extends $pb.GeneratedMessage {
   static AssetsRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $24.AssetsOptions get options => $_getN(0);
+  $27.AssetsOptions get options => $_getN(0);
   @$pb.TagNumber(1)
-  set options($24.AssetsOptions v) {
+  set options($27.AssetsOptions v) {
     setField(1, v);
   }
 
@@ -275,13 +275,13 @@ class AssetsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearOptions() => clearField(1);
   @$pb.TagNumber(1)
-  $24.AssetsOptions ensureOptions() => $_ensure(0);
+  $27.AssetsOptions ensureOptions() => $_ensure(0);
 }
 
 class ChainAssetsRequest extends $pb.GeneratedMessage {
   factory ChainAssetsRequest({
     $fixnum.Int64? chainId,
-    $24.AssetsOptions? options,
+    $27.AssetsOptions? options,
   }) {
     final $result = create();
     if (chainId != null) {
@@ -307,8 +307,8 @@ class ChainAssetsRequest extends $pb.GeneratedMessage {
       createEmptyInstance: create)
     ..a<$fixnum.Int64>(1, _omitFieldNames ? '' : 'chainId', $pb.PbFieldType.OU6,
         defaultOrMaker: $fixnum.Int64.ZERO)
-    ..aOM<$24.AssetsOptions>(2, _omitFieldNames ? '' : 'options',
-        subBuilder: $24.AssetsOptions.create)
+    ..aOM<$27.AssetsOptions>(2, _omitFieldNames ? '' : 'options',
+        subBuilder: $27.AssetsOptions.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
@@ -347,9 +347,9 @@ class ChainAssetsRequest extends $pb.GeneratedMessage {
   void clearChainId() => clearField(1);
 
   @$pb.TagNumber(2)
-  $24.AssetsOptions get options => $_getN(1);
+  $27.AssetsOptions get options => $_getN(1);
   @$pb.TagNumber(2)
-  set options($24.AssetsOptions v) {
+  set options($27.AssetsOptions v) {
     setField(2, v);
   }
 
@@ -358,7 +358,7 @@ class ChainAssetsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearOptions() => clearField(2);
   @$pb.TagNumber(2)
-  $24.AssetsOptions ensureOptions() => $_ensure(1);
+  $27.AssetsOptions ensureOptions() => $_ensure(1);
 }
 
 const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');

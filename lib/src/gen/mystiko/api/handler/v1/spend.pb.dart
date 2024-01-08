@@ -1,6 +1,6 @@
 //
 //  Generated code. Do not modify.
-//  source: mystiko/api/handler/v1/deposit.proto
+//  source: mystiko/api/handler/v1/spend.proto
 //
 // @dart = 2.12
 
@@ -14,15 +14,15 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../core/document/v1/deposit.pb.dart' as $18;
-import '../../../core/handler/v1/deposit.pb.dart' as $17;
+import '../../../core/document/v1/spend.pb.dart' as $21;
+import '../../../core/handler/v1/spend.pb.dart' as $20;
 import '../../../service/v1/client.pb.dart' as $8;
 import '../../../storage/v1/filter.pb.dart' as $15;
 import 'common.pb.dart' as $19;
 
-class QuoteRequest extends $pb.GeneratedMessage {
-  factory QuoteRequest({
-    $17.QuoteDepositOptions? options,
+class SpendQuoteRequest extends $pb.GeneratedMessage {
+  factory SpendQuoteRequest({
+    $20.QuoteSpendOptions? options,
   }) {
     final $result = create();
     if (options != null) {
@@ -30,50 +30,50 @@ class QuoteRequest extends $pb.GeneratedMessage {
     }
     return $result;
   }
-  QuoteRequest._() : super();
-  factory QuoteRequest.fromBuffer($core.List<$core.int> i,
+  SpendQuoteRequest._() : super();
+  factory SpendQuoteRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
-  factory QuoteRequest.fromJson($core.String i,
+  factory SpendQuoteRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'QuoteRequest',
+      _omitMessageNames ? '' : 'SpendQuoteRequest',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.handler.v1'),
       createEmptyInstance: create)
-    ..aOM<$17.QuoteDepositOptions>(1, _omitFieldNames ? '' : 'options',
-        subBuilder: $17.QuoteDepositOptions.create)
+    ..aOM<$20.QuoteSpendOptions>(1, _omitFieldNames ? '' : 'options',
+        subBuilder: $20.QuoteSpendOptions.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
-  QuoteRequest clone() => QuoteRequest()..mergeFromMessage(this);
+  SpendQuoteRequest clone() => SpendQuoteRequest()..mergeFromMessage(this);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
-  QuoteRequest copyWith(void Function(QuoteRequest) updates) =>
-      super.copyWith((message) => updates(message as QuoteRequest))
-          as QuoteRequest;
+  SpendQuoteRequest copyWith(void Function(SpendQuoteRequest) updates) =>
+      super.copyWith((message) => updates(message as SpendQuoteRequest))
+          as SpendQuoteRequest;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static QuoteRequest create() => QuoteRequest._();
-  QuoteRequest createEmptyInstance() => create();
-  static $pb.PbList<QuoteRequest> createRepeated() =>
-      $pb.PbList<QuoteRequest>();
+  static SpendQuoteRequest create() => SpendQuoteRequest._();
+  SpendQuoteRequest createEmptyInstance() => create();
+  static $pb.PbList<SpendQuoteRequest> createRepeated() =>
+      $pb.PbList<SpendQuoteRequest>();
   @$core.pragma('dart2js:noInline')
-  static QuoteRequest getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<QuoteRequest>(create);
-  static QuoteRequest? _defaultInstance;
+  static SpendQuoteRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SpendQuoteRequest>(create);
+  static SpendQuoteRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $17.QuoteDepositOptions get options => $_getN(0);
+  $20.QuoteSpendOptions get options => $_getN(0);
   @$pb.TagNumber(1)
-  set options($17.QuoteDepositOptions v) {
+  set options($20.QuoteSpendOptions v) {
     setField(1, v);
   }
 
@@ -82,12 +82,12 @@ class QuoteRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearOptions() => clearField(1);
   @$pb.TagNumber(1)
-  $17.QuoteDepositOptions ensureOptions() => $_ensure(0);
+  $20.QuoteSpendOptions ensureOptions() => $_ensure(0);
 }
 
-class SummaryRequest extends $pb.GeneratedMessage {
-  factory SummaryRequest({
-    $17.CreateDepositOptions? options,
+class SpendSummaryRequest extends $pb.GeneratedMessage {
+  factory SpendSummaryRequest({
+    $20.CreateSpendOptions? options,
   }) {
     final $result = create();
     if (options != null) {
@@ -95,50 +95,50 @@ class SummaryRequest extends $pb.GeneratedMessage {
     }
     return $result;
   }
-  SummaryRequest._() : super();
-  factory SummaryRequest.fromBuffer($core.List<$core.int> i,
+  SpendSummaryRequest._() : super();
+  factory SpendSummaryRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
-  factory SummaryRequest.fromJson($core.String i,
+  factory SpendSummaryRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'SummaryRequest',
+      _omitMessageNames ? '' : 'SpendSummaryRequest',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.handler.v1'),
       createEmptyInstance: create)
-    ..aOM<$17.CreateDepositOptions>(1, _omitFieldNames ? '' : 'options',
-        subBuilder: $17.CreateDepositOptions.create)
+    ..aOM<$20.CreateSpendOptions>(1, _omitFieldNames ? '' : 'options',
+        subBuilder: $20.CreateSpendOptions.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
-  SummaryRequest clone() => SummaryRequest()..mergeFromMessage(this);
+  SpendSummaryRequest clone() => SpendSummaryRequest()..mergeFromMessage(this);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
-  SummaryRequest copyWith(void Function(SummaryRequest) updates) =>
-      super.copyWith((message) => updates(message as SummaryRequest))
-          as SummaryRequest;
+  SpendSummaryRequest copyWith(void Function(SpendSummaryRequest) updates) =>
+      super.copyWith((message) => updates(message as SpendSummaryRequest))
+          as SpendSummaryRequest;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static SummaryRequest create() => SummaryRequest._();
-  SummaryRequest createEmptyInstance() => create();
-  static $pb.PbList<SummaryRequest> createRepeated() =>
-      $pb.PbList<SummaryRequest>();
+  static SpendSummaryRequest create() => SpendSummaryRequest._();
+  SpendSummaryRequest createEmptyInstance() => create();
+  static $pb.PbList<SpendSummaryRequest> createRepeated() =>
+      $pb.PbList<SpendSummaryRequest>();
   @$core.pragma('dart2js:noInline')
-  static SummaryRequest getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<SummaryRequest>(create);
-  static SummaryRequest? _defaultInstance;
+  static SpendSummaryRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SpendSummaryRequest>(create);
+  static SpendSummaryRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $17.CreateDepositOptions get options => $_getN(0);
+  $20.CreateSpendOptions get options => $_getN(0);
   @$pb.TagNumber(1)
-  set options($17.CreateDepositOptions v) {
+  set options($20.CreateSpendOptions v) {
     setField(1, v);
   }
 
@@ -147,12 +147,12 @@ class SummaryRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearOptions() => clearField(1);
   @$pb.TagNumber(1)
-  $17.CreateDepositOptions ensureOptions() => $_ensure(0);
+  $20.CreateSpendOptions ensureOptions() => $_ensure(0);
 }
 
-class CreateDepositRequest extends $pb.GeneratedMessage {
-  factory CreateDepositRequest({
-    $17.CreateDepositOptions? options,
+class CreateSpendRequest extends $pb.GeneratedMessage {
+  factory CreateSpendRequest({
+    $20.CreateSpendOptions? options,
   }) {
     final $result = create();
     if (options != null) {
@@ -160,51 +160,50 @@ class CreateDepositRequest extends $pb.GeneratedMessage {
     }
     return $result;
   }
-  CreateDepositRequest._() : super();
-  factory CreateDepositRequest.fromBuffer($core.List<$core.int> i,
+  CreateSpendRequest._() : super();
+  factory CreateSpendRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
-  factory CreateDepositRequest.fromJson($core.String i,
+  factory CreateSpendRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'CreateDepositRequest',
+      _omitMessageNames ? '' : 'CreateSpendRequest',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.handler.v1'),
       createEmptyInstance: create)
-    ..aOM<$17.CreateDepositOptions>(1, _omitFieldNames ? '' : 'options',
-        subBuilder: $17.CreateDepositOptions.create)
+    ..aOM<$20.CreateSpendOptions>(1, _omitFieldNames ? '' : 'options',
+        subBuilder: $20.CreateSpendOptions.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
-  CreateDepositRequest clone() =>
-      CreateDepositRequest()..mergeFromMessage(this);
+  CreateSpendRequest clone() => CreateSpendRequest()..mergeFromMessage(this);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
-  CreateDepositRequest copyWith(void Function(CreateDepositRequest) updates) =>
-      super.copyWith((message) => updates(message as CreateDepositRequest))
-          as CreateDepositRequest;
+  CreateSpendRequest copyWith(void Function(CreateSpendRequest) updates) =>
+      super.copyWith((message) => updates(message as CreateSpendRequest))
+          as CreateSpendRequest;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static CreateDepositRequest create() => CreateDepositRequest._();
-  CreateDepositRequest createEmptyInstance() => create();
-  static $pb.PbList<CreateDepositRequest> createRepeated() =>
-      $pb.PbList<CreateDepositRequest>();
+  static CreateSpendRequest create() => CreateSpendRequest._();
+  CreateSpendRequest createEmptyInstance() => create();
+  static $pb.PbList<CreateSpendRequest> createRepeated() =>
+      $pb.PbList<CreateSpendRequest>();
   @$core.pragma('dart2js:noInline')
-  static CreateDepositRequest getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<CreateDepositRequest>(create);
-  static CreateDepositRequest? _defaultInstance;
+  static CreateSpendRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateSpendRequest>(create);
+  static CreateSpendRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $17.CreateDepositOptions get options => $_getN(0);
+  $20.CreateSpendOptions get options => $_getN(0);
   @$pb.TagNumber(1)
-  set options($17.CreateDepositOptions v) {
+  set options($20.CreateSpendOptions v) {
     setField(1, v);
   }
 
@@ -213,12 +212,12 @@ class CreateDepositRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearOptions() => clearField(1);
   @$pb.TagNumber(1)
-  $17.CreateDepositOptions ensureOptions() => $_ensure(0);
+  $20.CreateSpendOptions ensureOptions() => $_ensure(0);
 }
 
-class SendRequest extends $pb.GeneratedMessage {
-  factory SendRequest({
-    $17.SendDepositOptions? options,
+class SendSpendRequest extends $pb.GeneratedMessage {
+  factory SendSpendRequest({
+    $20.SendSpendOptions? options,
   }) {
     final $result = create();
     if (options != null) {
@@ -226,49 +225,50 @@ class SendRequest extends $pb.GeneratedMessage {
     }
     return $result;
   }
-  SendRequest._() : super();
-  factory SendRequest.fromBuffer($core.List<$core.int> i,
+  SendSpendRequest._() : super();
+  factory SendSpendRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
-  factory SendRequest.fromJson($core.String i,
+  factory SendSpendRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'SendRequest',
+      _omitMessageNames ? '' : 'SendSpendRequest',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.handler.v1'),
       createEmptyInstance: create)
-    ..aOM<$17.SendDepositOptions>(1, _omitFieldNames ? '' : 'options',
-        subBuilder: $17.SendDepositOptions.create)
+    ..aOM<$20.SendSpendOptions>(1, _omitFieldNames ? '' : 'options',
+        subBuilder: $20.SendSpendOptions.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
-  SendRequest clone() => SendRequest()..mergeFromMessage(this);
+  SendSpendRequest clone() => SendSpendRequest()..mergeFromMessage(this);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
-  SendRequest copyWith(void Function(SendRequest) updates) =>
-      super.copyWith((message) => updates(message as SendRequest))
-          as SendRequest;
+  SendSpendRequest copyWith(void Function(SendSpendRequest) updates) =>
+      super.copyWith((message) => updates(message as SendSpendRequest))
+          as SendSpendRequest;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static SendRequest create() => SendRequest._();
-  SendRequest createEmptyInstance() => create();
-  static $pb.PbList<SendRequest> createRepeated() => $pb.PbList<SendRequest>();
+  static SendSpendRequest create() => SendSpendRequest._();
+  SendSpendRequest createEmptyInstance() => create();
+  static $pb.PbList<SendSpendRequest> createRepeated() =>
+      $pb.PbList<SendSpendRequest>();
   @$core.pragma('dart2js:noInline')
-  static SendRequest getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<SendRequest>(create);
-  static SendRequest? _defaultInstance;
+  static SendSpendRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SendSpendRequest>(create);
+  static SendSpendRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $17.SendDepositOptions get options => $_getN(0);
+  $20.SendSpendOptions get options => $_getN(0);
   @$pb.TagNumber(1)
-  set options($17.SendDepositOptions v) {
+  set options($20.SendSpendOptions v) {
     setField(1, v);
   }
 
@@ -277,12 +277,12 @@ class SendRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearOptions() => clearField(1);
   @$pb.TagNumber(1)
-  $17.SendDepositOptions ensureOptions() => $_ensure(0);
+  $20.SendSpendOptions ensureOptions() => $_ensure(0);
 }
 
-class SendWithGrpcRequest extends $pb.GeneratedMessage {
-  factory SendWithGrpcRequest({
-    $17.SendDepositOptions? sendOptions,
+class SendSpendWithGrpcRequest extends $pb.GeneratedMessage {
+  factory SendSpendWithGrpcRequest({
+    $20.SendSpendOptions? sendOptions,
     $8.ClientOptions? clientOptions,
   }) {
     final $result = create();
@@ -294,21 +294,21 @@ class SendWithGrpcRequest extends $pb.GeneratedMessage {
     }
     return $result;
   }
-  SendWithGrpcRequest._() : super();
-  factory SendWithGrpcRequest.fromBuffer($core.List<$core.int> i,
+  SendSpendWithGrpcRequest._() : super();
+  factory SendSpendWithGrpcRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
-  factory SendWithGrpcRequest.fromJson($core.String i,
+  factory SendSpendWithGrpcRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'SendWithGrpcRequest',
+      _omitMessageNames ? '' : 'SendSpendWithGrpcRequest',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.handler.v1'),
       createEmptyInstance: create)
-    ..aOM<$17.SendDepositOptions>(1, _omitFieldNames ? '' : 'sendOptions',
-        subBuilder: $17.SendDepositOptions.create)
+    ..aOM<$20.SendSpendOptions>(1, _omitFieldNames ? '' : 'sendOptions',
+        subBuilder: $20.SendSpendOptions.create)
     ..aOM<$8.ClientOptions>(2, _omitFieldNames ? '' : 'clientOptions',
         subBuilder: $8.ClientOptions.create)
     ..hasRequiredFields = false;
@@ -316,30 +316,32 @@ class SendWithGrpcRequest extends $pb.GeneratedMessage {
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
-  SendWithGrpcRequest clone() => SendWithGrpcRequest()..mergeFromMessage(this);
+  SendSpendWithGrpcRequest clone() =>
+      SendSpendWithGrpcRequest()..mergeFromMessage(this);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
-  SendWithGrpcRequest copyWith(void Function(SendWithGrpcRequest) updates) =>
-      super.copyWith((message) => updates(message as SendWithGrpcRequest))
-          as SendWithGrpcRequest;
+  SendSpendWithGrpcRequest copyWith(
+          void Function(SendSpendWithGrpcRequest) updates) =>
+      super.copyWith((message) => updates(message as SendSpendWithGrpcRequest))
+          as SendSpendWithGrpcRequest;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static SendWithGrpcRequest create() => SendWithGrpcRequest._();
-  SendWithGrpcRequest createEmptyInstance() => create();
-  static $pb.PbList<SendWithGrpcRequest> createRepeated() =>
-      $pb.PbList<SendWithGrpcRequest>();
+  static SendSpendWithGrpcRequest create() => SendSpendWithGrpcRequest._();
+  SendSpendWithGrpcRequest createEmptyInstance() => create();
+  static $pb.PbList<SendSpendWithGrpcRequest> createRepeated() =>
+      $pb.PbList<SendSpendWithGrpcRequest>();
   @$core.pragma('dart2js:noInline')
-  static SendWithGrpcRequest getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<SendWithGrpcRequest>(create);
-  static SendWithGrpcRequest? _defaultInstance;
+  static SendSpendWithGrpcRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SendSpendWithGrpcRequest>(create);
+  static SendSpendWithGrpcRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $17.SendDepositOptions get sendOptions => $_getN(0);
+  $20.SendSpendOptions get sendOptions => $_getN(0);
   @$pb.TagNumber(1)
-  set sendOptions($17.SendDepositOptions v) {
+  set sendOptions($20.SendSpendOptions v) {
     setField(1, v);
   }
 
@@ -348,7 +350,7 @@ class SendWithGrpcRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearSendOptions() => clearField(1);
   @$pb.TagNumber(1)
-  $17.SendDepositOptions ensureSendOptions() => $_ensure(0);
+  $20.SendSpendOptions ensureSendOptions() => $_ensure(0);
 
   @$pb.TagNumber(2)
   $8.ClientOptions get clientOptions => $_getN(1);
@@ -365,8 +367,8 @@ class SendWithGrpcRequest extends $pb.GeneratedMessage {
   $8.ClientOptions ensureClientOptions() => $_ensure(1);
 }
 
-class FindDepositRequest extends $pb.GeneratedMessage {
-  factory FindDepositRequest({
+class FindSpendRequest extends $pb.GeneratedMessage {
+  factory FindSpendRequest({
     $15.QueryFilter? filter,
   }) {
     final $result = create();
@@ -375,16 +377,16 @@ class FindDepositRequest extends $pb.GeneratedMessage {
     }
     return $result;
   }
-  FindDepositRequest._() : super();
-  factory FindDepositRequest.fromBuffer($core.List<$core.int> i,
+  FindSpendRequest._() : super();
+  factory FindSpendRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
-  factory FindDepositRequest.fromJson($core.String i,
+  factory FindSpendRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'FindDepositRequest',
+      _omitMessageNames ? '' : 'FindSpendRequest',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.handler.v1'),
       createEmptyInstance: create)
@@ -395,25 +397,25 @@ class FindDepositRequest extends $pb.GeneratedMessage {
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
-  FindDepositRequest clone() => FindDepositRequest()..mergeFromMessage(this);
+  FindSpendRequest clone() => FindSpendRequest()..mergeFromMessage(this);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
-  FindDepositRequest copyWith(void Function(FindDepositRequest) updates) =>
-      super.copyWith((message) => updates(message as FindDepositRequest))
-          as FindDepositRequest;
+  FindSpendRequest copyWith(void Function(FindSpendRequest) updates) =>
+      super.copyWith((message) => updates(message as FindSpendRequest))
+          as FindSpendRequest;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static FindDepositRequest create() => FindDepositRequest._();
-  FindDepositRequest createEmptyInstance() => create();
-  static $pb.PbList<FindDepositRequest> createRepeated() =>
-      $pb.PbList<FindDepositRequest>();
+  static FindSpendRequest create() => FindSpendRequest._();
+  FindSpendRequest createEmptyInstance() => create();
+  static $pb.PbList<FindSpendRequest> createRepeated() =>
+      $pb.PbList<FindSpendRequest>();
   @$core.pragma('dart2js:noInline')
-  static FindDepositRequest getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<FindDepositRequest>(create);
-  static FindDepositRequest? _defaultInstance;
+  static FindSpendRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<FindSpendRequest>(create);
+  static FindSpendRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
   $15.QueryFilter get filter => $_getN(0);
@@ -430,8 +432,8 @@ class FindDepositRequest extends $pb.GeneratedMessage {
   $15.QueryFilter ensureFilter() => $_ensure(0);
 }
 
-class FindDepositByIdRequest extends $pb.GeneratedMessage {
-  factory FindDepositByIdRequest({
+class FindSpendByIdRequest extends $pb.GeneratedMessage {
+  factory FindSpendByIdRequest({
     $core.String? id,
   }) {
     final $result = create();
@@ -440,16 +442,16 @@ class FindDepositByIdRequest extends $pb.GeneratedMessage {
     }
     return $result;
   }
-  FindDepositByIdRequest._() : super();
-  factory FindDepositByIdRequest.fromBuffer($core.List<$core.int> i,
+  FindSpendByIdRequest._() : super();
+  factory FindSpendByIdRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
-  factory FindDepositByIdRequest.fromJson($core.String i,
+  factory FindSpendByIdRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'FindDepositByIdRequest',
+      _omitMessageNames ? '' : 'FindSpendByIdRequest',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.handler.v1'),
       createEmptyInstance: create)
@@ -459,27 +461,26 @@ class FindDepositByIdRequest extends $pb.GeneratedMessage {
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
-  FindDepositByIdRequest clone() =>
-      FindDepositByIdRequest()..mergeFromMessage(this);
+  FindSpendByIdRequest clone() =>
+      FindSpendByIdRequest()..mergeFromMessage(this);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
-  FindDepositByIdRequest copyWith(
-          void Function(FindDepositByIdRequest) updates) =>
-      super.copyWith((message) => updates(message as FindDepositByIdRequest))
-          as FindDepositByIdRequest;
+  FindSpendByIdRequest copyWith(void Function(FindSpendByIdRequest) updates) =>
+      super.copyWith((message) => updates(message as FindSpendByIdRequest))
+          as FindSpendByIdRequest;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static FindDepositByIdRequest create() => FindDepositByIdRequest._();
-  FindDepositByIdRequest createEmptyInstance() => create();
-  static $pb.PbList<FindDepositByIdRequest> createRepeated() =>
-      $pb.PbList<FindDepositByIdRequest>();
+  static FindSpendByIdRequest create() => FindSpendByIdRequest._();
+  FindSpendByIdRequest createEmptyInstance() => create();
+  static $pb.PbList<FindSpendByIdRequest> createRepeated() =>
+      $pb.PbList<FindSpendByIdRequest>();
   @$core.pragma('dart2js:noInline')
-  static FindDepositByIdRequest getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<FindDepositByIdRequest>(create);
-  static FindDepositByIdRequest? _defaultInstance;
+  static FindSpendByIdRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<FindSpendByIdRequest>(create);
+  static FindSpendByIdRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get id => $_getSZ(0);
@@ -494,8 +495,8 @@ class FindDepositByIdRequest extends $pb.GeneratedMessage {
   void clearId() => clearField(1);
 }
 
-class CountDepositRequest extends $pb.GeneratedMessage {
-  factory CountDepositRequest({
+class CountSpendsRequest extends $pb.GeneratedMessage {
+  factory CountSpendsRequest({
     $15.QueryFilter? filter,
   }) {
     final $result = create();
@@ -504,16 +505,16 @@ class CountDepositRequest extends $pb.GeneratedMessage {
     }
     return $result;
   }
-  CountDepositRequest._() : super();
-  factory CountDepositRequest.fromBuffer($core.List<$core.int> i,
+  CountSpendsRequest._() : super();
+  factory CountSpendsRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
-  factory CountDepositRequest.fromJson($core.String i,
+  factory CountSpendsRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'CountDepositRequest',
+      _omitMessageNames ? '' : 'CountSpendsRequest',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.handler.v1'),
       createEmptyInstance: create)
@@ -524,25 +525,25 @@ class CountDepositRequest extends $pb.GeneratedMessage {
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
-  CountDepositRequest clone() => CountDepositRequest()..mergeFromMessage(this);
+  CountSpendsRequest clone() => CountSpendsRequest()..mergeFromMessage(this);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
-  CountDepositRequest copyWith(void Function(CountDepositRequest) updates) =>
-      super.copyWith((message) => updates(message as CountDepositRequest))
-          as CountDepositRequest;
+  CountSpendsRequest copyWith(void Function(CountSpendsRequest) updates) =>
+      super.copyWith((message) => updates(message as CountSpendsRequest))
+          as CountSpendsRequest;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static CountDepositRequest create() => CountDepositRequest._();
-  CountDepositRequest createEmptyInstance() => create();
-  static $pb.PbList<CountDepositRequest> createRepeated() =>
-      $pb.PbList<CountDepositRequest>();
+  static CountSpendsRequest create() => CountSpendsRequest._();
+  CountSpendsRequest createEmptyInstance() => create();
+  static $pb.PbList<CountSpendsRequest> createRepeated() =>
+      $pb.PbList<CountSpendsRequest>();
   @$core.pragma('dart2js:noInline')
-  static CountDepositRequest getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<CountDepositRequest>(create);
-  static CountDepositRequest? _defaultInstance;
+  static CountSpendsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CountSpendsRequest>(create);
+  static CountSpendsRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
   $15.QueryFilter get filter => $_getN(0);
@@ -559,130 +560,129 @@ class CountDepositRequest extends $pb.GeneratedMessage {
   $15.QueryFilter ensureFilter() => $_ensure(0);
 }
 
-class UpdateDepositRequest extends $pb.GeneratedMessage {
-  factory UpdateDepositRequest({
-    $18.Deposit? deposit,
+class UpdateSpendRequest extends $pb.GeneratedMessage {
+  factory UpdateSpendRequest({
+    $21.Spend? spend,
   }) {
     final $result = create();
-    if (deposit != null) {
-      $result.deposit = deposit;
+    if (spend != null) {
+      $result.spend = spend;
     }
     return $result;
   }
-  UpdateDepositRequest._() : super();
-  factory UpdateDepositRequest.fromBuffer($core.List<$core.int> i,
+  UpdateSpendRequest._() : super();
+  factory UpdateSpendRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
-  factory UpdateDepositRequest.fromJson($core.String i,
+  factory UpdateSpendRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'UpdateDepositRequest',
+      _omitMessageNames ? '' : 'UpdateSpendRequest',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.handler.v1'),
       createEmptyInstance: create)
-    ..aOM<$18.Deposit>(1, _omitFieldNames ? '' : 'deposit',
-        subBuilder: $18.Deposit.create)
+    ..aOM<$21.Spend>(1, _omitFieldNames ? '' : 'spend',
+        subBuilder: $21.Spend.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
-  UpdateDepositRequest clone() =>
-      UpdateDepositRequest()..mergeFromMessage(this);
+  UpdateSpendRequest clone() => UpdateSpendRequest()..mergeFromMessage(this);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
-  UpdateDepositRequest copyWith(void Function(UpdateDepositRequest) updates) =>
-      super.copyWith((message) => updates(message as UpdateDepositRequest))
-          as UpdateDepositRequest;
+  UpdateSpendRequest copyWith(void Function(UpdateSpendRequest) updates) =>
+      super.copyWith((message) => updates(message as UpdateSpendRequest))
+          as UpdateSpendRequest;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static UpdateDepositRequest create() => UpdateDepositRequest._();
-  UpdateDepositRequest createEmptyInstance() => create();
-  static $pb.PbList<UpdateDepositRequest> createRepeated() =>
-      $pb.PbList<UpdateDepositRequest>();
+  static UpdateSpendRequest create() => UpdateSpendRequest._();
+  UpdateSpendRequest createEmptyInstance() => create();
+  static $pb.PbList<UpdateSpendRequest> createRepeated() =>
+      $pb.PbList<UpdateSpendRequest>();
   @$core.pragma('dart2js:noInline')
-  static UpdateDepositRequest getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<UpdateDepositRequest>(create);
-  static UpdateDepositRequest? _defaultInstance;
+  static UpdateSpendRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateSpendRequest>(create);
+  static UpdateSpendRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $18.Deposit get deposit => $_getN(0);
+  $21.Spend get spend => $_getN(0);
   @$pb.TagNumber(1)
-  set deposit($18.Deposit v) {
+  set spend($21.Spend v) {
     setField(1, v);
   }
 
   @$pb.TagNumber(1)
-  $core.bool hasDeposit() => $_has(0);
+  $core.bool hasSpend() => $_has(0);
   @$pb.TagNumber(1)
-  void clearDeposit() => clearField(1);
+  void clearSpend() => clearField(1);
   @$pb.TagNumber(1)
-  $18.Deposit ensureDeposit() => $_ensure(0);
+  $21.Spend ensureSpend() => $_ensure(0);
 }
 
-class UpdateDepositBatchRequest extends $pb.GeneratedMessage {
-  factory UpdateDepositBatchRequest({
-    $core.Iterable<$18.Deposit>? deposits,
+class UpdateSpendBatchRequest extends $pb.GeneratedMessage {
+  factory UpdateSpendBatchRequest({
+    $core.Iterable<$21.Spend>? spends,
   }) {
     final $result = create();
-    if (deposits != null) {
-      $result.deposits.addAll(deposits);
+    if (spends != null) {
+      $result.spends.addAll(spends);
     }
     return $result;
   }
-  UpdateDepositBatchRequest._() : super();
-  factory UpdateDepositBatchRequest.fromBuffer($core.List<$core.int> i,
+  UpdateSpendBatchRequest._() : super();
+  factory UpdateSpendBatchRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
-  factory UpdateDepositBatchRequest.fromJson($core.String i,
+  factory UpdateSpendBatchRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'UpdateDepositBatchRequest',
+      _omitMessageNames ? '' : 'UpdateSpendBatchRequest',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.handler.v1'),
       createEmptyInstance: create)
-    ..pc<$18.Deposit>(1, _omitFieldNames ? '' : 'deposits', $pb.PbFieldType.PM,
-        subBuilder: $18.Deposit.create)
+    ..pc<$21.Spend>(1, _omitFieldNames ? '' : 'spends', $pb.PbFieldType.PM,
+        subBuilder: $21.Spend.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
-  UpdateDepositBatchRequest clone() =>
-      UpdateDepositBatchRequest()..mergeFromMessage(this);
+  UpdateSpendBatchRequest clone() =>
+      UpdateSpendBatchRequest()..mergeFromMessage(this);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
-  UpdateDepositBatchRequest copyWith(
-          void Function(UpdateDepositBatchRequest) updates) =>
-      super.copyWith((message) => updates(message as UpdateDepositBatchRequest))
-          as UpdateDepositBatchRequest;
+  UpdateSpendBatchRequest copyWith(
+          void Function(UpdateSpendBatchRequest) updates) =>
+      super.copyWith((message) => updates(message as UpdateSpendBatchRequest))
+          as UpdateSpendBatchRequest;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static UpdateDepositBatchRequest create() => UpdateDepositBatchRequest._();
-  UpdateDepositBatchRequest createEmptyInstance() => create();
-  static $pb.PbList<UpdateDepositBatchRequest> createRepeated() =>
-      $pb.PbList<UpdateDepositBatchRequest>();
+  static UpdateSpendBatchRequest create() => UpdateSpendBatchRequest._();
+  UpdateSpendBatchRequest createEmptyInstance() => create();
+  static $pb.PbList<UpdateSpendBatchRequest> createRepeated() =>
+      $pb.PbList<UpdateSpendBatchRequest>();
   @$core.pragma('dart2js:noInline')
-  static UpdateDepositBatchRequest getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<UpdateDepositBatchRequest>(create);
-  static UpdateDepositBatchRequest? _defaultInstance;
+  static UpdateSpendBatchRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateSpendBatchRequest>(create);
+  static UpdateSpendBatchRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.List<$18.Deposit> get deposits => $_getList(0);
+  $core.List<$21.Spend> get spends => $_getList(0);
 }
 
-class UpdateDepositByFilterRequest extends $pb.GeneratedMessage {
-  factory UpdateDepositByFilterRequest({
+class UpdateSpendByFilterRequest extends $pb.GeneratedMessage {
+  factory UpdateSpendByFilterRequest({
     $core.Iterable<$19.ColumnValuePair>? columnValues,
     $15.QueryFilter? filter,
   }) {
@@ -695,16 +695,16 @@ class UpdateDepositByFilterRequest extends $pb.GeneratedMessage {
     }
     return $result;
   }
-  UpdateDepositByFilterRequest._() : super();
-  factory UpdateDepositByFilterRequest.fromBuffer($core.List<$core.int> i,
+  UpdateSpendByFilterRequest._() : super();
+  factory UpdateSpendByFilterRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
-  factory UpdateDepositByFilterRequest.fromJson($core.String i,
+  factory UpdateSpendByFilterRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'UpdateDepositByFilterRequest',
+      _omitMessageNames ? '' : 'UpdateSpendByFilterRequest',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.handler.v1'),
       createEmptyInstance: create)
@@ -718,29 +718,28 @@ class UpdateDepositByFilterRequest extends $pb.GeneratedMessage {
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
-  UpdateDepositByFilterRequest clone() =>
-      UpdateDepositByFilterRequest()..mergeFromMessage(this);
+  UpdateSpendByFilterRequest clone() =>
+      UpdateSpendByFilterRequest()..mergeFromMessage(this);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
-  UpdateDepositByFilterRequest copyWith(
-          void Function(UpdateDepositByFilterRequest) updates) =>
+  UpdateSpendByFilterRequest copyWith(
+          void Function(UpdateSpendByFilterRequest) updates) =>
       super.copyWith(
-              (message) => updates(message as UpdateDepositByFilterRequest))
-          as UpdateDepositByFilterRequest;
+              (message) => updates(message as UpdateSpendByFilterRequest))
+          as UpdateSpendByFilterRequest;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static UpdateDepositByFilterRequest create() =>
-      UpdateDepositByFilterRequest._();
-  UpdateDepositByFilterRequest createEmptyInstance() => create();
-  static $pb.PbList<UpdateDepositByFilterRequest> createRepeated() =>
-      $pb.PbList<UpdateDepositByFilterRequest>();
+  static UpdateSpendByFilterRequest create() => UpdateSpendByFilterRequest._();
+  UpdateSpendByFilterRequest createEmptyInstance() => create();
+  static $pb.PbList<UpdateSpendByFilterRequest> createRepeated() =>
+      $pb.PbList<UpdateSpendByFilterRequest>();
   @$core.pragma('dart2js:noInline')
-  static UpdateDepositByFilterRequest getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<UpdateDepositByFilterRequest>(create);
-  static UpdateDepositByFilterRequest? _defaultInstance;
+  static UpdateSpendByFilterRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateSpendByFilterRequest>(create);
+  static UpdateSpendByFilterRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.List<$19.ColumnValuePair> get columnValues => $_getList(0);
@@ -760,8 +759,8 @@ class UpdateDepositByFilterRequest extends $pb.GeneratedMessage {
   $15.QueryFilter ensureFilter() => $_ensure(1);
 }
 
-class UpdateAllDepositRequest extends $pb.GeneratedMessage {
-  factory UpdateAllDepositRequest({
+class UpdateAllSpendRequest extends $pb.GeneratedMessage {
+  factory UpdateAllSpendRequest({
     $core.Iterable<$19.ColumnValuePair>? columnValues,
   }) {
     final $result = create();
@@ -770,16 +769,16 @@ class UpdateAllDepositRequest extends $pb.GeneratedMessage {
     }
     return $result;
   }
-  UpdateAllDepositRequest._() : super();
-  factory UpdateAllDepositRequest.fromBuffer($core.List<$core.int> i,
+  UpdateAllSpendRequest._() : super();
+  factory UpdateAllSpendRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
-  factory UpdateAllDepositRequest.fromJson($core.String i,
+  factory UpdateAllSpendRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'UpdateAllDepositRequest',
+      _omitMessageNames ? '' : 'UpdateAllSpendRequest',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.handler.v1'),
       createEmptyInstance: create)
@@ -791,156 +790,155 @@ class UpdateAllDepositRequest extends $pb.GeneratedMessage {
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
-  UpdateAllDepositRequest clone() =>
-      UpdateAllDepositRequest()..mergeFromMessage(this);
+  UpdateAllSpendRequest clone() =>
+      UpdateAllSpendRequest()..mergeFromMessage(this);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
-  UpdateAllDepositRequest copyWith(
-          void Function(UpdateAllDepositRequest) updates) =>
-      super.copyWith((message) => updates(message as UpdateAllDepositRequest))
-          as UpdateAllDepositRequest;
+  UpdateAllSpendRequest copyWith(
+          void Function(UpdateAllSpendRequest) updates) =>
+      super.copyWith((message) => updates(message as UpdateAllSpendRequest))
+          as UpdateAllSpendRequest;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static UpdateAllDepositRequest create() => UpdateAllDepositRequest._();
-  UpdateAllDepositRequest createEmptyInstance() => create();
-  static $pb.PbList<UpdateAllDepositRequest> createRepeated() =>
-      $pb.PbList<UpdateAllDepositRequest>();
+  static UpdateAllSpendRequest create() => UpdateAllSpendRequest._();
+  UpdateAllSpendRequest createEmptyInstance() => create();
+  static $pb.PbList<UpdateAllSpendRequest> createRepeated() =>
+      $pb.PbList<UpdateAllSpendRequest>();
   @$core.pragma('dart2js:noInline')
-  static UpdateAllDepositRequest getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<UpdateAllDepositRequest>(create);
-  static UpdateAllDepositRequest? _defaultInstance;
+  static UpdateAllSpendRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateAllSpendRequest>(create);
+  static UpdateAllSpendRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.List<$19.ColumnValuePair> get columnValues => $_getList(0);
 }
 
-class DeleteDepositRequest extends $pb.GeneratedMessage {
-  factory DeleteDepositRequest({
-    $18.Deposit? deposit,
+class DeleteSpendRequest extends $pb.GeneratedMessage {
+  factory DeleteSpendRequest({
+    $21.Spend? spend,
   }) {
     final $result = create();
-    if (deposit != null) {
-      $result.deposit = deposit;
+    if (spend != null) {
+      $result.spend = spend;
     }
     return $result;
   }
-  DeleteDepositRequest._() : super();
-  factory DeleteDepositRequest.fromBuffer($core.List<$core.int> i,
+  DeleteSpendRequest._() : super();
+  factory DeleteSpendRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
-  factory DeleteDepositRequest.fromJson($core.String i,
+  factory DeleteSpendRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'DeleteDepositRequest',
+      _omitMessageNames ? '' : 'DeleteSpendRequest',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.handler.v1'),
       createEmptyInstance: create)
-    ..aOM<$18.Deposit>(1, _omitFieldNames ? '' : 'deposit',
-        subBuilder: $18.Deposit.create)
+    ..aOM<$21.Spend>(1, _omitFieldNames ? '' : 'spend',
+        subBuilder: $21.Spend.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
-  DeleteDepositRequest clone() =>
-      DeleteDepositRequest()..mergeFromMessage(this);
+  DeleteSpendRequest clone() => DeleteSpendRequest()..mergeFromMessage(this);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
-  DeleteDepositRequest copyWith(void Function(DeleteDepositRequest) updates) =>
-      super.copyWith((message) => updates(message as DeleteDepositRequest))
-          as DeleteDepositRequest;
+  DeleteSpendRequest copyWith(void Function(DeleteSpendRequest) updates) =>
+      super.copyWith((message) => updates(message as DeleteSpendRequest))
+          as DeleteSpendRequest;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static DeleteDepositRequest create() => DeleteDepositRequest._();
-  DeleteDepositRequest createEmptyInstance() => create();
-  static $pb.PbList<DeleteDepositRequest> createRepeated() =>
-      $pb.PbList<DeleteDepositRequest>();
+  static DeleteSpendRequest create() => DeleteSpendRequest._();
+  DeleteSpendRequest createEmptyInstance() => create();
+  static $pb.PbList<DeleteSpendRequest> createRepeated() =>
+      $pb.PbList<DeleteSpendRequest>();
   @$core.pragma('dart2js:noInline')
-  static DeleteDepositRequest getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<DeleteDepositRequest>(create);
-  static DeleteDepositRequest? _defaultInstance;
+  static DeleteSpendRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeleteSpendRequest>(create);
+  static DeleteSpendRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $18.Deposit get deposit => $_getN(0);
+  $21.Spend get spend => $_getN(0);
   @$pb.TagNumber(1)
-  set deposit($18.Deposit v) {
+  set spend($21.Spend v) {
     setField(1, v);
   }
 
   @$pb.TagNumber(1)
-  $core.bool hasDeposit() => $_has(0);
+  $core.bool hasSpend() => $_has(0);
   @$pb.TagNumber(1)
-  void clearDeposit() => clearField(1);
+  void clearSpend() => clearField(1);
   @$pb.TagNumber(1)
-  $18.Deposit ensureDeposit() => $_ensure(0);
+  $21.Spend ensureSpend() => $_ensure(0);
 }
 
-class DeleteDepositBatchRequest extends $pb.GeneratedMessage {
-  factory DeleteDepositBatchRequest({
-    $core.Iterable<$18.Deposit>? deposits,
+class DeleteSpendBatchRequest extends $pb.GeneratedMessage {
+  factory DeleteSpendBatchRequest({
+    $core.Iterable<$21.Spend>? spends,
   }) {
     final $result = create();
-    if (deposits != null) {
-      $result.deposits.addAll(deposits);
+    if (spends != null) {
+      $result.spends.addAll(spends);
     }
     return $result;
   }
-  DeleteDepositBatchRequest._() : super();
-  factory DeleteDepositBatchRequest.fromBuffer($core.List<$core.int> i,
+  DeleteSpendBatchRequest._() : super();
+  factory DeleteSpendBatchRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
-  factory DeleteDepositBatchRequest.fromJson($core.String i,
+  factory DeleteSpendBatchRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'DeleteDepositBatchRequest',
+      _omitMessageNames ? '' : 'DeleteSpendBatchRequest',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.handler.v1'),
       createEmptyInstance: create)
-    ..pc<$18.Deposit>(1, _omitFieldNames ? '' : 'deposits', $pb.PbFieldType.PM,
-        subBuilder: $18.Deposit.create)
+    ..pc<$21.Spend>(1, _omitFieldNames ? '' : 'spends', $pb.PbFieldType.PM,
+        subBuilder: $21.Spend.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
-  DeleteDepositBatchRequest clone() =>
-      DeleteDepositBatchRequest()..mergeFromMessage(this);
+  DeleteSpendBatchRequest clone() =>
+      DeleteSpendBatchRequest()..mergeFromMessage(this);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
-  DeleteDepositBatchRequest copyWith(
-          void Function(DeleteDepositBatchRequest) updates) =>
-      super.copyWith((message) => updates(message as DeleteDepositBatchRequest))
-          as DeleteDepositBatchRequest;
+  DeleteSpendBatchRequest copyWith(
+          void Function(DeleteSpendBatchRequest) updates) =>
+      super.copyWith((message) => updates(message as DeleteSpendBatchRequest))
+          as DeleteSpendBatchRequest;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static DeleteDepositBatchRequest create() => DeleteDepositBatchRequest._();
-  DeleteDepositBatchRequest createEmptyInstance() => create();
-  static $pb.PbList<DeleteDepositBatchRequest> createRepeated() =>
-      $pb.PbList<DeleteDepositBatchRequest>();
+  static DeleteSpendBatchRequest create() => DeleteSpendBatchRequest._();
+  DeleteSpendBatchRequest createEmptyInstance() => create();
+  static $pb.PbList<DeleteSpendBatchRequest> createRepeated() =>
+      $pb.PbList<DeleteSpendBatchRequest>();
   @$core.pragma('dart2js:noInline')
-  static DeleteDepositBatchRequest getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<DeleteDepositBatchRequest>(create);
-  static DeleteDepositBatchRequest? _defaultInstance;
+  static DeleteSpendBatchRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeleteSpendBatchRequest>(create);
+  static DeleteSpendBatchRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.List<$18.Deposit> get deposits => $_getList(0);
+  $core.List<$21.Spend> get spends => $_getList(0);
 }
 
-class DeleteDepositByFilterRequest extends $pb.GeneratedMessage {
-  factory DeleteDepositByFilterRequest({
+class DeleteSpendByFilterRequest extends $pb.GeneratedMessage {
+  factory DeleteSpendByFilterRequest({
     $15.QueryFilter? filter,
   }) {
     final $result = create();
@@ -949,16 +947,16 @@ class DeleteDepositByFilterRequest extends $pb.GeneratedMessage {
     }
     return $result;
   }
-  DeleteDepositByFilterRequest._() : super();
-  factory DeleteDepositByFilterRequest.fromBuffer($core.List<$core.int> i,
+  DeleteSpendByFilterRequest._() : super();
+  factory DeleteSpendByFilterRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
-  factory DeleteDepositByFilterRequest.fromJson($core.String i,
+  factory DeleteSpendByFilterRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'DeleteDepositByFilterRequest',
+      _omitMessageNames ? '' : 'DeleteSpendByFilterRequest',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.handler.v1'),
       createEmptyInstance: create)
@@ -969,29 +967,28 @@ class DeleteDepositByFilterRequest extends $pb.GeneratedMessage {
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
-  DeleteDepositByFilterRequest clone() =>
-      DeleteDepositByFilterRequest()..mergeFromMessage(this);
+  DeleteSpendByFilterRequest clone() =>
+      DeleteSpendByFilterRequest()..mergeFromMessage(this);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
-  DeleteDepositByFilterRequest copyWith(
-          void Function(DeleteDepositByFilterRequest) updates) =>
+  DeleteSpendByFilterRequest copyWith(
+          void Function(DeleteSpendByFilterRequest) updates) =>
       super.copyWith(
-              (message) => updates(message as DeleteDepositByFilterRequest))
-          as DeleteDepositByFilterRequest;
+              (message) => updates(message as DeleteSpendByFilterRequest))
+          as DeleteSpendByFilterRequest;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static DeleteDepositByFilterRequest create() =>
-      DeleteDepositByFilterRequest._();
-  DeleteDepositByFilterRequest createEmptyInstance() => create();
-  static $pb.PbList<DeleteDepositByFilterRequest> createRepeated() =>
-      $pb.PbList<DeleteDepositByFilterRequest>();
+  static DeleteSpendByFilterRequest create() => DeleteSpendByFilterRequest._();
+  DeleteSpendByFilterRequest createEmptyInstance() => create();
+  static $pb.PbList<DeleteSpendByFilterRequest> createRepeated() =>
+      $pb.PbList<DeleteSpendByFilterRequest>();
   @$core.pragma('dart2js:noInline')
-  static DeleteDepositByFilterRequest getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<DeleteDepositByFilterRequest>(create);
-  static DeleteDepositByFilterRequest? _defaultInstance;
+  static DeleteSpendByFilterRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeleteSpendByFilterRequest>(create);
+  static DeleteSpendByFilterRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
   $15.QueryFilter get filter => $_getN(0);
@@ -1008,9 +1005,9 @@ class DeleteDepositByFilterRequest extends $pb.GeneratedMessage {
   $15.QueryFilter ensureFilter() => $_ensure(0);
 }
 
-class QuoteResponse extends $pb.GeneratedMessage {
-  factory QuoteResponse({
-    $17.DepositQuote? quote,
+class SpendQuoteResponse extends $pb.GeneratedMessage {
+  factory SpendQuoteResponse({
+    $20.SpendQuote? quote,
   }) {
     final $result = create();
     if (quote != null) {
@@ -1018,50 +1015,50 @@ class QuoteResponse extends $pb.GeneratedMessage {
     }
     return $result;
   }
-  QuoteResponse._() : super();
-  factory QuoteResponse.fromBuffer($core.List<$core.int> i,
+  SpendQuoteResponse._() : super();
+  factory SpendQuoteResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
-  factory QuoteResponse.fromJson($core.String i,
+  factory SpendQuoteResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'QuoteResponse',
+      _omitMessageNames ? '' : 'SpendQuoteResponse',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.handler.v1'),
       createEmptyInstance: create)
-    ..aOM<$17.DepositQuote>(1, _omitFieldNames ? '' : 'quote',
-        subBuilder: $17.DepositQuote.create)
+    ..aOM<$20.SpendQuote>(1, _omitFieldNames ? '' : 'quote',
+        subBuilder: $20.SpendQuote.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
-  QuoteResponse clone() => QuoteResponse()..mergeFromMessage(this);
+  SpendQuoteResponse clone() => SpendQuoteResponse()..mergeFromMessage(this);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
-  QuoteResponse copyWith(void Function(QuoteResponse) updates) =>
-      super.copyWith((message) => updates(message as QuoteResponse))
-          as QuoteResponse;
+  SpendQuoteResponse copyWith(void Function(SpendQuoteResponse) updates) =>
+      super.copyWith((message) => updates(message as SpendQuoteResponse))
+          as SpendQuoteResponse;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static QuoteResponse create() => QuoteResponse._();
-  QuoteResponse createEmptyInstance() => create();
-  static $pb.PbList<QuoteResponse> createRepeated() =>
-      $pb.PbList<QuoteResponse>();
+  static SpendQuoteResponse create() => SpendQuoteResponse._();
+  SpendQuoteResponse createEmptyInstance() => create();
+  static $pb.PbList<SpendQuoteResponse> createRepeated() =>
+      $pb.PbList<SpendQuoteResponse>();
   @$core.pragma('dart2js:noInline')
-  static QuoteResponse getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<QuoteResponse>(create);
-  static QuoteResponse? _defaultInstance;
+  static SpendQuoteResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SpendQuoteResponse>(create);
+  static SpendQuoteResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $17.DepositQuote get quote => $_getN(0);
+  $20.SpendQuote get quote => $_getN(0);
   @$pb.TagNumber(1)
-  set quote($17.DepositQuote v) {
+  set quote($20.SpendQuote v) {
     setField(1, v);
   }
 
@@ -1070,12 +1067,12 @@ class QuoteResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearQuote() => clearField(1);
   @$pb.TagNumber(1)
-  $17.DepositQuote ensureQuote() => $_ensure(0);
+  $20.SpendQuote ensureQuote() => $_ensure(0);
 }
 
-class SummaryResponse extends $pb.GeneratedMessage {
-  factory SummaryResponse({
-    $17.DepositSummary? summary,
+class SpendSummaryResponse extends $pb.GeneratedMessage {
+  factory SpendSummaryResponse({
+    $20.SpendSummary? summary,
   }) {
     final $result = create();
     if (summary != null) {
@@ -1083,50 +1080,51 @@ class SummaryResponse extends $pb.GeneratedMessage {
     }
     return $result;
   }
-  SummaryResponse._() : super();
-  factory SummaryResponse.fromBuffer($core.List<$core.int> i,
+  SpendSummaryResponse._() : super();
+  factory SpendSummaryResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
-  factory SummaryResponse.fromJson($core.String i,
+  factory SpendSummaryResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'SummaryResponse',
+      _omitMessageNames ? '' : 'SpendSummaryResponse',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.handler.v1'),
       createEmptyInstance: create)
-    ..aOM<$17.DepositSummary>(1, _omitFieldNames ? '' : 'summary',
-        subBuilder: $17.DepositSummary.create)
+    ..aOM<$20.SpendSummary>(1, _omitFieldNames ? '' : 'summary',
+        subBuilder: $20.SpendSummary.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
-  SummaryResponse clone() => SummaryResponse()..mergeFromMessage(this);
+  SpendSummaryResponse clone() =>
+      SpendSummaryResponse()..mergeFromMessage(this);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
-  SummaryResponse copyWith(void Function(SummaryResponse) updates) =>
-      super.copyWith((message) => updates(message as SummaryResponse))
-          as SummaryResponse;
+  SpendSummaryResponse copyWith(void Function(SpendSummaryResponse) updates) =>
+      super.copyWith((message) => updates(message as SpendSummaryResponse))
+          as SpendSummaryResponse;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static SummaryResponse create() => SummaryResponse._();
-  SummaryResponse createEmptyInstance() => create();
-  static $pb.PbList<SummaryResponse> createRepeated() =>
-      $pb.PbList<SummaryResponse>();
+  static SpendSummaryResponse create() => SpendSummaryResponse._();
+  SpendSummaryResponse createEmptyInstance() => create();
+  static $pb.PbList<SpendSummaryResponse> createRepeated() =>
+      $pb.PbList<SpendSummaryResponse>();
   @$core.pragma('dart2js:noInline')
-  static SummaryResponse getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<SummaryResponse>(create);
-  static SummaryResponse? _defaultInstance;
+  static SpendSummaryResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SpendSummaryResponse>(create);
+  static SpendSummaryResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $17.DepositSummary get summary => $_getN(0);
+  $20.SpendSummary get summary => $_getN(0);
   @$pb.TagNumber(1)
-  set summary($17.DepositSummary v) {
+  set summary($20.SpendSummary v) {
     setField(1, v);
   }
 
@@ -1135,264 +1133,261 @@ class SummaryResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearSummary() => clearField(1);
   @$pb.TagNumber(1)
-  $17.DepositSummary ensureSummary() => $_ensure(0);
+  $20.SpendSummary ensureSummary() => $_ensure(0);
 }
 
-class CreateDepositResponse extends $pb.GeneratedMessage {
-  factory CreateDepositResponse({
-    $18.Deposit? deposit,
+class CreateSpendResponse extends $pb.GeneratedMessage {
+  factory CreateSpendResponse({
+    $21.Spend? spend,
   }) {
     final $result = create();
-    if (deposit != null) {
-      $result.deposit = deposit;
+    if (spend != null) {
+      $result.spend = spend;
     }
     return $result;
   }
-  CreateDepositResponse._() : super();
-  factory CreateDepositResponse.fromBuffer($core.List<$core.int> i,
+  CreateSpendResponse._() : super();
+  factory CreateSpendResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
-  factory CreateDepositResponse.fromJson($core.String i,
+  factory CreateSpendResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'CreateDepositResponse',
+      _omitMessageNames ? '' : 'CreateSpendResponse',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.handler.v1'),
       createEmptyInstance: create)
-    ..aOM<$18.Deposit>(1, _omitFieldNames ? '' : 'deposit',
-        subBuilder: $18.Deposit.create)
+    ..aOM<$21.Spend>(1, _omitFieldNames ? '' : 'spend',
+        subBuilder: $21.Spend.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
-  CreateDepositResponse clone() =>
-      CreateDepositResponse()..mergeFromMessage(this);
+  CreateSpendResponse clone() => CreateSpendResponse()..mergeFromMessage(this);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
-  CreateDepositResponse copyWith(
-          void Function(CreateDepositResponse) updates) =>
-      super.copyWith((message) => updates(message as CreateDepositResponse))
-          as CreateDepositResponse;
+  CreateSpendResponse copyWith(void Function(CreateSpendResponse) updates) =>
+      super.copyWith((message) => updates(message as CreateSpendResponse))
+          as CreateSpendResponse;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static CreateDepositResponse create() => CreateDepositResponse._();
-  CreateDepositResponse createEmptyInstance() => create();
-  static $pb.PbList<CreateDepositResponse> createRepeated() =>
-      $pb.PbList<CreateDepositResponse>();
+  static CreateSpendResponse create() => CreateSpendResponse._();
+  CreateSpendResponse createEmptyInstance() => create();
+  static $pb.PbList<CreateSpendResponse> createRepeated() =>
+      $pb.PbList<CreateSpendResponse>();
   @$core.pragma('dart2js:noInline')
-  static CreateDepositResponse getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<CreateDepositResponse>(create);
-  static CreateDepositResponse? _defaultInstance;
+  static CreateSpendResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateSpendResponse>(create);
+  static CreateSpendResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $18.Deposit get deposit => $_getN(0);
+  $21.Spend get spend => $_getN(0);
   @$pb.TagNumber(1)
-  set deposit($18.Deposit v) {
+  set spend($21.Spend v) {
     setField(1, v);
   }
 
   @$pb.TagNumber(1)
-  $core.bool hasDeposit() => $_has(0);
+  $core.bool hasSpend() => $_has(0);
   @$pb.TagNumber(1)
-  void clearDeposit() => clearField(1);
+  void clearSpend() => clearField(1);
   @$pb.TagNumber(1)
-  $18.Deposit ensureDeposit() => $_ensure(0);
+  $21.Spend ensureSpend() => $_ensure(0);
 }
 
-class SendResponse extends $pb.GeneratedMessage {
-  factory SendResponse({
-    $18.Deposit? deposit,
+class SendSpendResponse extends $pb.GeneratedMessage {
+  factory SendSpendResponse({
+    $21.Spend? spend,
   }) {
     final $result = create();
-    if (deposit != null) {
-      $result.deposit = deposit;
+    if (spend != null) {
+      $result.spend = spend;
     }
     return $result;
   }
-  SendResponse._() : super();
-  factory SendResponse.fromBuffer($core.List<$core.int> i,
+  SendSpendResponse._() : super();
+  factory SendSpendResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
-  factory SendResponse.fromJson($core.String i,
+  factory SendSpendResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'SendResponse',
+      _omitMessageNames ? '' : 'SendSpendResponse',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.handler.v1'),
       createEmptyInstance: create)
-    ..aOM<$18.Deposit>(1, _omitFieldNames ? '' : 'deposit',
-        subBuilder: $18.Deposit.create)
+    ..aOM<$21.Spend>(1, _omitFieldNames ? '' : 'spend',
+        subBuilder: $21.Spend.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
-  SendResponse clone() => SendResponse()..mergeFromMessage(this);
+  SendSpendResponse clone() => SendSpendResponse()..mergeFromMessage(this);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
-  SendResponse copyWith(void Function(SendResponse) updates) =>
-      super.copyWith((message) => updates(message as SendResponse))
-          as SendResponse;
+  SendSpendResponse copyWith(void Function(SendSpendResponse) updates) =>
+      super.copyWith((message) => updates(message as SendSpendResponse))
+          as SendSpendResponse;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static SendResponse create() => SendResponse._();
-  SendResponse createEmptyInstance() => create();
-  static $pb.PbList<SendResponse> createRepeated() =>
-      $pb.PbList<SendResponse>();
+  static SendSpendResponse create() => SendSpendResponse._();
+  SendSpendResponse createEmptyInstance() => create();
+  static $pb.PbList<SendSpendResponse> createRepeated() =>
+      $pb.PbList<SendSpendResponse>();
   @$core.pragma('dart2js:noInline')
-  static SendResponse getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<SendResponse>(create);
-  static SendResponse? _defaultInstance;
+  static SendSpendResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SendSpendResponse>(create);
+  static SendSpendResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $18.Deposit get deposit => $_getN(0);
+  $21.Spend get spend => $_getN(0);
   @$pb.TagNumber(1)
-  set deposit($18.Deposit v) {
+  set spend($21.Spend v) {
     setField(1, v);
   }
 
   @$pb.TagNumber(1)
-  $core.bool hasDeposit() => $_has(0);
+  $core.bool hasSpend() => $_has(0);
   @$pb.TagNumber(1)
-  void clearDeposit() => clearField(1);
+  void clearSpend() => clearField(1);
   @$pb.TagNumber(1)
-  $18.Deposit ensureDeposit() => $_ensure(0);
+  $21.Spend ensureSpend() => $_ensure(0);
 }
 
-class FindDepositResponse extends $pb.GeneratedMessage {
-  factory FindDepositResponse({
-    $core.Iterable<$18.Deposit>? deposits,
+class FindSpendsResponse extends $pb.GeneratedMessage {
+  factory FindSpendsResponse({
+    $core.Iterable<$21.Spend>? spends,
   }) {
     final $result = create();
-    if (deposits != null) {
-      $result.deposits.addAll(deposits);
+    if (spends != null) {
+      $result.spends.addAll(spends);
     }
     return $result;
   }
-  FindDepositResponse._() : super();
-  factory FindDepositResponse.fromBuffer($core.List<$core.int> i,
+  FindSpendsResponse._() : super();
+  factory FindSpendsResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
-  factory FindDepositResponse.fromJson($core.String i,
+  factory FindSpendsResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'FindDepositResponse',
+      _omitMessageNames ? '' : 'FindSpendsResponse',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.handler.v1'),
       createEmptyInstance: create)
-    ..pc<$18.Deposit>(1, _omitFieldNames ? '' : 'deposits', $pb.PbFieldType.PM,
-        subBuilder: $18.Deposit.create)
+    ..pc<$21.Spend>(1, _omitFieldNames ? '' : 'spends', $pb.PbFieldType.PM,
+        subBuilder: $21.Spend.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
-  FindDepositResponse clone() => FindDepositResponse()..mergeFromMessage(this);
+  FindSpendsResponse clone() => FindSpendsResponse()..mergeFromMessage(this);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
-  FindDepositResponse copyWith(void Function(FindDepositResponse) updates) =>
-      super.copyWith((message) => updates(message as FindDepositResponse))
-          as FindDepositResponse;
+  FindSpendsResponse copyWith(void Function(FindSpendsResponse) updates) =>
+      super.copyWith((message) => updates(message as FindSpendsResponse))
+          as FindSpendsResponse;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static FindDepositResponse create() => FindDepositResponse._();
-  FindDepositResponse createEmptyInstance() => create();
-  static $pb.PbList<FindDepositResponse> createRepeated() =>
-      $pb.PbList<FindDepositResponse>();
+  static FindSpendsResponse create() => FindSpendsResponse._();
+  FindSpendsResponse createEmptyInstance() => create();
+  static $pb.PbList<FindSpendsResponse> createRepeated() =>
+      $pb.PbList<FindSpendsResponse>();
   @$core.pragma('dart2js:noInline')
-  static FindDepositResponse getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<FindDepositResponse>(create);
-  static FindDepositResponse? _defaultInstance;
+  static FindSpendsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<FindSpendsResponse>(create);
+  static FindSpendsResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.List<$18.Deposit> get deposits => $_getList(0);
+  $core.List<$21.Spend> get spends => $_getList(0);
 }
 
-class FindOneDepositResponse extends $pb.GeneratedMessage {
-  factory FindOneDepositResponse({
-    $18.Deposit? deposit,
+class FindOneSpendResponse extends $pb.GeneratedMessage {
+  factory FindOneSpendResponse({
+    $21.Spend? spend,
   }) {
     final $result = create();
-    if (deposit != null) {
-      $result.deposit = deposit;
+    if (spend != null) {
+      $result.spend = spend;
     }
     return $result;
   }
-  FindOneDepositResponse._() : super();
-  factory FindOneDepositResponse.fromBuffer($core.List<$core.int> i,
+  FindOneSpendResponse._() : super();
+  factory FindOneSpendResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
-  factory FindOneDepositResponse.fromJson($core.String i,
+  factory FindOneSpendResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'FindOneDepositResponse',
+      _omitMessageNames ? '' : 'FindOneSpendResponse',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.handler.v1'),
       createEmptyInstance: create)
-    ..aOM<$18.Deposit>(1, _omitFieldNames ? '' : 'deposit',
-        subBuilder: $18.Deposit.create)
+    ..aOM<$21.Spend>(1, _omitFieldNames ? '' : 'spend',
+        subBuilder: $21.Spend.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
-  FindOneDepositResponse clone() =>
-      FindOneDepositResponse()..mergeFromMessage(this);
+  FindOneSpendResponse clone() =>
+      FindOneSpendResponse()..mergeFromMessage(this);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
-  FindOneDepositResponse copyWith(
-          void Function(FindOneDepositResponse) updates) =>
-      super.copyWith((message) => updates(message as FindOneDepositResponse))
-          as FindOneDepositResponse;
+  FindOneSpendResponse copyWith(void Function(FindOneSpendResponse) updates) =>
+      super.copyWith((message) => updates(message as FindOneSpendResponse))
+          as FindOneSpendResponse;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static FindOneDepositResponse create() => FindOneDepositResponse._();
-  FindOneDepositResponse createEmptyInstance() => create();
-  static $pb.PbList<FindOneDepositResponse> createRepeated() =>
-      $pb.PbList<FindOneDepositResponse>();
+  static FindOneSpendResponse create() => FindOneSpendResponse._();
+  FindOneSpendResponse createEmptyInstance() => create();
+  static $pb.PbList<FindOneSpendResponse> createRepeated() =>
+      $pb.PbList<FindOneSpendResponse>();
   @$core.pragma('dart2js:noInline')
-  static FindOneDepositResponse getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<FindOneDepositResponse>(create);
-  static FindOneDepositResponse? _defaultInstance;
+  static FindOneSpendResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<FindOneSpendResponse>(create);
+  static FindOneSpendResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $18.Deposit get deposit => $_getN(0);
+  $21.Spend get spend => $_getN(0);
   @$pb.TagNumber(1)
-  set deposit($18.Deposit v) {
+  set spend($21.Spend v) {
     setField(1, v);
   }
 
   @$pb.TagNumber(1)
-  $core.bool hasDeposit() => $_has(0);
+  $core.bool hasSpend() => $_has(0);
   @$pb.TagNumber(1)
-  void clearDeposit() => clearField(1);
+  void clearSpend() => clearField(1);
   @$pb.TagNumber(1)
-  $18.Deposit ensureDeposit() => $_ensure(0);
+  $21.Spend ensureSpend() => $_ensure(0);
 }
 
-class CountDepositResponse extends $pb.GeneratedMessage {
-  factory CountDepositResponse({
+class CountSpendsResponse extends $pb.GeneratedMessage {
+  factory CountSpendsResponse({
     $fixnum.Int64? count,
   }) {
     final $result = create();
@@ -1401,16 +1396,16 @@ class CountDepositResponse extends $pb.GeneratedMessage {
     }
     return $result;
   }
-  CountDepositResponse._() : super();
-  factory CountDepositResponse.fromBuffer($core.List<$core.int> i,
+  CountSpendsResponse._() : super();
+  factory CountSpendsResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
-  factory CountDepositResponse.fromJson($core.String i,
+  factory CountSpendsResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'CountDepositResponse',
+      _omitMessageNames ? '' : 'CountSpendsResponse',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.handler.v1'),
       createEmptyInstance: create)
@@ -1421,26 +1416,25 @@ class CountDepositResponse extends $pb.GeneratedMessage {
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
-  CountDepositResponse clone() =>
-      CountDepositResponse()..mergeFromMessage(this);
+  CountSpendsResponse clone() => CountSpendsResponse()..mergeFromMessage(this);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
-  CountDepositResponse copyWith(void Function(CountDepositResponse) updates) =>
-      super.copyWith((message) => updates(message as CountDepositResponse))
-          as CountDepositResponse;
+  CountSpendsResponse copyWith(void Function(CountSpendsResponse) updates) =>
+      super.copyWith((message) => updates(message as CountSpendsResponse))
+          as CountSpendsResponse;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static CountDepositResponse create() => CountDepositResponse._();
-  CountDepositResponse createEmptyInstance() => create();
-  static $pb.PbList<CountDepositResponse> createRepeated() =>
-      $pb.PbList<CountDepositResponse>();
+  static CountSpendsResponse create() => CountSpendsResponse._();
+  CountSpendsResponse createEmptyInstance() => create();
+  static $pb.PbList<CountSpendsResponse> createRepeated() =>
+      $pb.PbList<CountSpendsResponse>();
   @$core.pragma('dart2js:noInline')
-  static CountDepositResponse getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<CountDepositResponse>(create);
-  static CountDepositResponse? _defaultInstance;
+  static CountSpendsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CountSpendsResponse>(create);
+  static CountSpendsResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
   $fixnum.Int64 get count => $_getI64(0);
@@ -1455,128 +1449,125 @@ class CountDepositResponse extends $pb.GeneratedMessage {
   void clearCount() => clearField(1);
 }
 
-class UpdateDepositResponse extends $pb.GeneratedMessage {
-  factory UpdateDepositResponse({
-    $18.Deposit? deposit,
+class UpdateSpendResponse extends $pb.GeneratedMessage {
+  factory UpdateSpendResponse({
+    $21.Spend? spend,
   }) {
     final $result = create();
-    if (deposit != null) {
-      $result.deposit = deposit;
+    if (spend != null) {
+      $result.spend = spend;
     }
     return $result;
   }
-  UpdateDepositResponse._() : super();
-  factory UpdateDepositResponse.fromBuffer($core.List<$core.int> i,
+  UpdateSpendResponse._() : super();
+  factory UpdateSpendResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
-  factory UpdateDepositResponse.fromJson($core.String i,
+  factory UpdateSpendResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'UpdateDepositResponse',
+      _omitMessageNames ? '' : 'UpdateSpendResponse',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.handler.v1'),
       createEmptyInstance: create)
-    ..aOM<$18.Deposit>(1, _omitFieldNames ? '' : 'deposit',
-        subBuilder: $18.Deposit.create)
+    ..aOM<$21.Spend>(1, _omitFieldNames ? '' : 'spend',
+        subBuilder: $21.Spend.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
-  UpdateDepositResponse clone() =>
-      UpdateDepositResponse()..mergeFromMessage(this);
+  UpdateSpendResponse clone() => UpdateSpendResponse()..mergeFromMessage(this);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
-  UpdateDepositResponse copyWith(
-          void Function(UpdateDepositResponse) updates) =>
-      super.copyWith((message) => updates(message as UpdateDepositResponse))
-          as UpdateDepositResponse;
+  UpdateSpendResponse copyWith(void Function(UpdateSpendResponse) updates) =>
+      super.copyWith((message) => updates(message as UpdateSpendResponse))
+          as UpdateSpendResponse;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static UpdateDepositResponse create() => UpdateDepositResponse._();
-  UpdateDepositResponse createEmptyInstance() => create();
-  static $pb.PbList<UpdateDepositResponse> createRepeated() =>
-      $pb.PbList<UpdateDepositResponse>();
+  static UpdateSpendResponse create() => UpdateSpendResponse._();
+  UpdateSpendResponse createEmptyInstance() => create();
+  static $pb.PbList<UpdateSpendResponse> createRepeated() =>
+      $pb.PbList<UpdateSpendResponse>();
   @$core.pragma('dart2js:noInline')
-  static UpdateDepositResponse getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<UpdateDepositResponse>(create);
-  static UpdateDepositResponse? _defaultInstance;
+  static UpdateSpendResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateSpendResponse>(create);
+  static UpdateSpendResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $18.Deposit get deposit => $_getN(0);
+  $21.Spend get spend => $_getN(0);
   @$pb.TagNumber(1)
-  set deposit($18.Deposit v) {
+  set spend($21.Spend v) {
     setField(1, v);
   }
 
   @$pb.TagNumber(1)
-  $core.bool hasDeposit() => $_has(0);
+  $core.bool hasSpend() => $_has(0);
   @$pb.TagNumber(1)
-  void clearDeposit() => clearField(1);
+  void clearSpend() => clearField(1);
   @$pb.TagNumber(1)
-  $18.Deposit ensureDeposit() => $_ensure(0);
+  $21.Spend ensureSpend() => $_ensure(0);
 }
 
-class UpdateDepositBatchResponse extends $pb.GeneratedMessage {
-  factory UpdateDepositBatchResponse({
-    $core.Iterable<$18.Deposit>? deposits,
+class UpdateSpendBatchResponse extends $pb.GeneratedMessage {
+  factory UpdateSpendBatchResponse({
+    $core.Iterable<$21.Spend>? spends,
   }) {
     final $result = create();
-    if (deposits != null) {
-      $result.deposits.addAll(deposits);
+    if (spends != null) {
+      $result.spends.addAll(spends);
     }
     return $result;
   }
-  UpdateDepositBatchResponse._() : super();
-  factory UpdateDepositBatchResponse.fromBuffer($core.List<$core.int> i,
+  UpdateSpendBatchResponse._() : super();
+  factory UpdateSpendBatchResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
-  factory UpdateDepositBatchResponse.fromJson($core.String i,
+  factory UpdateSpendBatchResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'UpdateDepositBatchResponse',
+      _omitMessageNames ? '' : 'UpdateSpendBatchResponse',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.handler.v1'),
       createEmptyInstance: create)
-    ..pc<$18.Deposit>(1, _omitFieldNames ? '' : 'deposits', $pb.PbFieldType.PM,
-        subBuilder: $18.Deposit.create)
+    ..pc<$21.Spend>(1, _omitFieldNames ? '' : 'spends', $pb.PbFieldType.PM,
+        subBuilder: $21.Spend.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
-  UpdateDepositBatchResponse clone() =>
-      UpdateDepositBatchResponse()..mergeFromMessage(this);
+  UpdateSpendBatchResponse clone() =>
+      UpdateSpendBatchResponse()..mergeFromMessage(this);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
-  UpdateDepositBatchResponse copyWith(
-          void Function(UpdateDepositBatchResponse) updates) =>
-      super.copyWith(
-              (message) => updates(message as UpdateDepositBatchResponse))
-          as UpdateDepositBatchResponse;
+  UpdateSpendBatchResponse copyWith(
+          void Function(UpdateSpendBatchResponse) updates) =>
+      super.copyWith((message) => updates(message as UpdateSpendBatchResponse))
+          as UpdateSpendBatchResponse;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static UpdateDepositBatchResponse create() => UpdateDepositBatchResponse._();
-  UpdateDepositBatchResponse createEmptyInstance() => create();
-  static $pb.PbList<UpdateDepositBatchResponse> createRepeated() =>
-      $pb.PbList<UpdateDepositBatchResponse>();
+  static UpdateSpendBatchResponse create() => UpdateSpendBatchResponse._();
+  UpdateSpendBatchResponse createEmptyInstance() => create();
+  static $pb.PbList<UpdateSpendBatchResponse> createRepeated() =>
+      $pb.PbList<UpdateSpendBatchResponse>();
   @$core.pragma('dart2js:noInline')
-  static UpdateDepositBatchResponse getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<UpdateDepositBatchResponse>(create);
-  static UpdateDepositBatchResponse? _defaultInstance;
+  static UpdateSpendBatchResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateSpendBatchResponse>(create);
+  static UpdateSpendBatchResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.List<$18.Deposit> get deposits => $_getList(0);
+  $core.List<$21.Spend> get spends => $_getList(0);
 }
 
 const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
