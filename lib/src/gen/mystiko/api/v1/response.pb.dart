@@ -136,6 +136,7 @@ enum StatusCode_Error {
   scanner,
   synchronizer,
   config,
+  spend,
   notSet
 }
 
@@ -149,6 +150,7 @@ class StatusCode extends $pb.GeneratedMessage {
     ScannerError? scanner,
     SynchronizerError? synchronizer,
     ConfigError? config,
+    SpendError? spend,
   }) {
     final $result = create();
     if (success != null) {
@@ -175,6 +177,9 @@ class StatusCode extends $pb.GeneratedMessage {
     if (config != null) {
       $result.config = config;
     }
+    if (spend != null) {
+      $result.spend = spend;
+    }
     return $result;
   }
   StatusCode._() : super();
@@ -193,13 +198,14 @@ class StatusCode extends $pb.GeneratedMessage {
     6: StatusCode_Error.scanner,
     7: StatusCode_Error.synchronizer,
     8: StatusCode_Error.config,
+    9: StatusCode_Error.spend,
     0: StatusCode_Error.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'StatusCode',
       package: const $pb.PackageName(_omitMessageNames ? '' : 'mystiko.api.v1'),
       createEmptyInstance: create)
-    ..oo(0, [2, 3, 4, 5, 6, 7, 8])
+    ..oo(0, [2, 3, 4, 5, 6, 7, 8, 9])
     ..aOB(1, _omitFieldNames ? '' : 'success')
     ..e<MystikoError>(2, _omitFieldNames ? '' : 'mystiko', $pb.PbFieldType.OE,
         defaultOrMaker: MystikoError.MYSTIKO_ERROR_UNSPECIFIED,
@@ -230,6 +236,10 @@ class StatusCode extends $pb.GeneratedMessage {
         defaultOrMaker: ConfigError.CONFIG_ERROR_UNSPECIFIED,
         valueOf: ConfigError.valueOf,
         enumValues: ConfigError.values)
+    ..e<SpendError>(9, _omitFieldNames ? '' : 'spend', $pb.PbFieldType.OE,
+        defaultOrMaker: SpendError.SPEND_ERROR_UNSPECIFIED,
+        valueOf: SpendError.valueOf,
+        enumValues: SpendError.values)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
@@ -351,6 +361,18 @@ class StatusCode extends $pb.GeneratedMessage {
   $core.bool hasConfig() => $_has(7);
   @$pb.TagNumber(8)
   void clearConfig() => clearField(8);
+
+  @$pb.TagNumber(9)
+  SpendError get spend => $_getN(8);
+  @$pb.TagNumber(9)
+  set spend(SpendError v) {
+    setField(9, v);
+  }
+
+  @$pb.TagNumber(9)
+  $core.bool hasSpend() => $_has(8);
+  @$pb.TagNumber(9)
+  void clearSpend() => clearField(9);
 }
 
 const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');

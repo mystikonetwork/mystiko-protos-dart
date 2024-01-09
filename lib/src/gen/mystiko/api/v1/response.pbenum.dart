@@ -300,6 +300,188 @@ class DepositError extends $pb.ProtobufEnum {
   const DepositError._($core.int v, $core.String n) : super(v, n);
 }
 
+class SpendError extends $pb.ProtobufEnum {
+  static const SpendError SPEND_ERROR_UNSPECIFIED =
+      SpendError._(0, _omitEnumNames ? '' : 'SPEND_ERROR_UNSPECIFIED');
+  static const SpendError SPEND_ERROR_ANYHOW_ERROR =
+      SpendError._(1, _omitEnumNames ? '' : 'SPEND_ERROR_ANYHOW_ERROR');
+  static const SpendError SPEND_ERROR_PUBLIC_ASSETS_ERROR =
+      SpendError._(2, _omitEnumNames ? '' : 'SPEND_ERROR_PUBLIC_ASSETS_ERROR');
+  static const SpendError SPEND_ERROR_COMMITMENT_POOL_CONTRACTS_ERROR =
+      SpendError._(3,
+          _omitEnumNames ? '' : 'SPEND_ERROR_COMMITMENT_POOL_CONTRACTS_ERROR');
+  static const SpendError SPEND_ERROR_TRANSACTIONS_ERROR =
+      SpendError._(4, _omitEnumNames ? '' : 'SPEND_ERROR_TRANSACTIONS_ERROR');
+  static const SpendError SPEND_ERROR_STORAGE_ERROR =
+      SpendError._(5, _omitEnumNames ? '' : 'SPEND_ERROR_STORAGE_ERROR');
+  static const SpendError SPEND_ERROR_WALLETS_ERROR =
+      SpendError._(6, _omitEnumNames ? '' : 'SPEND_ERROR_WALLETS_ERROR');
+  static const SpendError SPEND_ERROR_ACCOUNTS_ERROR =
+      SpendError._(7, _omitEnumNames ? '' : 'SPEND_ERROR_ACCOUNTS_ERROR');
+  static const SpendError SPEND_ERROR_RELAYER_CLIENT_ERROR =
+      SpendError._(8, _omitEnumNames ? '' : 'SPEND_ERROR_RELAYER_CLIENT_ERROR');
+  static const SpendError SPEND_ERROR_HEX_STRING_ERROR =
+      SpendError._(9, _omitEnumNames ? '' : 'SPEND_ERROR_HEX_STRING_ERROR');
+  static const SpendError SPEND_ERROR_PARSE_BIG_INT_ERROR =
+      SpendError._(10, _omitEnumNames ? '' : 'SPEND_ERROR_PARSE_BIG_INT_ERROR');
+  static const SpendError SPEND_ERROR_PROTOCOL_ERROR =
+      SpendError._(11, _omitEnumNames ? '' : 'SPEND_ERROR_PROTOCOL_ERROR');
+  static const SpendError SPEND_ERROR_PROTOCOL_KEY_ERROR =
+      SpendError._(12, _omitEnumNames ? '' : 'SPEND_ERROR_PROTOCOL_KEY_ERROR');
+  static const SpendError SPEND_ERROR_CRYPTO_ERROR =
+      SpendError._(13, _omitEnumNames ? '' : 'SPEND_ERROR_CRYPTO_ERROR');
+  static const SpendError SPEND_ERROR_MERKLE_TREE_ERROR =
+      SpendError._(14, _omitEnumNames ? '' : 'SPEND_ERROR_MERKLE_TREE_ERROR');
+  static const SpendError SPEND_ERROR_G16_PROVER_ERROR =
+      SpendError._(15, _omitEnumNames ? '' : 'SPEND_ERROR_G16_PROVER_ERROR');
+  static const SpendError SPEND_ERROR_LOCAL_WALLET_ERROR =
+      SpendError._(16, _omitEnumNames ? '' : 'SPEND_ERROR_LOCAL_WALLET_ERROR');
+  static const SpendError SPEND_ERROR_SERDE_JSON_ERROR =
+      SpendError._(17, _omitEnumNames ? '' : 'SPEND_ERROR_SERDE_JSON_ERROR');
+  static const SpendError SPEND_ERROR_NO_POOL_CONTRACT_FOUND_ERROR =
+      SpendError._(
+          18, _omitEnumNames ? '' : 'SPEND_ERROR_NO_POOL_CONTRACT_FOUND_ERROR');
+  static const SpendError SPEND_ERROR_NO_POOL_CONTRACT_ADDRESS_FOUND_ERROR =
+      SpendError._(
+          19,
+          _omitEnumNames
+              ? ''
+              : 'SPEND_ERROR_NO_POOL_CONTRACT_ADDRESS_FOUND_ERROR');
+  static const SpendError SPEND_ERROR_MISSING_PRIVATE_KEY_ERROR = SpendError._(
+      20, _omitEnumNames ? '' : 'SPEND_ERROR_MISSING_PRIVATE_KEY_ERROR');
+  static const SpendError SPEND_ERROR_UNSUPPORTED_CHAIN_ID_ERROR = SpendError._(
+      21, _omitEnumNames ? '' : 'SPEND_ERROR_UNSUPPORTED_CHAIN_ID_ERROR');
+  static const SpendError SPEND_ERROR_UNSUPPORTED_SPEND_JOIN_SPLIT_TYPE_ERROR =
+      SpendError._(
+          22,
+          _omitEnumNames
+              ? ''
+              : 'SPEND_ERROR_UNSUPPORTED_SPEND_JOIN_SPLIT_TYPE_ERROR');
+  static const SpendError SPEND_ERROR_INVALID_CREATE_OPTIONS_ERROR =
+      SpendError._(
+          23, _omitEnumNames ? '' : 'SPEND_ERROR_INVALID_CREATE_OPTIONS_ERROR');
+  static const SpendError SPEND_ERROR_INVALID_PUBLIC_ADDRESS_ERROR =
+      SpendError._(
+          24, _omitEnumNames ? '' : 'SPEND_ERROR_INVALID_PUBLIC_ADDRESS_ERROR');
+  static const SpendError SPEND_ERROR_INVALID_MYSTIKO_ADDRESS_ERROR = SpendError
+      ._(25, _omitEnumNames ? '' : 'SPEND_ERROR_INVALID_MYSTIKO_ADDRESS_ERROR');
+  static const SpendError SPEND_ERROR_INVALID_AMOUNT_ERROR = SpendError._(
+      26, _omitEnumNames ? '' : 'SPEND_ERROR_INVALID_AMOUNT_ERROR');
+  static const SpendError SPEND_ERROR_INVALID_ROLLUP_FEE_AMOUNT_ERROR =
+      SpendError._(27,
+          _omitEnumNames ? '' : 'SPEND_ERROR_INVALID_ROLLUP_FEE_AMOUNT_ERROR');
+  static const SpendError SPEND_ERROR_INSUFFICIENT_POOL_BALANCE_ERROR =
+      SpendError._(28,
+          _omitEnumNames ? '' : 'SPEND_ERROR_INSUFFICIENT_POOL_BALANCE_ERROR');
+  static const SpendError SPEND_ERROR_UNKNOWN_MERKLE_ROOT_ERROR = SpendError._(
+      29, _omitEnumNames ? '' : 'SPEND_ERROR_UNKNOWN_MERKLE_ROOT_ERROR');
+  static const SpendError SPEND_ERROR_ALREADY_SPENT_COMMITMENT_ERROR =
+      SpendError._(30,
+          _omitEnumNames ? '' : 'SPEND_ERROR_ALREADY_SPENT_COMMITMENT_ERROR');
+  static const SpendError
+      SPEND_ERROR_MISSING_SHIELDED_ADDRESS_IN_COMMITMENT_ERROR = SpendError._(
+          31,
+          _omitEnumNames
+              ? ''
+              : 'SPEND_ERROR_MISSING_SHIELDED_ADDRESS_IN_COMMITMENT_ERROR');
+  static const SpendError
+      SPEND_ERROR_MISSING_ENCRYPTED_NOTE_IN_COMMITMENT_ERROR = SpendError._(
+          32,
+          _omitEnumNames
+              ? ''
+              : 'SPEND_ERROR_MISSING_ENCRYPTED_NOTE_IN_COMMITMENT_ERROR');
+  static const SpendError SPEND_ERROR_MISSING_COMMITMENT_IN_MERKLE_TREE =
+      SpendError._(
+          33,
+          _omitEnumNames
+              ? ''
+              : 'SPEND_ERROR_MISSING_COMMITMENT_IN_MERKLE_TREE');
+  static const SpendError SPEND_ERROR_NON_OWNED_SHIELDED_ADDRESS_ERROR =
+      SpendError._(34,
+          _omitEnumNames ? '' : 'SPEND_ERROR_NON_OWNED_SHIELDED_ADDRESS_ERROR');
+  static const SpendError SPEND_ERROR_MISSING_CIRCUIT_TYPE_IN_CONFIG_ERROR =
+      SpendError._(
+          35,
+          _omitEnumNames
+              ? ''
+              : 'SPEND_ERROR_MISSING_CIRCUIT_TYPE_IN_CONFIG_ERROR');
+  static const SpendError SPEND_ERROR_INVALID_ZK_PROOF_ERROR = SpendError._(
+      36, _omitEnumNames ? '' : 'SPEND_ERROR_INVALID_ZK_PROOF_ERROR');
+  static const SpendError SPEND_ERROR_SPEND_NOT_FOUND_ERROR = SpendError._(
+      37, _omitEnumNames ? '' : 'SPEND_ERROR_SPEND_NOT_FOUND_ERROR');
+  static const SpendError SPEND_ERROR_SPEND_STATUS_ERROR =
+      SpendError._(38, _omitEnumNames ? '' : 'SPEND_ERROR_SPEND_STATUS_ERROR');
+  static const SpendError SPEND_ERROR_MISSING_GIVEN_RELAYER_ERROR =
+      SpendError._(
+          39, _omitEnumNames ? '' : 'SPEND_ERROR_MISSING_GIVEN_RELAYER_ERROR');
+  static const SpendError
+      SPEND_ERROR_MISSING_TRANSACTION_HASH_FROM_RELAYER_JOB_ERROR =
+      SpendError._(
+          40,
+          _omitEnumNames
+              ? ''
+              : 'SPEND_ERROR_MISSING_TRANSACTION_HASH_FROM_RELAYER_JOB_ERROR');
+  static const SpendError SPEND_ERROR_GET_MYSTIKO_GUARD_ERROR = SpendError._(
+      41, _omitEnumNames ? '' : 'SPEND_ERROR_GET_MYSTIKO_GUARD_ERROR');
+  static const SpendError SPEND_ERROR_DESERIALIZE_MESSAGE_ERROR = SpendError._(
+      42, _omitEnumNames ? '' : 'SPEND_ERROR_DESERIALIZE_MESSAGE_ERROR');
+  static const SpendError SPEND_ERROR_GRPC_CONNECT_ERROR =
+      SpendError._(43, _omitEnumNames ? '' : 'SPEND_ERROR_GRPC_CONNECT_ERROR');
+
+  static const $core.List<SpendError> values = <SpendError>[
+    SPEND_ERROR_UNSPECIFIED,
+    SPEND_ERROR_ANYHOW_ERROR,
+    SPEND_ERROR_PUBLIC_ASSETS_ERROR,
+    SPEND_ERROR_COMMITMENT_POOL_CONTRACTS_ERROR,
+    SPEND_ERROR_TRANSACTIONS_ERROR,
+    SPEND_ERROR_STORAGE_ERROR,
+    SPEND_ERROR_WALLETS_ERROR,
+    SPEND_ERROR_ACCOUNTS_ERROR,
+    SPEND_ERROR_RELAYER_CLIENT_ERROR,
+    SPEND_ERROR_HEX_STRING_ERROR,
+    SPEND_ERROR_PARSE_BIG_INT_ERROR,
+    SPEND_ERROR_PROTOCOL_ERROR,
+    SPEND_ERROR_PROTOCOL_KEY_ERROR,
+    SPEND_ERROR_CRYPTO_ERROR,
+    SPEND_ERROR_MERKLE_TREE_ERROR,
+    SPEND_ERROR_G16_PROVER_ERROR,
+    SPEND_ERROR_LOCAL_WALLET_ERROR,
+    SPEND_ERROR_SERDE_JSON_ERROR,
+    SPEND_ERROR_NO_POOL_CONTRACT_FOUND_ERROR,
+    SPEND_ERROR_NO_POOL_CONTRACT_ADDRESS_FOUND_ERROR,
+    SPEND_ERROR_MISSING_PRIVATE_KEY_ERROR,
+    SPEND_ERROR_UNSUPPORTED_CHAIN_ID_ERROR,
+    SPEND_ERROR_UNSUPPORTED_SPEND_JOIN_SPLIT_TYPE_ERROR,
+    SPEND_ERROR_INVALID_CREATE_OPTIONS_ERROR,
+    SPEND_ERROR_INVALID_PUBLIC_ADDRESS_ERROR,
+    SPEND_ERROR_INVALID_MYSTIKO_ADDRESS_ERROR,
+    SPEND_ERROR_INVALID_AMOUNT_ERROR,
+    SPEND_ERROR_INVALID_ROLLUP_FEE_AMOUNT_ERROR,
+    SPEND_ERROR_INSUFFICIENT_POOL_BALANCE_ERROR,
+    SPEND_ERROR_UNKNOWN_MERKLE_ROOT_ERROR,
+    SPEND_ERROR_ALREADY_SPENT_COMMITMENT_ERROR,
+    SPEND_ERROR_MISSING_SHIELDED_ADDRESS_IN_COMMITMENT_ERROR,
+    SPEND_ERROR_MISSING_ENCRYPTED_NOTE_IN_COMMITMENT_ERROR,
+    SPEND_ERROR_MISSING_COMMITMENT_IN_MERKLE_TREE,
+    SPEND_ERROR_NON_OWNED_SHIELDED_ADDRESS_ERROR,
+    SPEND_ERROR_MISSING_CIRCUIT_TYPE_IN_CONFIG_ERROR,
+    SPEND_ERROR_INVALID_ZK_PROOF_ERROR,
+    SPEND_ERROR_SPEND_NOT_FOUND_ERROR,
+    SPEND_ERROR_SPEND_STATUS_ERROR,
+    SPEND_ERROR_MISSING_GIVEN_RELAYER_ERROR,
+    SPEND_ERROR_MISSING_TRANSACTION_HASH_FROM_RELAYER_JOB_ERROR,
+    SPEND_ERROR_GET_MYSTIKO_GUARD_ERROR,
+    SPEND_ERROR_DESERIALIZE_MESSAGE_ERROR,
+    SPEND_ERROR_GRPC_CONNECT_ERROR,
+  ];
+
+  static final $core.Map<$core.int, SpendError> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static SpendError? valueOf($core.int value) => _byValue[value];
+
+  const SpendError._($core.int v, $core.String n) : super(v, n);
+}
+
 class ScannerError extends $pb.ProtobufEnum {
   static const ScannerError SCANNER_ERROR_UNSPECIFIED =
       ScannerError._(0, _omitEnumNames ? '' : 'SCANNER_ERROR_UNSPECIFIED');

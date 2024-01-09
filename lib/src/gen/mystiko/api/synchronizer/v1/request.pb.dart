@@ -14,8 +14,8 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../core/synchronizer/v1/reset.pb.dart' as $26;
-import '../../../core/synchronizer/v1/sync.pb.dart' as $25;
+import '../../../core/synchronizer/v1/reset.pb.dart' as $29;
+import '../../../core/synchronizer/v1/sync.pb.dart' as $28;
 
 class ChainSyncedBlockRequest extends $pb.GeneratedMessage {
   factory ChainSyncedBlockRequest({
@@ -229,7 +229,7 @@ class StatusRequest extends $pb.GeneratedMessage {
 
 class SyncRequest extends $pb.GeneratedMessage {
   factory SyncRequest({
-    $25.SyncOptions? options,
+    $28.SyncOptions? options,
   }) {
     final $result = create();
     if (options != null) {
@@ -250,8 +250,8 @@ class SyncRequest extends $pb.GeneratedMessage {
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.synchronizer.v1'),
       createEmptyInstance: create)
-    ..aOM<$25.SyncOptions>(1, _omitFieldNames ? '' : 'options',
-        subBuilder: $25.SyncOptions.create)
+    ..aOM<$28.SyncOptions>(1, _omitFieldNames ? '' : 'options',
+        subBuilder: $28.SyncOptions.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
@@ -277,9 +277,9 @@ class SyncRequest extends $pb.GeneratedMessage {
   static SyncRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $25.SyncOptions get options => $_getN(0);
+  $28.SyncOptions get options => $_getN(0);
   @$pb.TagNumber(1)
-  set options($25.SyncOptions v) {
+  set options($28.SyncOptions v) {
     setField(1, v);
   }
 
@@ -288,12 +288,12 @@ class SyncRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearOptions() => clearField(1);
   @$pb.TagNumber(1)
-  $25.SyncOptions ensureOptions() => $_ensure(0);
+  $28.SyncOptions ensureOptions() => $_ensure(0);
 }
 
 class ResetRequest extends $pb.GeneratedMessage {
   factory ResetRequest({
-    $26.ResetOptions? options,
+    $29.ResetOptions? options,
   }) {
     final $result = create();
     if (options != null) {
@@ -314,8 +314,8 @@ class ResetRequest extends $pb.GeneratedMessage {
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.synchronizer.v1'),
       createEmptyInstance: create)
-    ..aOM<$26.ResetOptions>(1, _omitFieldNames ? '' : 'options',
-        subBuilder: $26.ResetOptions.create)
+    ..aOM<$29.ResetOptions>(1, _omitFieldNames ? '' : 'options',
+        subBuilder: $29.ResetOptions.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
@@ -342,9 +342,9 @@ class ResetRequest extends $pb.GeneratedMessage {
   static ResetRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $26.ResetOptions get options => $_getN(0);
+  $29.ResetOptions get options => $_getN(0);
   @$pb.TagNumber(1)
-  set options($26.ResetOptions v) {
+  set options($29.ResetOptions v) {
     setField(1, v);
   }
 
@@ -353,7 +353,7 @@ class ResetRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearOptions() => clearField(1);
   @$pb.TagNumber(1)
-  $26.ResetOptions ensureOptions() => $_ensure(0);
+  $29.ResetOptions ensureOptions() => $_ensure(0);
 }
 
 const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
