@@ -986,6 +986,63 @@ class GetTransactionUrlResponse extends $pb.GeneratedMessage {
   void clearUrl() => clearField(1);
 }
 
+class SupportedAssetSymbolsResponse extends $pb.GeneratedMessage {
+  factory SupportedAssetSymbolsResponse({
+    $core.Iterable<$core.String>? symbols,
+  }) {
+    final $result = create();
+    if (symbols != null) {
+      $result.symbols.addAll(symbols);
+    }
+    return $result;
+  }
+  SupportedAssetSymbolsResponse._() : super();
+  factory SupportedAssetSymbolsResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SupportedAssetSymbolsResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'SupportedAssetSymbolsResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'mystiko.api.config.v1'),
+      createEmptyInstance: create)
+    ..pPS(1, _omitFieldNames ? '' : 'symbols')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  SupportedAssetSymbolsResponse clone() =>
+      SupportedAssetSymbolsResponse()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  SupportedAssetSymbolsResponse copyWith(
+          void Function(SupportedAssetSymbolsResponse) updates) =>
+      super.copyWith(
+              (message) => updates(message as SupportedAssetSymbolsResponse))
+          as SupportedAssetSymbolsResponse;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static SupportedAssetSymbolsResponse create() =>
+      SupportedAssetSymbolsResponse._();
+  SupportedAssetSymbolsResponse createEmptyInstance() => create();
+  static $pb.PbList<SupportedAssetSymbolsResponse> createRepeated() =>
+      $pb.PbList<SupportedAssetSymbolsResponse>();
+  @$core.pragma('dart2js:noInline')
+  static SupportedAssetSymbolsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SupportedAssetSymbolsResponse>(create);
+  static SupportedAssetSymbolsResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<$core.String> get symbols => $_getList(0);
+}
+
 const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
 const _omitMessageNames =
     $core.bool.fromEnvironment('protobuf.omit_message_names');

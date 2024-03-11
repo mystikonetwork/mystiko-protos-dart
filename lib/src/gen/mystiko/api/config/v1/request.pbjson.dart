@@ -255,3 +255,17 @@ final $typed_data.Uint8List getTransactionUrlRequestDescriptor =
     $convert.base64Decode(
         'ChhHZXRUcmFuc2FjdGlvblVybFJlcXVlc3QSGQoIY2hhaW5faWQYASABKARSB2NoYWluSWQSFw'
         'oHdHhfaGFzaBgCIAEoCVIGdHhIYXNo');
+
+@$core.Deprecated('Use supportedAssetSymbolsRequestDescriptor instead')
+const SupportedAssetSymbolsRequest$json = {
+  '1': 'SupportedAssetSymbolsRequest',
+  '2': [
+    {'1': 'chain_id', '3': 1, '4': 1, '5': 4, '10': 'chainId'},
+  ],
+};
+
+/// Descriptor for `SupportedAssetSymbolsRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List supportedAssetSymbolsRequestDescriptor =
+    $convert.base64Decode(
+        'ChxTdXBwb3J0ZWRBc3NldFN5bWJvbHNSZXF1ZXN0EhkKCGNoYWluX2lkGAEgASgEUgdjaGFpbk'
+        'lk');
