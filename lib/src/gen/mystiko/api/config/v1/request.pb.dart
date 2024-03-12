@@ -1206,6 +1206,73 @@ class GetTransactionUrlRequest extends $pb.GeneratedMessage {
   void clearTxHash() => clearField(2);
 }
 
+class SupportedAssetSymbolsRequest extends $pb.GeneratedMessage {
+  factory SupportedAssetSymbolsRequest({
+    $fixnum.Int64? chainId,
+  }) {
+    final $result = create();
+    if (chainId != null) {
+      $result.chainId = chainId;
+    }
+    return $result;
+  }
+  SupportedAssetSymbolsRequest._() : super();
+  factory SupportedAssetSymbolsRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SupportedAssetSymbolsRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'SupportedAssetSymbolsRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'mystiko.api.config.v1'),
+      createEmptyInstance: create)
+    ..a<$fixnum.Int64>(1, _omitFieldNames ? '' : 'chainId', $pb.PbFieldType.OU6,
+        defaultOrMaker: $fixnum.Int64.ZERO)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  SupportedAssetSymbolsRequest clone() =>
+      SupportedAssetSymbolsRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  SupportedAssetSymbolsRequest copyWith(
+          void Function(SupportedAssetSymbolsRequest) updates) =>
+      super.copyWith(
+              (message) => updates(message as SupportedAssetSymbolsRequest))
+          as SupportedAssetSymbolsRequest;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static SupportedAssetSymbolsRequest create() =>
+      SupportedAssetSymbolsRequest._();
+  SupportedAssetSymbolsRequest createEmptyInstance() => create();
+  static $pb.PbList<SupportedAssetSymbolsRequest> createRepeated() =>
+      $pb.PbList<SupportedAssetSymbolsRequest>();
+  @$core.pragma('dart2js:noInline')
+  static SupportedAssetSymbolsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SupportedAssetSymbolsRequest>(create);
+  static SupportedAssetSymbolsRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $fixnum.Int64 get chainId => $_getI64(0);
+  @$pb.TagNumber(1)
+  set chainId($fixnum.Int64 v) {
+    $_setInt64(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasChainId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearChainId() => clearField(1);
+}
+
 const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
 const _omitMessageNames =
     $core.bool.fromEnvironment('protobuf.omit_message_names');

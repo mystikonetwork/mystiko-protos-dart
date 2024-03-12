@@ -360,3 +360,17 @@ final $typed_data.Uint8List getTransactionUrlResponseDescriptor =
     $convert.base64Decode(
         'ChlHZXRUcmFuc2FjdGlvblVybFJlc3BvbnNlEhUKA3VybBgBIAEoCUgAUgN1cmyIAQFCBgoEX3'
         'VybA==');
+
+@$core.Deprecated('Use supportedAssetSymbolsResponseDescriptor instead')
+const SupportedAssetSymbolsResponse$json = {
+  '1': 'SupportedAssetSymbolsResponse',
+  '2': [
+    {'1': 'symbols', '3': 1, '4': 3, '5': 9, '10': 'symbols'},
+  ],
+};
+
+/// Descriptor for `SupportedAssetSymbolsResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List supportedAssetSymbolsResponseDescriptor =
+    $convert.base64Decode(
+        'Ch1TdXBwb3J0ZWRBc3NldFN5bWJvbHNSZXNwb25zZRIYCgdzeW1ib2xzGAEgAygJUgdzeW1ib2'
+        'xz');
