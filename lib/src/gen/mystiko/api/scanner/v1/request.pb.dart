@@ -83,9 +83,9 @@ class ScanRequest extends $pb.GeneratedMessage {
   $24.ScanOptions ensureOptions() => $_ensure(0);
 }
 
-class ResetRequest extends $pb.GeneratedMessage {
-  factory ResetRequest({
-    $25.ResetOptions? options,
+class ScannerResetRequest extends $pb.GeneratedMessage {
+  factory ScannerResetRequest({
+    $25.ScannerResetOptions? options,
   }) {
     final $result = create();
     if (options != null) {
@@ -93,50 +93,50 @@ class ResetRequest extends $pb.GeneratedMessage {
     }
     return $result;
   }
-  ResetRequest._() : super();
-  factory ResetRequest.fromBuffer($core.List<$core.int> i,
+  ScannerResetRequest._() : super();
+  factory ScannerResetRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
-  factory ResetRequest.fromJson($core.String i,
+  factory ScannerResetRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'ResetRequest',
+      _omitMessageNames ? '' : 'ScannerResetRequest',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.scanner.v1'),
       createEmptyInstance: create)
-    ..aOM<$25.ResetOptions>(1, _omitFieldNames ? '' : 'options',
-        subBuilder: $25.ResetOptions.create)
+    ..aOM<$25.ScannerResetOptions>(1, _omitFieldNames ? '' : 'options',
+        subBuilder: $25.ScannerResetOptions.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
-  ResetRequest clone() => ResetRequest()..mergeFromMessage(this);
+  ScannerResetRequest clone() => ScannerResetRequest()..mergeFromMessage(this);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
-  ResetRequest copyWith(void Function(ResetRequest) updates) =>
-      super.copyWith((message) => updates(message as ResetRequest))
-          as ResetRequest;
+  ScannerResetRequest copyWith(void Function(ScannerResetRequest) updates) =>
+      super.copyWith((message) => updates(message as ScannerResetRequest))
+          as ScannerResetRequest;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static ResetRequest create() => ResetRequest._();
-  ResetRequest createEmptyInstance() => create();
-  static $pb.PbList<ResetRequest> createRepeated() =>
-      $pb.PbList<ResetRequest>();
+  static ScannerResetRequest create() => ScannerResetRequest._();
+  ScannerResetRequest createEmptyInstance() => create();
+  static $pb.PbList<ScannerResetRequest> createRepeated() =>
+      $pb.PbList<ScannerResetRequest>();
   @$core.pragma('dart2js:noInline')
-  static ResetRequest getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<ResetRequest>(create);
-  static ResetRequest? _defaultInstance;
+  static ScannerResetRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ScannerResetRequest>(create);
+  static ScannerResetRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $25.ResetOptions get options => $_getN(0);
+  $25.ScannerResetOptions get options => $_getN(0);
   @$pb.TagNumber(1)
-  set options($25.ResetOptions v) {
+  set options($25.ScannerResetOptions v) {
     setField(1, v);
   }
 
@@ -145,7 +145,7 @@ class ResetRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearOptions() => clearField(1);
   @$pb.TagNumber(1)
-  $25.ResetOptions ensureOptions() => $_ensure(0);
+  $25.ScannerResetOptions ensureOptions() => $_ensure(0);
 }
 
 class BalanceRequest extends $pb.GeneratedMessage {

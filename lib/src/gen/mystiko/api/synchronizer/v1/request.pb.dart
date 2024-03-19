@@ -291,9 +291,9 @@ class SyncRequest extends $pb.GeneratedMessage {
   $28.SyncOptions ensureOptions() => $_ensure(0);
 }
 
-class ResetRequest extends $pb.GeneratedMessage {
-  factory ResetRequest({
-    $29.ResetOptions? options,
+class SynchronizerResetRequest extends $pb.GeneratedMessage {
+  factory SynchronizerResetRequest({
+    $29.SynchronizerResetOptions? options,
   }) {
     final $result = create();
     if (options != null) {
@@ -301,50 +301,52 @@ class ResetRequest extends $pb.GeneratedMessage {
     }
     return $result;
   }
-  ResetRequest._() : super();
-  factory ResetRequest.fromBuffer($core.List<$core.int> i,
+  SynchronizerResetRequest._() : super();
+  factory SynchronizerResetRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
-  factory ResetRequest.fromJson($core.String i,
+  factory SynchronizerResetRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'ResetRequest',
+      _omitMessageNames ? '' : 'SynchronizerResetRequest',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.synchronizer.v1'),
       createEmptyInstance: create)
-    ..aOM<$29.ResetOptions>(1, _omitFieldNames ? '' : 'options',
-        subBuilder: $29.ResetOptions.create)
+    ..aOM<$29.SynchronizerResetOptions>(1, _omitFieldNames ? '' : 'options',
+        subBuilder: $29.SynchronizerResetOptions.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
-  ResetRequest clone() => ResetRequest()..mergeFromMessage(this);
+  SynchronizerResetRequest clone() =>
+      SynchronizerResetRequest()..mergeFromMessage(this);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
-  ResetRequest copyWith(void Function(ResetRequest) updates) =>
-      super.copyWith((message) => updates(message as ResetRequest))
-          as ResetRequest;
+  SynchronizerResetRequest copyWith(
+          void Function(SynchronizerResetRequest) updates) =>
+      super.copyWith((message) => updates(message as SynchronizerResetRequest))
+          as SynchronizerResetRequest;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static ResetRequest create() => ResetRequest._();
-  ResetRequest createEmptyInstance() => create();
-  static $pb.PbList<ResetRequest> createRepeated() =>
-      $pb.PbList<ResetRequest>();
+  static SynchronizerResetRequest create() => SynchronizerResetRequest._();
+  SynchronizerResetRequest createEmptyInstance() => create();
+  static $pb.PbList<SynchronizerResetRequest> createRepeated() =>
+      $pb.PbList<SynchronizerResetRequest>();
   @$core.pragma('dart2js:noInline')
-  static ResetRequest getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<ResetRequest>(create);
-  static ResetRequest? _defaultInstance;
+  static SynchronizerResetRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SynchronizerResetRequest>(create);
+  static SynchronizerResetRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $29.ResetOptions get options => $_getN(0);
+  $29.SynchronizerResetOptions get options => $_getN(0);
   @$pb.TagNumber(1)
-  set options($29.ResetOptions v) {
+  set options($29.SynchronizerResetOptions v) {
     setField(1, v);
   }
 
@@ -353,7 +355,7 @@ class ResetRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearOptions() => clearField(1);
   @$pb.TagNumber(1)
-  $29.ResetOptions ensureOptions() => $_ensure(0);
+  $29.SynchronizerResetOptions ensureOptions() => $_ensure(0);
 }
 
 const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');

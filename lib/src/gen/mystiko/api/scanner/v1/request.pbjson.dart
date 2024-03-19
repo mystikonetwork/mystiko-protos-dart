@@ -33,25 +33,25 @@ final $typed_data.Uint8List scanRequestDescriptor = $convert.base64Decode(
     'CgtTY2FuUmVxdWVzdBI+CgdvcHRpb25zGAEgASgLMiQubXlzdGlrby5jb3JlLnNjYW5uZXIudj'
     'EuU2Nhbk9wdGlvbnNSB29wdGlvbnM=');
 
-@$core.Deprecated('Use resetRequestDescriptor instead')
-const ResetRequest$json = {
-  '1': 'ResetRequest',
+@$core.Deprecated('Use scannerResetRequestDescriptor instead')
+const ScannerResetRequest$json = {
+  '1': 'ScannerResetRequest',
   '2': [
     {
       '1': 'options',
       '3': 1,
       '4': 1,
       '5': 11,
-      '6': '.mystiko.core.scanner.v1.ResetOptions',
+      '6': '.mystiko.core.scanner.v1.ScannerResetOptions',
       '10': 'options'
     },
   ],
 };
 
-/// Descriptor for `ResetRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List resetRequestDescriptor = $convert.base64Decode(
-    'CgxSZXNldFJlcXVlc3QSPwoHb3B0aW9ucxgBIAEoCzIlLm15c3Rpa28uY29yZS5zY2FubmVyLn'
-    'YxLlJlc2V0T3B0aW9uc1IHb3B0aW9ucw==');
+/// Descriptor for `ScannerResetRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List scannerResetRequestDescriptor = $convert.base64Decode(
+    'ChNTY2FubmVyUmVzZXRSZXF1ZXN0EkYKB29wdGlvbnMYASABKAsyLC5teXN0aWtvLmNvcmUuc2'
+    'Nhbm5lci52MS5TY2FubmVyUmVzZXRPcHRpb25zUgdvcHRpb25z');
 
 @$core.Deprecated('Use balanceRequestDescriptor instead')
 const BalanceRequest$json = {

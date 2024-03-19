@@ -46,9 +46,9 @@ final $typed_data.Uint8List resetChainOptionsDescriptor = $convert.base64Decode(
     'FjdF9hZGRyZXNzZXMYAiADKAlSEWNvbnRyYWN0QWRkcmVzc2VzEiYKDGJsb2NrX251bWJlchgD'
     'IAEoBEgAUgtibG9ja051bWJlcogBAUIPCg1fYmxvY2tfbnVtYmVy');
 
-@$core.Deprecated('Use resetOptionsDescriptor instead')
-const ResetOptions$json = {
-  '1': 'ResetOptions',
+@$core.Deprecated('Use synchronizerResetOptionsDescriptor instead')
+const SynchronizerResetOptions$json = {
+  '1': 'SynchronizerResetOptions',
   '2': [
     {
       '1': 'chains',
@@ -61,7 +61,8 @@ const ResetOptions$json = {
   ],
 };
 
-/// Descriptor for `ResetOptions`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List resetOptionsDescriptor = $convert.base64Decode(
-    'CgxSZXNldE9wdGlvbnMSRwoGY2hhaW5zGAEgAygLMi8ubXlzdGlrby5jb3JlLnN5bmNocm9uaX'
-    'plci52MS5SZXNldENoYWluT3B0aW9uc1IGY2hhaW5z');
+/// Descriptor for `SynchronizerResetOptions`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List synchronizerResetOptionsDescriptor =
+    $convert.base64Decode(
+        'ChhTeW5jaHJvbml6ZXJSZXNldE9wdGlvbnMSRwoGY2hhaW5zGAEgAygLMi8ubXlzdGlrby5jb3'
+        'JlLnN5bmNocm9uaXplci52MS5SZXNldENoYWluT3B0aW9uc1IGY2hhaW5z');

@@ -73,22 +73,23 @@ final $typed_data.Uint8List syncRequestDescriptor = $convert.base64Decode(
     'CgtTeW5jUmVxdWVzdBJDCgdvcHRpb25zGAEgASgLMikubXlzdGlrby5jb3JlLnN5bmNocm9uaX'
     'plci52MS5TeW5jT3B0aW9uc1IHb3B0aW9ucw==');
 
-@$core.Deprecated('Use resetRequestDescriptor instead')
-const ResetRequest$json = {
-  '1': 'ResetRequest',
+@$core.Deprecated('Use synchronizerResetRequestDescriptor instead')
+const SynchronizerResetRequest$json = {
+  '1': 'SynchronizerResetRequest',
   '2': [
     {
       '1': 'options',
       '3': 1,
       '4': 1,
       '5': 11,
-      '6': '.mystiko.core.synchronizer.v1.ResetOptions',
+      '6': '.mystiko.core.synchronizer.v1.SynchronizerResetOptions',
       '10': 'options'
     },
   ],
 };
 
-/// Descriptor for `ResetRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List resetRequestDescriptor = $convert.base64Decode(
-    'CgxSZXNldFJlcXVlc3QSRAoHb3B0aW9ucxgBIAEoCzIqLm15c3Rpa28uY29yZS5zeW5jaHJvbm'
-    'l6ZXIudjEuUmVzZXRPcHRpb25zUgdvcHRpb25z');
+/// Descriptor for `SynchronizerResetRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List synchronizerResetRequestDescriptor =
+    $convert.base64Decode(
+        'ChhTeW5jaHJvbml6ZXJSZXNldFJlcXVlc3QSUAoHb3B0aW9ucxgBIAEoCzI2Lm15c3Rpa28uY2'
+        '9yZS5zeW5jaHJvbml6ZXIudjEuU3luY2hyb25pemVyUmVzZXRPcHRpb25zUgdvcHRpb25z');
