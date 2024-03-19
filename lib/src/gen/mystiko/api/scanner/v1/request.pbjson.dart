@@ -33,9 +33,9 @@ final $typed_data.Uint8List scanRequestDescriptor = $convert.base64Decode(
     'CgtTY2FuUmVxdWVzdBI+CgdvcHRpb25zGAEgASgLMiQubXlzdGlrby5jb3JlLnNjYW5uZXIudj'
     'EuU2Nhbk9wdGlvbnNSB29wdGlvbnM=');
 
-@$core.Deprecated('Use resetRequestDescriptor instead')
-const ResetRequest$json = {
-  '1': 'ResetRequest',
+@$core.Deprecated('Use scannerResetRequestDescriptor instead')
+const ScannerResetRequest$json = {
+  '1': 'ScannerResetRequest',
   '2': [
     {
       '1': 'options',
@@ -48,10 +48,10 @@ const ResetRequest$json = {
   ],
 };
 
-/// Descriptor for `ResetRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List resetRequestDescriptor = $convert.base64Decode(
-    'CgxSZXNldFJlcXVlc3QSRgoHb3B0aW9ucxgBIAEoCzIsLm15c3Rpa28uY29yZS5zY2FubmVyLn'
-    'YxLlNjYW5uZXJSZXNldE9wdGlvbnNSB29wdGlvbnM=');
+/// Descriptor for `ScannerResetRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List scannerResetRequestDescriptor = $convert.base64Decode(
+    'ChNTY2FubmVyUmVzZXRSZXF1ZXN0EkYKB29wdGlvbnMYASABKAsyLC5teXN0aWtvLmNvcmUuc2'
+    'Nhbm5lci52MS5TY2FubmVyUmVzZXRPcHRpb25zUgdvcHRpb25z');
 
 @$core.Deprecated('Use balanceRequestDescriptor instead')
 const BalanceRequest$json = {
