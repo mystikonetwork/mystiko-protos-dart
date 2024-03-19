@@ -85,7 +85,7 @@ class ScanRequest extends $pb.GeneratedMessage {
 
 class ResetRequest extends $pb.GeneratedMessage {
   factory ResetRequest({
-    $25.ResetOptions? options,
+    $25.ScannerResetOptions? options,
   }) {
     final $result = create();
     if (options != null) {
@@ -106,8 +106,8 @@ class ResetRequest extends $pb.GeneratedMessage {
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.scanner.v1'),
       createEmptyInstance: create)
-    ..aOM<$25.ResetOptions>(1, _omitFieldNames ? '' : 'options',
-        subBuilder: $25.ResetOptions.create)
+    ..aOM<$25.ScannerResetOptions>(1, _omitFieldNames ? '' : 'options',
+        subBuilder: $25.ScannerResetOptions.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
@@ -134,9 +134,9 @@ class ResetRequest extends $pb.GeneratedMessage {
   static ResetRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $25.ResetOptions get options => $_getN(0);
+  $25.ScannerResetOptions get options => $_getN(0);
   @$pb.TagNumber(1)
-  set options($25.ResetOptions v) {
+  set options($25.ScannerResetOptions v) {
     setField(1, v);
   }
 
@@ -145,7 +145,7 @@ class ResetRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearOptions() => clearField(1);
   @$pb.TagNumber(1)
-  $25.ResetOptions ensureOptions() => $_ensure(0);
+  $25.ScannerResetOptions ensureOptions() => $_ensure(0);
 }
 
 class BalanceRequest extends $pb.GeneratedMessage {

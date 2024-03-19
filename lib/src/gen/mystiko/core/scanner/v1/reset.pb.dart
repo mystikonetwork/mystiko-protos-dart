@@ -13,8 +13,8 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-class ResetOptions extends $pb.GeneratedMessage {
-  factory ResetOptions({
+class ScannerResetOptions extends $pb.GeneratedMessage {
+  factory ScannerResetOptions({
     $core.String? resetToId,
     $core.Iterable<$core.String>? shieldedAddresses,
   }) {
@@ -27,16 +27,16 @@ class ResetOptions extends $pb.GeneratedMessage {
     }
     return $result;
   }
-  ResetOptions._() : super();
-  factory ResetOptions.fromBuffer($core.List<$core.int> i,
+  ScannerResetOptions._() : super();
+  factory ScannerResetOptions.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
-  factory ResetOptions.fromJson($core.String i,
+  factory ScannerResetOptions.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'ResetOptions',
+      _omitMessageNames ? '' : 'ScannerResetOptions',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.core.scanner.v1'),
       createEmptyInstance: create)
@@ -47,25 +47,25 @@ class ResetOptions extends $pb.GeneratedMessage {
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
-  ResetOptions clone() => ResetOptions()..mergeFromMessage(this);
+  ScannerResetOptions clone() => ScannerResetOptions()..mergeFromMessage(this);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
-  ResetOptions copyWith(void Function(ResetOptions) updates) =>
-      super.copyWith((message) => updates(message as ResetOptions))
-          as ResetOptions;
+  ScannerResetOptions copyWith(void Function(ScannerResetOptions) updates) =>
+      super.copyWith((message) => updates(message as ScannerResetOptions))
+          as ScannerResetOptions;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static ResetOptions create() => ResetOptions._();
-  ResetOptions createEmptyInstance() => create();
-  static $pb.PbList<ResetOptions> createRepeated() =>
-      $pb.PbList<ResetOptions>();
+  static ScannerResetOptions create() => ScannerResetOptions._();
+  ScannerResetOptions createEmptyInstance() => create();
+  static $pb.PbList<ScannerResetOptions> createRepeated() =>
+      $pb.PbList<ScannerResetOptions>();
   @$core.pragma('dart2js:noInline')
-  static ResetOptions getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<ResetOptions>(create);
-  static ResetOptions? _defaultInstance;
+  static ScannerResetOptions getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ScannerResetOptions>(create);
+  static ScannerResetOptions? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get resetToId => $_getSZ(0);

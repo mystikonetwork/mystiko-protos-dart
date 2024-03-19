@@ -13,9 +13,9 @@ import 'dart:convert' as $convert;
 import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
 
-@$core.Deprecated('Use resetOptionsDescriptor instead')
-const ResetOptions$json = {
-  '1': 'ResetOptions',
+@$core.Deprecated('Use scannerResetOptionsDescriptor instead')
+const ScannerResetOptions$json = {
+  '1': 'ScannerResetOptions',
   '2': [
     {
       '1': 'reset_to_id',
@@ -39,11 +39,11 @@ const ResetOptions$json = {
   ],
 };
 
-/// Descriptor for `ResetOptions`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List resetOptionsDescriptor = $convert.base64Decode(
-    'CgxSZXNldE9wdGlvbnMSIwoLcmVzZXRfdG9faWQYASABKAlIAFIJcmVzZXRUb0lkiAEBEi0KEn'
-    'NoaWVsZGVkX2FkZHJlc3NlcxgCIAMoCVIRc2hpZWxkZWRBZGRyZXNzZXNCDgoMX3Jlc2V0X3Rv'
-    'X2lk');
+/// Descriptor for `ScannerResetOptions`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List scannerResetOptionsDescriptor = $convert.base64Decode(
+    'ChNTY2FubmVyUmVzZXRPcHRpb25zEiMKC3Jlc2V0X3RvX2lkGAEgASgJSABSCXJlc2V0VG9JZI'
+    'gBARItChJzaGllbGRlZF9hZGRyZXNzZXMYAiADKAlSEXNoaWVsZGVkQWRkcmVzc2VzQg4KDF9y'
+    'ZXNldF90b19pZA==');
 
 @$core.Deprecated('Use resetResultDescriptor instead')
 const ResetResult$json = {

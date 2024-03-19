@@ -104,8 +104,8 @@ class ResetChainOptions extends $pb.GeneratedMessage {
   void clearBlockNumber() => clearField(3);
 }
 
-class ResetOptions extends $pb.GeneratedMessage {
-  factory ResetOptions({
+class SynchronizerResetOptions extends $pb.GeneratedMessage {
+  factory SynchronizerResetOptions({
     $core.Iterable<ResetChainOptions>? chains,
   }) {
     final $result = create();
@@ -114,16 +114,16 @@ class ResetOptions extends $pb.GeneratedMessage {
     }
     return $result;
   }
-  ResetOptions._() : super();
-  factory ResetOptions.fromBuffer($core.List<$core.int> i,
+  SynchronizerResetOptions._() : super();
+  factory SynchronizerResetOptions.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
-  factory ResetOptions.fromJson($core.String i,
+  factory SynchronizerResetOptions.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'ResetOptions',
+      _omitMessageNames ? '' : 'SynchronizerResetOptions',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.core.synchronizer.v1'),
       createEmptyInstance: create)
@@ -135,25 +135,27 @@ class ResetOptions extends $pb.GeneratedMessage {
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
-  ResetOptions clone() => ResetOptions()..mergeFromMessage(this);
+  SynchronizerResetOptions clone() =>
+      SynchronizerResetOptions()..mergeFromMessage(this);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
-  ResetOptions copyWith(void Function(ResetOptions) updates) =>
-      super.copyWith((message) => updates(message as ResetOptions))
-          as ResetOptions;
+  SynchronizerResetOptions copyWith(
+          void Function(SynchronizerResetOptions) updates) =>
+      super.copyWith((message) => updates(message as SynchronizerResetOptions))
+          as SynchronizerResetOptions;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static ResetOptions create() => ResetOptions._();
-  ResetOptions createEmptyInstance() => create();
-  static $pb.PbList<ResetOptions> createRepeated() =>
-      $pb.PbList<ResetOptions>();
+  static SynchronizerResetOptions create() => SynchronizerResetOptions._();
+  SynchronizerResetOptions createEmptyInstance() => create();
+  static $pb.PbList<SynchronizerResetOptions> createRepeated() =>
+      $pb.PbList<SynchronizerResetOptions>();
   @$core.pragma('dart2js:noInline')
-  static ResetOptions getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<ResetOptions>(create);
-  static ResetOptions? _defaultInstance;
+  static SynchronizerResetOptions getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SynchronizerResetOptions>(create);
+  static SynchronizerResetOptions? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.List<ResetChainOptions> get chains => $_getList(0);

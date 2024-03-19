@@ -82,7 +82,7 @@ const ResetRequest$json = {
       '3': 1,
       '4': 1,
       '5': 11,
-      '6': '.mystiko.core.synchronizer.v1.ResetOptions',
+      '6': '.mystiko.core.synchronizer.v1.SynchronizerResetOptions',
       '10': 'options'
     },
   ],
@@ -90,5 +90,5 @@ const ResetRequest$json = {
 
 /// Descriptor for `ResetRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List resetRequestDescriptor = $convert.base64Decode(
-    'CgxSZXNldFJlcXVlc3QSRAoHb3B0aW9ucxgBIAEoCzIqLm15c3Rpa28uY29yZS5zeW5jaHJvbm'
-    'l6ZXIudjEuUmVzZXRPcHRpb25zUgdvcHRpb25z');
+    'CgxSZXNldFJlcXVlc3QSUAoHb3B0aW9ucxgBIAEoCzI2Lm15c3Rpa28uY29yZS5zeW5jaHJvbm'
+    'l6ZXIudjEuU3luY2hyb25pemVyUmVzZXRPcHRpb25zUgdvcHRpb25z');

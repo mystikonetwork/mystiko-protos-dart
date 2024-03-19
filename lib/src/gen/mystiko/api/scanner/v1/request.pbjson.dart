@@ -42,7 +42,7 @@ const ResetRequest$json = {
       '3': 1,
       '4': 1,
       '5': 11,
-      '6': '.mystiko.core.scanner.v1.ResetOptions',
+      '6': '.mystiko.core.scanner.v1.ScannerResetOptions',
       '10': 'options'
     },
   ],
@@ -50,8 +50,8 @@ const ResetRequest$json = {
 
 /// Descriptor for `ResetRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List resetRequestDescriptor = $convert.base64Decode(
-    'CgxSZXNldFJlcXVlc3QSPwoHb3B0aW9ucxgBIAEoCzIlLm15c3Rpa28uY29yZS5zY2FubmVyLn'
-    'YxLlJlc2V0T3B0aW9uc1IHb3B0aW9ucw==');
+    'CgxSZXNldFJlcXVlc3QSRgoHb3B0aW9ucxgBIAEoCzIsLm15c3Rpa28uY29yZS5zY2FubmVyLn'
+    'YxLlNjYW5uZXJSZXNldE9wdGlvbnNSB29wdGlvbnM=');
 
 @$core.Deprecated('Use balanceRequestDescriptor instead')
 const BalanceRequest$json = {
