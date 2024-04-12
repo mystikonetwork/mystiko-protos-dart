@@ -481,6 +481,7 @@ class SendSpendOptions extends $pb.GeneratedMessage {
     $core.String? spendId,
     $core.String? walletPassword,
     $core.String? privateKey,
+    $core.String? signerProvider,
     $fixnum.Int64? queryTimeoutMs,
     $fixnum.Int64? spendConfirmations,
     $fixnum.Int64? txSendTimeoutMs,
@@ -499,6 +500,9 @@ class SendSpendOptions extends $pb.GeneratedMessage {
     }
     if (privateKey != null) {
       $result.privateKey = privateKey;
+    }
+    if (signerProvider != null) {
+      $result.signerProvider = signerProvider;
     }
     if (queryTimeoutMs != null) {
       $result.queryTimeoutMs = queryTimeoutMs;
@@ -542,28 +546,29 @@ class SendSpendOptions extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'spendId')
     ..aOS(2, _omitFieldNames ? '' : 'walletPassword')
     ..aOS(3, _omitFieldNames ? '' : 'privateKey')
+    ..aOS(4, _omitFieldNames ? '' : 'signerProvider')
     ..a<$fixnum.Int64>(
-        4, _omitFieldNames ? '' : 'queryTimeoutMs', $pb.PbFieldType.OU6,
+        5, _omitFieldNames ? '' : 'queryTimeoutMs', $pb.PbFieldType.OU6,
         defaultOrMaker: $fixnum.Int64.ZERO)
     ..a<$fixnum.Int64>(
-        5, _omitFieldNames ? '' : 'spendConfirmations', $pb.PbFieldType.OU6,
+        6, _omitFieldNames ? '' : 'spendConfirmations', $pb.PbFieldType.OU6,
         defaultOrMaker: $fixnum.Int64.ZERO)
     ..a<$fixnum.Int64>(
-        6, _omitFieldNames ? '' : 'txSendTimeoutMs', $pb.PbFieldType.OU6,
+        7, _omitFieldNames ? '' : 'txSendTimeoutMs', $pb.PbFieldType.OU6,
         defaultOrMaker: $fixnum.Int64.ZERO)
     ..a<$fixnum.Int64>(
-        7, _omitFieldNames ? '' : 'txWaitTimeoutMs', $pb.PbFieldType.OU6,
+        8, _omitFieldNames ? '' : 'txWaitTimeoutMs', $pb.PbFieldType.OU6,
         defaultOrMaker: $fixnum.Int64.ZERO)
     ..a<$fixnum.Int64>(
-        8, _omitFieldNames ? '' : 'txWaitIntervalMs', $pb.PbFieldType.OU6,
+        9, _omitFieldNames ? '' : 'txWaitIntervalMs', $pb.PbFieldType.OU6,
         defaultOrMaker: $fixnum.Int64.ZERO)
     ..a<$fixnum.Int64>(
-        9, _omitFieldNames ? '' : 'relayerWaitTimeoutMs', $pb.PbFieldType.OU6,
+        10, _omitFieldNames ? '' : 'relayerWaitTimeoutMs', $pb.PbFieldType.OU6,
         defaultOrMaker: $fixnum.Int64.ZERO)
     ..a<$fixnum.Int64>(
-        10, _omitFieldNames ? '' : 'relayerWaitIntervalMs', $pb.PbFieldType.OU6,
+        11, _omitFieldNames ? '' : 'relayerWaitIntervalMs', $pb.PbFieldType.OU6,
         defaultOrMaker: $fixnum.Int64.ZERO)
-    ..aOM<$0.Transaction>(11, _omitFieldNames ? '' : 'tx',
+    ..aOM<$0.Transaction>(12, _omitFieldNames ? '' : 'tx',
         subBuilder: $0.Transaction.create)
     ..hasRequiredFields = false;
 
@@ -627,102 +632,114 @@ class SendSpendOptions extends $pb.GeneratedMessage {
   void clearPrivateKey() => clearField(3);
 
   @$pb.TagNumber(4)
-  $fixnum.Int64 get queryTimeoutMs => $_getI64(3);
+  $core.String get signerProvider => $_getSZ(3);
   @$pb.TagNumber(4)
-  set queryTimeoutMs($fixnum.Int64 v) {
-    $_setInt64(3, v);
+  set signerProvider($core.String v) {
+    $_setString(3, v);
   }
 
   @$pb.TagNumber(4)
-  $core.bool hasQueryTimeoutMs() => $_has(3);
+  $core.bool hasSignerProvider() => $_has(3);
   @$pb.TagNumber(4)
-  void clearQueryTimeoutMs() => clearField(4);
+  void clearSignerProvider() => clearField(4);
 
   @$pb.TagNumber(5)
-  $fixnum.Int64 get spendConfirmations => $_getI64(4);
+  $fixnum.Int64 get queryTimeoutMs => $_getI64(4);
   @$pb.TagNumber(5)
-  set spendConfirmations($fixnum.Int64 v) {
+  set queryTimeoutMs($fixnum.Int64 v) {
     $_setInt64(4, v);
   }
 
   @$pb.TagNumber(5)
-  $core.bool hasSpendConfirmations() => $_has(4);
+  $core.bool hasQueryTimeoutMs() => $_has(4);
   @$pb.TagNumber(5)
-  void clearSpendConfirmations() => clearField(5);
+  void clearQueryTimeoutMs() => clearField(5);
 
   @$pb.TagNumber(6)
-  $fixnum.Int64 get txSendTimeoutMs => $_getI64(5);
+  $fixnum.Int64 get spendConfirmations => $_getI64(5);
   @$pb.TagNumber(6)
-  set txSendTimeoutMs($fixnum.Int64 v) {
+  set spendConfirmations($fixnum.Int64 v) {
     $_setInt64(5, v);
   }
 
   @$pb.TagNumber(6)
-  $core.bool hasTxSendTimeoutMs() => $_has(5);
+  $core.bool hasSpendConfirmations() => $_has(5);
   @$pb.TagNumber(6)
-  void clearTxSendTimeoutMs() => clearField(6);
+  void clearSpendConfirmations() => clearField(6);
 
   @$pb.TagNumber(7)
-  $fixnum.Int64 get txWaitTimeoutMs => $_getI64(6);
+  $fixnum.Int64 get txSendTimeoutMs => $_getI64(6);
   @$pb.TagNumber(7)
-  set txWaitTimeoutMs($fixnum.Int64 v) {
+  set txSendTimeoutMs($fixnum.Int64 v) {
     $_setInt64(6, v);
   }
 
   @$pb.TagNumber(7)
-  $core.bool hasTxWaitTimeoutMs() => $_has(6);
+  $core.bool hasTxSendTimeoutMs() => $_has(6);
   @$pb.TagNumber(7)
-  void clearTxWaitTimeoutMs() => clearField(7);
+  void clearTxSendTimeoutMs() => clearField(7);
 
   @$pb.TagNumber(8)
-  $fixnum.Int64 get txWaitIntervalMs => $_getI64(7);
+  $fixnum.Int64 get txWaitTimeoutMs => $_getI64(7);
   @$pb.TagNumber(8)
-  set txWaitIntervalMs($fixnum.Int64 v) {
+  set txWaitTimeoutMs($fixnum.Int64 v) {
     $_setInt64(7, v);
   }
 
   @$pb.TagNumber(8)
-  $core.bool hasTxWaitIntervalMs() => $_has(7);
+  $core.bool hasTxWaitTimeoutMs() => $_has(7);
   @$pb.TagNumber(8)
-  void clearTxWaitIntervalMs() => clearField(8);
+  void clearTxWaitTimeoutMs() => clearField(8);
 
   @$pb.TagNumber(9)
-  $fixnum.Int64 get relayerWaitTimeoutMs => $_getI64(8);
+  $fixnum.Int64 get txWaitIntervalMs => $_getI64(8);
   @$pb.TagNumber(9)
-  set relayerWaitTimeoutMs($fixnum.Int64 v) {
+  set txWaitIntervalMs($fixnum.Int64 v) {
     $_setInt64(8, v);
   }
 
   @$pb.TagNumber(9)
-  $core.bool hasRelayerWaitTimeoutMs() => $_has(8);
+  $core.bool hasTxWaitIntervalMs() => $_has(8);
   @$pb.TagNumber(9)
-  void clearRelayerWaitTimeoutMs() => clearField(9);
+  void clearTxWaitIntervalMs() => clearField(9);
 
   @$pb.TagNumber(10)
-  $fixnum.Int64 get relayerWaitIntervalMs => $_getI64(9);
+  $fixnum.Int64 get relayerWaitTimeoutMs => $_getI64(9);
   @$pb.TagNumber(10)
-  set relayerWaitIntervalMs($fixnum.Int64 v) {
+  set relayerWaitTimeoutMs($fixnum.Int64 v) {
     $_setInt64(9, v);
   }
 
   @$pb.TagNumber(10)
-  $core.bool hasRelayerWaitIntervalMs() => $_has(9);
+  $core.bool hasRelayerWaitTimeoutMs() => $_has(9);
   @$pb.TagNumber(10)
-  void clearRelayerWaitIntervalMs() => clearField(10);
+  void clearRelayerWaitTimeoutMs() => clearField(10);
 
   @$pb.TagNumber(11)
-  $0.Transaction get tx => $_getN(10);
+  $fixnum.Int64 get relayerWaitIntervalMs => $_getI64(10);
   @$pb.TagNumber(11)
-  set tx($0.Transaction v) {
-    setField(11, v);
+  set relayerWaitIntervalMs($fixnum.Int64 v) {
+    $_setInt64(10, v);
   }
 
   @$pb.TagNumber(11)
-  $core.bool hasTx() => $_has(10);
+  $core.bool hasRelayerWaitIntervalMs() => $_has(10);
   @$pb.TagNumber(11)
-  void clearTx() => clearField(11);
-  @$pb.TagNumber(11)
-  $0.Transaction ensureTx() => $_ensure(10);
+  void clearRelayerWaitIntervalMs() => clearField(11);
+
+  @$pb.TagNumber(12)
+  $0.Transaction get tx => $_getN(11);
+  @$pb.TagNumber(12)
+  set tx($0.Transaction v) {
+    setField(12, v);
+  }
+
+  @$pb.TagNumber(12)
+  $core.bool hasTx() => $_has(11);
+  @$pb.TagNumber(12)
+  void clearTx() => clearField(12);
+  @$pb.TagNumber(12)
+  $0.Transaction ensureTx() => $_ensure(11);
 }
 
 class AmountRange extends $pb.GeneratedMessage {

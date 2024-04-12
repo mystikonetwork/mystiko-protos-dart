@@ -227,81 +227,91 @@ const SendSpendOptions$json = {
       '17': true
     },
     {
-      '1': 'query_timeout_ms',
+      '1': 'signer_provider',
       '3': 4,
       '4': 1,
-      '5': 4,
+      '5': 9,
       '9': 1,
+      '10': 'signerProvider',
+      '17': true
+    },
+    {
+      '1': 'query_timeout_ms',
+      '3': 5,
+      '4': 1,
+      '5': 4,
+      '9': 2,
       '10': 'queryTimeoutMs',
       '17': true
     },
     {
       '1': 'spend_confirmations',
-      '3': 5,
+      '3': 6,
       '4': 1,
       '5': 4,
-      '9': 2,
+      '9': 3,
       '10': 'spendConfirmations',
       '17': true
     },
     {
       '1': 'tx_send_timeout_ms',
-      '3': 6,
+      '3': 7,
       '4': 1,
       '5': 4,
-      '9': 3,
+      '9': 4,
       '10': 'txSendTimeoutMs',
       '17': true
     },
     {
       '1': 'tx_wait_timeout_ms',
-      '3': 7,
+      '3': 8,
       '4': 1,
       '5': 4,
-      '9': 4,
+      '9': 5,
       '10': 'txWaitTimeoutMs',
       '17': true
     },
     {
       '1': 'tx_wait_interval_ms',
-      '3': 8,
+      '3': 9,
       '4': 1,
       '5': 4,
-      '9': 5,
+      '9': 6,
       '10': 'txWaitIntervalMs',
       '17': true
     },
     {
       '1': 'relayer_wait_timeout_ms',
-      '3': 9,
+      '3': 10,
       '4': 1,
       '5': 4,
-      '9': 6,
+      '9': 7,
       '10': 'relayerWaitTimeoutMs',
       '17': true
     },
     {
       '1': 'relayer_wait_interval_ms',
-      '3': 10,
+      '3': 11,
       '4': 1,
       '5': 4,
-      '9': 7,
+      '9': 8,
       '10': 'relayerWaitIntervalMs',
       '17': true
     },
     {
       '1': 'tx',
-      '3': 11,
+      '3': 12,
       '4': 1,
       '5': 11,
       '6': '.mystiko.core.v1.Transaction',
-      '9': 8,
+      '9': 9,
       '10': 'tx',
       '17': true
     },
   ],
   '8': [
     {'1': '_private_key'},
+    {'1': '_signer_provider'},
     {'1': '_query_timeout_ms'},
     {'1': '_spend_confirmations'},
     {'1': '_tx_send_timeout_ms'},
@@ -317,18 +327,19 @@ const SendSpendOptions$json = {
 final $typed_data.Uint8List sendSpendOptionsDescriptor = $convert.base64Decode(
     'ChBTZW5kU3BlbmRPcHRpb25zEhkKCHNwZW5kX2lkGAEgASgJUgdzcGVuZElkEicKD3dhbGxldF'
     '9wYXNzd29yZBgCIAEoCVIOd2FsbGV0UGFzc3dvcmQSJAoLcHJpdmF0ZV9rZXkYAyABKAlIAFIK'
-    'cHJpdmF0ZUtleYgBARItChBxdWVyeV90aW1lb3V0X21zGAQgASgESAFSDnF1ZXJ5VGltZW91dE'
-    '1ziAEBEjQKE3NwZW5kX2NvbmZpcm1hdGlvbnMYBSABKARIAlISc3BlbmRDb25maXJtYXRpb25z'
-    'iAEBEjAKEnR4X3NlbmRfdGltZW91dF9tcxgGIAEoBEgDUg90eFNlbmRUaW1lb3V0TXOIAQESMA'
-    'oSdHhfd2FpdF90aW1lb3V0X21zGAcgASgESARSD3R4V2FpdFRpbWVvdXRNc4gBARIyChN0eF93'
-    'YWl0X2ludGVydmFsX21zGAggASgESAVSEHR4V2FpdEludGVydmFsTXOIAQESOgoXcmVsYXllcl'
-    '93YWl0X3RpbWVvdXRfbXMYCSABKARIBlIUcmVsYXllcldhaXRUaW1lb3V0TXOIAQESPAoYcmVs'
-    'YXllcl93YWl0X2ludGVydmFsX21zGAogASgESAdSFXJlbGF5ZXJXYWl0SW50ZXJ2YWxNc4gBAR'
-    'IxCgJ0eBgLIAEoCzIcLm15c3Rpa28uY29yZS52MS5UcmFuc2FjdGlvbkgIUgJ0eIgBAUIOCgxf'
-    'cHJpdmF0ZV9rZXlCEwoRX3F1ZXJ5X3RpbWVvdXRfbXNCFgoUX3NwZW5kX2NvbmZpcm1hdGlvbn'
-    'NCFQoTX3R4X3NlbmRfdGltZW91dF9tc0IVChNfdHhfd2FpdF90aW1lb3V0X21zQhYKFF90eF93'
-    'YWl0X2ludGVydmFsX21zQhoKGF9yZWxheWVyX3dhaXRfdGltZW91dF9tc0IbChlfcmVsYXllcl'
-    '93YWl0X2ludGVydmFsX21zQgUKA190eA==');
+    'cHJpdmF0ZUtleYgBARIsCg9zaWduZXJfcHJvdmlkZXIYBCABKAlIAVIOc2lnbmVyUHJvdmlkZX'
+    'KIAQESLQoQcXVlcnlfdGltZW91dF9tcxgFIAEoBEgCUg5xdWVyeVRpbWVvdXRNc4gBARI0ChNz'
+    'cGVuZF9jb25maXJtYXRpb25zGAYgASgESANSEnNwZW5kQ29uZmlybWF0aW9uc4gBARIwChJ0eF'
+    '9zZW5kX3RpbWVvdXRfbXMYByABKARIBFIPdHhTZW5kVGltZW91dE1ziAEBEjAKEnR4X3dhaXRf'
+    'dGltZW91dF9tcxgIIAEoBEgFUg90eFdhaXRUaW1lb3V0TXOIAQESMgoTdHhfd2FpdF9pbnRlcn'
+    'ZhbF9tcxgJIAEoBEgGUhB0eFdhaXRJbnRlcnZhbE1ziAEBEjoKF3JlbGF5ZXJfd2FpdF90aW1l'
+    'b3V0X21zGAogASgESAdSFHJlbGF5ZXJXYWl0VGltZW91dE1ziAEBEjwKGHJlbGF5ZXJfd2FpdF'
+    '9pbnRlcnZhbF9tcxgLIAEoBEgIUhVyZWxheWVyV2FpdEludGVydmFsTXOIAQESMQoCdHgYDCAB'
+    'KAsyHC5teXN0aWtvLmNvcmUudjEuVHJhbnNhY3Rpb25ICVICdHiIAQFCDgoMX3ByaXZhdGVfa2'
+    'V5QhIKEF9zaWduZXJfcHJvdmlkZXJCEwoRX3F1ZXJ5X3RpbWVvdXRfbXNCFgoUX3NwZW5kX2Nv'
+    'bmZpcm1hdGlvbnNCFQoTX3R4X3NlbmRfdGltZW91dF9tc0IVChNfdHhfd2FpdF90aW1lb3V0X2'
+    '1zQhYKFF90eF93YWl0X2ludGVydmFsX21zQhoKGF9yZWxheWVyX3dhaXRfdGltZW91dF9tc0Ib'
+    'ChlfcmVsYXllcl93YWl0X2ludGVydmFsX21zQgUKA190eA==');
 
 @$core.Deprecated('Use amountRangeDescriptor instead')
 const AmountRange$json = {
