@@ -180,82 +180,92 @@ const SendDepositOptions$json = {
       '17': true
     },
     {
-      '1': 'query_timeout_ms',
+      '1': 'signer_provider',
       '3': 3,
       '4': 1,
-      '5': 4,
+      '5': 9,
       '9': 1,
+      '10': 'signerProvider',
+      '17': true
+    },
+    {
+      '1': 'query_timeout_ms',
+      '3': 4,
+      '4': 1,
+      '5': 4,
+      '9': 2,
       '10': 'queryTimeoutMs',
       '17': true
     },
     {
       '1': 'asset_approve_confirmations',
-      '3': 4,
+      '3': 5,
       '4': 1,
       '5': 4,
-      '9': 2,
+      '9': 3,
       '10': 'assetApproveConfirmations',
       '17': true
     },
     {
       '1': 'deposit_confirmations',
-      '3': 5,
+      '3': 6,
       '4': 1,
       '5': 4,
-      '9': 3,
+      '9': 4,
       '10': 'depositConfirmations',
       '17': true
     },
     {
       '1': 'tx_send_timeout_ms',
-      '3': 6,
+      '3': 7,
       '4': 1,
       '5': 4,
-      '9': 4,
+      '9': 5,
       '10': 'txSendTimeoutMs',
       '17': true
     },
     {
       '1': 'tx_wait_timeout_ms',
-      '3': 7,
+      '3': 8,
       '4': 1,
       '5': 4,
-      '9': 5,
+      '9': 6,
       '10': 'txWaitTimeoutMs',
       '17': true
     },
     {
       '1': 'tx_wait_interval_ms',
-      '3': 8,
+      '3': 9,
       '4': 1,
       '5': 4,
-      '9': 6,
+      '9': 7,
       '10': 'txWaitIntervalMs',
       '17': true
     },
     {
       '1': 'asset_approve_tx',
-      '3': 9,
-      '4': 1,
-      '5': 11,
-      '6': '.mystiko.core.v1.Transaction',
-      '9': 7,
-      '10': 'assetApproveTx',
-      '17': true
-    },
-    {
-      '1': 'deposit_tx',
       '3': 10,
       '4': 1,
       '5': 11,
       '6': '.mystiko.core.v1.Transaction',
       '9': 8,
+      '10': 'assetApproveTx',
+      '17': true
+    },
+    {
+      '1': 'deposit_tx',
+      '3': 11,
+      '4': 1,
+      '5': 11,
+      '6': '.mystiko.core.v1.Transaction',
+      '9': 9,
       '10': 'depositTx',
       '17': true
     },
   ],
   '8': [
     {'1': '_private_key'},
+    {'1': '_signer_provider'},
     {'1': '_query_timeout_ms'},
     {'1': '_asset_approve_confirmations'},
     {'1': '_deposit_confirmations'},
@@ -270,19 +280,20 @@ const SendDepositOptions$json = {
 /// Descriptor for `SendDepositOptions`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List sendDepositOptionsDescriptor = $convert.base64Decode(
     'ChJTZW5kRGVwb3NpdE9wdGlvbnMSHQoKZGVwb3NpdF9pZBgBIAEoCVIJZGVwb3NpdElkEiQKC3'
-    'ByaXZhdGVfa2V5GAIgASgJSABSCnByaXZhdGVLZXmIAQESLQoQcXVlcnlfdGltZW91dF9tcxgD'
-    'IAEoBEgBUg5xdWVyeVRpbWVvdXRNc4gBARJDChthc3NldF9hcHByb3ZlX2NvbmZpcm1hdGlvbn'
-    'MYBCABKARIAlIZYXNzZXRBcHByb3ZlQ29uZmlybWF0aW9uc4gBARI4ChVkZXBvc2l0X2NvbmZp'
-    'cm1hdGlvbnMYBSABKARIA1IUZGVwb3NpdENvbmZpcm1hdGlvbnOIAQESMAoSdHhfc2VuZF90aW'
-    '1lb3V0X21zGAYgASgESARSD3R4U2VuZFRpbWVvdXRNc4gBARIwChJ0eF93YWl0X3RpbWVvdXRf'
-    'bXMYByABKARIBVIPdHhXYWl0VGltZW91dE1ziAEBEjIKE3R4X3dhaXRfaW50ZXJ2YWxfbXMYCC'
-    'ABKARIBlIQdHhXYWl0SW50ZXJ2YWxNc4gBARJLChBhc3NldF9hcHByb3ZlX3R4GAkgASgLMhwu'
-    'bXlzdGlrby5jb3JlLnYxLlRyYW5zYWN0aW9uSAdSDmFzc2V0QXBwcm92ZVR4iAEBEkAKCmRlcG'
-    '9zaXRfdHgYCiABKAsyHC5teXN0aWtvLmNvcmUudjEuVHJhbnNhY3Rpb25ICFIJZGVwb3NpdFR4'
-    'iAEBQg4KDF9wcml2YXRlX2tleUITChFfcXVlcnlfdGltZW91dF9tc0IeChxfYXNzZXRfYXBwcm'
-    '92ZV9jb25maXJtYXRpb25zQhgKFl9kZXBvc2l0X2NvbmZpcm1hdGlvbnNCFQoTX3R4X3NlbmRf'
-    'dGltZW91dF9tc0IVChNfdHhfd2FpdF90aW1lb3V0X21zQhYKFF90eF93YWl0X2ludGVydmFsX2'
-    '1zQhMKEV9hc3NldF9hcHByb3ZlX3R4Qg0KC19kZXBvc2l0X3R4');
+    'ByaXZhdGVfa2V5GAIgASgJSABSCnByaXZhdGVLZXmIAQESLAoPc2lnbmVyX3Byb3ZpZGVyGAMg'
+    'ASgJSAFSDnNpZ25lclByb3ZpZGVyiAEBEi0KEHF1ZXJ5X3RpbWVvdXRfbXMYBCABKARIAlIOcX'
+    'VlcnlUaW1lb3V0TXOIAQESQwobYXNzZXRfYXBwcm92ZV9jb25maXJtYXRpb25zGAUgASgESANS'
+    'GWFzc2V0QXBwcm92ZUNvbmZpcm1hdGlvbnOIAQESOAoVZGVwb3NpdF9jb25maXJtYXRpb25zGA'
+    'YgASgESARSFGRlcG9zaXRDb25maXJtYXRpb25ziAEBEjAKEnR4X3NlbmRfdGltZW91dF9tcxgH'
+    'IAEoBEgFUg90eFNlbmRUaW1lb3V0TXOIAQESMAoSdHhfd2FpdF90aW1lb3V0X21zGAggASgESA'
+    'ZSD3R4V2FpdFRpbWVvdXRNc4gBARIyChN0eF93YWl0X2ludGVydmFsX21zGAkgASgESAdSEHR4'
+    'V2FpdEludGVydmFsTXOIAQESSwoQYXNzZXRfYXBwcm92ZV90eBgKIAEoCzIcLm15c3Rpa28uY2'
+    '9yZS52MS5UcmFuc2FjdGlvbkgIUg5hc3NldEFwcHJvdmVUeIgBARJACgpkZXBvc2l0X3R4GAsg'
+    'ASgLMhwubXlzdGlrby5jb3JlLnYxLlRyYW5zYWN0aW9uSAlSCWRlcG9zaXRUeIgBAUIOCgxfcH'
+    'JpdmF0ZV9rZXlCEgoQX3NpZ25lcl9wcm92aWRlckITChFfcXVlcnlfdGltZW91dF9tc0IeChxf'
+    'YXNzZXRfYXBwcm92ZV9jb25maXJtYXRpb25zQhgKFl9kZXBvc2l0X2NvbmZpcm1hdGlvbnNCFQ'
+    'oTX3R4X3NlbmRfdGltZW91dF9tc0IVChNfdHhfd2FpdF90aW1lb3V0X21zQhYKFF90eF93YWl0'
+    'X2ludGVydmFsX21zQhMKEV9hc3NldF9hcHByb3ZlX3R4Qg0KC19kZXBvc2l0X3R4');
 
 @$core.Deprecated('Use depositQuoteDescriptor instead')
 const DepositQuote$json = {

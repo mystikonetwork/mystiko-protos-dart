@@ -408,6 +408,7 @@ class SendDepositOptions extends $pb.GeneratedMessage {
   factory SendDepositOptions({
     $core.String? depositId,
     $core.String? privateKey,
+    $core.String? signerProvider,
     $fixnum.Int64? queryTimeoutMs,
     $fixnum.Int64? assetApproveConfirmations,
     $fixnum.Int64? depositConfirmations,
@@ -423,6 +424,9 @@ class SendDepositOptions extends $pb.GeneratedMessage {
     }
     if (privateKey != null) {
       $result.privateKey = privateKey;
+    }
+    if (signerProvider != null) {
+      $result.signerProvider = signerProvider;
     }
     if (queryTimeoutMs != null) {
       $result.queryTimeoutMs = queryTimeoutMs;
@@ -465,27 +469,28 @@ class SendDepositOptions extends $pb.GeneratedMessage {
       createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'depositId')
     ..aOS(2, _omitFieldNames ? '' : 'privateKey')
+    ..aOS(3, _omitFieldNames ? '' : 'signerProvider')
     ..a<$fixnum.Int64>(
-        3, _omitFieldNames ? '' : 'queryTimeoutMs', $pb.PbFieldType.OU6,
+        4, _omitFieldNames ? '' : 'queryTimeoutMs', $pb.PbFieldType.OU6,
         defaultOrMaker: $fixnum.Int64.ZERO)
-    ..a<$fixnum.Int64>(4, _omitFieldNames ? '' : 'assetApproveConfirmations',
+    ..a<$fixnum.Int64>(5, _omitFieldNames ? '' : 'assetApproveConfirmations',
         $pb.PbFieldType.OU6,
         defaultOrMaker: $fixnum.Int64.ZERO)
     ..a<$fixnum.Int64>(
-        5, _omitFieldNames ? '' : 'depositConfirmations', $pb.PbFieldType.OU6,
+        6, _omitFieldNames ? '' : 'depositConfirmations', $pb.PbFieldType.OU6,
         defaultOrMaker: $fixnum.Int64.ZERO)
     ..a<$fixnum.Int64>(
-        6, _omitFieldNames ? '' : 'txSendTimeoutMs', $pb.PbFieldType.OU6,
+        7, _omitFieldNames ? '' : 'txSendTimeoutMs', $pb.PbFieldType.OU6,
         defaultOrMaker: $fixnum.Int64.ZERO)
     ..a<$fixnum.Int64>(
-        7, _omitFieldNames ? '' : 'txWaitTimeoutMs', $pb.PbFieldType.OU6,
+        8, _omitFieldNames ? '' : 'txWaitTimeoutMs', $pb.PbFieldType.OU6,
         defaultOrMaker: $fixnum.Int64.ZERO)
     ..a<$fixnum.Int64>(
-        8, _omitFieldNames ? '' : 'txWaitIntervalMs', $pb.PbFieldType.OU6,
+        9, _omitFieldNames ? '' : 'txWaitIntervalMs', $pb.PbFieldType.OU6,
         defaultOrMaker: $fixnum.Int64.ZERO)
-    ..aOM<$0.Transaction>(9, _omitFieldNames ? '' : 'assetApproveTx',
+    ..aOM<$0.Transaction>(10, _omitFieldNames ? '' : 'assetApproveTx',
         subBuilder: $0.Transaction.create)
-    ..aOM<$0.Transaction>(10, _omitFieldNames ? '' : 'depositTx',
+    ..aOM<$0.Transaction>(11, _omitFieldNames ? '' : 'depositTx',
         subBuilder: $0.Transaction.create)
     ..hasRequiredFields = false;
 
@@ -537,104 +542,116 @@ class SendDepositOptions extends $pb.GeneratedMessage {
   void clearPrivateKey() => clearField(2);
 
   @$pb.TagNumber(3)
-  $fixnum.Int64 get queryTimeoutMs => $_getI64(2);
+  $core.String get signerProvider => $_getSZ(2);
   @$pb.TagNumber(3)
-  set queryTimeoutMs($fixnum.Int64 v) {
-    $_setInt64(2, v);
+  set signerProvider($core.String v) {
+    $_setString(2, v);
   }
 
   @$pb.TagNumber(3)
-  $core.bool hasQueryTimeoutMs() => $_has(2);
+  $core.bool hasSignerProvider() => $_has(2);
   @$pb.TagNumber(3)
-  void clearQueryTimeoutMs() => clearField(3);
+  void clearSignerProvider() => clearField(3);
 
   @$pb.TagNumber(4)
-  $fixnum.Int64 get assetApproveConfirmations => $_getI64(3);
+  $fixnum.Int64 get queryTimeoutMs => $_getI64(3);
   @$pb.TagNumber(4)
-  set assetApproveConfirmations($fixnum.Int64 v) {
+  set queryTimeoutMs($fixnum.Int64 v) {
     $_setInt64(3, v);
   }
 
   @$pb.TagNumber(4)
-  $core.bool hasAssetApproveConfirmations() => $_has(3);
+  $core.bool hasQueryTimeoutMs() => $_has(3);
   @$pb.TagNumber(4)
-  void clearAssetApproveConfirmations() => clearField(4);
+  void clearQueryTimeoutMs() => clearField(4);
 
   @$pb.TagNumber(5)
-  $fixnum.Int64 get depositConfirmations => $_getI64(4);
+  $fixnum.Int64 get assetApproveConfirmations => $_getI64(4);
   @$pb.TagNumber(5)
-  set depositConfirmations($fixnum.Int64 v) {
+  set assetApproveConfirmations($fixnum.Int64 v) {
     $_setInt64(4, v);
   }
 
   @$pb.TagNumber(5)
-  $core.bool hasDepositConfirmations() => $_has(4);
+  $core.bool hasAssetApproveConfirmations() => $_has(4);
   @$pb.TagNumber(5)
-  void clearDepositConfirmations() => clearField(5);
+  void clearAssetApproveConfirmations() => clearField(5);
 
   @$pb.TagNumber(6)
-  $fixnum.Int64 get txSendTimeoutMs => $_getI64(5);
+  $fixnum.Int64 get depositConfirmations => $_getI64(5);
   @$pb.TagNumber(6)
-  set txSendTimeoutMs($fixnum.Int64 v) {
+  set depositConfirmations($fixnum.Int64 v) {
     $_setInt64(5, v);
   }
 
   @$pb.TagNumber(6)
-  $core.bool hasTxSendTimeoutMs() => $_has(5);
+  $core.bool hasDepositConfirmations() => $_has(5);
   @$pb.TagNumber(6)
-  void clearTxSendTimeoutMs() => clearField(6);
+  void clearDepositConfirmations() => clearField(6);
 
   @$pb.TagNumber(7)
-  $fixnum.Int64 get txWaitTimeoutMs => $_getI64(6);
+  $fixnum.Int64 get txSendTimeoutMs => $_getI64(6);
   @$pb.TagNumber(7)
-  set txWaitTimeoutMs($fixnum.Int64 v) {
+  set txSendTimeoutMs($fixnum.Int64 v) {
     $_setInt64(6, v);
   }
 
   @$pb.TagNumber(7)
-  $core.bool hasTxWaitTimeoutMs() => $_has(6);
+  $core.bool hasTxSendTimeoutMs() => $_has(6);
   @$pb.TagNumber(7)
-  void clearTxWaitTimeoutMs() => clearField(7);
+  void clearTxSendTimeoutMs() => clearField(7);
 
   @$pb.TagNumber(8)
-  $fixnum.Int64 get txWaitIntervalMs => $_getI64(7);
+  $fixnum.Int64 get txWaitTimeoutMs => $_getI64(7);
   @$pb.TagNumber(8)
-  set txWaitIntervalMs($fixnum.Int64 v) {
+  set txWaitTimeoutMs($fixnum.Int64 v) {
     $_setInt64(7, v);
   }
 
   @$pb.TagNumber(8)
-  $core.bool hasTxWaitIntervalMs() => $_has(7);
+  $core.bool hasTxWaitTimeoutMs() => $_has(7);
   @$pb.TagNumber(8)
-  void clearTxWaitIntervalMs() => clearField(8);
+  void clearTxWaitTimeoutMs() => clearField(8);
 
   @$pb.TagNumber(9)
-  $0.Transaction get assetApproveTx => $_getN(8);
+  $fixnum.Int64 get txWaitIntervalMs => $_getI64(8);
   @$pb.TagNumber(9)
-  set assetApproveTx($0.Transaction v) {
-    setField(9, v);
+  set txWaitIntervalMs($fixnum.Int64 v) {
+    $_setInt64(8, v);
   }
 
   @$pb.TagNumber(9)
-  $core.bool hasAssetApproveTx() => $_has(8);
+  $core.bool hasTxWaitIntervalMs() => $_has(8);
   @$pb.TagNumber(9)
-  void clearAssetApproveTx() => clearField(9);
-  @$pb.TagNumber(9)
-  $0.Transaction ensureAssetApproveTx() => $_ensure(8);
+  void clearTxWaitIntervalMs() => clearField(9);
 
   @$pb.TagNumber(10)
-  $0.Transaction get depositTx => $_getN(9);
+  $0.Transaction get assetApproveTx => $_getN(9);
   @$pb.TagNumber(10)
-  set depositTx($0.Transaction v) {
+  set assetApproveTx($0.Transaction v) {
     setField(10, v);
   }
 
   @$pb.TagNumber(10)
-  $core.bool hasDepositTx() => $_has(9);
+  $core.bool hasAssetApproveTx() => $_has(9);
   @$pb.TagNumber(10)
-  void clearDepositTx() => clearField(10);
+  void clearAssetApproveTx() => clearField(10);
   @$pb.TagNumber(10)
-  $0.Transaction ensureDepositTx() => $_ensure(9);
+  $0.Transaction ensureAssetApproveTx() => $_ensure(9);
+
+  @$pb.TagNumber(11)
+  $0.Transaction get depositTx => $_getN(10);
+  @$pb.TagNumber(11)
+  set depositTx($0.Transaction v) {
+    setField(11, v);
+  }
+
+  @$pb.TagNumber(11)
+  $core.bool hasDepositTx() => $_has(10);
+  @$pb.TagNumber(11)
+  void clearDepositTx() => clearField(11);
+  @$pb.TagNumber(11)
+  $0.Transaction ensureDepositTx() => $_ensure(10);
 }
 
 class DepositQuote extends $pb.GeneratedMessage {
