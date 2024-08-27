@@ -245,6 +245,32 @@ final $typed_data.Uint8List getAddressResponseDescriptor =
     $convert.base64Decode(
         'ChJHZXRBZGRyZXNzUmVzcG9uc2USGAoHYWRkcmVzcxgBIAEoCVIHYWRkcmVzcw==');
 
+@$core.Deprecated('Use personalSignRequestDescriptor instead')
+const PersonalSignRequest$json = {
+  '1': 'PersonalSignRequest',
+  '2': [
+    {'1': 'message', '3': 1, '4': 1, '5': 9, '10': 'message'},
+    {'1': 'address', '3': 2, '4': 1, '5': 9, '10': 'address'},
+  ],
+};
+
+/// Descriptor for `PersonalSignRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List personalSignRequestDescriptor = $convert.base64Decode(
+    'ChNQZXJzb25hbFNpZ25SZXF1ZXN0EhgKB21lc3NhZ2UYASABKAlSB21lc3NhZ2USGAoHYWRkcm'
+    'VzcxgCIAEoCVIHYWRkcmVzcw==');
+
+@$core.Deprecated('Use personalSignResponseDescriptor instead')
+const PersonalSignResponse$json = {
+  '1': 'PersonalSignResponse',
+  '2': [
+    {'1': 'signature', '3': 1, '4': 1, '5': 9, '10': 'signature'},
+  ],
+};
+
+/// Descriptor for `PersonalSignResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List personalSignResponseDescriptor = $convert.base64Decode(
+    'ChRQZXJzb25hbFNpZ25SZXNwb25zZRIcCglzaWduYXR1cmUYASABKAlSCXNpZ25hdHVyZQ==');
+
 @$core.Deprecated('Use sendTransactionRequestDescriptor instead')
 const SendTransactionRequest$json = {
   '1': 'SendTransactionRequest',

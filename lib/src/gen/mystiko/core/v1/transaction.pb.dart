@@ -776,6 +776,148 @@ class GetAddressResponse extends $pb.GeneratedMessage {
   void clearAddress() => clearField(1);
 }
 
+class PersonalSignRequest extends $pb.GeneratedMessage {
+  factory PersonalSignRequest({
+    $core.String? message,
+    $core.String? address,
+  }) {
+    final $result = create();
+    if (message != null) {
+      $result.message = message;
+    }
+    if (address != null) {
+      $result.address = address;
+    }
+    return $result;
+  }
+  PersonalSignRequest._() : super();
+  factory PersonalSignRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PersonalSignRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'PersonalSignRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'mystiko.core.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'message')
+    ..aOS(2, _omitFieldNames ? '' : 'address')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  PersonalSignRequest clone() => PersonalSignRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  PersonalSignRequest copyWith(void Function(PersonalSignRequest) updates) =>
+      super.copyWith((message) => updates(message as PersonalSignRequest))
+          as PersonalSignRequest;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static PersonalSignRequest create() => PersonalSignRequest._();
+  PersonalSignRequest createEmptyInstance() => create();
+  static $pb.PbList<PersonalSignRequest> createRepeated() =>
+      $pb.PbList<PersonalSignRequest>();
+  @$core.pragma('dart2js:noInline')
+  static PersonalSignRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<PersonalSignRequest>(create);
+  static PersonalSignRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get message => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set message($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasMessage() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearMessage() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get address => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set address($core.String v) {
+    $_setString(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasAddress() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearAddress() => clearField(2);
+}
+
+class PersonalSignResponse extends $pb.GeneratedMessage {
+  factory PersonalSignResponse({
+    $core.String? signature,
+  }) {
+    final $result = create();
+    if (signature != null) {
+      $result.signature = signature;
+    }
+    return $result;
+  }
+  PersonalSignResponse._() : super();
+  factory PersonalSignResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory PersonalSignResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'PersonalSignResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'mystiko.core.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'signature')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  PersonalSignResponse clone() =>
+      PersonalSignResponse()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  PersonalSignResponse copyWith(void Function(PersonalSignResponse) updates) =>
+      super.copyWith((message) => updates(message as PersonalSignResponse))
+          as PersonalSignResponse;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static PersonalSignResponse create() => PersonalSignResponse._();
+  PersonalSignResponse createEmptyInstance() => create();
+  static $pb.PbList<PersonalSignResponse> createRepeated() =>
+      $pb.PbList<PersonalSignResponse>();
+  @$core.pragma('dart2js:noInline')
+  static PersonalSignResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<PersonalSignResponse>(create);
+  static PersonalSignResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get signature => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set signature($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasSignature() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearSignature() => clearField(1);
+}
+
 class SendTransactionRequest extends $pb.GeneratedMessage {
   factory SendTransactionRequest({
     $fixnum.Int64? chainId,
