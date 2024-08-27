@@ -16,6 +16,7 @@ import 'package:protobuf/protobuf.dart' as $pb;
 import '../../common/v1/config.pb.dart' as $31;
 import '../../loader/v1/loader.pb.dart' as $35;
 import '../../relayer/v1/client.pb.dart' as $34;
+import '../../screening/v1/client.pb.dart' as $36;
 
 class MystikoOptions extends $pb.GeneratedMessage {
   factory MystikoOptions({
@@ -24,6 +25,7 @@ class MystikoOptions extends $pb.GeneratedMessage {
     $35.LoaderConfig? loaderConfig,
     $core.String? dbPath,
     $core.String? staticCachePath,
+    $36.ScreeningClientOptions? screeningClientOptions,
   }) {
     final $result = create();
     if (configOptions != null) {
@@ -40,6 +42,9 @@ class MystikoOptions extends $pb.GeneratedMessage {
     }
     if (staticCachePath != null) {
       $result.staticCachePath = staticCachePath;
+    }
+    if (screeningClientOptions != null) {
+      $result.screeningClientOptions = screeningClientOptions;
     }
     return $result;
   }
@@ -65,6 +70,9 @@ class MystikoOptions extends $pb.GeneratedMessage {
         subBuilder: $35.LoaderConfig.create)
     ..aOS(4, _omitFieldNames ? '' : 'dbPath')
     ..aOS(5, _omitFieldNames ? '' : 'staticCachePath')
+    ..aOM<$36.ScreeningClientOptions>(
+        6, _omitFieldNames ? '' : 'screeningClientOptions',
+        subBuilder: $36.ScreeningClientOptions.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
@@ -155,6 +163,20 @@ class MystikoOptions extends $pb.GeneratedMessage {
   $core.bool hasStaticCachePath() => $_has(4);
   @$pb.TagNumber(5)
   void clearStaticCachePath() => clearField(5);
+
+  @$pb.TagNumber(6)
+  $36.ScreeningClientOptions get screeningClientOptions => $_getN(5);
+  @$pb.TagNumber(6)
+  set screeningClientOptions($36.ScreeningClientOptions v) {
+    setField(6, v);
+  }
+
+  @$pb.TagNumber(6)
+  $core.bool hasScreeningClientOptions() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearScreeningClientOptions() => clearField(6);
+  @$pb.TagNumber(6)
+  $36.ScreeningClientOptions ensureScreeningClientOptions() => $_ensure(5);
 }
 
 const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');

@@ -113,6 +113,18 @@ class CircuitType extends $pb.ProtobufEnum {
       CircuitType._(10, _omitEnumNames ? '' : 'CIRCUIT_TYPE_TRANSACTION2X1');
   static const CircuitType CIRCUIT_TYPE_TRANSACTION2X2 =
       CircuitType._(11, _omitEnumNames ? '' : 'CIRCUIT_TYPE_TRANSACTION2X2');
+  static const CircuitType CIRCUIT_TYPE_ROLLUP_32 =
+      CircuitType._(12, _omitEnumNames ? '' : 'CIRCUIT_TYPE_ROLLUP_32');
+  static const CircuitType CIRCUIT_TYPE_ROLLUP_64 =
+      CircuitType._(13, _omitEnumNames ? '' : 'CIRCUIT_TYPE_ROLLUP_64');
+  static const CircuitType CIRCUIT_TYPE_ROLLUP_128 =
+      CircuitType._(14, _omitEnumNames ? '' : 'CIRCUIT_TYPE_ROLLUP_128');
+  static const CircuitType CIRCUIT_TYPE_ROLLUP_256 =
+      CircuitType._(15, _omitEnumNames ? '' : 'CIRCUIT_TYPE_ROLLUP_256');
+  static const CircuitType CIRCUIT_TYPE_ROLLUP_512 =
+      CircuitType._(16, _omitEnumNames ? '' : 'CIRCUIT_TYPE_ROLLUP_512');
+  static const CircuitType CIRCUIT_TYPE_ROLLUP_1024 =
+      CircuitType._(17, _omitEnumNames ? '' : 'CIRCUIT_TYPE_ROLLUP_1024');
 
   static const $core.List<CircuitType> values = <CircuitType>[
     CIRCUIT_TYPE_UNSPECIFIED,
@@ -127,6 +139,12 @@ class CircuitType extends $pb.ProtobufEnum {
     CIRCUIT_TYPE_TRANSACTION2X0,
     CIRCUIT_TYPE_TRANSACTION2X1,
     CIRCUIT_TYPE_TRANSACTION2X2,
+    CIRCUIT_TYPE_ROLLUP_32,
+    CIRCUIT_TYPE_ROLLUP_64,
+    CIRCUIT_TYPE_ROLLUP_128,
+    CIRCUIT_TYPE_ROLLUP_256,
+    CIRCUIT_TYPE_ROLLUP_512,
+    CIRCUIT_TYPE_ROLLUP_1024,
   ];
 
   static final $core.Map<$core.int, CircuitType> _byValue =

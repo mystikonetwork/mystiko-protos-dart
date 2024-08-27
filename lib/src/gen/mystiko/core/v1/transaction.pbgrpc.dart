@@ -33,6 +33,12 @@ class TransactionServiceClient extends $grpc.Client {
           ($0.SendTransactionRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) =>
               $0.SendTransactionResponse.fromBuffer(value));
+  static final _$personalSign =
+      $grpc.ClientMethod<$0.PersonalSignRequest, $0.PersonalSignResponse>(
+          '/mystiko.core.v1.TransactionService/PersonalSign',
+          ($0.PersonalSignRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) =>
+              $0.PersonalSignResponse.fromBuffer(value));
 
   TransactionServiceClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -49,6 +55,12 @@ class TransactionServiceClient extends $grpc.Client {
       $0.SendTransactionRequest request,
       {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$sendTransaction, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$0.PersonalSignResponse> personalSign(
+      $0.PersonalSignRequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$personalSign, request, options: options);
   }
 }
 
@@ -73,6 +85,15 @@ abstract class TransactionServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.SendTransactionRequest.fromBuffer(value),
         ($0.SendTransactionResponse value) => value.writeToBuffer()));
+    $addMethod(
+        $grpc.ServiceMethod<$0.PersonalSignRequest, $0.PersonalSignResponse>(
+            'PersonalSign',
+            personalSign_Pre,
+            false,
+            false,
+            ($core.List<$core.int> value) =>
+                $0.PersonalSignRequest.fromBuffer(value),
+            ($0.PersonalSignResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<$0.GetAddressResponse> getAddress_Pre($grpc.ServiceCall call,
@@ -86,8 +107,16 @@ abstract class TransactionServiceBase extends $grpc.Service {
     return sendTransaction(call, await request);
   }
 
+  $async.Future<$0.PersonalSignResponse> personalSign_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.PersonalSignRequest> request) async {
+    return personalSign(call, await request);
+  }
+
   $async.Future<$0.GetAddressResponse> getAddress(
       $grpc.ServiceCall call, $0.GetAddressRequest request);
   $async.Future<$0.SendTransactionResponse> sendTransaction(
       $grpc.ServiceCall call, $0.SendTransactionRequest request);
+  $async.Future<$0.PersonalSignResponse> personalSign(
+      $grpc.ServiceCall call, $0.PersonalSignRequest request);
 }

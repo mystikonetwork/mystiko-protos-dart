@@ -65,6 +65,16 @@ const MystikoOptions$json = {
       '10': 'staticCachePath',
       '17': true
     },
+    {
+      '1': 'screening_client_options',
+      '3': 6,
+      '4': 1,
+      '5': 11,
+      '6': '.mystiko.screening.v1.ScreeningClientOptions',
+      '9': 5,
+      '10': 'screeningClientOptions',
+      '17': true
+    },
   ],
   '8': [
     {'1': '_config_options'},
@@ -72,6 +82,7 @@ const MystikoOptions$json = {
     {'1': '_loader_config'},
     {'1': '_db_path'},
     {'1': '_static_cache_path'},
+    {'1': '_screening_client_options'},
   ],
 };
 
@@ -83,6 +94,8 @@ final $typed_data.Uint8List mystikoOptionsDescriptor = $convert.base64Decode(
     '5zSAFSFHJlbGF5ZXJDbGllbnRPcHRpb25ziAEBEkkKDWxvYWRlcl9jb25maWcYAyABKAsyHy5t'
     'eXN0aWtvLmxvYWRlci52MS5Mb2FkZXJDb25maWdIAlIMbG9hZGVyQ29uZmlniAEBEhwKB2RiX3'
     'BhdGgYBCABKAlIA1IGZGJQYXRoiAEBEi8KEXN0YXRpY19jYWNoZV9wYXRoGAUgASgJSARSD3N0'
-    'YXRpY0NhY2hlUGF0aIgBAUIRCg9fY29uZmlnX29wdGlvbnNCGQoXX3JlbGF5ZXJfY2xpZW50X2'
-    '9wdGlvbnNCEAoOX2xvYWRlcl9jb25maWdCCgoIX2RiX3BhdGhCFAoSX3N0YXRpY19jYWNoZV9w'
-    'YXRo');
+    'YXRpY0NhY2hlUGF0aIgBARJrChhzY3JlZW5pbmdfY2xpZW50X29wdGlvbnMYBiABKAsyLC5teX'
+    'N0aWtvLnNjcmVlbmluZy52MS5TY3JlZW5pbmdDbGllbnRPcHRpb25zSAVSFnNjcmVlbmluZ0Ns'
+    'aWVudE9wdGlvbnOIAQFCEQoPX2NvbmZpZ19vcHRpb25zQhkKF19yZWxheWVyX2NsaWVudF9vcH'
+    'Rpb25zQhAKDl9sb2FkZXJfY29uZmlnQgoKCF9kYl9wYXRoQhQKEl9zdGF0aWNfY2FjaGVfcGF0'
+    'aEIbChlfc2NyZWVuaW5nX2NsaWVudF9vcHRpb25z');
