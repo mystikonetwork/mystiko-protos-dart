@@ -262,6 +262,15 @@ const SendDepositOptions$json = {
       '10': 'depositTx',
       '17': true
     },
+    {
+      '1': 'screening_message',
+      '3': 12,
+      '4': 1,
+      '5': 9,
+      '9': 10,
+      '10': 'screeningMessage',
+      '17': true
+    },
   ],
   '8': [
     {'1': '_private_key'},
@@ -274,6 +283,7 @@ const SendDepositOptions$json = {
     {'1': '_tx_wait_interval_ms'},
     {'1': '_asset_approve_tx'},
     {'1': '_deposit_tx'},
+    {'1': '_screening_message'},
   ],
 };
 
@@ -289,11 +299,13 @@ final $typed_data.Uint8List sendDepositOptionsDescriptor = $convert.base64Decode
     'ZSD3R4V2FpdFRpbWVvdXRNc4gBARIyChN0eF93YWl0X2ludGVydmFsX21zGAkgASgESAdSEHR4'
     'V2FpdEludGVydmFsTXOIAQESSwoQYXNzZXRfYXBwcm92ZV90eBgKIAEoCzIcLm15c3Rpa28uY2'
     '9yZS52MS5UcmFuc2FjdGlvbkgIUg5hc3NldEFwcHJvdmVUeIgBARJACgpkZXBvc2l0X3R4GAsg'
-    'ASgLMhwubXlzdGlrby5jb3JlLnYxLlRyYW5zYWN0aW9uSAlSCWRlcG9zaXRUeIgBAUIOCgxfcH'
-    'JpdmF0ZV9rZXlCEgoQX3NpZ25lcl9wcm92aWRlckITChFfcXVlcnlfdGltZW91dF9tc0IeChxf'
-    'YXNzZXRfYXBwcm92ZV9jb25maXJtYXRpb25zQhgKFl9kZXBvc2l0X2NvbmZpcm1hdGlvbnNCFQ'
-    'oTX3R4X3NlbmRfdGltZW91dF9tc0IVChNfdHhfd2FpdF90aW1lb3V0X21zQhYKFF90eF93YWl0'
-    'X2ludGVydmFsX21zQhMKEV9hc3NldF9hcHByb3ZlX3R4Qg0KC19kZXBvc2l0X3R4');
+    'ASgLMhwubXlzdGlrby5jb3JlLnYxLlRyYW5zYWN0aW9uSAlSCWRlcG9zaXRUeIgBARIwChFzY3'
+    'JlZW5pbmdfbWVzc2FnZRgMIAEoCUgKUhBzY3JlZW5pbmdNZXNzYWdliAEBQg4KDF9wcml2YXRl'
+    'X2tleUISChBfc2lnbmVyX3Byb3ZpZGVyQhMKEV9xdWVyeV90aW1lb3V0X21zQh4KHF9hc3NldF'
+    '9hcHByb3ZlX2NvbmZpcm1hdGlvbnNCGAoWX2RlcG9zaXRfY29uZmlybWF0aW9uc0IVChNfdHhf'
+    'c2VuZF90aW1lb3V0X21zQhUKE190eF93YWl0X3RpbWVvdXRfbXNCFgoUX3R4X3dhaXRfaW50ZX'
+    'J2YWxfbXNCEwoRX2Fzc2V0X2FwcHJvdmVfdHhCDQoLX2RlcG9zaXRfdHhCFAoSX3NjcmVlbmlu'
+    'Z19tZXNzYWdl');
 
 @$core.Deprecated('Use depositQuoteDescriptor instead')
 const DepositQuote$json = {

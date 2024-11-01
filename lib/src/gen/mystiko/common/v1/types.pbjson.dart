@@ -24,6 +24,7 @@ const BridgeType$json = {
     {'1': 'BRIDGE_TYPE_CELER', '2': 4},
     {'1': 'BRIDGE_TYPE_LAYER_ZERO', '2': 5},
     {'1': 'BRIDGE_TYPE_AXELAR', '2': 6},
+    {'1': 'BRIDGE_TYPE_WORMHOLE', '2': 7},
   ],
 };
 
@@ -32,7 +33,7 @@ final $typed_data.Uint8List bridgeTypeDescriptor = $convert.base64Decode(
     'CgpCcmlkZ2VUeXBlEhsKF0JSSURHRV9UWVBFX1VOU1BFQ0lGSUVEEAASFAoQQlJJREdFX1RZUE'
     'VfTE9PUBABEhQKEEJSSURHRV9UWVBFX1BPTFkQAhIXChNCUklER0VfVFlQRV9UQlJJREdFEAMS'
     'FQoRQlJJREdFX1RZUEVfQ0VMRVIQBBIaChZCUklER0VfVFlQRV9MQVlFUl9aRVJPEAUSFgoSQl'
-    'JJREdFX1RZUEVfQVhFTEFSEAY=');
+    'JJREdFX1RZUEVfQVhFTEFSEAYSGAoUQlJJREdFX1RZUEVfV09STUhPTEUQBw==');
 
 @$core.Deprecated('Use contractTypeDescriptor instead')
 const ContractType$json = {

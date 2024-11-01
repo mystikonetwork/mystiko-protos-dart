@@ -417,6 +417,7 @@ class SendDepositOptions extends $pb.GeneratedMessage {
     $fixnum.Int64? txWaitIntervalMs,
     $0.Transaction? assetApproveTx,
     $0.Transaction? depositTx,
+    $core.String? screeningMessage,
   }) {
     final $result = create();
     if (depositId != null) {
@@ -451,6 +452,9 @@ class SendDepositOptions extends $pb.GeneratedMessage {
     }
     if (depositTx != null) {
       $result.depositTx = depositTx;
+    }
+    if (screeningMessage != null) {
+      $result.screeningMessage = screeningMessage;
     }
     return $result;
   }
@@ -492,6 +496,7 @@ class SendDepositOptions extends $pb.GeneratedMessage {
         subBuilder: $0.Transaction.create)
     ..aOM<$0.Transaction>(11, _omitFieldNames ? '' : 'depositTx',
         subBuilder: $0.Transaction.create)
+    ..aOS(12, _omitFieldNames ? '' : 'screeningMessage')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
@@ -652,6 +657,18 @@ class SendDepositOptions extends $pb.GeneratedMessage {
   void clearDepositTx() => clearField(11);
   @$pb.TagNumber(11)
   $0.Transaction ensureDepositTx() => $_ensure(10);
+
+  @$pb.TagNumber(12)
+  $core.String get screeningMessage => $_getSZ(11);
+  @$pb.TagNumber(12)
+  set screeningMessage($core.String v) {
+    $_setString(11, v);
+  }
+
+  @$pb.TagNumber(12)
+  $core.bool hasScreeningMessage() => $_has(11);
+  @$pb.TagNumber(12)
+  void clearScreeningMessage() => clearField(12);
 }
 
 class DepositQuote extends $pb.GeneratedMessage {

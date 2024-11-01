@@ -28,6 +28,8 @@ class BridgeType extends $pb.ProtobufEnum {
       BridgeType._(5, _omitEnumNames ? '' : 'BRIDGE_TYPE_LAYER_ZERO');
   static const BridgeType BRIDGE_TYPE_AXELAR =
       BridgeType._(6, _omitEnumNames ? '' : 'BRIDGE_TYPE_AXELAR');
+  static const BridgeType BRIDGE_TYPE_WORMHOLE =
+      BridgeType._(7, _omitEnumNames ? '' : 'BRIDGE_TYPE_WORMHOLE');
 
   static const $core.List<BridgeType> values = <BridgeType>[
     BRIDGE_TYPE_UNSPECIFIED,
@@ -37,6 +39,7 @@ class BridgeType extends $pb.ProtobufEnum {
     BRIDGE_TYPE_CELER,
     BRIDGE_TYPE_LAYER_ZERO,
     BRIDGE_TYPE_AXELAR,
+    BRIDGE_TYPE_WORMHOLE,
   ];
 
   static final $core.Map<$core.int, BridgeType> _byValue =
