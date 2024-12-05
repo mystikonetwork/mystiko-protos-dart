@@ -427,6 +427,18 @@ class SpendError extends $pb.ProtobufEnum {
       42, _omitEnumNames ? '' : 'SPEND_ERROR_DESERIALIZE_MESSAGE_ERROR');
   static const SpendError SPEND_ERROR_GRPC_CONNECT_ERROR =
       SpendError._(43, _omitEnumNames ? '' : 'SPEND_ERROR_GRPC_CONNECT_ERROR');
+  static const SpendError SPEND_ERROR_STD_IO_ERROR =
+      SpendError._(44, _omitEnumNames ? '' : 'SPEND_ERROR_STD_IO_ERROR');
+  static const SpendError SPEND_ERROR_PROTOS_ERROR =
+      SpendError._(45, _omitEnumNames ? '' : 'SPEND_ERROR_PROTOS_ERROR');
+  static const SpendError SPEND_ERROR_FETCHER_ERROR =
+      SpendError._(46, _omitEnumNames ? '' : 'SPEND_ERROR_FETCHER_ERROR');
+  static const SpendError SPEND_ERROR_MISSING_RESOURCE_ERROR = SpendError._(
+      47, _omitEnumNames ? '' : 'SPEND_ERROR_MISSING_RESOURCE_ERROR');
+  static const SpendError SPEND_ERROR_RAW_RESOURCE_ERROR =
+      SpendError._(48, _omitEnumNames ? '' : 'SPEND_ERROR_RAW_RESOURCE_ERROR');
+  static const SpendError SPEND_ERROR_FETCH_FROM_PROVIDER_ERROR = SpendError._(
+      49, _omitEnumNames ? '' : 'SPEND_ERROR_FETCH_FROM_PROVIDER_ERROR');
 
   static const $core.List<SpendError> values = <SpendError>[
     SPEND_ERROR_UNSPECIFIED,
@@ -473,6 +485,12 @@ class SpendError extends $pb.ProtobufEnum {
     SPEND_ERROR_GET_MYSTIKO_GUARD_ERROR,
     SPEND_ERROR_DESERIALIZE_MESSAGE_ERROR,
     SPEND_ERROR_GRPC_CONNECT_ERROR,
+    SPEND_ERROR_STD_IO_ERROR,
+    SPEND_ERROR_PROTOS_ERROR,
+    SPEND_ERROR_FETCHER_ERROR,
+    SPEND_ERROR_MISSING_RESOURCE_ERROR,
+    SPEND_ERROR_RAW_RESOURCE_ERROR,
+    SPEND_ERROR_FETCH_FROM_PROVIDER_ERROR,
   ];
 
   static final $core.Map<$core.int, SpendError> _byValue =
@@ -519,6 +537,14 @@ class ScannerError extends $pb.ProtobufEnum {
           13, _omitEnumNames ? '' : 'SCANNER_ERROR_DESERIALIZE_MESSAGE_ERROR');
   static const ScannerError SCANNER_ERROR_PROTOCOL_KEY_ERROR = ScannerError._(
       14, _omitEnumNames ? '' : 'SCANNER_ERROR_PROTOCOL_KEY_ERROR');
+  static const ScannerError SCANNER_ERROR_PROVIDER_ERROR =
+      ScannerError._(15, _omitEnumNames ? '' : 'SCANNER_ERROR_PROVIDER_ERROR');
+  static const ScannerError SCANNER_ERROR_COMMITMENT_POOL_CONTRACTS_ERROR =
+      ScannerError._(
+          16,
+          _omitEnumNames
+              ? ''
+              : 'SCANNER_ERROR_COMMITMENT_POOL_CONTRACTS_ERROR');
 
   static const $core.List<ScannerError> values = <ScannerError>[
     SCANNER_ERROR_UNSPECIFIED,
@@ -536,6 +562,8 @@ class ScannerError extends $pb.ProtobufEnum {
     SCANNER_ERROR_GET_MYSTIKO_GUARD_ERROR,
     SCANNER_ERROR_DESERIALIZE_MESSAGE_ERROR,
     SCANNER_ERROR_PROTOCOL_KEY_ERROR,
+    SCANNER_ERROR_PROVIDER_ERROR,
+    SCANNER_ERROR_COMMITMENT_POOL_CONTRACTS_ERROR,
   ];
 
   static final $core.Map<$core.int, ScannerError> _byValue =

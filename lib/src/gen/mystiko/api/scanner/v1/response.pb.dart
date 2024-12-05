@@ -15,6 +15,7 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 import '../../../core/scanner/v1/asset.pb.dart' as $27;
 import '../../../core/scanner/v1/balance.pb.dart' as $26;
+import '../../../core/scanner/v1/import.pb.dart' as $28;
 import '../../../core/scanner/v1/reset.pb.dart' as $25;
 import '../../../core/scanner/v1/scan.pb.dart' as $24;
 
@@ -331,6 +332,71 @@ class ChainAssetsResponse extends $pb.GeneratedMessage {
   void clearResult() => clearField(1);
   @$pb.TagNumber(1)
   $27.AssetsByChain ensureResult() => $_ensure(0);
+}
+
+class AssetImportResponse extends $pb.GeneratedMessage {
+  factory AssetImportResponse({
+    $28.AssetImportResult? result,
+  }) {
+    final $result = create();
+    if (result != null) {
+      $result.result = result;
+    }
+    return $result;
+  }
+  AssetImportResponse._() : super();
+  factory AssetImportResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AssetImportResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'AssetImportResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'mystiko.api.scanner.v1'),
+      createEmptyInstance: create)
+    ..aOM<$28.AssetImportResult>(1, _omitFieldNames ? '' : 'result',
+        subBuilder: $28.AssetImportResult.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  AssetImportResponse clone() => AssetImportResponse()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  AssetImportResponse copyWith(void Function(AssetImportResponse) updates) =>
+      super.copyWith((message) => updates(message as AssetImportResponse))
+          as AssetImportResponse;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static AssetImportResponse create() => AssetImportResponse._();
+  AssetImportResponse createEmptyInstance() => create();
+  static $pb.PbList<AssetImportResponse> createRepeated() =>
+      $pb.PbList<AssetImportResponse>();
+  @$core.pragma('dart2js:noInline')
+  static AssetImportResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AssetImportResponse>(create);
+  static AssetImportResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $28.AssetImportResult get result => $_getN(0);
+  @$pb.TagNumber(1)
+  set result($28.AssetImportResult v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasResult() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearResult() => clearField(1);
+  @$pb.TagNumber(1)
+  $28.AssetImportResult ensureResult() => $_ensure(0);
 }
 
 const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');

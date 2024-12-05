@@ -490,6 +490,11 @@ class SendSpendOptions extends $pb.GeneratedMessage {
     $fixnum.Int64? relayerWaitTimeoutMs,
     $fixnum.Int64? relayerWaitIntervalMs,
     $0.Transaction? tx,
+    $core.List<$core.int>? rawMerkleTree,
+    $core.List<$core.int>? rawZkProgram,
+    $core.List<$core.int>? rawZkProvingKey,
+    $core.List<$core.int>? rawZkVerifyingKey,
+    $core.List<$core.int>? rawZkAbi,
   }) {
     final $result = create();
     if (spendId != null) {
@@ -527,6 +532,21 @@ class SendSpendOptions extends $pb.GeneratedMessage {
     }
     if (tx != null) {
       $result.tx = tx;
+    }
+    if (rawMerkleTree != null) {
+      $result.rawMerkleTree = rawMerkleTree;
+    }
+    if (rawZkProgram != null) {
+      $result.rawZkProgram = rawZkProgram;
+    }
+    if (rawZkProvingKey != null) {
+      $result.rawZkProvingKey = rawZkProvingKey;
+    }
+    if (rawZkVerifyingKey != null) {
+      $result.rawZkVerifyingKey = rawZkVerifyingKey;
+    }
+    if (rawZkAbi != null) {
+      $result.rawZkAbi = rawZkAbi;
     }
     return $result;
   }
@@ -570,6 +590,16 @@ class SendSpendOptions extends $pb.GeneratedMessage {
         defaultOrMaker: $fixnum.Int64.ZERO)
     ..aOM<$0.Transaction>(12, _omitFieldNames ? '' : 'tx',
         subBuilder: $0.Transaction.create)
+    ..a<$core.List<$core.int>>(
+        13, _omitFieldNames ? '' : 'rawMerkleTree', $pb.PbFieldType.OY)
+    ..a<$core.List<$core.int>>(
+        14, _omitFieldNames ? '' : 'rawZkProgram', $pb.PbFieldType.OY)
+    ..a<$core.List<$core.int>>(
+        15, _omitFieldNames ? '' : 'rawZkProvingKey', $pb.PbFieldType.OY)
+    ..a<$core.List<$core.int>>(
+        16, _omitFieldNames ? '' : 'rawZkVerifyingKey', $pb.PbFieldType.OY)
+    ..a<$core.List<$core.int>>(
+        17, _omitFieldNames ? '' : 'rawZkAbi', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
@@ -740,6 +770,66 @@ class SendSpendOptions extends $pb.GeneratedMessage {
   void clearTx() => clearField(12);
   @$pb.TagNumber(12)
   $0.Transaction ensureTx() => $_ensure(11);
+
+  @$pb.TagNumber(13)
+  $core.List<$core.int> get rawMerkleTree => $_getN(12);
+  @$pb.TagNumber(13)
+  set rawMerkleTree($core.List<$core.int> v) {
+    $_setBytes(12, v);
+  }
+
+  @$pb.TagNumber(13)
+  $core.bool hasRawMerkleTree() => $_has(12);
+  @$pb.TagNumber(13)
+  void clearRawMerkleTree() => clearField(13);
+
+  @$pb.TagNumber(14)
+  $core.List<$core.int> get rawZkProgram => $_getN(13);
+  @$pb.TagNumber(14)
+  set rawZkProgram($core.List<$core.int> v) {
+    $_setBytes(13, v);
+  }
+
+  @$pb.TagNumber(14)
+  $core.bool hasRawZkProgram() => $_has(13);
+  @$pb.TagNumber(14)
+  void clearRawZkProgram() => clearField(14);
+
+  @$pb.TagNumber(15)
+  $core.List<$core.int> get rawZkProvingKey => $_getN(14);
+  @$pb.TagNumber(15)
+  set rawZkProvingKey($core.List<$core.int> v) {
+    $_setBytes(14, v);
+  }
+
+  @$pb.TagNumber(15)
+  $core.bool hasRawZkProvingKey() => $_has(14);
+  @$pb.TagNumber(15)
+  void clearRawZkProvingKey() => clearField(15);
+
+  @$pb.TagNumber(16)
+  $core.List<$core.int> get rawZkVerifyingKey => $_getN(15);
+  @$pb.TagNumber(16)
+  set rawZkVerifyingKey($core.List<$core.int> v) {
+    $_setBytes(15, v);
+  }
+
+  @$pb.TagNumber(16)
+  $core.bool hasRawZkVerifyingKey() => $_has(15);
+  @$pb.TagNumber(16)
+  void clearRawZkVerifyingKey() => clearField(16);
+
+  @$pb.TagNumber(17)
+  $core.List<$core.int> get rawZkAbi => $_getN(16);
+  @$pb.TagNumber(17)
+  set rawZkAbi($core.List<$core.int> v) {
+    $_setBytes(16, v);
+  }
+
+  @$pb.TagNumber(17)
+  $core.bool hasRawZkAbi() => $_has(16);
+  @$pb.TagNumber(17)
+  void clearRawZkAbi() => clearField(17);
 }
 
 class AmountRange extends $pb.GeneratedMessage {

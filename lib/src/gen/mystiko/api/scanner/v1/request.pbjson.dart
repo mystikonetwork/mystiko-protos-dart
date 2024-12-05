@@ -114,3 +114,23 @@ final $typed_data.Uint8List chainAssetsRequestDescriptor = $convert.base64Decode
     'ChJDaGFpbkFzc2V0c1JlcXVlc3QSGQoIY2hhaW5faWQYASABKARSB2NoYWluSWQSQAoHb3B0aW'
     '9ucxgCIAEoCzImLm15c3Rpa28uY29yZS5zY2FubmVyLnYxLkFzc2V0c09wdGlvbnNSB29wdGlv'
     'bnM=');
+
+@$core.Deprecated('Use assetImportRequestDescriptor instead')
+const AssetImportRequest$json = {
+  '1': 'AssetImportRequest',
+  '2': [
+    {
+      '1': 'options',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.mystiko.core.scanner.v1.AssetImportOptions',
+      '10': 'options'
+    },
+  ],
+};
+
+/// Descriptor for `AssetImportRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List assetImportRequestDescriptor = $convert.base64Decode(
+    'ChJBc3NldEltcG9ydFJlcXVlc3QSRQoHb3B0aW9ucxgBIAEoCzIrLm15c3Rpa28uY29yZS5zY2'
+    'FubmVyLnYxLkFzc2V0SW1wb3J0T3B0aW9uc1IHb3B0aW9ucw==');
