@@ -117,3 +117,23 @@ const ChainAssetsResponse$json = {
 final $typed_data.Uint8List chainAssetsResponseDescriptor = $convert.base64Decode(
     'ChNDaGFpbkFzc2V0c1Jlc3BvbnNlEkMKBnJlc3VsdBgBIAEoCzImLm15c3Rpa28uY29yZS5zY2'
     'FubmVyLnYxLkFzc2V0c0J5Q2hhaW5IAFIGcmVzdWx0iAEBQgkKB19yZXN1bHQ=');
+
+@$core.Deprecated('Use assetImportResponseDescriptor instead')
+const AssetImportResponse$json = {
+  '1': 'AssetImportResponse',
+  '2': [
+    {
+      '1': 'result',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.mystiko.core.scanner.v1.AssetImportResult',
+      '10': 'result'
+    },
+  ],
+};
+
+/// Descriptor for `AssetImportResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List assetImportResponseDescriptor = $convert.base64Decode(
+    'ChNBc3NldEltcG9ydFJlc3BvbnNlEkIKBnJlc3VsdBgBIAEoCzIqLm15c3Rpa28uY29yZS5zY2'
+    'FubmVyLnYxLkFzc2V0SW1wb3J0UmVzdWx0UgZyZXN1bHQ=');

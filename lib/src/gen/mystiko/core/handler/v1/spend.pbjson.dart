@@ -308,6 +308,51 @@ const SendSpendOptions$json = {
       '10': 'tx',
       '17': true
     },
+    {
+      '1': 'raw_merkle_tree',
+      '3': 13,
+      '4': 1,
+      '5': 12,
+      '9': 10,
+      '10': 'rawMerkleTree',
+      '17': true
+    },
+    {
+      '1': 'raw_zk_program',
+      '3': 14,
+      '4': 1,
+      '5': 12,
+      '9': 11,
+      '10': 'rawZkProgram',
+      '17': true
+    },
+    {
+      '1': 'raw_zk_proving_key',
+      '3': 15,
+      '4': 1,
+      '5': 12,
+      '9': 12,
+      '10': 'rawZkProvingKey',
+      '17': true
+    },
+    {
+      '1': 'raw_zk_verifying_key',
+      '3': 16,
+      '4': 1,
+      '5': 12,
+      '9': 13,
+      '10': 'rawZkVerifyingKey',
+      '17': true
+    },
+    {
+      '1': 'raw_zk_abi',
+      '3': 17,
+      '4': 1,
+      '5': 12,
+      '9': 14,
+      '10': 'rawZkAbi',
+      '17': true
+    },
   ],
   '8': [
     {'1': '_private_key'},
@@ -320,6 +365,11 @@ const SendSpendOptions$json = {
     {'1': '_relayer_wait_timeout_ms'},
     {'1': '_relayer_wait_interval_ms'},
     {'1': '_tx'},
+    {'1': '_raw_merkle_tree'},
+    {'1': '_raw_zk_program'},
+    {'1': '_raw_zk_proving_key'},
+    {'1': '_raw_zk_verifying_key'},
+    {'1': '_raw_zk_abi'},
   ],
 };
 
@@ -335,11 +385,17 @@ final $typed_data.Uint8List sendSpendOptionsDescriptor = $convert.base64Decode(
     'ZhbF9tcxgJIAEoBEgGUhB0eFdhaXRJbnRlcnZhbE1ziAEBEjoKF3JlbGF5ZXJfd2FpdF90aW1l'
     'b3V0X21zGAogASgESAdSFHJlbGF5ZXJXYWl0VGltZW91dE1ziAEBEjwKGHJlbGF5ZXJfd2FpdF'
     '9pbnRlcnZhbF9tcxgLIAEoBEgIUhVyZWxheWVyV2FpdEludGVydmFsTXOIAQESMQoCdHgYDCAB'
-    'KAsyHC5teXN0aWtvLmNvcmUudjEuVHJhbnNhY3Rpb25ICVICdHiIAQFCDgoMX3ByaXZhdGVfa2'
-    'V5QhIKEF9zaWduZXJfcHJvdmlkZXJCEwoRX3F1ZXJ5X3RpbWVvdXRfbXNCFgoUX3NwZW5kX2Nv'
-    'bmZpcm1hdGlvbnNCFQoTX3R4X3NlbmRfdGltZW91dF9tc0IVChNfdHhfd2FpdF90aW1lb3V0X2'
-    '1zQhYKFF90eF93YWl0X2ludGVydmFsX21zQhoKGF9yZWxheWVyX3dhaXRfdGltZW91dF9tc0Ib'
-    'ChlfcmVsYXllcl93YWl0X2ludGVydmFsX21zQgUKA190eA==');
+    'KAsyHC5teXN0aWtvLmNvcmUudjEuVHJhbnNhY3Rpb25ICVICdHiIAQESKwoPcmF3X21lcmtsZV'
+    '90cmVlGA0gASgMSApSDXJhd01lcmtsZVRyZWWIAQESKQoOcmF3X3prX3Byb2dyYW0YDiABKAxI'
+    'C1IMcmF3WmtQcm9ncmFtiAEBEjAKEnJhd196a19wcm92aW5nX2tleRgPIAEoDEgMUg9yYXdaa1'
+    'Byb3ZpbmdLZXmIAQESNAoUcmF3X3prX3ZlcmlmeWluZ19rZXkYECABKAxIDVIRcmF3WmtWZXJp'
+    'ZnlpbmdLZXmIAQESIQoKcmF3X3prX2FiaRgRIAEoDEgOUghyYXdaa0FiaYgBAUIOCgxfcHJpdm'
+    'F0ZV9rZXlCEgoQX3NpZ25lcl9wcm92aWRlckITChFfcXVlcnlfdGltZW91dF9tc0IWChRfc3Bl'
+    'bmRfY29uZmlybWF0aW9uc0IVChNfdHhfc2VuZF90aW1lb3V0X21zQhUKE190eF93YWl0X3RpbW'
+    'VvdXRfbXNCFgoUX3R4X3dhaXRfaW50ZXJ2YWxfbXNCGgoYX3JlbGF5ZXJfd2FpdF90aW1lb3V0'
+    'X21zQhsKGV9yZWxheWVyX3dhaXRfaW50ZXJ2YWxfbXNCBQoDX3R4QhIKEF9yYXdfbWVya2xlX3'
+    'RyZWVCEQoPX3Jhd196a19wcm9ncmFtQhUKE19yYXdfemtfcHJvdmluZ19rZXlCFwoVX3Jhd196'
+    'a192ZXJpZnlpbmdfa2V5Qg0KC19yYXdfemtfYWJp');
 
 @$core.Deprecated('Use amountRangeDescriptor instead')
 const AmountRange$json = {

@@ -52,19 +52,31 @@ class DepositStatus extends $pb.ProtobufEnum {
 class SpendStatus extends $pb.ProtobufEnum {
   static const SpendStatus SPEND_STATUS_UNSPECIFIED =
       SpendStatus._(0, _omitEnumNames ? '' : 'SPEND_STATUS_UNSPECIFIED');
+  static const SpendStatus SPEND_STATUS_MERKLE_TREE_FETCHING = SpendStatus._(
+      1, _omitEnumNames ? '' : 'SPEND_STATUS_MERKLE_TREE_FETCHING');
+  static const SpendStatus SPEND_STATUS_MERKLE_TREE_FETCHED = SpendStatus._(
+      2, _omitEnumNames ? '' : 'SPEND_STATUS_MERKLE_TREE_FETCHED');
+  static const SpendStatus SPEND_STATUS_STATIC_ASSETS_FETCHING = SpendStatus._(
+      3, _omitEnumNames ? '' : 'SPEND_STATUS_STATIC_ASSETS_FETCHING');
+  static const SpendStatus SPEND_STATUS_STATIC_ASSETS_FETCHED = SpendStatus._(
+      4, _omitEnumNames ? '' : 'SPEND_STATUS_STATIC_ASSETS_FETCHED');
   static const SpendStatus SPEND_STATUS_PROOF_GENERATING =
-      SpendStatus._(1, _omitEnumNames ? '' : 'SPEND_STATUS_PROOF_GENERATING');
+      SpendStatus._(5, _omitEnumNames ? '' : 'SPEND_STATUS_PROOF_GENERATING');
   static const SpendStatus SPEND_STATUS_PROOF_GENERATED =
-      SpendStatus._(2, _omitEnumNames ? '' : 'SPEND_STATUS_PROOF_GENERATED');
+      SpendStatus._(6, _omitEnumNames ? '' : 'SPEND_STATUS_PROOF_GENERATED');
   static const SpendStatus SPEND_STATUS_PENDING =
-      SpendStatus._(3, _omitEnumNames ? '' : 'SPEND_STATUS_PENDING');
+      SpendStatus._(7, _omitEnumNames ? '' : 'SPEND_STATUS_PENDING');
   static const SpendStatus SPEND_STATUS_SUCCEEDED =
-      SpendStatus._(4, _omitEnumNames ? '' : 'SPEND_STATUS_SUCCEEDED');
+      SpendStatus._(8, _omitEnumNames ? '' : 'SPEND_STATUS_SUCCEEDED');
   static const SpendStatus SPEND_STATUS_FAILED =
-      SpendStatus._(5, _omitEnumNames ? '' : 'SPEND_STATUS_FAILED');
+      SpendStatus._(9, _omitEnumNames ? '' : 'SPEND_STATUS_FAILED');
 
   static const $core.List<SpendStatus> values = <SpendStatus>[
     SPEND_STATUS_UNSPECIFIED,
+    SPEND_STATUS_MERKLE_TREE_FETCHING,
+    SPEND_STATUS_MERKLE_TREE_FETCHED,
+    SPEND_STATUS_STATIC_ASSETS_FETCHING,
+    SPEND_STATUS_STATIC_ASSETS_FETCHED,
     SPEND_STATUS_PROOF_GENERATING,
     SPEND_STATUS_PROOF_GENERATED,
     SPEND_STATUS_PENDING,

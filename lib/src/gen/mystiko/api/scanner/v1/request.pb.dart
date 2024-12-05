@@ -16,6 +16,7 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 import '../../../core/scanner/v1/asset.pb.dart' as $27;
 import '../../../core/scanner/v1/balance.pb.dart' as $26;
+import '../../../core/scanner/v1/import.pb.dart' as $28;
 import '../../../core/scanner/v1/reset.pb.dart' as $25;
 import '../../../core/scanner/v1/scan.pb.dart' as $24;
 
@@ -359,6 +360,71 @@ class ChainAssetsRequest extends $pb.GeneratedMessage {
   void clearOptions() => clearField(2);
   @$pb.TagNumber(2)
   $27.AssetsOptions ensureOptions() => $_ensure(1);
+}
+
+class AssetImportRequest extends $pb.GeneratedMessage {
+  factory AssetImportRequest({
+    $28.AssetImportOptions? options,
+  }) {
+    final $result = create();
+    if (options != null) {
+      $result.options = options;
+    }
+    return $result;
+  }
+  AssetImportRequest._() : super();
+  factory AssetImportRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AssetImportRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'AssetImportRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'mystiko.api.scanner.v1'),
+      createEmptyInstance: create)
+    ..aOM<$28.AssetImportOptions>(1, _omitFieldNames ? '' : 'options',
+        subBuilder: $28.AssetImportOptions.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  AssetImportRequest clone() => AssetImportRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  AssetImportRequest copyWith(void Function(AssetImportRequest) updates) =>
+      super.copyWith((message) => updates(message as AssetImportRequest))
+          as AssetImportRequest;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static AssetImportRequest create() => AssetImportRequest._();
+  AssetImportRequest createEmptyInstance() => create();
+  static $pb.PbList<AssetImportRequest> createRepeated() =>
+      $pb.PbList<AssetImportRequest>();
+  @$core.pragma('dart2js:noInline')
+  static AssetImportRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AssetImportRequest>(create);
+  static AssetImportRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $28.AssetImportOptions get options => $_getN(0);
+  @$pb.TagNumber(1)
+  set options($28.AssetImportOptions v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasOptions() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearOptions() => clearField(1);
+  @$pb.TagNumber(1)
+  $28.AssetImportOptions ensureOptions() => $_ensure(0);
 }
 
 const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
