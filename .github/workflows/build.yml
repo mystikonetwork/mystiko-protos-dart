@@ -23,13 +23,14 @@ jobs:
         with:
           sdk: 3.2.5
 
+      - name: Pub Get
+        run: dart pub get
+
       - name: Format
-        run: |
-          dart format .
+        run: dart format .
 
       - name: Analyze
-        run: |
-          dart analyze .
+        run: dart analyze .
 
       - name: Check Dirty Files
         run: git diff --quiet || (echo "some generated files are not included in repo" && exit 1)
