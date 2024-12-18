@@ -13,6 +13,26 @@ import 'dart:convert' as $convert;
 import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
 
+@$core.Deprecated('Use syncRequestDescriptor instead')
+const SyncRequest$json = {
+  '1': 'SyncRequest',
+  '2': [
+    {
+      '1': 'options',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.mystiko.core.scanner.v1.SyncOptions',
+      '10': 'options'
+    },
+  ],
+};
+
+/// Descriptor for `SyncRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List syncRequestDescriptor = $convert.base64Decode(
+    'CgtTeW5jUmVxdWVzdBI+CgdvcHRpb25zGAEgASgLMiQubXlzdGlrby5jb3JlLnNjYW5uZXIudj'
+    'EuU3luY09wdGlvbnNSB29wdGlvbnM=');
+
 @$core.Deprecated('Use scanRequestDescriptor instead')
 const ScanRequest$json = {
   '1': 'ScanRequest',

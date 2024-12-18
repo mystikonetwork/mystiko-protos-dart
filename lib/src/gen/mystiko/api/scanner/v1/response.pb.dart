@@ -13,15 +13,80 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../core/scanner/v1/asset.pb.dart' as $27;
-import '../../../core/scanner/v1/balance.pb.dart' as $26;
-import '../../../core/scanner/v1/import.pb.dart' as $28;
-import '../../../core/scanner/v1/reset.pb.dart' as $25;
-import '../../../core/scanner/v1/scan.pb.dart' as $24;
+import '../../../core/scanner/v1/asset.pb.dart' as $28;
+import '../../../core/scanner/v1/balance.pb.dart' as $27;
+import '../../../core/scanner/v1/import.pb.dart' as $29;
+import '../../../core/scanner/v1/reset.pb.dart' as $26;
+import '../../../core/scanner/v1/scan.pb.dart' as $25;
+
+class SyncResponse extends $pb.GeneratedMessage {
+  factory SyncResponse({
+    $27.BalanceResult? result,
+  }) {
+    final $result = create();
+    if (result != null) {
+      $result.result = result;
+    }
+    return $result;
+  }
+  SyncResponse._() : super();
+  factory SyncResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SyncResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'SyncResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'mystiko.api.scanner.v1'),
+      createEmptyInstance: create)
+    ..aOM<$27.BalanceResult>(1, _omitFieldNames ? '' : 'result',
+        subBuilder: $27.BalanceResult.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  SyncResponse clone() => SyncResponse()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  SyncResponse copyWith(void Function(SyncResponse) updates) =>
+      super.copyWith((message) => updates(message as SyncResponse))
+          as SyncResponse;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static SyncResponse create() => SyncResponse._();
+  SyncResponse createEmptyInstance() => create();
+  static $pb.PbList<SyncResponse> createRepeated() =>
+      $pb.PbList<SyncResponse>();
+  @$core.pragma('dart2js:noInline')
+  static SyncResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SyncResponse>(create);
+  static SyncResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $27.BalanceResult get result => $_getN(0);
+  @$pb.TagNumber(1)
+  set result($27.BalanceResult v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasResult() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearResult() => clearField(1);
+  @$pb.TagNumber(1)
+  $27.BalanceResult ensureResult() => $_ensure(0);
+}
 
 class ScanResponse extends $pb.GeneratedMessage {
   factory ScanResponse({
-    $24.ScanResult? result,
+    $25.ScanResult? result,
   }) {
     final $result = create();
     if (result != null) {
@@ -42,8 +107,8 @@ class ScanResponse extends $pb.GeneratedMessage {
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.scanner.v1'),
       createEmptyInstance: create)
-    ..aOM<$24.ScanResult>(1, _omitFieldNames ? '' : 'result',
-        subBuilder: $24.ScanResult.create)
+    ..aOM<$25.ScanResult>(1, _omitFieldNames ? '' : 'result',
+        subBuilder: $25.ScanResult.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
@@ -70,9 +135,9 @@ class ScanResponse extends $pb.GeneratedMessage {
   static ScanResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $24.ScanResult get result => $_getN(0);
+  $25.ScanResult get result => $_getN(0);
   @$pb.TagNumber(1)
-  set result($24.ScanResult v) {
+  set result($25.ScanResult v) {
     setField(1, v);
   }
 
@@ -81,12 +146,12 @@ class ScanResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearResult() => clearField(1);
   @$pb.TagNumber(1)
-  $24.ScanResult ensureResult() => $_ensure(0);
+  $25.ScanResult ensureResult() => $_ensure(0);
 }
 
 class ResetResponse extends $pb.GeneratedMessage {
   factory ResetResponse({
-    $25.ResetResult? result,
+    $26.ResetResult? result,
   }) {
     final $result = create();
     if (result != null) {
@@ -107,8 +172,8 @@ class ResetResponse extends $pb.GeneratedMessage {
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.scanner.v1'),
       createEmptyInstance: create)
-    ..aOM<$25.ResetResult>(1, _omitFieldNames ? '' : 'result',
-        subBuilder: $25.ResetResult.create)
+    ..aOM<$26.ResetResult>(1, _omitFieldNames ? '' : 'result',
+        subBuilder: $26.ResetResult.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
@@ -135,9 +200,9 @@ class ResetResponse extends $pb.GeneratedMessage {
   static ResetResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $25.ResetResult get result => $_getN(0);
+  $26.ResetResult get result => $_getN(0);
   @$pb.TagNumber(1)
-  set result($25.ResetResult v) {
+  set result($26.ResetResult v) {
     setField(1, v);
   }
 
@@ -146,12 +211,12 @@ class ResetResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearResult() => clearField(1);
   @$pb.TagNumber(1)
-  $25.ResetResult ensureResult() => $_ensure(0);
+  $26.ResetResult ensureResult() => $_ensure(0);
 }
 
 class BalanceResponse extends $pb.GeneratedMessage {
   factory BalanceResponse({
-    $26.BalanceResult? result,
+    $27.BalanceResult? result,
   }) {
     final $result = create();
     if (result != null) {
@@ -172,8 +237,8 @@ class BalanceResponse extends $pb.GeneratedMessage {
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.scanner.v1'),
       createEmptyInstance: create)
-    ..aOM<$26.BalanceResult>(1, _omitFieldNames ? '' : 'result',
-        subBuilder: $26.BalanceResult.create)
+    ..aOM<$27.BalanceResult>(1, _omitFieldNames ? '' : 'result',
+        subBuilder: $27.BalanceResult.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
@@ -200,9 +265,9 @@ class BalanceResponse extends $pb.GeneratedMessage {
   static BalanceResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $26.BalanceResult get result => $_getN(0);
+  $27.BalanceResult get result => $_getN(0);
   @$pb.TagNumber(1)
-  set result($26.BalanceResult v) {
+  set result($27.BalanceResult v) {
     setField(1, v);
   }
 
@@ -211,12 +276,12 @@ class BalanceResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearResult() => clearField(1);
   @$pb.TagNumber(1)
-  $26.BalanceResult ensureResult() => $_ensure(0);
+  $27.BalanceResult ensureResult() => $_ensure(0);
 }
 
 class AssetsResponse extends $pb.GeneratedMessage {
   factory AssetsResponse({
-    $core.Iterable<$27.AssetsByChain>? results,
+    $core.Iterable<$28.AssetsByChain>? results,
   }) {
     final $result = create();
     if (results != null) {
@@ -237,9 +302,9 @@ class AssetsResponse extends $pb.GeneratedMessage {
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.scanner.v1'),
       createEmptyInstance: create)
-    ..pc<$27.AssetsByChain>(
+    ..pc<$28.AssetsByChain>(
         1, _omitFieldNames ? '' : 'results', $pb.PbFieldType.PM,
-        subBuilder: $27.AssetsByChain.create)
+        subBuilder: $28.AssetsByChain.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
@@ -266,12 +331,12 @@ class AssetsResponse extends $pb.GeneratedMessage {
   static AssetsResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.List<$27.AssetsByChain> get results => $_getList(0);
+  $core.List<$28.AssetsByChain> get results => $_getList(0);
 }
 
 class ChainAssetsResponse extends $pb.GeneratedMessage {
   factory ChainAssetsResponse({
-    $27.AssetsByChain? result,
+    $28.AssetsByChain? result,
   }) {
     final $result = create();
     if (result != null) {
@@ -292,8 +357,8 @@ class ChainAssetsResponse extends $pb.GeneratedMessage {
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.scanner.v1'),
       createEmptyInstance: create)
-    ..aOM<$27.AssetsByChain>(1, _omitFieldNames ? '' : 'result',
-        subBuilder: $27.AssetsByChain.create)
+    ..aOM<$28.AssetsByChain>(1, _omitFieldNames ? '' : 'result',
+        subBuilder: $28.AssetsByChain.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
@@ -320,9 +385,9 @@ class ChainAssetsResponse extends $pb.GeneratedMessage {
   static ChainAssetsResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $27.AssetsByChain get result => $_getN(0);
+  $28.AssetsByChain get result => $_getN(0);
   @$pb.TagNumber(1)
-  set result($27.AssetsByChain v) {
+  set result($28.AssetsByChain v) {
     setField(1, v);
   }
 
@@ -331,12 +396,12 @@ class ChainAssetsResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearResult() => clearField(1);
   @$pb.TagNumber(1)
-  $27.AssetsByChain ensureResult() => $_ensure(0);
+  $28.AssetsByChain ensureResult() => $_ensure(0);
 }
 
 class AssetImportResponse extends $pb.GeneratedMessage {
   factory AssetImportResponse({
-    $28.AssetImportResult? result,
+    $29.AssetImportResult? result,
   }) {
     final $result = create();
     if (result != null) {
@@ -357,8 +422,8 @@ class AssetImportResponse extends $pb.GeneratedMessage {
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.scanner.v1'),
       createEmptyInstance: create)
-    ..aOM<$28.AssetImportResult>(1, _omitFieldNames ? '' : 'result',
-        subBuilder: $28.AssetImportResult.create)
+    ..aOM<$29.AssetImportResult>(1, _omitFieldNames ? '' : 'result',
+        subBuilder: $29.AssetImportResult.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
@@ -385,9 +450,9 @@ class AssetImportResponse extends $pb.GeneratedMessage {
   static AssetImportResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $28.AssetImportResult get result => $_getN(0);
+  $29.AssetImportResult get result => $_getN(0);
   @$pb.TagNumber(1)
-  set result($28.AssetImportResult v) {
+  set result($29.AssetImportResult v) {
     setField(1, v);
   }
 
@@ -396,7 +461,7 @@ class AssetImportResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearResult() => clearField(1);
   @$pb.TagNumber(1)
-  $28.AssetImportResult ensureResult() => $_ensure(0);
+  $29.AssetImportResult ensureResult() => $_ensure(0);
 }
 
 const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
