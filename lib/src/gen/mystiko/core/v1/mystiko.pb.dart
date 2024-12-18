@@ -13,19 +13,19 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../common/v1/config.pb.dart' as $32;
-import '../../loader/v1/loader.pb.dart' as $36;
-import '../../relayer/v1/client.pb.dart' as $35;
-import '../../screening/v1/client.pb.dart' as $37;
+import '../../common/v1/config.pb.dart' as $33;
+import '../../loader/v1/loader.pb.dart' as $37;
+import '../../relayer/v1/client.pb.dart' as $36;
+import '../../screening/v1/client.pb.dart' as $38;
 
 class MystikoOptions extends $pb.GeneratedMessage {
   factory MystikoOptions({
-    $32.ConfigOptions? configOptions,
-    $35.RelayerClientOptions? relayerClientOptions,
-    $36.LoaderConfig? loaderConfig,
+    $33.ConfigOptions? configOptions,
+    $36.RelayerClientOptions? relayerClientOptions,
+    $37.LoaderConfig? loaderConfig,
     $core.String? dbPath,
     $core.String? staticCachePath,
-    $37.ScreeningClientOptions? screeningClientOptions,
+    $38.ScreeningClientOptions? screeningClientOptions,
   }) {
     final $result = create();
     if (configOptions != null) {
@@ -61,18 +61,18 @@ class MystikoOptions extends $pb.GeneratedMessage {
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'mystiko.core.v1'),
       createEmptyInstance: create)
-    ..aOM<$32.ConfigOptions>(1, _omitFieldNames ? '' : 'configOptions',
-        subBuilder: $32.ConfigOptions.create)
-    ..aOM<$35.RelayerClientOptions>(
+    ..aOM<$33.ConfigOptions>(1, _omitFieldNames ? '' : 'configOptions',
+        subBuilder: $33.ConfigOptions.create)
+    ..aOM<$36.RelayerClientOptions>(
         2, _omitFieldNames ? '' : 'relayerClientOptions',
-        subBuilder: $35.RelayerClientOptions.create)
-    ..aOM<$36.LoaderConfig>(3, _omitFieldNames ? '' : 'loaderConfig',
-        subBuilder: $36.LoaderConfig.create)
+        subBuilder: $36.RelayerClientOptions.create)
+    ..aOM<$37.LoaderConfig>(3, _omitFieldNames ? '' : 'loaderConfig',
+        subBuilder: $37.LoaderConfig.create)
     ..aOS(4, _omitFieldNames ? '' : 'dbPath')
     ..aOS(5, _omitFieldNames ? '' : 'staticCachePath')
-    ..aOM<$37.ScreeningClientOptions>(
+    ..aOM<$38.ScreeningClientOptions>(
         6, _omitFieldNames ? '' : 'screeningClientOptions',
-        subBuilder: $37.ScreeningClientOptions.create)
+        subBuilder: $38.ScreeningClientOptions.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
@@ -99,9 +99,9 @@ class MystikoOptions extends $pb.GeneratedMessage {
   static MystikoOptions? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $32.ConfigOptions get configOptions => $_getN(0);
+  $33.ConfigOptions get configOptions => $_getN(0);
   @$pb.TagNumber(1)
-  set configOptions($32.ConfigOptions v) {
+  set configOptions($33.ConfigOptions v) {
     setField(1, v);
   }
 
@@ -110,12 +110,12 @@ class MystikoOptions extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearConfigOptions() => clearField(1);
   @$pb.TagNumber(1)
-  $32.ConfigOptions ensureConfigOptions() => $_ensure(0);
+  $33.ConfigOptions ensureConfigOptions() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $35.RelayerClientOptions get relayerClientOptions => $_getN(1);
+  $36.RelayerClientOptions get relayerClientOptions => $_getN(1);
   @$pb.TagNumber(2)
-  set relayerClientOptions($35.RelayerClientOptions v) {
+  set relayerClientOptions($36.RelayerClientOptions v) {
     setField(2, v);
   }
 
@@ -124,12 +124,12 @@ class MystikoOptions extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearRelayerClientOptions() => clearField(2);
   @$pb.TagNumber(2)
-  $35.RelayerClientOptions ensureRelayerClientOptions() => $_ensure(1);
+  $36.RelayerClientOptions ensureRelayerClientOptions() => $_ensure(1);
 
   @$pb.TagNumber(3)
-  $36.LoaderConfig get loaderConfig => $_getN(2);
+  $37.LoaderConfig get loaderConfig => $_getN(2);
   @$pb.TagNumber(3)
-  set loaderConfig($36.LoaderConfig v) {
+  set loaderConfig($37.LoaderConfig v) {
     setField(3, v);
   }
 
@@ -138,7 +138,7 @@ class MystikoOptions extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearLoaderConfig() => clearField(3);
   @$pb.TagNumber(3)
-  $36.LoaderConfig ensureLoaderConfig() => $_ensure(2);
+  $37.LoaderConfig ensureLoaderConfig() => $_ensure(2);
 
   @$pb.TagNumber(4)
   $core.String get dbPath => $_getSZ(3);
@@ -165,9 +165,9 @@ class MystikoOptions extends $pb.GeneratedMessage {
   void clearStaticCachePath() => clearField(5);
 
   @$pb.TagNumber(6)
-  $37.ScreeningClientOptions get screeningClientOptions => $_getN(5);
+  $38.ScreeningClientOptions get screeningClientOptions => $_getN(5);
   @$pb.TagNumber(6)
-  set screeningClientOptions($37.ScreeningClientOptions v) {
+  set screeningClientOptions($38.ScreeningClientOptions v) {
     setField(6, v);
   }
 
@@ -176,7 +176,7 @@ class MystikoOptions extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   void clearScreeningClientOptions() => clearField(6);
   @$pb.TagNumber(6)
-  $37.ScreeningClientOptions ensureScreeningClientOptions() => $_ensure(5);
+  $38.ScreeningClientOptions ensureScreeningClientOptions() => $_ensure(5);
 }
 
 const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
