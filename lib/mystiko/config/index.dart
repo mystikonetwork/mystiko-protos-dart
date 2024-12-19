@@ -4,3 +4,6 @@ export 'package:mystiko_protos_dart/src/gen/mystiko/config/v1/circuit.pb.dart';
 export 'package:mystiko_protos_dart/src/gen/mystiko/config/v1/mystiko.pb.dart';
 export 'package:mystiko_protos_dart/src/gen/mystiko/config/v1/packer.pb.dart';
 export 'package:mystiko_protos_dart/src/gen/mystiko/config/v1/provider.pb.dart';
+
+export 'package:mystiko_protos_dart/mystiko/config/bridge/index.dart';
+export 'package:mystiko_protos_dart/mystiko/config/contract/index.dart';
