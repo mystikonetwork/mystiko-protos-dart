@@ -1,5 +1,3 @@
-library storage;
-
 import 'package:fixnum/fixnum.dart';
 import 'package:mystiko_protos_dart/src/gen/mystiko/storage/v1/filter.pb.dart';
 import 'package:protobuf/protobuf.dart';
