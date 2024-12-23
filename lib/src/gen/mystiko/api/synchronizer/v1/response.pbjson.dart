@@ -47,9 +47,9 @@ final $typed_data.Uint8List contractSyncedBlockResponseDescriptor =
         'ChtDb250cmFjdFN5bmNlZEJsb2NrUmVzcG9uc2USGwoGcmVzdWx0GAEgASgESABSBnJlc3VsdI'
         'gBAUIJCgdfcmVzdWx0');
 
-@$core.Deprecated('Use statusResponseDescriptor instead')
-const StatusResponse$json = {
-  '1': 'StatusResponse',
+@$core.Deprecated('Use synchronizerStatusResponseDescriptor instead')
+const SynchronizerStatusResponse$json = {
+  '1': 'SynchronizerStatusResponse',
   '2': [
     {
       '1': 'status',
@@ -62,7 +62,8 @@ const StatusResponse$json = {
   ],
 };
 
-/// Descriptor for `StatusResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List statusResponseDescriptor = $convert.base64Decode(
-    'Cg5TdGF0dXNSZXNwb25zZRJICgZzdGF0dXMYASABKAsyMC5teXN0aWtvLmNvcmUuc3luY2hyb2'
-    '5pemVyLnYxLlN5bmNocm9uaXplclN0YXR1c1IGc3RhdHVz');
+/// Descriptor for `SynchronizerStatusResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List synchronizerStatusResponseDescriptor =
+    $convert.base64Decode(
+        'ChpTeW5jaHJvbml6ZXJTdGF0dXNSZXNwb25zZRJICgZzdGF0dXMYASABKAsyMC5teXN0aWtvLm'
+        'NvcmUuc3luY2hyb25pemVyLnYxLlN5bmNocm9uaXplclN0YXR1c1IGc3RhdHVz');

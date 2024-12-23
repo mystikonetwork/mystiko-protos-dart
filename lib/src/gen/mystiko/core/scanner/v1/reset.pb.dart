@@ -83,18 +83,18 @@ class ScannerResetOptions extends $pb.GeneratedMessage {
   $core.List<$core.String> get shieldedAddresses => $_getList(1);
 }
 
-class ResetResult extends $pb.GeneratedMessage {
-  factory ResetResult() => create();
-  ResetResult._() : super();
-  factory ResetResult.fromBuffer($core.List<$core.int> i,
+class ScannerResetResult extends $pb.GeneratedMessage {
+  factory ScannerResetResult() => create();
+  ScannerResetResult._() : super();
+  factory ScannerResetResult.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
-  factory ResetResult.fromJson($core.String i,
+  factory ScannerResetResult.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'ResetResult',
+      _omitMessageNames ? '' : 'ScannerResetResult',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.core.scanner.v1'),
       createEmptyInstance: create)
@@ -103,24 +103,25 @@ class ResetResult extends $pb.GeneratedMessage {
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
-  ResetResult clone() => ResetResult()..mergeFromMessage(this);
+  ScannerResetResult clone() => ScannerResetResult()..mergeFromMessage(this);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
-  ResetResult copyWith(void Function(ResetResult) updates) =>
-      super.copyWith((message) => updates(message as ResetResult))
-          as ResetResult;
+  ScannerResetResult copyWith(void Function(ScannerResetResult) updates) =>
+      super.copyWith((message) => updates(message as ScannerResetResult))
+          as ScannerResetResult;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static ResetResult create() => ResetResult._();
-  ResetResult createEmptyInstance() => create();
-  static $pb.PbList<ResetResult> createRepeated() => $pb.PbList<ResetResult>();
+  static ScannerResetResult create() => ScannerResetResult._();
+  ScannerResetResult createEmptyInstance() => create();
+  static $pb.PbList<ScannerResetResult> createRepeated() =>
+      $pb.PbList<ScannerResetResult>();
   @$core.pragma('dart2js:noInline')
-  static ResetResult getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<ResetResult>(create);
-  static ResetResult? _defaultInstance;
+  static ScannerResetResult getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ScannerResetResult>(create);
+  static ScannerResetResult? _defaultInstance;
 }
 
 const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');

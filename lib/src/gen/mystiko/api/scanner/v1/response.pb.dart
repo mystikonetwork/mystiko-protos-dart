@@ -19,8 +19,8 @@ import '../../../core/scanner/v1/import.pb.dart' as $29;
 import '../../../core/scanner/v1/reset.pb.dart' as $26;
 import '../../../core/scanner/v1/scan.pb.dart' as $25;
 
-class SyncResponse extends $pb.GeneratedMessage {
-  factory SyncResponse({
+class ScannerSyncResponse extends $pb.GeneratedMessage {
+  factory ScannerSyncResponse({
     $27.BalanceResult? result,
   }) {
     final $result = create();
@@ -29,16 +29,16 @@ class SyncResponse extends $pb.GeneratedMessage {
     }
     return $result;
   }
-  SyncResponse._() : super();
-  factory SyncResponse.fromBuffer($core.List<$core.int> i,
+  ScannerSyncResponse._() : super();
+  factory ScannerSyncResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
-  factory SyncResponse.fromJson($core.String i,
+  factory ScannerSyncResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'SyncResponse',
+      _omitMessageNames ? '' : 'ScannerSyncResponse',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.scanner.v1'),
       createEmptyInstance: create)
@@ -49,25 +49,25 @@ class SyncResponse extends $pb.GeneratedMessage {
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
-  SyncResponse clone() => SyncResponse()..mergeFromMessage(this);
+  ScannerSyncResponse clone() => ScannerSyncResponse()..mergeFromMessage(this);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
-  SyncResponse copyWith(void Function(SyncResponse) updates) =>
-      super.copyWith((message) => updates(message as SyncResponse))
-          as SyncResponse;
+  ScannerSyncResponse copyWith(void Function(ScannerSyncResponse) updates) =>
+      super.copyWith((message) => updates(message as ScannerSyncResponse))
+          as ScannerSyncResponse;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static SyncResponse create() => SyncResponse._();
-  SyncResponse createEmptyInstance() => create();
-  static $pb.PbList<SyncResponse> createRepeated() =>
-      $pb.PbList<SyncResponse>();
+  static ScannerSyncResponse create() => ScannerSyncResponse._();
+  ScannerSyncResponse createEmptyInstance() => create();
+  static $pb.PbList<ScannerSyncResponse> createRepeated() =>
+      $pb.PbList<ScannerSyncResponse>();
   @$core.pragma('dart2js:noInline')
-  static SyncResponse getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<SyncResponse>(create);
-  static SyncResponse? _defaultInstance;
+  static ScannerSyncResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ScannerSyncResponse>(create);
+  static ScannerSyncResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
   $27.BalanceResult get result => $_getN(0);
@@ -84,9 +84,9 @@ class SyncResponse extends $pb.GeneratedMessage {
   $27.BalanceResult ensureResult() => $_ensure(0);
 }
 
-class ScanResponse extends $pb.GeneratedMessage {
-  factory ScanResponse({
-    $25.ScanResult? result,
+class ScannerScanResponse extends $pb.GeneratedMessage {
+  factory ScannerScanResponse({
+    $25.ScannerScanResult? result,
   }) {
     final $result = create();
     if (result != null) {
@@ -94,50 +94,50 @@ class ScanResponse extends $pb.GeneratedMessage {
     }
     return $result;
   }
-  ScanResponse._() : super();
-  factory ScanResponse.fromBuffer($core.List<$core.int> i,
+  ScannerScanResponse._() : super();
+  factory ScannerScanResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
-  factory ScanResponse.fromJson($core.String i,
+  factory ScannerScanResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'ScanResponse',
+      _omitMessageNames ? '' : 'ScannerScanResponse',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.scanner.v1'),
       createEmptyInstance: create)
-    ..aOM<$25.ScanResult>(1, _omitFieldNames ? '' : 'result',
-        subBuilder: $25.ScanResult.create)
+    ..aOM<$25.ScannerScanResult>(1, _omitFieldNames ? '' : 'result',
+        subBuilder: $25.ScannerScanResult.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
-  ScanResponse clone() => ScanResponse()..mergeFromMessage(this);
+  ScannerScanResponse clone() => ScannerScanResponse()..mergeFromMessage(this);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
-  ScanResponse copyWith(void Function(ScanResponse) updates) =>
-      super.copyWith((message) => updates(message as ScanResponse))
-          as ScanResponse;
+  ScannerScanResponse copyWith(void Function(ScannerScanResponse) updates) =>
+      super.copyWith((message) => updates(message as ScannerScanResponse))
+          as ScannerScanResponse;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static ScanResponse create() => ScanResponse._();
-  ScanResponse createEmptyInstance() => create();
-  static $pb.PbList<ScanResponse> createRepeated() =>
-      $pb.PbList<ScanResponse>();
+  static ScannerScanResponse create() => ScannerScanResponse._();
+  ScannerScanResponse createEmptyInstance() => create();
+  static $pb.PbList<ScannerScanResponse> createRepeated() =>
+      $pb.PbList<ScannerScanResponse>();
   @$core.pragma('dart2js:noInline')
-  static ScanResponse getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<ScanResponse>(create);
-  static ScanResponse? _defaultInstance;
+  static ScannerScanResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ScannerScanResponse>(create);
+  static ScannerScanResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $25.ScanResult get result => $_getN(0);
+  $25.ScannerScanResult get result => $_getN(0);
   @$pb.TagNumber(1)
-  set result($25.ScanResult v) {
+  set result($25.ScannerScanResult v) {
     setField(1, v);
   }
 
@@ -146,12 +146,12 @@ class ScanResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearResult() => clearField(1);
   @$pb.TagNumber(1)
-  $25.ScanResult ensureResult() => $_ensure(0);
+  $25.ScannerScanResult ensureResult() => $_ensure(0);
 }
 
-class ResetResponse extends $pb.GeneratedMessage {
-  factory ResetResponse({
-    $26.ResetResult? result,
+class ScannerResetResponse extends $pb.GeneratedMessage {
+  factory ScannerResetResponse({
+    $26.ScannerResetResult? result,
   }) {
     final $result = create();
     if (result != null) {
@@ -159,50 +159,51 @@ class ResetResponse extends $pb.GeneratedMessage {
     }
     return $result;
   }
-  ResetResponse._() : super();
-  factory ResetResponse.fromBuffer($core.List<$core.int> i,
+  ScannerResetResponse._() : super();
+  factory ScannerResetResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
-  factory ResetResponse.fromJson($core.String i,
+  factory ScannerResetResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'ResetResponse',
+      _omitMessageNames ? '' : 'ScannerResetResponse',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.scanner.v1'),
       createEmptyInstance: create)
-    ..aOM<$26.ResetResult>(1, _omitFieldNames ? '' : 'result',
-        subBuilder: $26.ResetResult.create)
+    ..aOM<$26.ScannerResetResult>(1, _omitFieldNames ? '' : 'result',
+        subBuilder: $26.ScannerResetResult.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
-  ResetResponse clone() => ResetResponse()..mergeFromMessage(this);
+  ScannerResetResponse clone() =>
+      ScannerResetResponse()..mergeFromMessage(this);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
-  ResetResponse copyWith(void Function(ResetResponse) updates) =>
-      super.copyWith((message) => updates(message as ResetResponse))
-          as ResetResponse;
+  ScannerResetResponse copyWith(void Function(ScannerResetResponse) updates) =>
+      super.copyWith((message) => updates(message as ScannerResetResponse))
+          as ScannerResetResponse;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static ResetResponse create() => ResetResponse._();
-  ResetResponse createEmptyInstance() => create();
-  static $pb.PbList<ResetResponse> createRepeated() =>
-      $pb.PbList<ResetResponse>();
+  static ScannerResetResponse create() => ScannerResetResponse._();
+  ScannerResetResponse createEmptyInstance() => create();
+  static $pb.PbList<ScannerResetResponse> createRepeated() =>
+      $pb.PbList<ScannerResetResponse>();
   @$core.pragma('dart2js:noInline')
-  static ResetResponse getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<ResetResponse>(create);
-  static ResetResponse? _defaultInstance;
+  static ScannerResetResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ScannerResetResponse>(create);
+  static ScannerResetResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $26.ResetResult get result => $_getN(0);
+  $26.ScannerResetResult get result => $_getN(0);
   @$pb.TagNumber(1)
-  set result($26.ResetResult v) {
+  set result($26.ScannerResetResult v) {
     setField(1, v);
   }
 
@@ -211,7 +212,7 @@ class ResetResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearResult() => clearField(1);
   @$pb.TagNumber(1)
-  $26.ResetResult ensureResult() => $_ensure(0);
+  $26.ScannerResetResult ensureResult() => $_ensure(0);
 }
 
 class BalanceResponse extends $pb.GeneratedMessage {
@@ -399,8 +400,8 @@ class ChainAssetsResponse extends $pb.GeneratedMessage {
   $28.AssetsByChain ensureResult() => $_ensure(0);
 }
 
-class AssetImportResponse extends $pb.GeneratedMessage {
-  factory AssetImportResponse({
+class ScannerAssetImportResponse extends $pb.GeneratedMessage {
+  factory ScannerAssetImportResponse({
     $29.AssetImportResult? result,
   }) {
     final $result = create();
@@ -409,16 +410,16 @@ class AssetImportResponse extends $pb.GeneratedMessage {
     }
     return $result;
   }
-  AssetImportResponse._() : super();
-  factory AssetImportResponse.fromBuffer($core.List<$core.int> i,
+  ScannerAssetImportResponse._() : super();
+  factory ScannerAssetImportResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
-  factory AssetImportResponse.fromJson($core.String i,
+  factory ScannerAssetImportResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'AssetImportResponse',
+      _omitMessageNames ? '' : 'ScannerAssetImportResponse',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.scanner.v1'),
       createEmptyInstance: create)
@@ -429,25 +430,28 @@ class AssetImportResponse extends $pb.GeneratedMessage {
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
-  AssetImportResponse clone() => AssetImportResponse()..mergeFromMessage(this);
+  ScannerAssetImportResponse clone() =>
+      ScannerAssetImportResponse()..mergeFromMessage(this);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
-  AssetImportResponse copyWith(void Function(AssetImportResponse) updates) =>
-      super.copyWith((message) => updates(message as AssetImportResponse))
-          as AssetImportResponse;
+  ScannerAssetImportResponse copyWith(
+          void Function(ScannerAssetImportResponse) updates) =>
+      super.copyWith(
+              (message) => updates(message as ScannerAssetImportResponse))
+          as ScannerAssetImportResponse;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static AssetImportResponse create() => AssetImportResponse._();
-  AssetImportResponse createEmptyInstance() => create();
-  static $pb.PbList<AssetImportResponse> createRepeated() =>
-      $pb.PbList<AssetImportResponse>();
+  static ScannerAssetImportResponse create() => ScannerAssetImportResponse._();
+  ScannerAssetImportResponse createEmptyInstance() => create();
+  static $pb.PbList<ScannerAssetImportResponse> createRepeated() =>
+      $pb.PbList<ScannerAssetImportResponse>();
   @$core.pragma('dart2js:noInline')
-  static AssetImportResponse getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<AssetImportResponse>(create);
-  static AssetImportResponse? _defaultInstance;
+  static ScannerAssetImportResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ScannerAssetImportResponse>(create);
+  static ScannerAssetImportResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
   $29.AssetImportResult get result => $_getN(0);

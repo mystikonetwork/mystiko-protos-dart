@@ -45,11 +45,11 @@ final $typed_data.Uint8List scannerResetOptionsDescriptor = $convert.base64Decod
     'gBARItChJzaGllbGRlZF9hZGRyZXNzZXMYAiADKAlSEXNoaWVsZGVkQWRkcmVzc2VzQg4KDF9y'
     'ZXNldF90b19pZA==');
 
-@$core.Deprecated('Use resetResultDescriptor instead')
-const ResetResult$json = {
-  '1': 'ResetResult',
+@$core.Deprecated('Use scannerResetResultDescriptor instead')
+const ScannerResetResult$json = {
+  '1': 'ScannerResetResult',
 };
 
-/// Descriptor for `ResetResult`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List resetResultDescriptor =
-    $convert.base64Decode('CgtSZXNldFJlc3VsdA==');
+/// Descriptor for `ScannerResetResult`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List scannerResetResultDescriptor =
+    $convert.base64Decode('ChJTY2FubmVyUmVzZXRSZXN1bHQ=');

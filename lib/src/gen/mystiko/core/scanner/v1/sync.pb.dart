@@ -13,8 +13,8 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-class SyncOptions extends $pb.GeneratedMessage {
-  factory SyncOptions({
+class ScannerSyncOptions extends $pb.GeneratedMessage {
+  factory ScannerSyncOptions({
     $core.String? walletPassword,
     $core.int? concurrency,
   }) {
@@ -27,16 +27,16 @@ class SyncOptions extends $pb.GeneratedMessage {
     }
     return $result;
   }
-  SyncOptions._() : super();
-  factory SyncOptions.fromBuffer($core.List<$core.int> i,
+  ScannerSyncOptions._() : super();
+  factory ScannerSyncOptions.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
-  factory SyncOptions.fromJson($core.String i,
+  factory ScannerSyncOptions.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'SyncOptions',
+      _omitMessageNames ? '' : 'ScannerSyncOptions',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.core.scanner.v1'),
       createEmptyInstance: create)
@@ -47,24 +47,25 @@ class SyncOptions extends $pb.GeneratedMessage {
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
-  SyncOptions clone() => SyncOptions()..mergeFromMessage(this);
+  ScannerSyncOptions clone() => ScannerSyncOptions()..mergeFromMessage(this);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
-  SyncOptions copyWith(void Function(SyncOptions) updates) =>
-      super.copyWith((message) => updates(message as SyncOptions))
-          as SyncOptions;
+  ScannerSyncOptions copyWith(void Function(ScannerSyncOptions) updates) =>
+      super.copyWith((message) => updates(message as ScannerSyncOptions))
+          as ScannerSyncOptions;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static SyncOptions create() => SyncOptions._();
-  SyncOptions createEmptyInstance() => create();
-  static $pb.PbList<SyncOptions> createRepeated() => $pb.PbList<SyncOptions>();
+  static ScannerSyncOptions create() => ScannerSyncOptions._();
+  ScannerSyncOptions createEmptyInstance() => create();
+  static $pb.PbList<ScannerSyncOptions> createRepeated() =>
+      $pb.PbList<ScannerSyncOptions>();
   @$core.pragma('dart2js:noInline')
-  static SyncOptions getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<SyncOptions>(create);
-  static SyncOptions? _defaultInstance;
+  static ScannerSyncOptions getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ScannerSyncOptions>(create);
+  static ScannerSyncOptions? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get walletPassword => $_getSZ(0);

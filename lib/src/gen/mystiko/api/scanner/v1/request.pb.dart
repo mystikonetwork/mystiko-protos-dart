@@ -21,9 +21,9 @@ import '../../../core/scanner/v1/reset.pb.dart' as $26;
 import '../../../core/scanner/v1/scan.pb.dart' as $25;
 import '../../../core/scanner/v1/sync.pb.dart' as $24;
 
-class SyncRequest extends $pb.GeneratedMessage {
-  factory SyncRequest({
-    $24.SyncOptions? options,
+class ScannerSyncRequest extends $pb.GeneratedMessage {
+  factory ScannerSyncRequest({
+    $24.ScannerSyncOptions? options,
   }) {
     final $result = create();
     if (options != null) {
@@ -31,49 +31,50 @@ class SyncRequest extends $pb.GeneratedMessage {
     }
     return $result;
   }
-  SyncRequest._() : super();
-  factory SyncRequest.fromBuffer($core.List<$core.int> i,
+  ScannerSyncRequest._() : super();
+  factory ScannerSyncRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
-  factory SyncRequest.fromJson($core.String i,
+  factory ScannerSyncRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'SyncRequest',
+      _omitMessageNames ? '' : 'ScannerSyncRequest',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.scanner.v1'),
       createEmptyInstance: create)
-    ..aOM<$24.SyncOptions>(1, _omitFieldNames ? '' : 'options',
-        subBuilder: $24.SyncOptions.create)
+    ..aOM<$24.ScannerSyncOptions>(1, _omitFieldNames ? '' : 'options',
+        subBuilder: $24.ScannerSyncOptions.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
-  SyncRequest clone() => SyncRequest()..mergeFromMessage(this);
+  ScannerSyncRequest clone() => ScannerSyncRequest()..mergeFromMessage(this);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
-  SyncRequest copyWith(void Function(SyncRequest) updates) =>
-      super.copyWith((message) => updates(message as SyncRequest))
-          as SyncRequest;
+  ScannerSyncRequest copyWith(void Function(ScannerSyncRequest) updates) =>
+      super.copyWith((message) => updates(message as ScannerSyncRequest))
+          as ScannerSyncRequest;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static SyncRequest create() => SyncRequest._();
-  SyncRequest createEmptyInstance() => create();
-  static $pb.PbList<SyncRequest> createRepeated() => $pb.PbList<SyncRequest>();
+  static ScannerSyncRequest create() => ScannerSyncRequest._();
+  ScannerSyncRequest createEmptyInstance() => create();
+  static $pb.PbList<ScannerSyncRequest> createRepeated() =>
+      $pb.PbList<ScannerSyncRequest>();
   @$core.pragma('dart2js:noInline')
-  static SyncRequest getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<SyncRequest>(create);
-  static SyncRequest? _defaultInstance;
+  static ScannerSyncRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ScannerSyncRequest>(create);
+  static ScannerSyncRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $24.SyncOptions get options => $_getN(0);
+  $24.ScannerSyncOptions get options => $_getN(0);
   @$pb.TagNumber(1)
-  set options($24.SyncOptions v) {
+  set options($24.ScannerSyncOptions v) {
     setField(1, v);
   }
 
@@ -82,12 +83,12 @@ class SyncRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearOptions() => clearField(1);
   @$pb.TagNumber(1)
-  $24.SyncOptions ensureOptions() => $_ensure(0);
+  $24.ScannerSyncOptions ensureOptions() => $_ensure(0);
 }
 
-class ScanRequest extends $pb.GeneratedMessage {
-  factory ScanRequest({
-    $25.ScanOptions? options,
+class ScannerScanRequest extends $pb.GeneratedMessage {
+  factory ScannerScanRequest({
+    $25.ScannerScanOptions? options,
   }) {
     final $result = create();
     if (options != null) {
@@ -95,49 +96,50 @@ class ScanRequest extends $pb.GeneratedMessage {
     }
     return $result;
   }
-  ScanRequest._() : super();
-  factory ScanRequest.fromBuffer($core.List<$core.int> i,
+  ScannerScanRequest._() : super();
+  factory ScannerScanRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
-  factory ScanRequest.fromJson($core.String i,
+  factory ScannerScanRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'ScanRequest',
+      _omitMessageNames ? '' : 'ScannerScanRequest',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.scanner.v1'),
       createEmptyInstance: create)
-    ..aOM<$25.ScanOptions>(1, _omitFieldNames ? '' : 'options',
-        subBuilder: $25.ScanOptions.create)
+    ..aOM<$25.ScannerScanOptions>(1, _omitFieldNames ? '' : 'options',
+        subBuilder: $25.ScannerScanOptions.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
-  ScanRequest clone() => ScanRequest()..mergeFromMessage(this);
+  ScannerScanRequest clone() => ScannerScanRequest()..mergeFromMessage(this);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
-  ScanRequest copyWith(void Function(ScanRequest) updates) =>
-      super.copyWith((message) => updates(message as ScanRequest))
-          as ScanRequest;
+  ScannerScanRequest copyWith(void Function(ScannerScanRequest) updates) =>
+      super.copyWith((message) => updates(message as ScannerScanRequest))
+          as ScannerScanRequest;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static ScanRequest create() => ScanRequest._();
-  ScanRequest createEmptyInstance() => create();
-  static $pb.PbList<ScanRequest> createRepeated() => $pb.PbList<ScanRequest>();
+  static ScannerScanRequest create() => ScannerScanRequest._();
+  ScannerScanRequest createEmptyInstance() => create();
+  static $pb.PbList<ScannerScanRequest> createRepeated() =>
+      $pb.PbList<ScannerScanRequest>();
   @$core.pragma('dart2js:noInline')
-  static ScanRequest getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<ScanRequest>(create);
-  static ScanRequest? _defaultInstance;
+  static ScannerScanRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ScannerScanRequest>(create);
+  static ScannerScanRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $25.ScanOptions get options => $_getN(0);
+  $25.ScannerScanOptions get options => $_getN(0);
   @$pb.TagNumber(1)
-  set options($25.ScanOptions v) {
+  set options($25.ScannerScanOptions v) {
     setField(1, v);
   }
 
@@ -146,7 +148,7 @@ class ScanRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearOptions() => clearField(1);
   @$pb.TagNumber(1)
-  $25.ScanOptions ensureOptions() => $_ensure(0);
+  $25.ScannerScanOptions ensureOptions() => $_ensure(0);
 }
 
 class ScannerResetRequest extends $pb.GeneratedMessage {
@@ -427,8 +429,8 @@ class ChainAssetsRequest extends $pb.GeneratedMessage {
   $28.AssetsOptions ensureOptions() => $_ensure(1);
 }
 
-class AssetImportRequest extends $pb.GeneratedMessage {
-  factory AssetImportRequest({
+class ScannerAssetImportRequest extends $pb.GeneratedMessage {
+  factory ScannerAssetImportRequest({
     $29.AssetImportOptions? options,
   }) {
     final $result = create();
@@ -437,16 +439,16 @@ class AssetImportRequest extends $pb.GeneratedMessage {
     }
     return $result;
   }
-  AssetImportRequest._() : super();
-  factory AssetImportRequest.fromBuffer($core.List<$core.int> i,
+  ScannerAssetImportRequest._() : super();
+  factory ScannerAssetImportRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
-  factory AssetImportRequest.fromJson($core.String i,
+  factory ScannerAssetImportRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'AssetImportRequest',
+      _omitMessageNames ? '' : 'ScannerAssetImportRequest',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.scanner.v1'),
       createEmptyInstance: create)
@@ -457,25 +459,27 @@ class AssetImportRequest extends $pb.GeneratedMessage {
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
-  AssetImportRequest clone() => AssetImportRequest()..mergeFromMessage(this);
+  ScannerAssetImportRequest clone() =>
+      ScannerAssetImportRequest()..mergeFromMessage(this);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
-  AssetImportRequest copyWith(void Function(AssetImportRequest) updates) =>
-      super.copyWith((message) => updates(message as AssetImportRequest))
-          as AssetImportRequest;
+  ScannerAssetImportRequest copyWith(
+          void Function(ScannerAssetImportRequest) updates) =>
+      super.copyWith((message) => updates(message as ScannerAssetImportRequest))
+          as ScannerAssetImportRequest;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static AssetImportRequest create() => AssetImportRequest._();
-  AssetImportRequest createEmptyInstance() => create();
-  static $pb.PbList<AssetImportRequest> createRepeated() =>
-      $pb.PbList<AssetImportRequest>();
+  static ScannerAssetImportRequest create() => ScannerAssetImportRequest._();
+  ScannerAssetImportRequest createEmptyInstance() => create();
+  static $pb.PbList<ScannerAssetImportRequest> createRepeated() =>
+      $pb.PbList<ScannerAssetImportRequest>();
   @$core.pragma('dart2js:noInline')
-  static AssetImportRequest getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<AssetImportRequest>(create);
-  static AssetImportRequest? _defaultInstance;
+  static ScannerAssetImportRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ScannerAssetImportRequest>(create);
+  static ScannerAssetImportRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
   $29.AssetImportOptions get options => $_getN(0);

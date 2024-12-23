@@ -165,8 +165,8 @@ class ContractSyncedBlockRequest extends $pb.GeneratedMessage {
   void clearContractAddress() => clearField(2);
 }
 
-class StatusRequest extends $pb.GeneratedMessage {
-  factory StatusRequest({
+class SynchronizerStatusRequest extends $pb.GeneratedMessage {
+  factory SynchronizerStatusRequest({
     $core.bool? withContracts,
   }) {
     final $result = create();
@@ -175,16 +175,16 @@ class StatusRequest extends $pb.GeneratedMessage {
     }
     return $result;
   }
-  StatusRequest._() : super();
-  factory StatusRequest.fromBuffer($core.List<$core.int> i,
+  SynchronizerStatusRequest._() : super();
+  factory SynchronizerStatusRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
-  factory StatusRequest.fromJson($core.String i,
+  factory SynchronizerStatusRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'StatusRequest',
+      _omitMessageNames ? '' : 'SynchronizerStatusRequest',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.synchronizer.v1'),
       createEmptyInstance: create)
@@ -194,25 +194,27 @@ class StatusRequest extends $pb.GeneratedMessage {
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
-  StatusRequest clone() => StatusRequest()..mergeFromMessage(this);
+  SynchronizerStatusRequest clone() =>
+      SynchronizerStatusRequest()..mergeFromMessage(this);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
-  StatusRequest copyWith(void Function(StatusRequest) updates) =>
-      super.copyWith((message) => updates(message as StatusRequest))
-          as StatusRequest;
+  SynchronizerStatusRequest copyWith(
+          void Function(SynchronizerStatusRequest) updates) =>
+      super.copyWith((message) => updates(message as SynchronizerStatusRequest))
+          as SynchronizerStatusRequest;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static StatusRequest create() => StatusRequest._();
-  StatusRequest createEmptyInstance() => create();
-  static $pb.PbList<StatusRequest> createRepeated() =>
-      $pb.PbList<StatusRequest>();
+  static SynchronizerStatusRequest create() => SynchronizerStatusRequest._();
+  SynchronizerStatusRequest createEmptyInstance() => create();
+  static $pb.PbList<SynchronizerStatusRequest> createRepeated() =>
+      $pb.PbList<SynchronizerStatusRequest>();
   @$core.pragma('dart2js:noInline')
-  static StatusRequest getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<StatusRequest>(create);
-  static StatusRequest? _defaultInstance;
+  static SynchronizerStatusRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SynchronizerStatusRequest>(create);
+  static SynchronizerStatusRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.bool get withContracts => $_getBF(0);
@@ -227,9 +229,9 @@ class StatusRequest extends $pb.GeneratedMessage {
   void clearWithContracts() => clearField(1);
 }
 
-class SyncRequest extends $pb.GeneratedMessage {
-  factory SyncRequest({
-    $30.SyncOptions? options,
+class SynchronizerSyncRequest extends $pb.GeneratedMessage {
+  factory SynchronizerSyncRequest({
+    $30.SynchronizerSyncOptions? options,
   }) {
     final $result = create();
     if (options != null) {
@@ -237,49 +239,52 @@ class SyncRequest extends $pb.GeneratedMessage {
     }
     return $result;
   }
-  SyncRequest._() : super();
-  factory SyncRequest.fromBuffer($core.List<$core.int> i,
+  SynchronizerSyncRequest._() : super();
+  factory SynchronizerSyncRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
-  factory SyncRequest.fromJson($core.String i,
+  factory SynchronizerSyncRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'SyncRequest',
+      _omitMessageNames ? '' : 'SynchronizerSyncRequest',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.synchronizer.v1'),
       createEmptyInstance: create)
-    ..aOM<$30.SyncOptions>(1, _omitFieldNames ? '' : 'options',
-        subBuilder: $30.SyncOptions.create)
+    ..aOM<$30.SynchronizerSyncOptions>(1, _omitFieldNames ? '' : 'options',
+        subBuilder: $30.SynchronizerSyncOptions.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
-  SyncRequest clone() => SyncRequest()..mergeFromMessage(this);
+  SynchronizerSyncRequest clone() =>
+      SynchronizerSyncRequest()..mergeFromMessage(this);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
-  SyncRequest copyWith(void Function(SyncRequest) updates) =>
-      super.copyWith((message) => updates(message as SyncRequest))
-          as SyncRequest;
+  SynchronizerSyncRequest copyWith(
+          void Function(SynchronizerSyncRequest) updates) =>
+      super.copyWith((message) => updates(message as SynchronizerSyncRequest))
+          as SynchronizerSyncRequest;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static SyncRequest create() => SyncRequest._();
-  SyncRequest createEmptyInstance() => create();
-  static $pb.PbList<SyncRequest> createRepeated() => $pb.PbList<SyncRequest>();
+  static SynchronizerSyncRequest create() => SynchronizerSyncRequest._();
+  SynchronizerSyncRequest createEmptyInstance() => create();
+  static $pb.PbList<SynchronizerSyncRequest> createRepeated() =>
+      $pb.PbList<SynchronizerSyncRequest>();
   @$core.pragma('dart2js:noInline')
-  static SyncRequest getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<SyncRequest>(create);
-  static SyncRequest? _defaultInstance;
+  static SynchronizerSyncRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SynchronizerSyncRequest>(create);
+  static SynchronizerSyncRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $30.SyncOptions get options => $_getN(0);
+  $30.SynchronizerSyncOptions get options => $_getN(0);
   @$pb.TagNumber(1)
-  set options($30.SyncOptions v) {
+  set options($30.SynchronizerSyncOptions v) {
     setField(1, v);
   }
 
@@ -288,7 +293,7 @@ class SyncRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearOptions() => clearField(1);
   @$pb.TagNumber(1)
-  $30.SyncOptions ensureOptions() => $_ensure(0);
+  $30.SynchronizerSyncOptions ensureOptions() => $_ensure(0);
 }
 
 class SynchronizerResetRequest extends $pb.GeneratedMessage {

@@ -14,8 +14,8 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-class ScanOptions extends $pb.GeneratedMessage {
-  factory ScanOptions({
+class ScannerScanOptions extends $pb.GeneratedMessage {
+  factory ScannerScanOptions({
     $core.String? walletPassword,
     $fixnum.Int64? batchSize,
     $core.int? concurrency,
@@ -36,16 +36,16 @@ class ScanOptions extends $pb.GeneratedMessage {
     }
     return $result;
   }
-  ScanOptions._() : super();
-  factory ScanOptions.fromBuffer($core.List<$core.int> i,
+  ScannerScanOptions._() : super();
+  factory ScannerScanOptions.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
-  factory ScanOptions.fromJson($core.String i,
+  factory ScannerScanOptions.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'ScanOptions',
+      _omitMessageNames ? '' : 'ScannerScanOptions',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.core.scanner.v1'),
       createEmptyInstance: create)
@@ -60,24 +60,25 @@ class ScanOptions extends $pb.GeneratedMessage {
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
-  ScanOptions clone() => ScanOptions()..mergeFromMessage(this);
+  ScannerScanOptions clone() => ScannerScanOptions()..mergeFromMessage(this);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
-  ScanOptions copyWith(void Function(ScanOptions) updates) =>
-      super.copyWith((message) => updates(message as ScanOptions))
-          as ScanOptions;
+  ScannerScanOptions copyWith(void Function(ScannerScanOptions) updates) =>
+      super.copyWith((message) => updates(message as ScannerScanOptions))
+          as ScannerScanOptions;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static ScanOptions create() => ScanOptions._();
-  ScanOptions createEmptyInstance() => create();
-  static $pb.PbList<ScanOptions> createRepeated() => $pb.PbList<ScanOptions>();
+  static ScannerScanOptions create() => ScannerScanOptions._();
+  ScannerScanOptions createEmptyInstance() => create();
+  static $pb.PbList<ScannerScanOptions> createRepeated() =>
+      $pb.PbList<ScannerScanOptions>();
   @$core.pragma('dart2js:noInline')
-  static ScanOptions getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<ScanOptions>(create);
-  static ScanOptions? _defaultInstance;
+  static ScannerScanOptions getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ScannerScanOptions>(create);
+  static ScannerScanOptions? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get walletPassword => $_getSZ(0);
@@ -119,8 +120,8 @@ class ScanOptions extends $pb.GeneratedMessage {
   $core.List<$core.String> get shieldedAddresses => $_getList(3);
 }
 
-class ScanResult extends $pb.GeneratedMessage {
-  factory ScanResult({
+class ScannerScanResult extends $pb.GeneratedMessage {
+  factory ScannerScanResult({
     $fixnum.Int64? totalCount,
     $fixnum.Int64? ownedCount,
     $core.Iterable<$core.String>? scannedShieldedAddresses,
@@ -141,16 +142,16 @@ class ScanResult extends $pb.GeneratedMessage {
     }
     return $result;
   }
-  ScanResult._() : super();
-  factory ScanResult.fromBuffer($core.List<$core.int> i,
+  ScannerScanResult._() : super();
+  factory ScannerScanResult.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
-  factory ScanResult.fromJson($core.String i,
+  factory ScannerScanResult.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'ScanResult',
+      _omitMessageNames ? '' : 'ScannerScanResult',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.core.scanner.v1'),
       createEmptyInstance: create)
@@ -167,23 +168,25 @@ class ScanResult extends $pb.GeneratedMessage {
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
-  ScanResult clone() => ScanResult()..mergeFromMessage(this);
+  ScannerScanResult clone() => ScannerScanResult()..mergeFromMessage(this);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
-  ScanResult copyWith(void Function(ScanResult) updates) =>
-      super.copyWith((message) => updates(message as ScanResult)) as ScanResult;
+  ScannerScanResult copyWith(void Function(ScannerScanResult) updates) =>
+      super.copyWith((message) => updates(message as ScannerScanResult))
+          as ScannerScanResult;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static ScanResult create() => ScanResult._();
-  ScanResult createEmptyInstance() => create();
-  static $pb.PbList<ScanResult> createRepeated() => $pb.PbList<ScanResult>();
+  static ScannerScanResult create() => ScannerScanResult._();
+  ScannerScanResult createEmptyInstance() => create();
+  static $pb.PbList<ScannerScanResult> createRepeated() =>
+      $pb.PbList<ScannerScanResult>();
   @$core.pragma('dart2js:noInline')
-  static ScanResult getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<ScanResult>(create);
-  static ScanResult? _defaultInstance;
+  static ScannerScanResult getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ScannerScanResult>(create);
+  static ScannerScanResult? _defaultInstance;
 
   @$pb.TagNumber(1)
   $fixnum.Int64 get totalCount => $_getI64(0);

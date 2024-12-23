@@ -14,8 +14,8 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-class SyncOptions extends $pb.GeneratedMessage {
-  factory SyncOptions({
+class SynchronizerSyncOptions extends $pb.GeneratedMessage {
+  factory SynchronizerSyncOptions({
     $core.bool? disableDatapackerFetcher,
     $core.bool? enableDatapackerFetcherValidate,
     $core.bool? disableSequencerFetcher,
@@ -84,16 +84,16 @@ class SyncOptions extends $pb.GeneratedMessage {
     }
     return $result;
   }
-  SyncOptions._() : super();
-  factory SyncOptions.fromBuffer($core.List<$core.int> i,
+  SynchronizerSyncOptions._() : super();
+  factory SynchronizerSyncOptions.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
-  factory SyncOptions.fromJson($core.String i,
+  factory SynchronizerSyncOptions.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'SyncOptions',
+      _omitMessageNames ? '' : 'SynchronizerSyncOptions',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.core.synchronizer.v1'),
       createEmptyInstance: create)
@@ -128,24 +128,27 @@ class SyncOptions extends $pb.GeneratedMessage {
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
-  SyncOptions clone() => SyncOptions()..mergeFromMessage(this);
+  SynchronizerSyncOptions clone() =>
+      SynchronizerSyncOptions()..mergeFromMessage(this);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
-  SyncOptions copyWith(void Function(SyncOptions) updates) =>
-      super.copyWith((message) => updates(message as SyncOptions))
-          as SyncOptions;
+  SynchronizerSyncOptions copyWith(
+          void Function(SynchronizerSyncOptions) updates) =>
+      super.copyWith((message) => updates(message as SynchronizerSyncOptions))
+          as SynchronizerSyncOptions;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static SyncOptions create() => SyncOptions._();
-  SyncOptions createEmptyInstance() => create();
-  static $pb.PbList<SyncOptions> createRepeated() => $pb.PbList<SyncOptions>();
+  static SynchronizerSyncOptions create() => SynchronizerSyncOptions._();
+  SynchronizerSyncOptions createEmptyInstance() => create();
+  static $pb.PbList<SynchronizerSyncOptions> createRepeated() =>
+      $pb.PbList<SynchronizerSyncOptions>();
   @$core.pragma('dart2js:noInline')
-  static SyncOptions getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<SyncOptions>(create);
-  static SyncOptions? _defaultInstance;
+  static SynchronizerSyncOptions getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SynchronizerSyncOptions>(create);
+  static SynchronizerSyncOptions? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.bool get disableDatapackerFetcher => $_getBF(0);
