@@ -148,8 +148,8 @@ class ContractSyncedBlockResponse extends $pb.GeneratedMessage {
   void clearResult() => clearField(1);
 }
 
-class StatusResponse extends $pb.GeneratedMessage {
-  factory StatusResponse({
+class SynchronizerStatusResponse extends $pb.GeneratedMessage {
+  factory SynchronizerStatusResponse({
     $32.SynchronizerStatus? status,
   }) {
     final $result = create();
@@ -158,16 +158,16 @@ class StatusResponse extends $pb.GeneratedMessage {
     }
     return $result;
   }
-  StatusResponse._() : super();
-  factory StatusResponse.fromBuffer($core.List<$core.int> i,
+  SynchronizerStatusResponse._() : super();
+  factory SynchronizerStatusResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
-  factory StatusResponse.fromJson($core.String i,
+  factory SynchronizerStatusResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'StatusResponse',
+      _omitMessageNames ? '' : 'SynchronizerStatusResponse',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.synchronizer.v1'),
       createEmptyInstance: create)
@@ -178,25 +178,28 @@ class StatusResponse extends $pb.GeneratedMessage {
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
-  StatusResponse clone() => StatusResponse()..mergeFromMessage(this);
+  SynchronizerStatusResponse clone() =>
+      SynchronizerStatusResponse()..mergeFromMessage(this);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
-  StatusResponse copyWith(void Function(StatusResponse) updates) =>
-      super.copyWith((message) => updates(message as StatusResponse))
-          as StatusResponse;
+  SynchronizerStatusResponse copyWith(
+          void Function(SynchronizerStatusResponse) updates) =>
+      super.copyWith(
+              (message) => updates(message as SynchronizerStatusResponse))
+          as SynchronizerStatusResponse;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static StatusResponse create() => StatusResponse._();
-  StatusResponse createEmptyInstance() => create();
-  static $pb.PbList<StatusResponse> createRepeated() =>
-      $pb.PbList<StatusResponse>();
+  static SynchronizerStatusResponse create() => SynchronizerStatusResponse._();
+  SynchronizerStatusResponse createEmptyInstance() => create();
+  static $pb.PbList<SynchronizerStatusResponse> createRepeated() =>
+      $pb.PbList<SynchronizerStatusResponse>();
   @$core.pragma('dart2js:noInline')
-  static StatusResponse getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<StatusResponse>(create);
-  static StatusResponse? _defaultInstance;
+  static SynchronizerStatusResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SynchronizerStatusResponse>(create);
+  static SynchronizerStatusResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
   $32.SynchronizerStatus get status => $_getN(0);

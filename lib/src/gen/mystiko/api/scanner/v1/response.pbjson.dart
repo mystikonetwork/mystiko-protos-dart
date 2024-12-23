@@ -13,9 +13,9 @@ import 'dart:convert' as $convert;
 import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
 
-@$core.Deprecated('Use syncResponseDescriptor instead')
-const SyncResponse$json = {
-  '1': 'SyncResponse',
+@$core.Deprecated('Use scannerSyncResponseDescriptor instead')
+const ScannerSyncResponse$json = {
+  '1': 'ScannerSyncResponse',
   '2': [
     {
       '1': 'result',
@@ -28,50 +28,50 @@ const SyncResponse$json = {
   ],
 };
 
-/// Descriptor for `SyncResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List syncResponseDescriptor = $convert.base64Decode(
-    'CgxTeW5jUmVzcG9uc2USPgoGcmVzdWx0GAEgASgLMiYubXlzdGlrby5jb3JlLnNjYW5uZXIudj'
-    'EuQmFsYW5jZVJlc3VsdFIGcmVzdWx0');
+/// Descriptor for `ScannerSyncResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List scannerSyncResponseDescriptor = $convert.base64Decode(
+    'ChNTY2FubmVyU3luY1Jlc3BvbnNlEj4KBnJlc3VsdBgBIAEoCzImLm15c3Rpa28uY29yZS5zY2'
+    'FubmVyLnYxLkJhbGFuY2VSZXN1bHRSBnJlc3VsdA==');
 
-@$core.Deprecated('Use scanResponseDescriptor instead')
-const ScanResponse$json = {
-  '1': 'ScanResponse',
+@$core.Deprecated('Use scannerScanResponseDescriptor instead')
+const ScannerScanResponse$json = {
+  '1': 'ScannerScanResponse',
   '2': [
     {
       '1': 'result',
       '3': 1,
       '4': 1,
       '5': 11,
-      '6': '.mystiko.core.scanner.v1.ScanResult',
+      '6': '.mystiko.core.scanner.v1.ScannerScanResult',
       '10': 'result'
     },
   ],
 };
 
-/// Descriptor for `ScanResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List scanResponseDescriptor = $convert.base64Decode(
-    'CgxTY2FuUmVzcG9uc2USOwoGcmVzdWx0GAEgASgLMiMubXlzdGlrby5jb3JlLnNjYW5uZXIudj'
-    'EuU2NhblJlc3VsdFIGcmVzdWx0');
+/// Descriptor for `ScannerScanResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List scannerScanResponseDescriptor = $convert.base64Decode(
+    'ChNTY2FubmVyU2NhblJlc3BvbnNlEkIKBnJlc3VsdBgBIAEoCzIqLm15c3Rpa28uY29yZS5zY2'
+    'FubmVyLnYxLlNjYW5uZXJTY2FuUmVzdWx0UgZyZXN1bHQ=');
 
-@$core.Deprecated('Use resetResponseDescriptor instead')
-const ResetResponse$json = {
-  '1': 'ResetResponse',
+@$core.Deprecated('Use scannerResetResponseDescriptor instead')
+const ScannerResetResponse$json = {
+  '1': 'ScannerResetResponse',
   '2': [
     {
       '1': 'result',
       '3': 1,
       '4': 1,
       '5': 11,
-      '6': '.mystiko.core.scanner.v1.ResetResult',
+      '6': '.mystiko.core.scanner.v1.ScannerResetResult',
       '10': 'result'
     },
   ],
 };
 
-/// Descriptor for `ResetResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List resetResponseDescriptor = $convert.base64Decode(
-    'Cg1SZXNldFJlc3BvbnNlEjwKBnJlc3VsdBgBIAEoCzIkLm15c3Rpa28uY29yZS5zY2FubmVyLn'
-    'YxLlJlc2V0UmVzdWx0UgZyZXN1bHQ=');
+/// Descriptor for `ScannerResetResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List scannerResetResponseDescriptor = $convert.base64Decode(
+    'ChRTY2FubmVyUmVzZXRSZXNwb25zZRJDCgZyZXN1bHQYASABKAsyKy5teXN0aWtvLmNvcmUuc2'
+    'Nhbm5lci52MS5TY2FubmVyUmVzZXRSZXN1bHRSBnJlc3VsdA==');
 
 @$core.Deprecated('Use balanceResponseDescriptor instead')
 const BalanceResponse$json = {
@@ -138,9 +138,9 @@ final $typed_data.Uint8List chainAssetsResponseDescriptor = $convert.base64Decod
     'ChNDaGFpbkFzc2V0c1Jlc3BvbnNlEkMKBnJlc3VsdBgBIAEoCzImLm15c3Rpa28uY29yZS5zY2'
     'FubmVyLnYxLkFzc2V0c0J5Q2hhaW5IAFIGcmVzdWx0iAEBQgkKB19yZXN1bHQ=');
 
-@$core.Deprecated('Use assetImportResponseDescriptor instead')
-const AssetImportResponse$json = {
-  '1': 'AssetImportResponse',
+@$core.Deprecated('Use scannerAssetImportResponseDescriptor instead')
+const ScannerAssetImportResponse$json = {
+  '1': 'ScannerAssetImportResponse',
   '2': [
     {
       '1': 'result',
@@ -153,7 +153,8 @@ const AssetImportResponse$json = {
   ],
 };
 
-/// Descriptor for `AssetImportResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List assetImportResponseDescriptor = $convert.base64Decode(
-    'ChNBc3NldEltcG9ydFJlc3BvbnNlEkIKBnJlc3VsdBgBIAEoCzIqLm15c3Rpa28uY29yZS5zY2'
-    'FubmVyLnYxLkFzc2V0SW1wb3J0UmVzdWx0UgZyZXN1bHQ=');
+/// Descriptor for `ScannerAssetImportResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List scannerAssetImportResponseDescriptor =
+    $convert.base64Decode(
+        'ChpTY2FubmVyQXNzZXRJbXBvcnRSZXNwb25zZRJCCgZyZXN1bHQYASABKAsyKi5teXN0aWtvLm'
+        'NvcmUuc2Nhbm5lci52MS5Bc3NldEltcG9ydFJlc3VsdFIGcmVzdWx0');

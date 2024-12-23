@@ -13,9 +13,9 @@ import 'dart:convert' as $convert;
 import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
 
-@$core.Deprecated('Use syncOptionsDescriptor instead')
-const SyncOptions$json = {
-  '1': 'SyncOptions',
+@$core.Deprecated('Use scannerSyncOptionsDescriptor instead')
+const ScannerSyncOptions$json = {
+  '1': 'ScannerSyncOptions',
   '2': [
     {'1': 'wallet_password', '3': 1, '4': 1, '5': 9, '10': 'walletPassword'},
     {
@@ -33,7 +33,8 @@ const SyncOptions$json = {
   ],
 };
 
-/// Descriptor for `SyncOptions`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List syncOptionsDescriptor = $convert.base64Decode(
-    'CgtTeW5jT3B0aW9ucxInCg93YWxsZXRfcGFzc3dvcmQYASABKAlSDndhbGxldFBhc3N3b3JkEi'
-    'UKC2NvbmN1cnJlbmN5GAIgASgNSABSC2NvbmN1cnJlbmN5iAEBQg4KDF9jb25jdXJyZW5jeQ==');
+/// Descriptor for `ScannerSyncOptions`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List scannerSyncOptionsDescriptor = $convert.base64Decode(
+    'ChJTY2FubmVyU3luY09wdGlvbnMSJwoPd2FsbGV0X3Bhc3N3b3JkGAEgASgJUg53YWxsZXRQYX'
+    'Nzd29yZBIlCgtjb25jdXJyZW5jeRgCIAEoDUgAUgtjb25jdXJyZW5jeYgBAUIOCgxfY29uY3Vy'
+    'cmVuY3k=');

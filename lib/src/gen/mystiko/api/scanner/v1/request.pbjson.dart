@@ -13,45 +13,45 @@ import 'dart:convert' as $convert;
 import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
 
-@$core.Deprecated('Use syncRequestDescriptor instead')
-const SyncRequest$json = {
-  '1': 'SyncRequest',
+@$core.Deprecated('Use scannerSyncRequestDescriptor instead')
+const ScannerSyncRequest$json = {
+  '1': 'ScannerSyncRequest',
   '2': [
     {
       '1': 'options',
       '3': 1,
       '4': 1,
       '5': 11,
-      '6': '.mystiko.core.scanner.v1.SyncOptions',
+      '6': '.mystiko.core.scanner.v1.ScannerSyncOptions',
       '10': 'options'
     },
   ],
 };
 
-/// Descriptor for `SyncRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List syncRequestDescriptor = $convert.base64Decode(
-    'CgtTeW5jUmVxdWVzdBI+CgdvcHRpb25zGAEgASgLMiQubXlzdGlrby5jb3JlLnNjYW5uZXIudj'
-    'EuU3luY09wdGlvbnNSB29wdGlvbnM=');
+/// Descriptor for `ScannerSyncRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List scannerSyncRequestDescriptor = $convert.base64Decode(
+    'ChJTY2FubmVyU3luY1JlcXVlc3QSRQoHb3B0aW9ucxgBIAEoCzIrLm15c3Rpa28uY29yZS5zY2'
+    'FubmVyLnYxLlNjYW5uZXJTeW5jT3B0aW9uc1IHb3B0aW9ucw==');
 
-@$core.Deprecated('Use scanRequestDescriptor instead')
-const ScanRequest$json = {
-  '1': 'ScanRequest',
+@$core.Deprecated('Use scannerScanRequestDescriptor instead')
+const ScannerScanRequest$json = {
+  '1': 'ScannerScanRequest',
   '2': [
     {
       '1': 'options',
       '3': 1,
       '4': 1,
       '5': 11,
-      '6': '.mystiko.core.scanner.v1.ScanOptions',
+      '6': '.mystiko.core.scanner.v1.ScannerScanOptions',
       '10': 'options'
     },
   ],
 };
 
-/// Descriptor for `ScanRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List scanRequestDescriptor = $convert.base64Decode(
-    'CgtTY2FuUmVxdWVzdBI+CgdvcHRpb25zGAEgASgLMiQubXlzdGlrby5jb3JlLnNjYW5uZXIudj'
-    'EuU2Nhbk9wdGlvbnNSB29wdGlvbnM=');
+/// Descriptor for `ScannerScanRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List scannerScanRequestDescriptor = $convert.base64Decode(
+    'ChJTY2FubmVyU2NhblJlcXVlc3QSRQoHb3B0aW9ucxgBIAEoCzIrLm15c3Rpa28uY29yZS5zY2'
+    'FubmVyLnYxLlNjYW5uZXJTY2FuT3B0aW9uc1IHb3B0aW9ucw==');
 
 @$core.Deprecated('Use scannerResetRequestDescriptor instead')
 const ScannerResetRequest$json = {
@@ -135,9 +135,9 @@ final $typed_data.Uint8List chainAssetsRequestDescriptor = $convert.base64Decode
     '9ucxgCIAEoCzImLm15c3Rpa28uY29yZS5zY2FubmVyLnYxLkFzc2V0c09wdGlvbnNSB29wdGlv'
     'bnM=');
 
-@$core.Deprecated('Use assetImportRequestDescriptor instead')
-const AssetImportRequest$json = {
-  '1': 'AssetImportRequest',
+@$core.Deprecated('Use scannerAssetImportRequestDescriptor instead')
+const ScannerAssetImportRequest$json = {
+  '1': 'ScannerAssetImportRequest',
   '2': [
     {
       '1': 'options',
@@ -150,7 +150,8 @@ const AssetImportRequest$json = {
   ],
 };
 
-/// Descriptor for `AssetImportRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List assetImportRequestDescriptor = $convert.base64Decode(
-    'ChJBc3NldEltcG9ydFJlcXVlc3QSRQoHb3B0aW9ucxgBIAEoCzIrLm15c3Rpa28uY29yZS5zY2'
-    'FubmVyLnYxLkFzc2V0SW1wb3J0T3B0aW9uc1IHb3B0aW9ucw==');
+/// Descriptor for `ScannerAssetImportRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List scannerAssetImportRequestDescriptor =
+    $convert.base64Decode(
+        'ChlTY2FubmVyQXNzZXRJbXBvcnRSZXF1ZXN0EkUKB29wdGlvbnMYASABKAsyKy5teXN0aWtvLm'
+        'NvcmUuc2Nhbm5lci52MS5Bc3NldEltcG9ydE9wdGlvbnNSB29wdGlvbnM=');

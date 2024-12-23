@@ -41,37 +41,39 @@ final $typed_data.Uint8List contractSyncedBlockRequestDescriptor =
         'ChpDb250cmFjdFN5bmNlZEJsb2NrUmVxdWVzdBIZCghjaGFpbl9pZBgBIAEoBFIHY2hhaW5JZB'
         'IpChBjb250cmFjdF9hZGRyZXNzGAIgASgJUg9jb250cmFjdEFkZHJlc3M=');
 
-@$core.Deprecated('Use statusRequestDescriptor instead')
-const StatusRequest$json = {
-  '1': 'StatusRequest',
+@$core.Deprecated('Use synchronizerStatusRequestDescriptor instead')
+const SynchronizerStatusRequest$json = {
+  '1': 'SynchronizerStatusRequest',
   '2': [
     {'1': 'with_contracts', '3': 1, '4': 1, '5': 8, '10': 'withContracts'},
   ],
 };
 
-/// Descriptor for `StatusRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List statusRequestDescriptor = $convert.base64Decode(
-    'Cg1TdGF0dXNSZXF1ZXN0EiUKDndpdGhfY29udHJhY3RzGAEgASgIUg13aXRoQ29udHJhY3Rz');
+/// Descriptor for `SynchronizerStatusRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List synchronizerStatusRequestDescriptor =
+    $convert.base64Decode(
+        'ChlTeW5jaHJvbml6ZXJTdGF0dXNSZXF1ZXN0EiUKDndpdGhfY29udHJhY3RzGAEgASgIUg13aX'
+        'RoQ29udHJhY3Rz');
 
-@$core.Deprecated('Use syncRequestDescriptor instead')
-const SyncRequest$json = {
-  '1': 'SyncRequest',
+@$core.Deprecated('Use synchronizerSyncRequestDescriptor instead')
+const SynchronizerSyncRequest$json = {
+  '1': 'SynchronizerSyncRequest',
   '2': [
     {
       '1': 'options',
       '3': 1,
       '4': 1,
       '5': 11,
-      '6': '.mystiko.core.synchronizer.v1.SyncOptions',
+      '6': '.mystiko.core.synchronizer.v1.SynchronizerSyncOptions',
       '10': 'options'
     },
   ],
 };
 
-/// Descriptor for `SyncRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List syncRequestDescriptor = $convert.base64Decode(
-    'CgtTeW5jUmVxdWVzdBJDCgdvcHRpb25zGAEgASgLMikubXlzdGlrby5jb3JlLnN5bmNocm9uaX'
-    'plci52MS5TeW5jT3B0aW9uc1IHb3B0aW9ucw==');
+/// Descriptor for `SynchronizerSyncRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List synchronizerSyncRequestDescriptor = $convert.base64Decode(
+    'ChdTeW5jaHJvbml6ZXJTeW5jUmVxdWVzdBJPCgdvcHRpb25zGAEgASgLMjUubXlzdGlrby5jb3'
+    'JlLnN5bmNocm9uaXplci52MS5TeW5jaHJvbml6ZXJTeW5jT3B0aW9uc1IHb3B0aW9ucw==');
 
 @$core.Deprecated('Use synchronizerResetRequestDescriptor instead')
 const SynchronizerResetRequest$json = {

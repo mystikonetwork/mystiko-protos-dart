@@ -13,9 +13,9 @@ import 'dart:convert' as $convert;
 import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
 
-@$core.Deprecated('Use scanOptionsDescriptor instead')
-const ScanOptions$json = {
-  '1': 'ScanOptions',
+@$core.Deprecated('Use scannerScanOptionsDescriptor instead')
+const ScannerScanOptions$json = {
+  '1': 'ScannerScanOptions',
   '2': [
     {'1': 'wallet_password', '3': 1, '4': 1, '5': 9, '10': 'walletPassword'},
     {
@@ -50,16 +50,16 @@ const ScanOptions$json = {
   ],
 };
 
-/// Descriptor for `ScanOptions`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List scanOptionsDescriptor = $convert.base64Decode(
-    'CgtTY2FuT3B0aW9ucxInCg93YWxsZXRfcGFzc3dvcmQYASABKAlSDndhbGxldFBhc3N3b3JkEi'
-    'IKCmJhdGNoX3NpemUYAiABKARIAFIJYmF0Y2hTaXpliAEBEiUKC2NvbmN1cnJlbmN5GAMgASgN'
-    'SAFSC2NvbmN1cnJlbmN5iAEBEi0KEnNoaWVsZGVkX2FkZHJlc3NlcxgEIAMoCVIRc2hpZWxkZW'
-    'RBZGRyZXNzZXNCDQoLX2JhdGNoX3NpemVCDgoMX2NvbmN1cnJlbmN5');
+/// Descriptor for `ScannerScanOptions`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List scannerScanOptionsDescriptor = $convert.base64Decode(
+    'ChJTY2FubmVyU2Nhbk9wdGlvbnMSJwoPd2FsbGV0X3Bhc3N3b3JkGAEgASgJUg53YWxsZXRQYX'
+    'Nzd29yZBIiCgpiYXRjaF9zaXplGAIgASgESABSCWJhdGNoU2l6ZYgBARIlCgtjb25jdXJyZW5j'
+    'eRgDIAEoDUgBUgtjb25jdXJyZW5jeYgBARItChJzaGllbGRlZF9hZGRyZXNzZXMYBCADKAlSEX'
+    'NoaWVsZGVkQWRkcmVzc2VzQg0KC19iYXRjaF9zaXplQg4KDF9jb25jdXJyZW5jeQ==');
 
-@$core.Deprecated('Use scanResultDescriptor instead')
-const ScanResult$json = {
-  '1': 'ScanResult',
+@$core.Deprecated('Use scannerScanResultDescriptor instead')
+const ScannerScanResult$json = {
+  '1': 'ScannerScanResult',
   '2': [
     {'1': 'total_count', '3': 1, '4': 1, '5': 4, '10': 'totalCount'},
     {'1': 'owned_count', '3': 2, '4': 1, '5': 4, '10': 'ownedCount'},
@@ -77,9 +77,9 @@ const ScanResult$json = {
   ],
 };
 
-/// Descriptor for `ScanResult`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List scanResultDescriptor = $convert.base64Decode(
-    'CgpTY2FuUmVzdWx0Eh8KC3RvdGFsX2NvdW50GAEgASgEUgp0b3RhbENvdW50Eh8KC293bmVkX2'
-    'NvdW50GAIgASgEUgpvd25lZENvdW50EjwKGnNjYW5uZWRfc2hpZWxkZWRfYWRkcmVzc2VzGAMg'
-    'AygJUhhzY2FubmVkU2hpZWxkZWRBZGRyZXNzZXMSGAoFdG9faWQYBCABKAlIAFIEdG9JZIgBAU'
-    'IICgZfdG9faWQ=');
+/// Descriptor for `ScannerScanResult`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List scannerScanResultDescriptor = $convert.base64Decode(
+    'ChFTY2FubmVyU2NhblJlc3VsdBIfCgt0b3RhbF9jb3VudBgBIAEoBFIKdG90YWxDb3VudBIfCg'
+    'tvd25lZF9jb3VudBgCIAEoBFIKb3duZWRDb3VudBI8ChpzY2FubmVkX3NoaWVsZGVkX2FkZHJl'
+    'c3NlcxgDIAMoCVIYc2Nhbm5lZFNoaWVsZGVkQWRkcmVzc2VzEhgKBXRvX2lkGAQgASgJSABSBH'
+    'RvSWSIAQFCCAoGX3RvX2lk');
