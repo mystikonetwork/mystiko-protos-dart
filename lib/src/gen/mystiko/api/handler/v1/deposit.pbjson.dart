@@ -123,6 +123,27 @@ final $typed_data.Uint8List sendWithGrpcRequestDescriptor = $convert.base64Decod
     'X29wdGlvbnMYAiABKAsyIS5teXN0aWtvLnNlcnZpY2UudjEuQ2xpZW50T3B0aW9uc1INY2xpZW'
     '50T3B0aW9ucw==');
 
+@$core.Deprecated('Use fixDepositStatusRequestDescriptor instead')
+const FixDepositStatusRequest$json = {
+  '1': 'FixDepositStatusRequest',
+  '2': [
+    {
+      '1': 'options',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.mystiko.core.handler.v1.FixDepositStatusOptions',
+      '10': 'options'
+    },
+  ],
+};
+
+/// Descriptor for `FixDepositStatusRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List fixDepositStatusRequestDescriptor =
+    $convert.base64Decode(
+        'ChdGaXhEZXBvc2l0U3RhdHVzUmVxdWVzdBJKCgdvcHRpb25zGAEgASgLMjAubXlzdGlrby5jb3'
+        'JlLmhhbmRsZXIudjEuRml4RGVwb3NpdFN0YXR1c09wdGlvbnNSB29wdGlvbnM=');
+
 @$core.Deprecated('Use findDepositRequestDescriptor instead')
 const FindDepositRequest$json = {
   '1': 'FindDepositRequest',
@@ -407,6 +428,27 @@ const SendResponse$json = {
 final $typed_data.Uint8List sendResponseDescriptor = $convert.base64Decode(
     'CgxTZW5kUmVzcG9uc2USOwoHZGVwb3NpdBgBIAEoCzIhLm15c3Rpa28uY29yZS5kb2N1bWVudC'
     '52MS5EZXBvc2l0UgdkZXBvc2l0');
+
+@$core.Deprecated('Use fixDepositStatusResponseDescriptor instead')
+const FixDepositStatusResponse$json = {
+  '1': 'FixDepositStatusResponse',
+  '2': [
+    {
+      '1': 'deposit',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.mystiko.core.document.v1.Deposit',
+      '10': 'deposit'
+    },
+  ],
+};
+
+/// Descriptor for `FixDepositStatusResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List fixDepositStatusResponseDescriptor =
+    $convert.base64Decode(
+        'ChhGaXhEZXBvc2l0U3RhdHVzUmVzcG9uc2USOwoHZGVwb3NpdBgBIAEoCzIhLm15c3Rpa28uY2'
+        '9yZS5kb2N1bWVudC52MS5EZXBvc2l0UgdkZXBvc2l0');
 
 @$core.Deprecated('Use findDepositResponseDescriptor instead')
 const FindDepositResponse$json = {

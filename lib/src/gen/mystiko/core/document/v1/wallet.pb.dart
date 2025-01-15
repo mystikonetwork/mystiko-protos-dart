@@ -14,6 +14,8 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
+import '../../v1/common.pbenum.dart' as $7;
+
 class Wallet extends $pb.GeneratedMessage {
   factory Wallet({
     $core.String? id,
@@ -22,6 +24,7 @@ class Wallet extends $pb.GeneratedMessage {
     $core.String? encryptedEntropy,
     $core.String? hashedPassword,
     $core.int? accountNonce,
+    $7.MnemonicType? mnemonicType,
   }) {
     final $result = create();
     if (id != null) {
@@ -41,6 +44,9 @@ class Wallet extends $pb.GeneratedMessage {
     }
     if (accountNonce != null) {
       $result.accountNonce = accountNonce;
+    }
+    if (mnemonicType != null) {
+      $result.mnemonicType = mnemonicType;
     }
     return $result;
   }
@@ -68,6 +74,11 @@ class Wallet extends $pb.GeneratedMessage {
     ..aOS(5, _omitFieldNames ? '' : 'hashedPassword')
     ..a<$core.int>(
         6, _omitFieldNames ? '' : 'accountNonce', $pb.PbFieldType.OU3)
+    ..e<$7.MnemonicType>(
+        7, _omitFieldNames ? '' : 'mnemonicType', $pb.PbFieldType.OE,
+        defaultOrMaker: $7.MnemonicType.MNEMONIC_TYPE_UNSPECIFIED,
+        valueOf: $7.MnemonicType.valueOf,
+        enumValues: $7.MnemonicType.values)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
@@ -162,6 +173,18 @@ class Wallet extends $pb.GeneratedMessage {
   $core.bool hasAccountNonce() => $_has(5);
   @$pb.TagNumber(6)
   void clearAccountNonce() => clearField(6);
+
+  @$pb.TagNumber(7)
+  $7.MnemonicType get mnemonicType => $_getN(6);
+  @$pb.TagNumber(7)
+  set mnemonicType($7.MnemonicType v) {
+    setField(7, v);
+  }
+
+  @$pb.TagNumber(7)
+  $core.bool hasMnemonicType() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearMnemonicType() => clearField(7);
 }
 
 const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');

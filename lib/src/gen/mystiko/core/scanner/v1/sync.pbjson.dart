@@ -38,3 +38,23 @@ final $typed_data.Uint8List scannerSyncOptionsDescriptor = $convert.base64Decode
     'ChJTY2FubmVyU3luY09wdGlvbnMSJwoPd2FsbGV0X3Bhc3N3b3JkGAEgASgJUg53YWxsZXRQYX'
     'Nzd29yZBIlCgtjb25jdXJyZW5jeRgCIAEoDUgAUgtjb25jdXJyZW5jeYgBAUIOCgxfY29uY3Vy'
     'cmVuY3k=');
+
+@$core.Deprecated('Use scannerSyncResultDescriptor instead')
+const ScannerSyncResult$json = {
+  '1': 'ScannerSyncResult',
+  '2': [
+    {
+      '1': 'results',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.mystiko.core.scanner.v1.AccountBalanceResult',
+      '10': 'results'
+    },
+  ],
+};
+
+/// Descriptor for `ScannerSyncResult`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List scannerSyncResultDescriptor = $convert.base64Decode(
+    'ChFTY2FubmVyU3luY1Jlc3VsdBJHCgdyZXN1bHRzGAEgAygLMi0ubXlzdGlrby5jb3JlLnNjYW'
+    '5uZXIudjEuQWNjb3VudEJhbGFuY2VSZXN1bHRSB3Jlc3VsdHM=');
