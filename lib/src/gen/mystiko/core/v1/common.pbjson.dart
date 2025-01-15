@@ -13,6 +13,21 @@ import 'dart:convert' as $convert;
 import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
 
+@$core.Deprecated('Use mnemonicTypeDescriptor instead')
+const MnemonicType$json = {
+  '1': 'MnemonicType',
+  '2': [
+    {'1': 'MNEMONIC_TYPE_UNSPECIFIED', '2': 0},
+    {'1': 'MNEMONIC_TYPE_WEB', '2': 1},
+    {'1': 'MNEMONIC_TYPE_RUST', '2': 2},
+  ],
+};
+
+/// Descriptor for `MnemonicType`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List mnemonicTypeDescriptor = $convert.base64Decode(
+    'CgxNbmVtb25pY1R5cGUSHQoZTU5FTU9OSUNfVFlQRV9VTlNQRUNJRklFRBAAEhUKEU1ORU1PTk'
+    'lDX1RZUEVfV0VCEAESFgoSTU5FTU9OSUNfVFlQRV9SVVNUEAI=');
+
 @$core.Deprecated('Use depositStatusDescriptor instead')
 const DepositStatus$json = {
   '1': 'DepositStatus',

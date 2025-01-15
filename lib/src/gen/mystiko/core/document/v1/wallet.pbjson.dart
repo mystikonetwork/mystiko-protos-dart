@@ -29,6 +29,14 @@ const Wallet$json = {
     },
     {'1': 'hashed_password', '3': 5, '4': 1, '5': 9, '10': 'hashedPassword'},
     {'1': 'account_nonce', '3': 6, '4': 1, '5': 13, '10': 'accountNonce'},
+    {
+      '1': 'mnemonic_type',
+      '3': 7,
+      '4': 1,
+      '5': 14,
+      '6': '.mystiko.core.v1.MnemonicType',
+      '10': 'mnemonicType'
+    },
   ],
 };
 
@@ -37,4 +45,6 @@ final $typed_data.Uint8List walletDescriptor = $convert.base64Decode(
     'CgZXYWxsZXQSDgoCaWQYASABKAlSAmlkEh0KCmNyZWF0ZWRfYXQYAiABKARSCWNyZWF0ZWRBdB'
     'IdCgp1cGRhdGVkX2F0GAMgASgEUgl1cGRhdGVkQXQSKwoRZW5jcnlwdGVkX2VudHJvcHkYBCAB'
     'KAlSEGVuY3J5cHRlZEVudHJvcHkSJwoPaGFzaGVkX3Bhc3N3b3JkGAUgASgJUg5oYXNoZWRQYX'
-    'Nzd29yZBIjCg1hY2NvdW50X25vbmNlGAYgASgNUgxhY2NvdW50Tm9uY2U=');
+    'Nzd29yZBIjCg1hY2NvdW50X25vbmNlGAYgASgNUgxhY2NvdW50Tm9uY2USQgoNbW5lbW9uaWNf'
+    'dHlwZRgHIAEoDjIdLm15c3Rpa28uY29yZS52MS5NbmVtb25pY1R5cGVSDG1uZW1vbmljVHlwZQ'
+    '==');

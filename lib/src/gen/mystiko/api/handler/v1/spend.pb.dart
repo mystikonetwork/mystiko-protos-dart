@@ -367,6 +367,73 @@ class SendSpendWithGrpcRequest extends $pb.GeneratedMessage {
   $8.ClientOptions ensureClientOptions() => $_ensure(1);
 }
 
+class FixSpendStatusRequest extends $pb.GeneratedMessage {
+  factory FixSpendStatusRequest({
+    $20.FixSpendStatusOptions? options,
+  }) {
+    final $result = create();
+    if (options != null) {
+      $result.options = options;
+    }
+    return $result;
+  }
+  FixSpendStatusRequest._() : super();
+  factory FixSpendStatusRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory FixSpendStatusRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'FixSpendStatusRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'mystiko.api.handler.v1'),
+      createEmptyInstance: create)
+    ..aOM<$20.FixSpendStatusOptions>(1, _omitFieldNames ? '' : 'options',
+        subBuilder: $20.FixSpendStatusOptions.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  FixSpendStatusRequest clone() =>
+      FixSpendStatusRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  FixSpendStatusRequest copyWith(
+          void Function(FixSpendStatusRequest) updates) =>
+      super.copyWith((message) => updates(message as FixSpendStatusRequest))
+          as FixSpendStatusRequest;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static FixSpendStatusRequest create() => FixSpendStatusRequest._();
+  FixSpendStatusRequest createEmptyInstance() => create();
+  static $pb.PbList<FixSpendStatusRequest> createRepeated() =>
+      $pb.PbList<FixSpendStatusRequest>();
+  @$core.pragma('dart2js:noInline')
+  static FixSpendStatusRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<FixSpendStatusRequest>(create);
+  static FixSpendStatusRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $20.FixSpendStatusOptions get options => $_getN(0);
+  @$pb.TagNumber(1)
+  set options($20.FixSpendStatusOptions v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasOptions() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearOptions() => clearField(1);
+  @$pb.TagNumber(1)
+  $20.FixSpendStatusOptions ensureOptions() => $_ensure(0);
+}
+
 class FindSpendRequest extends $pb.GeneratedMessage {
   factory FindSpendRequest({
     $15.QueryFilter? filter,
@@ -1250,6 +1317,73 @@ class SendSpendResponse extends $pb.GeneratedMessage {
   static SendSpendResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<SendSpendResponse>(create);
   static SendSpendResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $21.Spend get spend => $_getN(0);
+  @$pb.TagNumber(1)
+  set spend($21.Spend v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasSpend() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearSpend() => clearField(1);
+  @$pb.TagNumber(1)
+  $21.Spend ensureSpend() => $_ensure(0);
+}
+
+class FixSpendStatusResponse extends $pb.GeneratedMessage {
+  factory FixSpendStatusResponse({
+    $21.Spend? spend,
+  }) {
+    final $result = create();
+    if (spend != null) {
+      $result.spend = spend;
+    }
+    return $result;
+  }
+  FixSpendStatusResponse._() : super();
+  factory FixSpendStatusResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory FixSpendStatusResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'FixSpendStatusResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'mystiko.api.handler.v1'),
+      createEmptyInstance: create)
+    ..aOM<$21.Spend>(1, _omitFieldNames ? '' : 'spend',
+        subBuilder: $21.Spend.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  FixSpendStatusResponse clone() =>
+      FixSpendStatusResponse()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  FixSpendStatusResponse copyWith(
+          void Function(FixSpendStatusResponse) updates) =>
+      super.copyWith((message) => updates(message as FixSpendStatusResponse))
+          as FixSpendStatusResponse;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static FixSpendStatusResponse create() => FixSpendStatusResponse._();
+  FixSpendStatusResponse createEmptyInstance() => create();
+  static $pb.PbList<FixSpendStatusResponse> createRepeated() =>
+      $pb.PbList<FixSpendStatusResponse>();
+  @$core.pragma('dart2js:noInline')
+  static FixSpendStatusResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<FixSpendStatusResponse>(create);
+  static FixSpendStatusResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
   $21.Spend get spend => $_getN(0);

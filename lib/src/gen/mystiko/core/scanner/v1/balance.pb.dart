@@ -288,6 +288,78 @@ class BalanceResult extends $pb.GeneratedMessage {
   $core.List<Balance> get balances => $_getList(0);
 }
 
+class AccountBalanceResult extends $pb.GeneratedMessage {
+  factory AccountBalanceResult({
+    $core.String? shieldedAddresses,
+    $core.Iterable<Balance>? balances,
+  }) {
+    final $result = create();
+    if (shieldedAddresses != null) {
+      $result.shieldedAddresses = shieldedAddresses;
+    }
+    if (balances != null) {
+      $result.balances.addAll(balances);
+    }
+    return $result;
+  }
+  AccountBalanceResult._() : super();
+  factory AccountBalanceResult.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AccountBalanceResult.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'AccountBalanceResult',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'mystiko.core.scanner.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'shieldedAddresses')
+    ..pc<Balance>(2, _omitFieldNames ? '' : 'balances', $pb.PbFieldType.PM,
+        subBuilder: Balance.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  AccountBalanceResult clone() =>
+      AccountBalanceResult()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  AccountBalanceResult copyWith(void Function(AccountBalanceResult) updates) =>
+      super.copyWith((message) => updates(message as AccountBalanceResult))
+          as AccountBalanceResult;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static AccountBalanceResult create() => AccountBalanceResult._();
+  AccountBalanceResult createEmptyInstance() => create();
+  static $pb.PbList<AccountBalanceResult> createRepeated() =>
+      $pb.PbList<AccountBalanceResult>();
+  @$core.pragma('dart2js:noInline')
+  static AccountBalanceResult getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AccountBalanceResult>(create);
+  static AccountBalanceResult? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get shieldedAddresses => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set shieldedAddresses($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasShieldedAddresses() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearShieldedAddresses() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.List<Balance> get balances => $_getList(1);
+}
+
 const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
 const _omitMessageNames =
     $core.bool.fromEnvironment('protobuf.omit_message_names');

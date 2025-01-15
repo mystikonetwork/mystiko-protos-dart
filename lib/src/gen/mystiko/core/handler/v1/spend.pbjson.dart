@@ -772,3 +772,29 @@ final $typed_data.Uint8List spendSummaryDescriptor = $convert.base64Decode(
     'VfZGVjaW1hbF9hbW91bnRCHwodX2dhc19yZWxheWVyX2ZlZV9hc3NldF9zeW1ib2xCIQofX2dh'
     'c19yZWxheWVyX2ZlZV9hc3NldF9kZWNpbWFsc0IWChRfZ2FzX3JlbGF5ZXJfYWRkcmVzc0ITCh'
     'FfZ2FzX3JlbGF5ZXJfbmFtZUISChBfZ2FzX3JlbGF5ZXJfdXJs');
+
+@$core.Deprecated('Use fixSpendStatusOptionsDescriptor instead')
+const FixSpendStatusOptions$json = {
+  '1': 'FixSpendStatusOptions',
+  '2': [
+    {'1': 'spend_id', '3': 1, '4': 1, '5': 9, '10': 'spendId'},
+    {
+      '1': 'query_timeout_ms',
+      '3': 2,
+      '4': 1,
+      '5': 4,
+      '9': 0,
+      '10': 'queryTimeoutMs',
+      '17': true
+    },
+  ],
+  '8': [
+    {'1': '_query_timeout_ms'},
+  ],
+};
+
+/// Descriptor for `FixSpendStatusOptions`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List fixSpendStatusOptionsDescriptor = $convert.base64Decode(
+    'ChVGaXhTcGVuZFN0YXR1c09wdGlvbnMSGQoIc3BlbmRfaWQYASABKAlSB3NwZW5kSWQSLQoQcX'
+    'VlcnlfdGltZW91dF9tcxgCIAEoBEgAUg5xdWVyeVRpbWVvdXRNc4gBAUITChFfcXVlcnlfdGlt'
+    'ZW91dF9tcw==');

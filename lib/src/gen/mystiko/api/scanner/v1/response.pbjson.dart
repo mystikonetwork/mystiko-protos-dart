@@ -22,7 +22,7 @@ const ScannerSyncResponse$json = {
       '3': 1,
       '4': 1,
       '5': 11,
-      '6': '.mystiko.core.scanner.v1.BalanceResult',
+      '6': '.mystiko.core.scanner.v1.ScannerSyncResult',
       '10': 'result'
     },
   ],
@@ -30,8 +30,8 @@ const ScannerSyncResponse$json = {
 
 /// Descriptor for `ScannerSyncResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List scannerSyncResponseDescriptor = $convert.base64Decode(
-    'ChNTY2FubmVyU3luY1Jlc3BvbnNlEj4KBnJlc3VsdBgBIAEoCzImLm15c3Rpa28uY29yZS5zY2'
-    'FubmVyLnYxLkJhbGFuY2VSZXN1bHRSBnJlc3VsdA==');
+    'ChNTY2FubmVyU3luY1Jlc3BvbnNlEkIKBnJlc3VsdBgBIAEoCzIqLm15c3Rpa28uY29yZS5zY2'
+    'FubmVyLnYxLlNjYW5uZXJTeW5jUmVzdWx0UgZyZXN1bHQ=');
 
 @$core.Deprecated('Use scannerScanResponseDescriptor instead')
 const ScannerScanResponse$json = {

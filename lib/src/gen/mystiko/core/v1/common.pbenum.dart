@@ -13,6 +13,27 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
+class MnemonicType extends $pb.ProtobufEnum {
+  static const MnemonicType MNEMONIC_TYPE_UNSPECIFIED =
+      MnemonicType._(0, _omitEnumNames ? '' : 'MNEMONIC_TYPE_UNSPECIFIED');
+  static const MnemonicType MNEMONIC_TYPE_WEB =
+      MnemonicType._(1, _omitEnumNames ? '' : 'MNEMONIC_TYPE_WEB');
+  static const MnemonicType MNEMONIC_TYPE_RUST =
+      MnemonicType._(2, _omitEnumNames ? '' : 'MNEMONIC_TYPE_RUST');
+
+  static const $core.List<MnemonicType> values = <MnemonicType>[
+    MNEMONIC_TYPE_UNSPECIFIED,
+    MNEMONIC_TYPE_WEB,
+    MNEMONIC_TYPE_RUST,
+  ];
+
+  static final $core.Map<$core.int, MnemonicType> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static MnemonicType? valueOf($core.int value) => _byValue[value];
+
+  const MnemonicType._($core.int v, $core.String n) : super(v, n);
+}
+
 class DepositStatus extends $pb.ProtobufEnum {
   static const DepositStatus DEPOSIT_STATUS_UNSPECIFIED =
       DepositStatus._(0, _omitEnumNames ? '' : 'DEPOSIT_STATUS_UNSPECIFIED');

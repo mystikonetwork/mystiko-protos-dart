@@ -365,6 +365,73 @@ class SendWithGrpcRequest extends $pb.GeneratedMessage {
   $8.ClientOptions ensureClientOptions() => $_ensure(1);
 }
 
+class FixDepositStatusRequest extends $pb.GeneratedMessage {
+  factory FixDepositStatusRequest({
+    $17.FixDepositStatusOptions? options,
+  }) {
+    final $result = create();
+    if (options != null) {
+      $result.options = options;
+    }
+    return $result;
+  }
+  FixDepositStatusRequest._() : super();
+  factory FixDepositStatusRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory FixDepositStatusRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'FixDepositStatusRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'mystiko.api.handler.v1'),
+      createEmptyInstance: create)
+    ..aOM<$17.FixDepositStatusOptions>(1, _omitFieldNames ? '' : 'options',
+        subBuilder: $17.FixDepositStatusOptions.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  FixDepositStatusRequest clone() =>
+      FixDepositStatusRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  FixDepositStatusRequest copyWith(
+          void Function(FixDepositStatusRequest) updates) =>
+      super.copyWith((message) => updates(message as FixDepositStatusRequest))
+          as FixDepositStatusRequest;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static FixDepositStatusRequest create() => FixDepositStatusRequest._();
+  FixDepositStatusRequest createEmptyInstance() => create();
+  static $pb.PbList<FixDepositStatusRequest> createRepeated() =>
+      $pb.PbList<FixDepositStatusRequest>();
+  @$core.pragma('dart2js:noInline')
+  static FixDepositStatusRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<FixDepositStatusRequest>(create);
+  static FixDepositStatusRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $17.FixDepositStatusOptions get options => $_getN(0);
+  @$pb.TagNumber(1)
+  set options($17.FixDepositStatusOptions v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasOptions() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearOptions() => clearField(1);
+  @$pb.TagNumber(1)
+  $17.FixDepositStatusOptions ensureOptions() => $_ensure(0);
+}
+
 class FindDepositRequest extends $pb.GeneratedMessage {
   factory FindDepositRequest({
     $15.QueryFilter? filter,
@@ -1254,6 +1321,73 @@ class SendResponse extends $pb.GeneratedMessage {
   static SendResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<SendResponse>(create);
   static SendResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $18.Deposit get deposit => $_getN(0);
+  @$pb.TagNumber(1)
+  set deposit($18.Deposit v) {
+    setField(1, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasDeposit() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearDeposit() => clearField(1);
+  @$pb.TagNumber(1)
+  $18.Deposit ensureDeposit() => $_ensure(0);
+}
+
+class FixDepositStatusResponse extends $pb.GeneratedMessage {
+  factory FixDepositStatusResponse({
+    $18.Deposit? deposit,
+  }) {
+    final $result = create();
+    if (deposit != null) {
+      $result.deposit = deposit;
+    }
+    return $result;
+  }
+  FixDepositStatusResponse._() : super();
+  factory FixDepositStatusResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory FixDepositStatusResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'FixDepositStatusResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'mystiko.api.handler.v1'),
+      createEmptyInstance: create)
+    ..aOM<$18.Deposit>(1, _omitFieldNames ? '' : 'deposit',
+        subBuilder: $18.Deposit.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  FixDepositStatusResponse clone() =>
+      FixDepositStatusResponse()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  FixDepositStatusResponse copyWith(
+          void Function(FixDepositStatusResponse) updates) =>
+      super.copyWith((message) => updates(message as FixDepositStatusResponse))
+          as FixDepositStatusResponse;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static FixDepositStatusResponse create() => FixDepositStatusResponse._();
+  FixDepositStatusResponse createEmptyInstance() => create();
+  static $pb.PbList<FixDepositStatusResponse> createRepeated() =>
+      $pb.PbList<FixDepositStatusResponse>();
+  @$core.pragma('dart2js:noInline')
+  static FixDepositStatusResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<FixDepositStatusResponse>(create);
+  static FixDepositStatusResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
   $18.Deposit get deposit => $_getN(0);

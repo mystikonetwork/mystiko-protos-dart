@@ -1470,6 +1470,89 @@ class DepositSummary extends $pb.GeneratedMessage {
   $core.Map<$core.String, $core.String> get totalDecimalAmounts => $_getMap(21);
 }
 
+class FixDepositStatusOptions extends $pb.GeneratedMessage {
+  factory FixDepositStatusOptions({
+    $core.String? depositId,
+    $fixnum.Int64? queryTimeoutMs,
+  }) {
+    final $result = create();
+    if (depositId != null) {
+      $result.depositId = depositId;
+    }
+    if (queryTimeoutMs != null) {
+      $result.queryTimeoutMs = queryTimeoutMs;
+    }
+    return $result;
+  }
+  FixDepositStatusOptions._() : super();
+  factory FixDepositStatusOptions.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory FixDepositStatusOptions.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'FixDepositStatusOptions',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'mystiko.core.handler.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'depositId')
+    ..a<$fixnum.Int64>(
+        2, _omitFieldNames ? '' : 'queryTimeoutMs', $pb.PbFieldType.OU6,
+        defaultOrMaker: $fixnum.Int64.ZERO)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  FixDepositStatusOptions clone() =>
+      FixDepositStatusOptions()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  FixDepositStatusOptions copyWith(
+          void Function(FixDepositStatusOptions) updates) =>
+      super.copyWith((message) => updates(message as FixDepositStatusOptions))
+          as FixDepositStatusOptions;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static FixDepositStatusOptions create() => FixDepositStatusOptions._();
+  FixDepositStatusOptions createEmptyInstance() => create();
+  static $pb.PbList<FixDepositStatusOptions> createRepeated() =>
+      $pb.PbList<FixDepositStatusOptions>();
+  @$core.pragma('dart2js:noInline')
+  static FixDepositStatusOptions getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<FixDepositStatusOptions>(create);
+  static FixDepositStatusOptions? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get depositId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set depositId($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasDepositId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearDepositId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $fixnum.Int64 get queryTimeoutMs => $_getI64(1);
+  @$pb.TagNumber(2)
+  set queryTimeoutMs($fixnum.Int64 v) {
+    $_setInt64(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasQueryTimeoutMs() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearQueryTimeoutMs() => clearField(2);
+}
+
 const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
 const _omitMessageNames =
     $core.bool.fromEnvironment('protobuf.omit_message_names');

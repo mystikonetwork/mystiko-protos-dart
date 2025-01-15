@@ -13,6 +13,8 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
+import 'balance.pb.dart' as $24;
+
 class ScannerSyncOptions extends $pb.GeneratedMessage {
   factory ScannerSyncOptions({
     $core.String? walletPassword,
@@ -90,6 +92,61 @@ class ScannerSyncOptions extends $pb.GeneratedMessage {
   $core.bool hasConcurrency() => $_has(1);
   @$pb.TagNumber(2)
   void clearConcurrency() => clearField(2);
+}
+
+class ScannerSyncResult extends $pb.GeneratedMessage {
+  factory ScannerSyncResult({
+    $core.Iterable<$24.AccountBalanceResult>? results,
+  }) {
+    final $result = create();
+    if (results != null) {
+      $result.results.addAll(results);
+    }
+    return $result;
+  }
+  ScannerSyncResult._() : super();
+  factory ScannerSyncResult.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ScannerSyncResult.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ScannerSyncResult',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'mystiko.core.scanner.v1'),
+      createEmptyInstance: create)
+    ..pc<$24.AccountBalanceResult>(
+        1, _omitFieldNames ? '' : 'results', $pb.PbFieldType.PM,
+        subBuilder: $24.AccountBalanceResult.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  ScannerSyncResult clone() => ScannerSyncResult()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  ScannerSyncResult copyWith(void Function(ScannerSyncResult) updates) =>
+      super.copyWith((message) => updates(message as ScannerSyncResult))
+          as ScannerSyncResult;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ScannerSyncResult create() => ScannerSyncResult._();
+  ScannerSyncResult createEmptyInstance() => create();
+  static $pb.PbList<ScannerSyncResult> createRepeated() =>
+      $pb.PbList<ScannerSyncResult>();
+  @$core.pragma('dart2js:noInline')
+  static ScannerSyncResult getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ScannerSyncResult>(create);
+  static ScannerSyncResult? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<$24.AccountBalanceResult> get results => $_getList(0);
 }
 
 const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');

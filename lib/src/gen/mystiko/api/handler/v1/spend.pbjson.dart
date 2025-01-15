@@ -123,6 +123,26 @@ final $typed_data.Uint8List sendSpendWithGrpcRequestDescriptor = $convert.base64
     'ZW50X29wdGlvbnMYAiABKAsyIS5teXN0aWtvLnNlcnZpY2UudjEuQ2xpZW50T3B0aW9uc1INY2'
     'xpZW50T3B0aW9ucw==');
 
+@$core.Deprecated('Use fixSpendStatusRequestDescriptor instead')
+const FixSpendStatusRequest$json = {
+  '1': 'FixSpendStatusRequest',
+  '2': [
+    {
+      '1': 'options',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.mystiko.core.handler.v1.FixSpendStatusOptions',
+      '10': 'options'
+    },
+  ],
+};
+
+/// Descriptor for `FixSpendStatusRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List fixSpendStatusRequestDescriptor = $convert.base64Decode(
+    'ChVGaXhTcGVuZFN0YXR1c1JlcXVlc3QSSAoHb3B0aW9ucxgBIAEoCzIuLm15c3Rpa28uY29yZS'
+    '5oYW5kbGVyLnYxLkZpeFNwZW5kU3RhdHVzT3B0aW9uc1IHb3B0aW9ucw==');
+
 @$core.Deprecated('Use findSpendRequestDescriptor instead')
 const FindSpendRequest$json = {
   '1': 'FindSpendRequest',
@@ -406,6 +426,27 @@ const SendSpendResponse$json = {
 final $typed_data.Uint8List sendSpendResponseDescriptor = $convert.base64Decode(
     'ChFTZW5kU3BlbmRSZXNwb25zZRI1CgVzcGVuZBgBIAEoCzIfLm15c3Rpa28uY29yZS5kb2N1bW'
     'VudC52MS5TcGVuZFIFc3BlbmQ=');
+
+@$core.Deprecated('Use fixSpendStatusResponseDescriptor instead')
+const FixSpendStatusResponse$json = {
+  '1': 'FixSpendStatusResponse',
+  '2': [
+    {
+      '1': 'spend',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.mystiko.core.document.v1.Spend',
+      '10': 'spend'
+    },
+  ],
+};
+
+/// Descriptor for `FixSpendStatusResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List fixSpendStatusResponseDescriptor =
+    $convert.base64Decode(
+        'ChZGaXhTcGVuZFN0YXR1c1Jlc3BvbnNlEjUKBXNwZW5kGAEgASgLMh8ubXlzdGlrby5jb3JlLm'
+        'RvY3VtZW50LnYxLlNwZW5kUgVzcGVuZA==');
 
 @$core.Deprecated('Use findSpendsResponseDescriptor instead')
 const FindSpendsResponse$json = {
