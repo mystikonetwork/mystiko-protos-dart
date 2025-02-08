@@ -694,3 +694,29 @@ final $typed_data.Uint8List depositSummaryDescriptor = $convert.base64Decode(
     'ZlZV9hc3NldF9kZWNpbWFsc0IWChRfZXhlY3V0b3JfZmVlX2Ftb3VudEIeChxfZXhlY3V0b3Jf'
     'ZmVlX2RlY2ltYWxfYW1vdW50QhwKGl9leGVjdXRvcl9mZWVfYXNzZXRfc3ltYm9sQh4KHF9leG'
     'VjdXRvcl9mZWVfYXNzZXRfZGVjaW1hbHNCDgoMX2JyaWRnZV90eXBl');
+
+@$core.Deprecated('Use fixDepositStatusOptionsDescriptor instead')
+const FixDepositStatusOptions$json = {
+  '1': 'FixDepositStatusOptions',
+  '2': [
+    {'1': 'deposit_id', '3': 1, '4': 1, '5': 9, '10': 'depositId'},
+    {
+      '1': 'query_timeout_ms',
+      '3': 2,
+      '4': 1,
+      '5': 4,
+      '9': 0,
+      '10': 'queryTimeoutMs',
+      '17': true
+    },
+  ],
+  '8': [
+    {'1': '_query_timeout_ms'},
+  ],
+};
+
+/// Descriptor for `FixDepositStatusOptions`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List fixDepositStatusOptionsDescriptor = $convert.base64Decode(
+    'ChdGaXhEZXBvc2l0U3RhdHVzT3B0aW9ucxIdCgpkZXBvc2l0X2lkGAEgASgJUglkZXBvc2l0SW'
+    'QSLQoQcXVlcnlfdGltZW91dF9tcxgCIAEoBEgAUg5xdWVyeVRpbWVvdXRNc4gBAUITChFfcXVl'
+    'cnlfdGltZW91dF9tcw==');

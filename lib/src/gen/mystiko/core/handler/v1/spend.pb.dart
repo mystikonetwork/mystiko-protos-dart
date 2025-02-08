@@ -1919,6 +1919,89 @@ class SpendSummary extends $pb.GeneratedMessage {
   void clearGasRelayerUrl() => clearField(22);
 }
 
+class FixSpendStatusOptions extends $pb.GeneratedMessage {
+  factory FixSpendStatusOptions({
+    $core.String? spendId,
+    $fixnum.Int64? queryTimeoutMs,
+  }) {
+    final $result = create();
+    if (spendId != null) {
+      $result.spendId = spendId;
+    }
+    if (queryTimeoutMs != null) {
+      $result.queryTimeoutMs = queryTimeoutMs;
+    }
+    return $result;
+  }
+  FixSpendStatusOptions._() : super();
+  factory FixSpendStatusOptions.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory FixSpendStatusOptions.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'FixSpendStatusOptions',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'mystiko.core.handler.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'spendId')
+    ..a<$fixnum.Int64>(
+        2, _omitFieldNames ? '' : 'queryTimeoutMs', $pb.PbFieldType.OU6,
+        defaultOrMaker: $fixnum.Int64.ZERO)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  FixSpendStatusOptions clone() =>
+      FixSpendStatusOptions()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  FixSpendStatusOptions copyWith(
+          void Function(FixSpendStatusOptions) updates) =>
+      super.copyWith((message) => updates(message as FixSpendStatusOptions))
+          as FixSpendStatusOptions;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static FixSpendStatusOptions create() => FixSpendStatusOptions._();
+  FixSpendStatusOptions createEmptyInstance() => create();
+  static $pb.PbList<FixSpendStatusOptions> createRepeated() =>
+      $pb.PbList<FixSpendStatusOptions>();
+  @$core.pragma('dart2js:noInline')
+  static FixSpendStatusOptions getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<FixSpendStatusOptions>(create);
+  static FixSpendStatusOptions? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get spendId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set spendId($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasSpendId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearSpendId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $fixnum.Int64 get queryTimeoutMs => $_getI64(1);
+  @$pb.TagNumber(2)
+  set queryTimeoutMs($fixnum.Int64 v) {
+    $_setInt64(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasQueryTimeoutMs() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearQueryTimeoutMs() => clearField(2);
+}
+
 const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
 const _omitMessageNames =
     $core.bool.fromEnvironment('protobuf.omit_message_names');

@@ -15,15 +15,15 @@ import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import '../../../core/scanner/v1/asset.pb.dart' as $28;
-import '../../../core/scanner/v1/balance.pb.dart' as $27;
+import '../../../core/scanner/v1/balance.pb.dart' as $24;
 import '../../../core/scanner/v1/import.pb.dart' as $29;
-import '../../../core/scanner/v1/reset.pb.dart' as $26;
-import '../../../core/scanner/v1/scan.pb.dart' as $25;
-import '../../../core/scanner/v1/sync.pb.dart' as $24;
+import '../../../core/scanner/v1/reset.pb.dart' as $27;
+import '../../../core/scanner/v1/scan.pb.dart' as $26;
+import '../../../core/scanner/v1/sync.pb.dart' as $25;
 
 class ScannerSyncRequest extends $pb.GeneratedMessage {
   factory ScannerSyncRequest({
-    $24.ScannerSyncOptions? options,
+    $25.ScannerSyncOptions? options,
   }) {
     final $result = create();
     if (options != null) {
@@ -44,8 +44,8 @@ class ScannerSyncRequest extends $pb.GeneratedMessage {
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.scanner.v1'),
       createEmptyInstance: create)
-    ..aOM<$24.ScannerSyncOptions>(1, _omitFieldNames ? '' : 'options',
-        subBuilder: $24.ScannerSyncOptions.create)
+    ..aOM<$25.ScannerSyncOptions>(1, _omitFieldNames ? '' : 'options',
+        subBuilder: $25.ScannerSyncOptions.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
@@ -72,9 +72,9 @@ class ScannerSyncRequest extends $pb.GeneratedMessage {
   static ScannerSyncRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $24.ScannerSyncOptions get options => $_getN(0);
+  $25.ScannerSyncOptions get options => $_getN(0);
   @$pb.TagNumber(1)
-  set options($24.ScannerSyncOptions v) {
+  set options($25.ScannerSyncOptions v) {
     setField(1, v);
   }
 
@@ -83,12 +83,12 @@ class ScannerSyncRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearOptions() => clearField(1);
   @$pb.TagNumber(1)
-  $24.ScannerSyncOptions ensureOptions() => $_ensure(0);
+  $25.ScannerSyncOptions ensureOptions() => $_ensure(0);
 }
 
 class ScannerScanRequest extends $pb.GeneratedMessage {
   factory ScannerScanRequest({
-    $25.ScannerScanOptions? options,
+    $26.ScannerScanOptions? options,
   }) {
     final $result = create();
     if (options != null) {
@@ -109,8 +109,8 @@ class ScannerScanRequest extends $pb.GeneratedMessage {
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.scanner.v1'),
       createEmptyInstance: create)
-    ..aOM<$25.ScannerScanOptions>(1, _omitFieldNames ? '' : 'options',
-        subBuilder: $25.ScannerScanOptions.create)
+    ..aOM<$26.ScannerScanOptions>(1, _omitFieldNames ? '' : 'options',
+        subBuilder: $26.ScannerScanOptions.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
@@ -137,9 +137,9 @@ class ScannerScanRequest extends $pb.GeneratedMessage {
   static ScannerScanRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $25.ScannerScanOptions get options => $_getN(0);
+  $26.ScannerScanOptions get options => $_getN(0);
   @$pb.TagNumber(1)
-  set options($25.ScannerScanOptions v) {
+  set options($26.ScannerScanOptions v) {
     setField(1, v);
   }
 
@@ -148,12 +148,12 @@ class ScannerScanRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearOptions() => clearField(1);
   @$pb.TagNumber(1)
-  $25.ScannerScanOptions ensureOptions() => $_ensure(0);
+  $26.ScannerScanOptions ensureOptions() => $_ensure(0);
 }
 
 class ScannerResetRequest extends $pb.GeneratedMessage {
   factory ScannerResetRequest({
-    $26.ScannerResetOptions? options,
+    $27.ScannerResetOptions? options,
   }) {
     final $result = create();
     if (options != null) {
@@ -174,8 +174,8 @@ class ScannerResetRequest extends $pb.GeneratedMessage {
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.scanner.v1'),
       createEmptyInstance: create)
-    ..aOM<$26.ScannerResetOptions>(1, _omitFieldNames ? '' : 'options',
-        subBuilder: $26.ScannerResetOptions.create)
+    ..aOM<$27.ScannerResetOptions>(1, _omitFieldNames ? '' : 'options',
+        subBuilder: $27.ScannerResetOptions.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
@@ -202,9 +202,9 @@ class ScannerResetRequest extends $pb.GeneratedMessage {
   static ScannerResetRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $26.ScannerResetOptions get options => $_getN(0);
+  $27.ScannerResetOptions get options => $_getN(0);
   @$pb.TagNumber(1)
-  set options($26.ScannerResetOptions v) {
+  set options($27.ScannerResetOptions v) {
     setField(1, v);
   }
 
@@ -213,12 +213,12 @@ class ScannerResetRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearOptions() => clearField(1);
   @$pb.TagNumber(1)
-  $26.ScannerResetOptions ensureOptions() => $_ensure(0);
+  $27.ScannerResetOptions ensureOptions() => $_ensure(0);
 }
 
 class BalanceRequest extends $pb.GeneratedMessage {
   factory BalanceRequest({
-    $27.BalanceOptions? options,
+    $24.BalanceOptions? options,
   }) {
     final $result = create();
     if (options != null) {
@@ -239,8 +239,8 @@ class BalanceRequest extends $pb.GeneratedMessage {
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'mystiko.api.scanner.v1'),
       createEmptyInstance: create)
-    ..aOM<$27.BalanceOptions>(1, _omitFieldNames ? '' : 'options',
-        subBuilder: $27.BalanceOptions.create)
+    ..aOM<$24.BalanceOptions>(1, _omitFieldNames ? '' : 'options',
+        subBuilder: $24.BalanceOptions.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('Using this can add significant overhead to your binary. '
@@ -267,9 +267,9 @@ class BalanceRequest extends $pb.GeneratedMessage {
   static BalanceRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $27.BalanceOptions get options => $_getN(0);
+  $24.BalanceOptions get options => $_getN(0);
   @$pb.TagNumber(1)
-  set options($27.BalanceOptions v) {
+  set options($24.BalanceOptions v) {
     setField(1, v);
   }
 
@@ -278,7 +278,7 @@ class BalanceRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearOptions() => clearField(1);
   @$pb.TagNumber(1)
-  $27.BalanceOptions ensureOptions() => $_ensure(0);
+  $24.BalanceOptions ensureOptions() => $_ensure(0);
 }
 
 class AssetsRequest extends $pb.GeneratedMessage {

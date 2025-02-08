@@ -104,3 +104,31 @@ const BalanceResult$json = {
 final $typed_data.Uint8List balanceResultDescriptor = $convert.base64Decode(
     'Cg1CYWxhbmNlUmVzdWx0EjwKCGJhbGFuY2VzGAEgAygLMiAubXlzdGlrby5jb3JlLnNjYW5uZX'
     'IudjEuQmFsYW5jZVIIYmFsYW5jZXM=');
+
+@$core.Deprecated('Use accountBalanceResultDescriptor instead')
+const AccountBalanceResult$json = {
+  '1': 'AccountBalanceResult',
+  '2': [
+    {
+      '1': 'shielded_addresses',
+      '3': 1,
+      '4': 1,
+      '5': 9,
+      '10': 'shieldedAddresses'
+    },
+    {
+      '1': 'balances',
+      '3': 2,
+      '4': 3,
+      '5': 11,
+      '6': '.mystiko.core.scanner.v1.Balance',
+      '10': 'balances'
+    },
+  ],
+};
+
+/// Descriptor for `AccountBalanceResult`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List accountBalanceResultDescriptor = $convert.base64Decode(
+    'ChRBY2NvdW50QmFsYW5jZVJlc3VsdBItChJzaGllbGRlZF9hZGRyZXNzZXMYASABKAlSEXNoaW'
+    'VsZGVkQWRkcmVzc2VzEjwKCGJhbGFuY2VzGAIgAygLMiAubXlzdGlrby5jb3JlLnNjYW5uZXIu'
+    'djEuQmFsYW5jZVIIYmFsYW5jZXM=');
